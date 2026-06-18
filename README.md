@@ -185,7 +185,7 @@ Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrule
 
 ## Requirements
 
-- Any LLM with a system prompt / custom instructions field (GPT-4, Claude 3+, Gemini, local models via Ollama/LM Studio)
+- Any capable LLM with a system prompt / custom instructions field (GPT, Claude, Gemini, DeepSeek, open-source models)
 - For full skill functionality (decision matrix, anti-patterns, scenarios, examples): a skill system that loads files from a folder (OpenCode, Claude Code). For other agents, copy `SKILL.md` as a standalone prompt - it contains the complete core methodology.
 - No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
