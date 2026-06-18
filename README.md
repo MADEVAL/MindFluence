@@ -1,4 +1,4 @@
-# mindfluence
+# MindFluence
 
 > **Persuasion engineered through psychology, not manipulation.**
 
@@ -8,7 +8,7 @@ An AI prompt-skill that turns 20 cognitive biases into high-converting marketing
 
 ## What is this?
 
-**mindfluence** is a system prompt (skill) for LLMs - GPT, Claude, Gemini, DeepSeek or any capable model. It transforms the AI into a marketing strategist who understands *why* humans click, read, and buy - not just *what* to write.
+**MindFluence** is a system prompt (skill) for LLMs - GPT, Claude, Gemini, DeepSeek or any capable model. It transforms the AI into a marketing strategist who understands *why* humans click, read, and buy - not just *what* to write.
 
 It's built on decades of research in behavioral economics and evolutionary psychology: Kahneman's two systems, Cialdini's principles, Munger's psychological misjudgments, Festinger's cognitive dissonance - distilled into actionable copywriting instructions.
 
