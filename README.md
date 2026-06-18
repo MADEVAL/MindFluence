@@ -28,26 +28,26 @@ It's built on decades of research in behavioral economics and evolutionary psych
 
 | # | Bias | Category | Marketing Use |
 |---|------|----------|---------------|
-| 1 | **Social Proof / Bandwagon** | Social | "Join 10,000+ who already..." |
-| 2 | **Anchoring** | Optimizer | Show expensive option first; everything else seems cheap |
-| 3 | **Framing** | Filter | Same fact, opposite reaction - depending on wording |
-| 4 | **Appeal to Authority** | Social | Cite Harvard, Forbes, domain experts |
-| 5 | **Fear / Loss Aversion** | Filter + Social | "You're losing $X/day. Here's the fix." |
-| 6 | **Availability Heuristic** | Optimizer | Vivid stories beat statistics every time |
-| 7 | **Confirmation Bias** | Filter | Tell people they were right; they'll love you |
-| 8 | **Cognitive Dissonance** | Filter + Optimizer | Surface contradictions → offer resolution through your product |
-| 9 | **Survivorship Bias** | Optimizer | Show winners; acknowledge they're the best outcomes |
-| 10 | **Endowment Effect** | Optimizer | Free trials = they already "own" it = cancelling hurts |
-| 11 | **Fundamental Attribution Error** | Social | Blame the system, not the customer |
-| 12 | **Sunk Cost Fallacy** | Optimizer | "You've already read 3,000 words. Last step." |
-| 13 | **Status Quo Bias** | Filter | "Works with what you already have. No migration needed." |
-| 14 | **False Consensus Effect** | Social | "Everyone secretly thinks this. We say it out loud." |
-| 15 | **In-Group Favoritism** | Social | "For people like us..." - instant belonging |
-| 16 | **Halo Effect** | Optimizer | Beautiful design = trustworthy product |
-| 17 | **Hindsight Bias** | Optimizer | "We predicted this in 2022. Here we are." |
-| 18 | **Backfire Effect** | Filter | Never correct - reframe. "Yes, AND..." |
-| 19 | **Bias Blind Spot** | Filter | "Smart people know biases apply to THEM too." |
-| 20 | **Group Polarization** | Social | Communities don't moderate - they amplify. Build one. |
+| 1  | **Social Proof / Bandwagon**     | Social              | Used by teams at Google, Airbnb, and 10,000+ startups |
+| 2  | **Anchoring**                     | Optimizer           | Enterprise: $499/mo → Pro: $99/mo |
+| 3  | **Framing**                       | Filter              | "90% success rate" vs "Only 10% fail" |
+| 4  | **Appeal to Authority**           | Social              | The same method taught at Harvard Business School |
+| 5  | **Fear / Loss Aversion**          | Filter + Social     | Every day without X costs you $200 in missed revenue |
+| 6  | **Availability Heuristic**        | Optimizer           | "Sarah tripled her revenue in 3 months. Here's the exact playbook." |
+| 7  | **Confirmation Bias**             | Filter              | "You already know newsletters are broken. Here's the data that proves your instinct right." |
+| 8  | **Cognitive Dissonance**          | Filter + Optimizer  | "You care about health but skip breakfast. Our 2-minute shake fixes the gap." |
+| 9  | **Survivorship Bias**             | Optimizer           | "The 23% who succeeded all followed this pattern. The 77% did not." |
+| 10 | **Endowment Effect**              | Optimizer           | Your workspace is already set up. Cancelling means losing everything you built. |
+| 11 | **Fundamental Attribution Error** | Social              | "It's not that you're bad at networking. Conferences are designed to exclude introverts." |
+| 12 | **Sunk Cost Fallacy**             | Optimizer           | You've put 6 months into learning this skill. The next module is where it clicks. |
+| 13 | **Status Quo Bias**               | Filter              | Works inside Slack. Your team won't even notice the switch. |
+| 14 | **False Consensus Effect**        | Social              | "Most designers hate this tool. They just pretend they don't." |
+| 15 | **In-Group Favoritism**           | Social              | The newsletter for founders who build in public — not sell courses. |
+| 16 | **Halo Effect**                   | Optimizer           | Designed by the same studio behind Apple's award-winning UI. |
+| 17 | **Hindsight Bias**                | Optimizer           | "In 2022, we said no-code would eat SaaS. 3 years later — here's the data." |
+| 18 | **Backfire Effect**               | Filter              | "You're right — cold email IS broken. That's exactly why we rebuilt the approach." |
+| 19 | **Bias Blind Spot**               | Filter              | "You're too smart to fall for this. Which is precisely why it'll work on you." |
+| 20 | **Group Polarization**            | Social              | Join 5,000 founders who are quitting the 9-to-5 this year. |
 
 ## Tone-of-Voice Switcher
 
