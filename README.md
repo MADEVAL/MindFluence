@@ -1,5 +1,7 @@
 # MindFluence
 
+[ **English** | [Русский](README.ru.md) ]
+
 > **Persuasion engineered through psychology, not manipulation.**
 
 An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience.
@@ -21,34 +23,6 @@ It's built on decades of research in behavioral economics and evolutionary psych
 **Two modes:**
 - **Quick Mode** (default) - minimal input, immediate output. The AI picks the best biases automatically.
 - **Deep Mode** - the AI asks clarifying questions about audience, platform, tone, and desired action before generating.
-
-## What's inside
-
-```
-mindfluence/
-├── SKILL.md                    ← Main instruction. 20 biases, methodology, tone-of-voice, ethics, output format.
-├── decision-matrix.md          ← Audience × product × platform → bias priority map. Eliminates guesswork.
-├── anti-patterns.md            ← 12 common AI copywriting failures + concrete fixes + audit checklist.
-├── scenarios/                  ← Task-specific playbooks (11 scenarios)
-│   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
-│   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
-│   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
-│   ├── email-sequence.md       ← Welcome, nurture, cart abandonment, re-engagement
-│   ├── webinar-warmup.md       ← Registration → live event (minute-by-minute) → post-webinar
-│   ├── ad-campaign.md          ← Video, search, social, retargeting + A/B testing framework
-│   ├── sales-page.md           ← Long-form sales page - 12-section psychological arc for high-ticket
-│   ├── case-study.md           ← 6-part success story structure (situation → result → CTA)
-│   ├── pricing-page.md         ← Anchoring architecture, decoy engineering, localization psychology
-│   ├── cold-outreach.md        ← 5-line rule for cold email/DM - no trust, no social proof
-│   └── crisis-response.md      ← 6-part apology structure - defensive bias engineering
-├── examples/                   ← Annotated outputs showing the skill in action
-│   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
-│   ├── landing-hero.md         ← Hero section for premium meal delivery
-│   ├── ad-script.md            ← 30s video ad for language app
-│   ├── email-welcome.md        ← SaaS welcome email
-│   └── longform-article.md     ← Article intro with full bias analysis
-└── README.md
-```
 
 ## The 20 Cognitive Biases
 
@@ -128,6 +102,34 @@ The skill doesn't guess which biases to use. `decision-matrix.md` provides a loo
 | 12 | Blaming Dissonance | "You say X but do Y" - blames the reader, not the system |
 
 Includes an **audit checklist** - scan any output in 30 seconds before delivering.
+
+## What's inside
+
+```
+mindfluence/
+├── SKILL.md                    ← Main instruction. 20 biases, methodology, tone-of-voice, ethics, output format.
+├── decision-matrix.md          ← Audience × product × platform → bias priority map. Eliminates guesswork.
+├── anti-patterns.md            ← 12 common AI copywriting failures + concrete fixes + audit checklist.
+├── scenarios/                  ← Task-specific playbooks (11 scenarios)
+│   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
+│   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
+│   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
+│   ├── email-sequence.md       ← Welcome, nurture, cart abandonment, re-engagement
+│   ├── webinar-warmup.md       ← Registration → live event (minute-by-minute) → post-webinar
+│   ├── ad-campaign.md          ← Video, search, social, retargeting + A/B testing framework
+│   ├── sales-page.md           ← Long-form sales page - 12-section psychological arc for high-ticket
+│   ├── case-study.md           ← 6-part success story structure (situation → result → CTA)
+│   ├── pricing-page.md         ← Anchoring architecture, decoy engineering, localization psychology
+│   ├── cold-outreach.md        ← 5-line rule for cold email/DM - no trust, no social proof
+│   └── crisis-response.md      ← 6-part apology structure - defensive bias engineering
+├── examples/                   ← Annotated outputs showing the skill in action
+│   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
+│   ├── landing-hero.md         ← Hero section for premium meal delivery
+│   ├── ad-script.md            ← 30s video ad for language app
+│   ├── email-welcome.md        ← SaaS welcome email
+│   └── longform-article.md     ← Article intro with full bias analysis
+└── README.md
+```
 
 ## Example
 
