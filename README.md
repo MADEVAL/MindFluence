@@ -200,7 +200,7 @@ Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrule
 
 ## License
 
-MIT - use freely in commercial and non-commercial projects.
+GPL
 
 ---
 
