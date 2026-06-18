@@ -1,7 +1,7 @@
 # Scenario: Pricing Page
 
 ## CONTEXT
-A dedicated page presenting your pricing — or the pricing section of a larger page. Pricing is the highest-leverage, highest-anxiety moment in the buyer journey. Done right, it converts. Done wrong, it leaks.
+A dedicated page presenting your pricing - or the pricing section of a larger page. Pricing is the highest-leverage, highest-anxiety moment in the buyer journey. Done right, it converts. Done wrong, it leaks.
 
 ## GOAL
 Engineer the pricing presentation so the prospect perceives maximum value, selects the option you want them to select, and feels smart about their choice.
@@ -10,7 +10,7 @@ Engineer the pricing presentation so the prospect perceives maximum value, selec
 
 ## THE PSYCHOLOGY OF PRICING
 
-Pricing is not about numbers. It's about **reference points.** The brain doesn't evaluate price in absolute terms — it evaluates price relative to the nearest available anchor. Your job: control every anchor on the page.
+Pricing is not about numbers. It's about **reference points.** The brain doesn't evaluate price in absolute terms - it evaluates price relative to the nearest available anchor. Your job: control every anchor on the page.
 
 ---
 
@@ -46,29 +46,29 @@ Instead of "Save 20% with annual," show the monthly as the reference and annual 
 Before any price appears on the page, establish a value anchor:
 > "Companies typically spend $50,000–150,000 building custom solutions for this. Our platform: starting at $99/mo."
 
-The anchor doesn't need to be a competitor — it can be the cost of NOT using your product.
+The anchor doesn't need to be a competitor - it can be the cost of NOT using your product.
 
 ---
 
 ## 2. DECOY ENGINEERING
 
-A decoy is an option you don't expect anyone to buy — it exists solely to make another option look better.
+A decoy is an option you don't expect anyone to buy - it exists solely to make another option look better.
 
 **The Classic Decoy (Asymmetric Dominance):**
 ```
-Option A: Print only — $59
-Option B: Print + Digital — $125 ← target
-Option C: Digital only — $125 ← decoy
+Option A: Print only - $59
+Option B: Print + Digital - $125 ← target
+Option C: Digital only - $125 ← decoy
 ```
-Option C is dominated by Option B (same price, fewer products). B looks like a bargain. Nobody buys C. They don't need to — C did its job just by existing.
+Option C is dominated by Option B (same price, fewer products). B looks like a bargain. Nobody buys C. They don't need to - C did its job just by existing.
 
 **Modern SaaS Decoy:**
 ```
-Starter: 5 users, 10 projects — $29/mo
-Professional: 15 users, unlimited projects — $99/mo ← target
-Enterprise: 50 users, unlimited projects, dedicated support — $299/mo ← anchor + decoy
+Starter: 5 users, 10 projects - $29/mo
+Professional: 15 users, unlimited projects - $99/mo ← target
+Enterprise: 50 users, unlimited projects, dedicated support - $299/mo ← anchor + decoy
 ```
-Enterprise makes Professional look cheap (anchor). Starter makes Professional look capable (decoy — too limited for serious use).
+Enterprise makes Professional look cheap (anchor). Starter makes Professional look capable (decoy - too limited for serious use).
 
 ---
 
@@ -80,13 +80,13 @@ Enterprise makes Professional look cheap (anchor). Starter makes Professional lo
 - $997 works better than $1,000 for info-products (both charm and anchor at the same time).
 - Round numbers for luxury. $5,000 > $4,999 for a premium course. Odd numbers signal "discount store."
 
-### Price Is Just a Number — Until You Contextualize It
-- "Just $3/day" (reframes annual as daily — daily = negligible)
+### Price Is Just a Number - Until You Contextualize It
+- "Just $3/day" (reframes annual as daily - daily = negligible)
 - "Less than your team's weekly coffee budget" (reframes relative to trivial expense)
 - "Pays for itself in 2 client calls" (ROI reframe)
 
 ### The Left-Digit Effect
-$3.99 feels significantly cheaper than $4.00 — because the brain anchors on the leftmost digit. Use for impulse purchases. Avoid for premium.
+$3.99 feels significantly cheaper than $4.00 - because the brain anchors on the leftmost digit. Use for impulse purchases. Avoid for premium.
 
 ---
 
@@ -119,7 +119,7 @@ Bundling reduces cognitive load. The brain sees 3 bundles, not 15 features.
 
 **If you DON'T offer Free:**
 - Offer a guarantee or trial INSTEAD. "Start your 14-day trial. No credit card."
-- The guarantee IS your free tier — risk-free entry.
+- The guarantee IS your free tier - risk-free entry.
 
 ---
 

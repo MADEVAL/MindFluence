@@ -27,13 +27,13 @@ So let's skip that part.
 
 Here's exactly what to do in the next 5 minutes:
 
-**Step 1 — Import your current projects (2 min)**
-Connect Asana, Trello, or just drag a CSV. Don't worry about organizing anything yet — we'll handle that in step 2.
+**Step 1 - Import your current projects (2 min)**
+Connect Asana, Trello, or just drag a CSV. Don't worry about organizing anything yet - we'll handle that in step 2.
 
 → [Import Your Projects]
 
-**Step 2 — See the magic (3 min)**
-Once your projects are in, check the Timeline view. It's the reason most teams switch. It automatically maps every deadline, dependency, and conflict — stuff you'd spend hours untangling in a spreadsheet.
+**Step 2 - See the magic (3 min)**
+Once your projects are in, check the Timeline view. It's the reason most teams switch. It automatically maps every deadline, dependency, and conflict - stuff you'd spend hours untangling in a spreadsheet.
 
 → [Open Timeline View]
 
@@ -43,7 +43,7 @@ If you get stuck or something feels off, reply to this email. I read every respo
 
 Here's what's coming tomorrow: the template library. Our most-requested feature. It'll save you from ever building a project workflow from scratch again.
 
-— Alex
+- Alex
 Founder @ [Product]
 
 P.S. The average team saves 7 hours in their first week. The ones who do both steps above save 12. Just saying.
@@ -51,9 +51,9 @@ P.S. The average team saves 7 hours in their first week. The ones who do both st
 ---
 
 [RATIONALE]
-- **Reciprocity:** The email gives immediate, tangible value — a clear 5-minute path to value, not generic "welcome!" fluff. The specificity triggers reciprocity: "They helped me. I should engage."
-- **Endowment Effect:** "Your projects," "Your [Product]." The language of ownership begins immediately. The tool is already "theirs" — they're just setting it up. Canceling later = losing something they own.
-- **Status Quo Bias:** "Connect Asana, Trello, or just drag a CSV. Don't worry about organizing." The email reduces perceived switching cost to near-zero. The existing setup isn't threatened — it's imported. "We'll handle that" signals low effort.
+- **Reciprocity:** The email gives immediate, tangible value - a clear 5-minute path to value, not generic "welcome!" fluff. The specificity triggers reciprocity: "They helped me. I should engage."
+- **Endowment Effect:** "Your projects," "Your [Product]." The language of ownership begins immediately. The tool is already "theirs" - they're just setting it up. Canceling later = losing something they own.
+- **Status Quo Bias:** "Connect Asana, Trello, or just drag a CSV. Don't worry about organizing." The email reduces perceived switching cost to near-zero. The existing setup isn't threatened - it's imported. "We'll handle that" signals low effort.
 - **Framing:** The Timeline view isn't described as "a feature." It's described as "the reason most teams switch." The frame is social proof + outcome, not capability.
 - **Authority (founder sign-off):** The email is from the founder, not "The [Product] Team." Founder emails have higher open and reply rates because they feel personal, not automated. "I read every response" = social contract. Opens future emails because readers believe a human is on the other end.
 - **Sunk Cost (P.S.):** The P.S. is the behavioral hook. "The average team saves 7 hours. The ones who do both steps save 12." The reader has already invested 2 minutes reading. The P.S. creates a micro-commitment: "I want to be in the 12-hour group." The step from reading to doing becomes smaller.

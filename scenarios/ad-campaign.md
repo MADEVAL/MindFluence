@@ -1,22 +1,22 @@
 # Scenario: Ad Campaign
 
 ## CONTEXT
-Creating paid advertising — video ads (TikTok, YouTube, Reels), search ads (Google, Bing), display/retargeting, and social feed ads (Facebook, Instagram, LinkedIn).
+Creating paid advertising - video ads (TikTok, YouTube, Reels), search ads (Google, Bing), display/retargeting, and social feed ads (Facebook, Instagram, LinkedIn).
 
 ## GOAL
-Stop the scroll, capture attention in <3 seconds, communicate value in <15 seconds, and drive a measurable action — click, sign-up, or purchase.
+Stop the scroll, capture attention in <3 seconds, communicate value in <15 seconds, and drive a measurable action - click, sign-up, or purchase.
 
 ---
 
 ## PLATFORM × BIAS × FORMAT
 
-### Video Ads (TikTok, Reels, YouTube Shorts — ≤60s)
+### Video Ads (TikTok, Reels, YouTube Shorts - ≤60s)
 
 **The Brain's Ad Processing:**
-- Second 0–3: Amygdala scan — "Threat? Opportunity? Ignore?"
-- Second 3–8: System 1 engagement — "This feels relevant/familiar/exciting."
-- Second 8–30: Value communication — "What's in it for me?"
-- Second 30–60: Action trigger — "What do I do now?"
+- Second 0–3: Amygdala scan - "Threat? Opportunity? Ignore?"
+- Second 3–8: System 1 engagement - "This feels relevant/familiar/exciting."
+- Second 8–30: Value communication - "What's in it for me?"
+- Second 30–60: Action trigger - "What do I do now?"
 
 **Pattern A: The Hook → Problem → Solution → Proof → CTA (30–60s)**
 
@@ -30,7 +30,7 @@ Stop the scroll, capture attention in <3 seconds, communicate value in <15 secon
 | 45–60s | **CTA.** "Click the link. Only [X] available. [Deadline]." | Loss Aversion / Scarcity |
 
 **Pattern B: The Native/UGC Style (15–30s)**
-Start in media res — like a regular person's video. No intro. No branding for 5 seconds.
+Start in media res - like a regular person's video. No intro. No branding for 5 seconds.
 - "I tried [thing] so you don't have to..."
 - "My [role] friend showed me this and..."
 - "Nobody's talking about this, but..."
@@ -46,7 +46,7 @@ Contrarian hook. Polemic.
 
 ---
 
-### Search Ads (Google/Bing — text only)
+### Search Ads (Google/Bing - text only)
 
 Search ads meet the user at the moment of intent. The psychology is different: they're already looking. Your job is to be the OBVIOUS choice, not to create desire from scratch.
 

@@ -1,10 +1,10 @@
 # Scenario: Email Sequence
 
 ## CONTEXT
-Writing an email sequence — welcome series, nurture campaign, re-engagement, or cart abandonment.
+Writing an email sequence - welcome series, nurture campaign, re-engagement, or cart abandonment.
 
 ## GOAL
-Move subscribers through a psychological progression: stranger → trust → desire → action → loyalty — using cognitive biases at each stage.
+Move subscribers through a psychological progression: stranger → trust → desire → action → loyalty - using cognitive biases at each stage.
 
 ---
 
@@ -17,7 +17,7 @@ Move subscribers through a psychological progression: stranger → trust → des
 | Email | Purpose | Dominant Bias | Content |
 |-------|---------|---------------|---------|
 | #1 (immediate) | Deliver lead magnet + set expectations | Reciprocity + Endowment | "Here's what you asked for. Here's what to expect from me." |
-| #2 (Day 2) | Best value — no pitch | Authority + Availability | Your single best piece of content. Story-driven. |
+| #2 (Day 2) | Best value - no pitch | Authority + Availability | Your single best piece of content. Story-driven. |
 | #3 (Day 4) | Social proof | Social Proof + Survivorship | Case study or testimonial. "Here's what happened when [customer] applied this." |
 | #4 (Day 6) | Soft pitch | Anchoring + Framing | Introduce your product as the natural next step. |
 | #5 (Day 8) | Hard pitch / community | Loss Aversion + In-Group | "Last chance at [offer]. Or join [community]." |
@@ -45,9 +45,9 @@ Move subscribers through a psychological progression: stranger → trust → des
 | Pitch | Social Proof + Loss Aversion | Case study, limited offer, new product |
 
 **Rules:**
-- The pitch email should feel like a natural extension of the value emails — same voice, same quality.
+- The pitch email should feel like a natural extension of the value emails - same voice, same quality.
 - Never pitch without first establishing: (a) the problem, (b) why existing solutions fail, (c) your unique angle.
-- The "curated roundup" format leverages Status Quo — it's a familiar format. Readers open it on habit.
+- The "curated roundup" format leverages Status Quo - it's a familiar format. Readers open it on habit.
 
 ---
 
@@ -62,7 +62,7 @@ Move subscribers through a psychological progression: stranger → trust → des
 | #3 | 48–72 hours after | Loss Aversion + Scarcity | "Your cart expires in [time]. Price increases / stock is low." |
 
 **Bias details:**
-- **Endowment:** They already mentally "own" the item. The email reminds them it's theirs — they just haven't taken possession.
+- **Endowment:** They already mentally "own" the item. The email reminds them it's theirs - they just haven't taken possession.
 - **Social Proof:** Seeing others buy the SAME item validates the choice. "People like you are buying this right now."
 - **Confirmation:** Show reviews specific to the abandoned item. Their interest is confirmed as correct.
 - **Loss Aversion:** "Expiring" cart = losing something you almost had. More powerful than "complete your purchase."

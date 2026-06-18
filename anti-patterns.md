@@ -23,7 +23,7 @@
 **What AI writes:**
 > "Every day you wait, your competitors are stealing your market share. Your business is bleeding revenue. Act now."
 
-**Why it fails:** Fear activates the amygdala — fight/flight/freeze. If you trigger fear but don't immediately provide the safe path, the brain goes to "freeze" (scroll past) or "flight" (close the tab). Fear without resolution = anxiety without action.
+**Why it fails:** Fear activates the amygdala - fight/flight/freeze. If you trigger fear but don't immediately provide the safe path, the brain goes to "freeze" (scroll past) or "flight" (close the tab). Fear without resolution = anxiety without action.
 
 **Fix:**
 > "Competitors who adopted [solution] grew 34% faster last year. The gap compounds monthly. Here's the 3-step switch that takes 15 minutes and costs nothing to try: [Step 1 → Step 2 → Step 3]."
@@ -65,7 +65,7 @@
 **What AI writes:**
 > "Here's a free ebook! Now buy our course."
 
-**Why it fails:** Reciprocity works when the gift feels genuine, not when it's obviously a hook. If the "free value" is a thinly veiled sales pitch, it triggers reactance — the brain's "you're trying to manipulate me" alarm.
+**Why it fails:** Reciprocity works when the gift feels genuine, not when it's obviously a hook. If the "free value" is a thinly veiled sales pitch, it triggers reactance - the brain's "you're trying to manipulate me" alarm.
 
 **Fix:** Give genuine standalone value FIRST. The ebook/article/tool should be valuable even if the reader never buys anything. The pitch comes in a SEPARATE communication, after the value has been consumed.
 
@@ -78,10 +78,10 @@
 **What AI writes:**
 > "Only 3 spots left! Offer expires in 2 hours! ⏰"
 
-**Why it fails:** Consumers have been burned by fake countdown timers and artificial scarcity for decades. The brain has developed skepticism. If your urgency mechanism resets on reload, is never explained, or feels arbitrary — trust evaporates instantly and permanently.
+**Why it fails:** Consumers have been burned by fake countdown timers and artificial scarcity for decades. The brain has developed skepticism. If your urgency mechanism resets on reload, is never explained, or feels arbitrary - trust evaporates instantly and permanently.
 
 **Fix (genuine scarcity):**
-> "We're capping this cohort at 50 founders. Not because we want to — because our team of 3 can't give personalized feedback to more than 50. Current count: 47. Registration closes Friday at midnight, period."
+> "We're capping this cohort at 50 founders. Not because we want to - because our team of 3 can't give personalized feedback to more than 50. Current count: 47. Registration closes Friday at midnight, period."
 
 **Rule:** Scarcity must be EXPLAINED, not just DECLARED. Why is it limited? Capacity? Time? Attention? Cost? If you can't explain the constraint, don't use scarcity.
 
@@ -92,7 +92,7 @@
 **What AI writes:**
 > "You've come this far. Don't stop now." (in the FIRST email or FIRST paragraph)
 
-**Why it fails:** Sunk cost only works after the prospect has ACTUALLY invested something: time, attention, effort, emotion. Invoking it too early is absurd — "I just opened this email, what 'far' have I come?"
+**Why it fails:** Sunk cost only works after the prospect has ACTUALLY invested something: time, attention, effort, emotion. Invoking it too early is absurd - "I just opened this email, what 'far' have I come?"
 
 **Fix:** Build investment first across multiple touches. THEN invoke sunk cost:
 > "You've watched the 90-minute webinar. You've read the 12-page guide. You've seen the case studies. The only thing between you and the outcome is one decision."
@@ -136,7 +136,7 @@
 **Why it fails:** This reads as "you're probably one of the stupid people." Even if the reader agrees with the take, the framing makes them defensive. Nobody wants to be told they're in the "most people" who are wrong.
 
 **Fix:**
-> "You've probably sensed that [common belief] doesn't add up. You're right. Here's why — and what the data actually shows."
+> "You've probably sensed that [common belief] doesn't add up. You're right. Here's why - and what the data actually shows."
 
 **Rule:** Confirmation bias marketing must make the reader feel SMART for doubting, not DUMB for believing. "You were right to question this" > "Everyone else is wrong."
 
@@ -161,10 +161,10 @@
 **What AI writes:**
 > "You say health is your priority, but you haven't exercised in months. Why?"
 
-**Why it fails:** Calling out the reader's hypocrisy triggers shame, not action. The brain's response to shame is withdrawal, not engagement. You've created dissonance, but the resolution path is "I'm a bad person" — and nobody clicks "buy" from that state.
+**Why it fails:** Calling out the reader's hypocrisy triggers shame, not action. The brain's response to shame is withdrawal, not engagement. You've created dissonance, but the resolution path is "I'm a bad person" - and nobody clicks "buy" from that state.
 
 **Fix:**
-> "Most of my clients tell me health is their #1 priority. Then I ask when their last checkup was. Silence. Not because they don't care — because the system makes it hard. Appointments during work hours. Forms that take 30 minutes. Waiting rooms. We fixed that."
+> "Most of my clients tell me health is their #1 priority. Then I ask when their last checkup was. Silence. Not because they don't care - because the system makes it hard. Appointments during work hours. Forms that take 30 minutes. Waiting rooms. We fixed that."
 
 **Rule:** Dissonance must be resolved by blaming the SITUATION, never the PERSON. "The system failed you" > "You failed."
 

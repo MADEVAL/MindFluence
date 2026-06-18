@@ -2,15 +2,15 @@
 
 > **Persuasion engineered through psychology, not manipulation.**
 
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy — for any language, any platform, any audience.
+An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience.
 
 ---
 
 ## What is this?
 
-**mindfluence** is a system prompt (skill) for LLMs — GPT-4, Claude, Gemini, or any capable model. It transforms the AI into a marketing strategist who understands *why* humans click, read, and buy — not just *what* to write.
+**mindfluence** is a system prompt (skill) for LLMs - GPT, Claude, Gemini, DeepSeek or any capable model. It transforms the AI into a marketing strategist who understands *why* humans click, read, and buy - not just *what* to write.
 
-It's built on decades of research in behavioral economics and evolutionary psychology: Kahneman's two systems, Cialdini's principles, Munger's psychological misjudgments, Festinger's cognitive dissonance — distilled into actionable copywriting instructions.
+It's built on decades of research in behavioral economics and evolutionary psychology: Kahneman's two systems, Cialdini's principles, Munger's psychological misjudgments, Festinger's cognitive dissonance - distilled into actionable copywriting instructions.
 
 ## How it works
 
@@ -19,8 +19,8 @@ It's built on decades of research in behavioral economics and evolutionary psych
 3. **Get output** with every bias labeled, every decision explained, every word psychologically justified.
 
 **Two modes:**
-- **Quick Mode** (default) — minimal input, immediate output. The AI picks the best biases automatically.
-- **Deep Mode** — the AI asks clarifying questions about audience, platform, tone, and desired action before generating.
+- **Quick Mode** (default) - minimal input, immediate output. The AI picks the best biases automatically.
+- **Deep Mode** - the AI asks clarifying questions about audience, platform, tone, and desired action before generating.
 
 ## What's inside
 
@@ -32,15 +32,15 @@ mindfluence/
 ├── scenarios/                  ← Task-specific playbooks (11 scenarios)
 │   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
 │   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
-│   ├── landing-page.md         ← Full page bias map — hero to footer, section by section
+│   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
 │   ├── email-sequence.md       ← Welcome, nurture, cart abandonment, re-engagement
 │   ├── webinar-warmup.md       ← Registration → live event (minute-by-minute) → post-webinar
 │   ├── ad-campaign.md          ← Video, search, social, retargeting + A/B testing framework
-│   ├── sales-page.md           ← Long-form sales page — 12-section psychological arc for high-ticket
+│   ├── sales-page.md           ← Long-form sales page - 12-section psychological arc for high-ticket
 │   ├── case-study.md           ← 6-part success story structure (situation → result → CTA)
 │   ├── pricing-page.md         ← Anchoring architecture, decoy engineering, localization psychology
-│   ├── cold-outreach.md        ← 5-line rule for cold email/DM — no trust, no social proof
-│   └── crisis-response.md      ← 6-part apology structure — defensive bias engineering
+│   ├── cold-outreach.md        ← 5-line rule for cold email/DM - no trust, no social proof
+│   └── crisis-response.md      ← 6-part apology structure - defensive bias engineering
 ├── examples/                   ← Annotated outputs showing the skill in action
 │   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
 │   ├── landing-hero.md         ← Hero section for premium meal delivery
@@ -56,7 +56,7 @@ mindfluence/
 |---|------|----------|---------------|
 | 1 | **Social Proof / Bandwagon** | Social | "Join 10,000+ who already..." |
 | 2 | **Anchoring** | Optimizer | Show expensive option first; everything else seems cheap |
-| 3 | **Framing** | Filter | Same fact, opposite reaction — depending on wording |
+| 3 | **Framing** | Filter | Same fact, opposite reaction - depending on wording |
 | 4 | **Appeal to Authority** | Social | Cite Harvard, Forbes, domain experts |
 | 5 | **Fear / Loss Aversion** | Filter + Social | "You're losing $X/day. Here's the fix." |
 | 6 | **Availability Heuristic** | Optimizer | Vivid stories beat statistics every time |
@@ -68,12 +68,12 @@ mindfluence/
 | 12 | **Sunk Cost Fallacy** | Optimizer | "You've already read 3,000 words. Last step." |
 | 13 | **Status Quo Bias** | Filter | "Works with what you already have. No migration needed." |
 | 14 | **False Consensus Effect** | Social | "Everyone secretly thinks this. We say it out loud." |
-| 15 | **In-Group Favoritism** | Social | "For people like us..." — instant belonging |
+| 15 | **In-Group Favoritism** | Social | "For people like us..." - instant belonging |
 | 16 | **Halo Effect** | Optimizer | Beautiful design = trustworthy product |
 | 17 | **Hindsight Bias** | Optimizer | "We predicted this in 2022. Here we are." |
-| 18 | **Backfire Effect** | Filter | Never correct — reframe. "Yes, AND..." |
+| 18 | **Backfire Effect** | Filter | Never correct - reframe. "Yes, AND..." |
 | 19 | **Bias Blind Spot** | Filter | "Smart people know biases apply to THEM too." |
-| 20 | **Group Polarization** | Social | Communities don't moderate — they amplify. Build one. |
+| 20 | **Group Polarization** | Social | Communities don't moderate - they amplify. Build one. |
 
 ## Tone-of-Voice Switcher
 
@@ -110,24 +110,24 @@ The skill doesn't guess which biases to use. `decision-matrix.md` provides a loo
 
 ## Anti-Patterns
 
-`anti-patterns.md` catches the 12 most common ways AI gets cognitive-bias copy wrong — each with the failing output, the psychological reason it fails, the concrete fix, and a rule to follow:
+`anti-patterns.md` catches the 12 most common ways AI gets cognitive-bias copy wrong - each with the failing output, the psychological reason it fails, the concrete fix, and a rule to follow:
 
 | # | Anti-Pattern | Example Failure |
 |---|-------------|-----------------|
 | 1 | Vague Social Proof | "Thousands of satisfied customers" |
 | 2 | Fear Without an Exit | Threat with no immediate solution |
-| 3 | Framing Without Anchoring | "This is a revolution" — no reference point |
-| 4 | Authority Without Proof | "Studies show..." — no source, no year |
-| 5 | Transactional Reciprocity | "Free ebook! Now buy." — gift and pitch in same breath |
+| 3 | Framing Without Anchoring | "This is a revolution" - no reference point |
+| 4 | Authority Without Proof | "Studies show..." - no source, no year |
+| 5 | Transactional Reciprocity | "Free ebook! Now buy." - gift and pitch in same breath |
 | 6 | Fake Scarcity | Countdown timers that reset on reload |
-| 7 | Premature Sunk Cost | "You've come this far" — in the first paragraph |
-| 8 | Empty In-Group | "Like-minded people" — no shared identity |
-| 9 | Wrong-Source Halo | "As seen on Forbes" — audience doesn't respect Forbes |
-| 10 | Insulting Confirmation | "Most people are wrong" — makes reader defensive |
-| 11 | Abstract Availability | "Imagine struggling" — no concrete sensory details |
-| 12 | Blaming Dissonance | "You say X but do Y" — blames the reader, not the system |
+| 7 | Premature Sunk Cost | "You've come this far" - in the first paragraph |
+| 8 | Empty In-Group | "Like-minded people" - no shared identity |
+| 9 | Wrong-Source Halo | "As seen on Forbes" - audience doesn't respect Forbes |
+| 10 | Insulting Confirmation | "Most people are wrong" - makes reader defensive |
+| 11 | Abstract Availability | "Imagine struggling" - no concrete sensory details |
+| 12 | Blaming Dissonance | "You say X but do Y" - blames the reader, not the system |
 
-Includes an **audit checklist** — scan any output in 30 seconds before delivering.
+Includes an **audit checklist** - scan any output in 30 seconds before delivering.
 
 ## Example
 
@@ -169,7 +169,7 @@ Includes an **audit checklist** — scan any output in 30 seconds before deliver
 
 ### With OpenCode (native)
 
-Place the `mindfluence/` folder into `.opencode/skills/` (project) or `~/.config/opencode/skills/` (global). OpenCode auto-discovers `SKILL.md` via its frontmatter — no extra config needed. The skill activates when you ask for marketing copy, ads, landing pages, emails, or launch content.
+Place the `mindfluence/` folder into `.opencode/skills/` (project) or `~/.config/opencode/skills/` (global). OpenCode auto-discovers `SKILL.md` via its frontmatter - no extra config needed. The skill activates when you ask for marketing copy, ads, landing pages, emails, or launch content.
 
 ### With Claude Code
 
@@ -181,24 +181,24 @@ Upload `SKILL.md` as the system prompt. Add `decision-matrix.md`, `anti-patterns
 
 ### With any other LLM agent (Cursor, Windsurf, Copilot, Cline, Aider, etc.)
 
-Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md`, etc.). The prompt content is platform-agnostic — only the file name changes.
+Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md`, etc.). The prompt content is platform-agnostic - only the file name changes.
 
 ## Requirements
 
 - Any LLM with a system prompt / custom instructions field (GPT-4, Claude 3+, Gemini, local models via Ollama/LM Studio)
-- For full skill functionality (decision matrix, anti-patterns, scenarios, examples): a skill system that loads files from a folder (OpenCode, Claude Code). For other agents, copy `SKILL.md` as a standalone prompt — it contains the complete core methodology.
-- No API keys, no tools, no dependencies — pure prompt engineering
+- For full skill functionality (decision matrix, anti-patterns, scenarios, examples): a skill system that loads files from a folder (OpenCode, Claude Code). For other agents, copy `SKILL.md` as a standalone prompt - it contains the complete core methodology.
+- No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
 
 ## Why "mindfluence"?
 
-**mind** (the brain — cognitive biases live here) + **influence** (what persuasion actually does — shapes decisions without force).
+**mind** (the brain - cognitive biases live here) + **influence** (what persuasion actually does - shapes decisions without force).
 
 ---
 
 ## License
 
-MIT — use freely in commercial and non-commercial projects.
+MIT - use freely in commercial and non-commercial projects.
 
 ---
 

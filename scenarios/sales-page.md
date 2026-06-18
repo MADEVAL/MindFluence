@@ -1,7 +1,7 @@
 # Scenario: Long-Form Sales Page
 
 ## CONTEXT
-A standalone sales page for a high-ticket product ($200+): course, coaching program, premium software, consulting package. Unlike a landing page (which converts to trial or lead), this page must overcome deep skepticism, justify a significant price, and close a purchase directly — often 3,000–10,000 words.
+A standalone sales page for a high-ticket product ($200+): course, coaching program, premium software, consulting package. Unlike a landing page (which converts to trial or lead), this page must overcome deep skepticism, justify a significant price, and close a purchase directly - often 3,000–10,000 words.
 
 ## GOAL
 Move the reader from "I don't know you" to "Take my money" in a single scroll. Every section builds on the previous. Skipping a section creates a psychological leak.
@@ -20,7 +20,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 ```
 
 **Rules:**
-- Headline must pass the "scroll test" — interesting enough to make them scroll past the fold.
+- Headline must pass the "scroll test" - interesting enough to make them scroll past the fold.
 - Never use the product name in the headline. The product is the answer to a question the headline asks.
 - Hero visual: product-in-context (person using it, result achieved), not product-in-isolation.
 
@@ -37,7 +37,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 **Rules:**
 - Use real names, dates, dollar amounts, emotions.
-- The story must be relatable — the reader must see themselves in it.
+- The story must be relatable - the reader must see themselves in it.
 - The mistake must be specific, not generic. "I struggled" = boring. "I lost $47,000 trying 6 different methods that all failed for the same reason" = hook.
 
 ---
@@ -86,7 +86,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 **Rules:**
 - Each phase/pillar gets: name, one-sentence description, the specific outcome it produces.
 - Use diagrams if format allows. Visual mechanism = reduced cognitive load.
-- The mechanism IS the perceived value. Explain it thoroughly — this is what they're buying.
+- The mechanism IS the perceived value. Explain it thoroughly - this is what they're buying.
 
 ---
 
@@ -115,10 +115,10 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 [STATUS QUO] Address switching cost, time investment, risk of change.
 ```
 
-**Pattern:** "You might be thinking: [objection 1]. I get it — I thought the same thing. Here's what I discovered: [reframe]. You might also wonder: [objection 2]. Valid. Here's the data: [evidence]."
+**Pattern:** "You might be thinking: [objection 1]. I get it - I thought the same thing. Here's what I discovered: [reframe]. You might also wonder: [objection 2]. Valid. Here's the data: [evidence]."
 
 **Rules:**
-- Address the 3 most common objections. No more — readers don't have 7 objections.
+- Address the 3 most common objections. No more - readers don't have 7 objections.
 - Use "I used to think" framing, not "You're wrong." Validate, then transcend.
 - The most common objection for high-ticket: "Is this worth $X?" Answer with ROI math, not opinion.
 
@@ -131,11 +131,11 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 [FRAMING] Not a purchase. An investment in [outcome].
 ```
 
-**Pattern:** "When you join [Program Name], here's everything you get: Module 1: [Name] (value: $X) — [what it solves]. Module 2: [Name] (value: $X) — [what it solves]... Total value: $X,XXX. Your investment: $XXX."
+**Pattern:** "When you join [Program Name], here's everything you get: Module 1: [Name] (value: $X) - [what it solves]. Module 2: [Name] (value: $X) - [what it solves]... Total value: $X,XXX. Your investment: $XXX."
 
 **Rules:**
 - List every deliverable with an individual value. The sum must exceed the price by 3–5×.
-- "Value" must be justifiable — not arbitrary. "Consulting calls: $500/hr × 4 hours = $2,000."
+- "Value" must be justifiable - not arbitrary. "Consulting calls: $500/hr × 4 hours = $2,000."
 - Bonuses at the end: "And you also get [bonus 1], [bonus 2]..." Bonuses = added value perception without added cost.
 
 ---
@@ -151,7 +151,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 **Rules:**
 - Price reveal is a climax, not an afterthought. Build to it.
 - Guarantee must be specific: timeframe, conditions, how to claim. Vague guarantees = no guarantee.
-- If offering payment plans, frame as "X payments of $Y" — the lower number anchors first.
+- If offering payment plans, frame as "X payments of $Y" - the lower number anchors first.
 
 ---
 
@@ -175,7 +175,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 **Rules:**
 - Scarcity must be REAL and EXPLAINED. Cohort size limited by personal feedback capacity. Price increase on calendar date. Bonus package expiring.
-- Never fake scarcity. A single exposed fake destroys all trust — past, present, and future.
+- Never fake scarcity. A single exposed fake destroys all trust - past, present, and future.
 
 ---
 

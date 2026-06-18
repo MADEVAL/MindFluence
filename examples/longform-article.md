@@ -15,7 +15,7 @@
 
 There's a man in Chicago who owns 47 productivity apps.
 
-I know this because he emailed me his phone's home screen. Folders within folders. Todoist AND Things AND TickTick — all with red notification badges. Notion databases tracking his Notion templates. A shortcut that opens three apps simultaneously "for his morning routine."
+I know this because he emailed me his phone's home screen. Folders within folders. Todoist AND Things AND TickTick - all with red notification badges. Notion databases tracking his Notion templates. A shortcut that opens three apps simultaneously "for his morning routine."
 
 He is not disorganized. He is drowning in systems designed to organize him.
 
@@ -33,7 +33,7 @@ This isn't a productivity crisis. It's a complexity crisis dressed in productivi
 
 In 2019, I hit a wall.
 
-I was managing a team of 12. Publishing weekly. Consulting on the side. My system had 14 apps, 3 notebooks, and a whiteboard that covered an entire wall. I was "productive" in the way a hamster on a wheel is productive — lots of motion, zero forward progress.
+I was managing a team of 12. Publishing weekly. Consulting on the side. My system had 14 apps, 3 notebooks, and a whiteboard that covered an entire wall. I was "productive" in the way a hamster on a wheel is productive - lots of motion, zero forward progress.
 
 One Friday, in frustration, I deleted everything. Every app. Every notebook. Every "system."
 
@@ -41,11 +41,11 @@ Monday morning, I opened a single text file and wrote:
 
 *What actually needs to happen this week?*
 
-Three things. That was it. Three things that, if done, would make the week a success. Everything else — the 47 flagged emails, the 23 "urgent" Slack messages, the 8 "quick tasks" I'd brain-dumped into Todoist — none of it made the list.
+Three things. That was it. Three things that, if done, would make the week a success. Everything else - the 47 flagged emails, the 23 "urgent" Slack messages, the 8 "quick tasks" I'd brain-dumped into Todoist - none of it made the list.
 
 That week, I shipped more than I had in the previous month.
 
-Here's what I learned, and what the research confirms: the human brain can hold roughly 4 items in working memory at any given time. Push beyond that, and you're not multitasking. You're switching. And every switch costs you 23 minutes of focused attention — a finding from the University of California that's been replicated across dozens of studies.
+Here's what I learned, and what the research confirms: the human brain can hold roughly 4 items in working memory at any given time. Push beyond that, and you're not multitasking. You're switching. And every switch costs you 23 minutes of focused attention - a finding from the University of California that's been replicated across dozens of studies.
 
 At 6 tools × multiple switches per day, the average knowledge worker is losing 2–3 hours daily to tool-switching alone. Not to actual work. To the CONTEXT of work.
 
@@ -64,10 +64,10 @@ The fix isn't another tool. It's a filter.
 ---
 
 [RATIONALE]
-- **Availability Heuristic (opening):** The 47-app man from Chicago isn't a statistic — he's a CHARACTER. Readers see themselves in him. The specificity (phone home screen, folders, red badges) creates a vivid, recallable image. This is the opposite of "many people struggle with productivity."
+- **Availability Heuristic (opening):** The 47-app man from Chicago isn't a statistic - he's a CHARACTER. Readers see themselves in him. The specificity (phone home screen, folders, red badges) creates a vivid, recallable image. This is the opposite of "many people struggle with productivity."
 - **Loss Aversion (the math):** $31,250/year is a concrete, personalized loss. It's not "you could be more productive." It's "$31,250 is leaving your wallet every year because of tool-switching." The brain treats potential losses as real losses. This paragraph alone converts skeptics.
 - **Framing (the core thesis):** "Complexity crisis, not productivity crisis." This is category reframing. The reader came looking for productivity advice. The article tells them they're asking the wrong question. This creates immediate differentiation from every other productivity article.
-- **Anchoring:** The "$10,000 lesson" in the section header anchors the value of what follows. The actual cost analysis ($31,250/year) exceeds the anchor — making the lesson feel UNDER-valued.
+- **Anchoring:** The "$10,000 lesson" in the section header anchors the value of what follows. The actual cost analysis ($31,250/year) exceeds the anchor - making the lesson feel UNDER-valued.
 - **Cognitive Dissonance:** "You're not bad at productivity. You're operating a brain designed for the savanna..." This resolves the reader's self-blame. They don't have a character flaw. They have a hardware/software mismatch. Relief + insight = trust.
 - **Confirmation Bias:** "The human brain can hold roughly 4 items in working memory." Readers who've FELT overwhelmed but couldn't articulate why now have a scientific explanation. They were right to feel overwhelmed. The article confirms their intuition and gives them language for it.
 - **Authority:** The UC research reference ("replicated across dozens of studies") adds scientific weight without over-citing. One strong, specific citation > ten vague ones. The "I managed a team of 12" establishes practical authority without bragging.

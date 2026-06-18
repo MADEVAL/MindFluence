@@ -1,7 +1,7 @@
 # Scenario: Landing Page
 
 ## CONTEXT
-Designing the structure and copy for a landing page — the single page that converts visitors into leads or customers.
+Designing the structure and copy for a landing page - the single page that converts visitors into leads or customers.
 
 ## GOAL
 Maximize conversion rate by engineering the psychological journey from "stranger" to "buyer" using a deliberate sequence of cognitive biases.
@@ -16,19 +16,19 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 
 ## SECTION-BY-SECTION BIAS MAP
 
-### 1. HERO (above the fold — decides if they stay)
+### 1. HERO (above the fold - decides if they stay)
 ```
 [FRAMING] Headline: name the problem OR state the transformation.
 [LOSS AVERSION] Subhead: what they're losing by NOT having this.
 [SOCIAL PROOF] 3–5 recognizable logos or a single stat ("Used by 10,000+ teams").
-[RISK REVERSAL] CTA: "Start free trial" / "Get started — no credit card."
+[RISK REVERSAL] CTA: "Start free trial" / "Get started - no credit card."
 [HALO EFFECT] Hero visual: premium, clean, emotionally resonant.
 ```
 
 **Rules:**
-- Headline MUST pass the "5-second test" — a stranger should understand the value proposition in 5 seconds.
+- Headline MUST pass the "5-second test" - a stranger should understand the value proposition in 5 seconds.
 - Never use vague headlines like "Revolutionize Your Workflow." Use specific transformation or named pain.
-- CTA button text should complete the sentence "I want to..." — "Start my free trial", "See my options", "Get the report."
+- CTA button text should complete the sentence "I want to..." - "Start my free trial", "See my options", "Get the report."
 - Hero image/video quality IS your product quality in the visitor's mind. Compress nothing. Compromise nothing.
 
 ---
@@ -48,7 +48,7 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 ```
 [FRAMING] Introduce your product not as "a tool" but as a category of one.
 [AUTHORITY] Why you built this / why you're uniquely qualified.
-[HALO EFFECT] Show the product in its best light — screenshots, mockups, video.
+[HALO EFFECT] Show the product in its best light - screenshots, mockups, video.
 ```
 
 **Pattern:** "That's why we built [product]. Not another [crowded category]. A [new category] that [specific mechanism of solving the problem]."
@@ -79,7 +79,7 @@ Fewer steps = lower perceived effort = higher conversion. Never exceed 4 steps.
 1. Video testimonial (face + voice + emotion)
 2. Photo + name + role + specific metric ("Grew revenue 34% in 90 days")
 3. Photo + name + role + qualitative quote
-4. Text-only quote (weakest — use only as filler)
+4. Text-only quote (weakest - use only as filler)
 
 **The "Wall of Love" pattern:** A dense grid of positive tweets/short quotes. The sheer volume = social proof.
 
@@ -155,12 +155,12 @@ Never list features as bullet points of capabilities. Transform every capability
 Framing (hero)
   → Fear/Loss (problem agitation)
     → Framing (solution intro)
-      → Status Quo (how it works — easy)
+      → Status Quo (how it works - easy)
         → Social Proof (testimonials)
           → Confirmation (they're smart to choose this)
             → Framing (features → benefits)
               → Anchoring (pricing)
-                → Backfire Effect (FAQ — concerns validated, then resolved)
+                → Backfire Effect (FAQ - concerns validated, then resolved)
                   → Loss Aversion + Social Proof + Risk Reversal (final CTA)
 ```
 
@@ -169,7 +169,7 @@ Framing (hero)
 ## CONVERSION KILLERS (what NOT to do)
 - Generic headlines ("Welcome to the future of...")
 - Feature lists without benefit translation
-- Anonymous testimonials ("— John D.")
+- Anonymous testimonials ("- John D.")
 - Navigation links that leak visitors away from the conversion path
 - Multiple CTAs that compete for attention
 - Fake urgency (countdown that resets on reload)

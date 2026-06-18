@@ -4,7 +4,7 @@
 A documented story of a real customer who achieved a specific result using your product or method. Used as social proof on sales pages, in emails, on social media, and in pitch decks.
 
 ## GOAL
-Make the reader think "If they can do it, I can do it" — then take the next step toward purchase. A case study is the single most powerful piece of marketing content because it's simultaneously a story (System 1), a proof point (System 2), and a mirror for the reader's aspiration.
+Make the reader think "If they can do it, I can do it" - then take the next step toward purchase. A case study is the single most powerful piece of marketing content because it's simultaneously a story (System 1), a proof point (System 2), and a mirror for the reader's aspiration.
 
 ---
 
@@ -32,7 +32,7 @@ Make the reader think "If they can do it, I can do it" — then take the next st
 [AVAILABILITY] Use sensory details to make the problem vivid.
 ```
 
-**Pattern:** "But [specific problem] was holding them back. Every [time period], they were losing [quantified loss]. They tried [alternative 1] — [why it failed]. They tried [alternative 2] — [why it failed]. Nothing worked."
+**Pattern:** "But [specific problem] was holding them back. Every [time period], they were losing [quantified loss]. They tried [alternative 1] - [why it failed]. They tried [alternative 2] - [why it failed]. Nothing worked."
 
 **Rules:**
 - Quantify the problem. "Sales were stagnant" = weak. "Revenue had been flat at $12K/month for 14 months" = strong.
@@ -43,16 +43,16 @@ Make the reader think "If they can do it, I can do it" — then take the next st
 
 ### PART 3: DISCOVERY (50–100 words)
 ```
-[AVAILABILITY] How they found your product — the "meet-cute" moment.
+[AVAILABILITY] How they found your product - the "meet-cute" moment.
 [SOCIAL PROOF] If they found you via referral, name the referrer.
-[CONFIRMATION] Their initial skepticism — and why they decided anyway.
+[CONFIRMATION] Their initial skepticism - and why they decided anyway.
 ```
 
-**Pattern:** "Then [how they discovered you]. [Name] was skeptical at first — [specific doubt]. But [specific reason] convinced them to try."
+**Pattern:** "Then [how they discovered you]. [Name] was skeptical at first - [specific doubt]. But [specific reason] convinced them to try."
 
 **Rules:**
 - Acknowledge initial skepticism. It makes the eventual success more credible.
-- If referred, name the referrer — borrowed trust = instant authority.
+- If referred, name the referrer - borrowed trust = instant authority.
 - The discovery moment should feel authentic, not scripted. "A colleague forwarded an article" > "They were searching for solutions."
 
 ---
@@ -68,14 +68,14 @@ Make the reader think "If they can do it, I can do it" — then take the next st
 
 **Rules:**
 - Show the process, not just the result. Process = believability. "They used our framework for 90 days" > "And then magic happened."
-- Include an early win — a small result that proved it was working. Early wins build narrative momentum.
+- Include an early win - a small result that proved it was working. Early wins build narrative momentum.
 - The solution section is where you subtly differentiate from competitors. "Unlike [alternative], this approach [key difference]."
 
 ---
 
 ### PART 5: RESULTS (100–200 words)
 ```
-[SURVIVORSHIP BIAS] Show the outcome — quantified, specific, verifiable.
+[SURVIVORSHIP BIAS] Show the outcome - quantified, specific, verifiable.
 [SOCIAL PROOF] The result IS the proof.
 [CONFIRMATION] Frame the result as "what happens when [right approach] meets [right person]."
 ```
@@ -94,12 +94,12 @@ Make the reader think "If they can do it, I can do it" — then take the next st
 ```
 [SOCIAL PROOF] Direct quote from the customer.
 [CONFIRMATION] The quote should validate the reader's desire.
-[AVAILABILITY] Natural, conversational language — not marketing-speak.
+[AVAILABILITY] Natural, conversational language - not marketing-speak.
 ```
 
 **Pattern:** > "[Direct quote from customer, 2–4 sentences. Should mention a specific result and an emotional payoff.]"
 >
-> — [Full Name], [Role] at [Company]
+> - [Full Name], [Role] at [Company]
 
 **Then a soft CTA:** "Want results like [Name]'s? [Link: See how / Start your trial / Book a call]."
 
@@ -112,11 +112,11 @@ Make the reader think "If they can do it, I can do it" — then take the next st
 
 ## BIAS SEQUENCE
 ```
-Availability (Situation — real person, real details)
- → Fear / Loss (Problem — quantified pain)
+Availability (Situation - real person, real details)
+ → Fear / Loss (Problem - quantified pain)
    → Availability + Social Proof (Discovery)
-     → Framing + Status Quo (Solution — here's how easy it was)
-       → Survivorship + Social Proof (Results — quantified outcome)
+     → Framing + Status Quo (Solution - here's how easy it was)
+       → Survivorship + Social Proof (Results - quantified outcome)
          → Social Proof + Confirmation (Testimonial quote)
            → Bias-informed CTA
 ```
@@ -133,7 +133,7 @@ Situation (paragraph) → Problem (2 paragraphs) → Discovery (1 paragraph) →
 Full structure above. Add visuals: charts, before/after screenshots, photos of the customer.
 
 ### Video case study (for ads, testimonials)
-3–5 minutes. Customer speaks directly to camera. Use the 6-part structure as interview questions. Edit tightly — keep only the strongest moments.
+3–5 minutes. Customer speaks directly to camera. Use the 6-part structure as interview questions. Edit tightly - keep only the strongest moments.
 
 ---
 
