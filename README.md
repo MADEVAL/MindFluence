@@ -42,10 +42,10 @@ It's built on decades of research in behavioral economics and evolutionary psych
 | 12 | **Sunk Cost Fallacy**             | Optimizer           | You've put 6 months into learning this skill. The next module is where it clicks. |
 | 13 | **Status Quo Bias**               | Filter              | Works inside Slack. Your team won't even notice the switch. |
 | 14 | **False Consensus Effect**        | Social              | "Most designers hate this tool. They just pretend they don't." |
-| 15 | **In-Group Favoritism**           | Social              | The newsletter for founders who build in public — not sell courses. |
+| 15 | **In-Group Favoritism**           | Social              | The newsletter for founders who build in public - not sell courses. |
 | 16 | **Halo Effect**                   | Optimizer           | Designed by the same studio behind Apple's award-winning UI. |
-| 17 | **Hindsight Bias**                | Optimizer           | "In 2022, we said no-code would eat SaaS. 3 years later — here's the data." |
-| 18 | **Backfire Effect**               | Filter              | "You're right — cold email IS broken. That's exactly why we rebuilt the approach." |
+| 17 | **Hindsight Bias**                | Optimizer           | "In 2022, we said no-code would eat SaaS. 3 years later - here's the data." |
+| 18 | **Backfire Effect**               | Filter              | "You're right - cold email IS broken. That's exactly why we rebuilt the approach." |
 | 19 | **Bias Blind Spot**               | Filter              | "You're too smart to fall for this. Which is precisely why it'll work on you." |
 | 20 | **Group Polarization**            | Social              | Join 5,000 founders who are quitting the 9-to-5 this year. |
 
