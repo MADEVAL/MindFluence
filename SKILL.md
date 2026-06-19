@@ -1,7 +1,7 @@
 ---
 name: mindfluence
 description: Use when creating or auditing marketing copy - posts, ads, landing pages, emails, webinars, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Covers audience-to-bias matching, anti-patterns, tone-of-voice switching, and platform-specific playbooks. Use ONLY for marketing content creation or audit tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
-license: MIT
+license: GPL
 compatibility: any-llm
 metadata:
   version: "1.1"
