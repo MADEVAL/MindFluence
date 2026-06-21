@@ -23,6 +23,8 @@ It's built on decades of research in behavioral economics and evolutionary psych
 **Two modes:**
 - **Quick Mode** (default) - minimal input, immediate output. The AI picks the best biases automatically.
 - **Deep Mode** - the AI asks clarifying questions about audience, platform, tone, and desired action before generating.
+- **Audit Mode** - analyzes existing copy for cognitive biases and anti-patterns. Doesn't create — dissects.
+- **Optimize Mode** - iterates on underperforming copy using metrics (CTR, conversion, open rate). Maps funnel stages to specific biases, swaps failing biases, generates A/B variants.
 
 ## The 20 Cognitive Biases
 
@@ -110,7 +112,8 @@ mindfluence/
 ├── SKILL.md                    ← Main instruction. 20 biases, methodology, tone-of-voice, ethics, output format.
 ├── decision-matrix.md          ← Audience × product × platform → bias priority map. Eliminates guesswork.
 ├── anti-patterns.md            ← 12 common AI copywriting failures + concrete fixes + audit checklist.
-├── scenarios/                  ← Task-specific playbooks (11 scenarios)
+├── cultural-matrix.md          ← Bias adaptation across 4 cultural dimensions + 12 region profiles.
+├── scenarios/                  ← Task-specific playbooks (12 scenarios)
 │   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
 │   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
 │   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
@@ -121,7 +124,8 @@ mindfluence/
 │   ├── case-study.md           ← 6-part success story structure (situation → result → CTA)
 │   ├── pricing-page.md         ← Anchoring architecture, decoy engineering, localization psychology
 │   ├── cold-outreach.md        ← 5-line rule for cold email/DM - no trust, no social proof
-│   └── crisis-response.md      ← 6-part apology structure - defensive bias engineering
+│   ├── crisis-response.md      ← 6-part apology structure - defensive bias engineering
+│   └── push-notifications.md   ← Push & SMS - lock screen psychology, 6 push types, frequency caps
 ├── examples/                   ← Annotated outputs showing the skill in action
 │   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
 │   ├── landing-hero.md         ← Hero section for premium meal delivery
@@ -207,7 +211,7 @@ GPL
 ## GitHub Description
 
 ```
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy. Includes playbooks for ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, and crisis response. Language-agnostic. Works with any LLM.
+An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy — for any language, any platform, any audience. Includes playbooks for ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, and crisis response. Features a decision matrix (audience × product × platform), 12 anti-patterns with fixes, 20 bias cultural adaptations across 12 regions, and a measurement loop with statistical confidence thresholds.
 ```
 
 ## GitHub Tags
