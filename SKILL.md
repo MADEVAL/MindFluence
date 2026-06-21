@@ -1,22 +1,24 @@
 ---
 name: mindfluence
-description: Use when creating or auditing marketing copy - posts, ads, landing pages, emails, webinars, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Covers audience-to-bias matching, anti-patterns, tone-of-voice switching, and platform-specific playbooks. Use ONLY for marketing content creation or audit tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
+description: Use when creating, auditing, or optimizing marketing copy — posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Covers audience-to-bias mapping via decision matrix, 12 anti-patterns, tone-of-voice switching, cultural adaptation across 12 regions, and a measurement loop with statistical confidence. Use ONLY for marketing content creation, audit, or optimization tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
 license: GPL
 compatibility: any-llm
 metadata:
-  version: "1.1"
+  version: "1.2"
   biases: "20"
   language: any
   tone-styles: "5"
-  scenarios: "11"
+  scenarios: "12"
+  modes: "4"
+  regions: "12"
 ---
 
 # mindfluence - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
-> **Version:** 1.1
+> **Version:** 1.2
 > **Language-agnostic:** Generates content in any language. Adapts cultural references and examples to the target audience's locale.
-> **Mode:** Hybrid - fast generation by default; deep customization on request.
+> **Mode:** Hybrid - fast generation by default; deep customization, audit, and metric-based optimization on request.
 
 ---
 
@@ -62,7 +64,31 @@ User provides existing marketing copy and asks you to analyze it. You do NOT cre
 
 **Trigger:** User says "audit", "review", "analyze this copy", "check this ad", "what's wrong with this".
 
-**Before selecting biases in any mode:** Always cross-reference `decision-matrix.md` for audience-to-bias mapping. Random bias selection produces generic, unconvincing copy. The matrix is your first filter. (Audit Mode: skip this and the BIAS SELECTION gate - follow the Audit procedure instead. Use `anti-patterns.md` as your analysis framework.)
+### Optimize Mode
+User provides performance data from an existing piece of marketing copy and asks you to improve it. You do NOT create from scratch. You iterate based on evidence.
+
+**Procedure:**
+1. Read the original copy and the metrics provided (open rate, CTR, conversion rate, scroll depth, reply rate, A/B test results, or qualitative feedback).
+2. Identify which stage of the funnel is underperforming. Metric → stage mapping:
+   - Low open rate / low views → **Hook failure.** Re-examine the first bias (usually Availability / Fear / Framing). Is the pattern-interrupt strong enough? Is the headline specific enough? (Check anti-patterns #2, #3, #11.)
+   - High views, low CTR → **Interest failure.** The hook worked, but the body didn't escalate. Re-examine the middle biases. Is social proof specific? Is the authority source named? (Check anti-patterns #1, #4, #7, #8.)
+   - High CTR, low conversion → **Trust/Urgency failure.** The prospect is interested but not convinced to act. Re-examine close biases. Is scarcity genuine? Is risk reversal specific? (Check anti-patterns #5, #6, #12.)
+   - High unsubscribe / low retention → **Mismatch with audience temperature.** The bias stack targeted the wrong temperature. Re-classify audience and re-run the decision matrix.
+3. Propose bias adjustments: keep the biases that worked, replace the biases at the failing stage, explain the psychological rationale for each swap.
+4. Generate the revised copy (full output) with updated `[BIASES ENGAGED]` and `[RATIONALE]` comparing old vs new stack.
+5. Preserve the original tone and target action unless the user explicitly requests changing them.
+
+**Output format for Optimize Mode:**
+```
+[ORIGINAL BIAS STACK] → [ISSUE FOUND] → [ADJUSTED STACK] → [REVISED CONTENT]
+
+[RATIONALE]
+What changed, why, and how the new stack addresses the specific performance gap.
+```
+
+**Trigger:** User says "optimize", "improve", "iterate", "A/B test", "this didn't convert", "open rate dropped", "CTR is low", or provides metrics alongside copy.
+
+**Before selecting biases in any mode:** Always cross-reference `decision-matrix.md` for audience-to-bias mapping. Random bias selection produces generic, unconvincing copy. The matrix is your first filter. (Audit Mode: skip this and the BIAS SELECTION gate - follow the Audit procedure instead. Use `anti-patterns.md` as your analysis framework. Optimize Mode: use the matrix to validate the existing stack and search for replacement biases.)
 
 ---
 
@@ -115,9 +141,12 @@ Select and announce the tone at the start of every output. Adapt to platform, au
 5. Run the decision flow → section 4 of `decision-matrix.md`.
 6. Note your resulting bias stack (3–5 biases).
 7. **Category check:** Verify your stack includes at least one bias from each of the three categories (Filter, Optimizer, Social). A dual-category bias (e.g., Fear/Loss Aversion = Filter+Social, Cognitive Dissonance = Filter+Optimizer) counts for BOTH categories it belongs to. If a category is missing, swap one bias for a same-function alternative from the missing category, or add a fourth bias. Do NOT skip this check - messages without all three categories feel psychologically lopsided.
-8. NOW proceed to the Bias Catalog below - but only read the entries for your selected biases. Skip the rest.
+8. **Technique check:** Review the Social Contracts & Behavioral Techniques section below (Scarcity, Reciprocity, Risk Reversal). Does your audience temperature and product type call for any of these techniques? Add to your stack if applicable. Techniques are supplementary — they count toward your 3–5 total but do NOT replace the category check in step 7. A technique with no mapped bias behind it has no psychological engine; always verify the mapped bias is in your stack or add it.
+9. NOW proceed to the Bias Catalog below — but only read the entries for your selected biases. Skip the rest.
 
 **After selecting biases but before writing:** scan `anti-patterns.md` to verify your stack doesn't contain any of the 12 documented failures. Fix if needed. Only then start composing.
+
+**Cultural adaptation:** If the target audience's culture differs from the default Western/English context, cross-reference `cultural-matrix.md`. Cultural dimensions (individualism/collectivism, power distance, uncertainty avoidance, communication context) shift how biases are received. A bias that converts in one culture can backfire in another. Adjust framing, intensity, and social proof style per the matrix.
 
 ---
 
@@ -138,10 +167,13 @@ Before reading the Bias Catalog, check this table. If the user's request contain
 | "pricing", "price", "pricing page", "pricing table", "plans", "tiers" | `scenarios/pricing-page.md` |
 | "cold email", "cold outreach", "DM", "direct message", "prospecting", "cold pitch" | `scenarios/cold-outreach.md` |
 | "apology", "crisis", "PR statement", "sorry", "incident", "we messed up" | `scenarios/crisis-response.md` |
+| "push notification", "SMS", "push", "notification", "lock screen", "mobile alert" | `scenarios/push-notifications.md` |
+| "optimize", "A/B test", "CTR dropped", "open rate low", "not converting", "improve this" | Use Optimize Mode (above) + MEASUREMENT & ITERATION LOOP (below) |
 
 For sample outputs with full bias annotations, see `examples/`.
 For audience-to-bias mapping, see `decision-matrix.md`.
 For common mistakes to avoid, see `anti-patterns.md`.
+For adapting biases across cultures and regions, see `cultural-matrix.md`.
 
 ---
 
@@ -564,6 +596,78 @@ Use for: ads, landing pages, product pages, free-to-paid conversion.
 
 ---
 
+## MEASUREMENT & ITERATION LOOP
+
+Persuasion without measurement is superstition. The skill can generate copy, but only data can improve it. Use this framework when the user provides performance metrics or asks to iterate on existing copy.
+
+### Funnel-to-Bias Mapping
+
+Each stage of the marketing funnel engages different biases. When a stage underperforms, the bias responsible is the first place to look.
+
+| Funnel Stage | Metric | Primary Biases at This Stage | If Underperforming, Check |
+|-------------|--------|------------------------------|---------------------------|
+| **Attention** | Impressions, views, open rate | Availability, Framing, Fear, False Consensus | Is the hook specific enough? Anti-patterns #2, #3, #11. Cultural-matrix: high-context cultures need different hooks. |
+| **Engagement** | Read time, scroll depth, reply rate | Social Proof, Authority, Anchoring, Availability (story) | Is social proof quantified? Is authority named? Anti-patterns #1, #4, #7, #8. |
+| **Desire** | CTR, page visits, trial signups | Loss Aversion, Endowment, Scarcity, Confirmation | Is the problem vivid enough? Is the trial frictionless? Anti-patterns #5, #6, #2. |
+| **Action** | Conversion, purchase, registration | Risk Reversal, Scarcity, Sunk Cost, Status Quo | Is the guarantee specific? Is the ask clear? Anti-patterns #6, #7. |
+| **Retention** | Churn, repeat purchase, referrals | In-Group, Sunk Cost, Group Polarization, Endowment | Is the community alive? Is switching cost real? Anti-patterns #8, #7. |
+
+### The Iteration Protocol
+
+When a piece of copy underperforms, do NOT generate a completely new version. Follow the protocol:
+
+1. **Isolate the failing stage.** Which metric dropped? Map it to the stage above. One stage = one primary bias to examine.
+2. **Keep what works.** The biases in the stages ABOVE the failing stage did their job. Don't change them.
+3. **Swap the failing bias.** Replace the weakest bias at the failing stage with the next-best alternative from the decision matrix for the same audience temperature and product type.
+4. **Generate a variant — not a rewrite.** Change only the sections powered by the swapped bias. Preserve the rest.
+5. **Label the test.** Output the variant with a clear `[VARIANT: bias-A → bias-B, stage: Engagement]` header so the user can A/B test.
+
+### Multi-Variant Testing
+
+When multiple stages underperform or when the user wants to test competing hypotheses, generate up to 3 variants simultaneously. Each variant tests ONE hypothesis:
+
+- **Variant A:** Swap the failing bias at the identified stage (standard iteration).
+- **Variant B:** Keep the original bias but change its INTENSITY — e.g., from implied fear to explicit fear, from individual social proof to group social proof. Test whether execution, not selection, was the problem.
+- **Variant C:** Add a technique (Scarcity, Reciprocity, Risk Reversal) without removing any bias. Test whether the stack was underpowered.
+
+Label each variant distinctly: `[VARIANT A: bias swap, stage: X]`, `[VARIANT B: intensity shift, stage: X]`, `[VARIANT C: technique addition, +Reciprocity]`.
+
+**Limit:** Never test more than 3 variants. Beyond 3, statistical confidence requires sample sizes that most campaigns never reach. If the user insists on more, explain the sample size problem.
+
+### Statistical Confidence
+
+Do NOT declare a winner without sufficient data. Minimum thresholds before drawing conclusions:
+
+| Metric | Minimum Sample | Minimum Duration | Watch For |
+|--------|---------------|------------------|-----------|
+| Open rate (email) | 500 recipients per variant | 48 hours | Time-of-send bias (Tuesday 10am ≠ Saturday 3pm) |
+| CTR (ads, email) | 100 clicks per variant | 72 hours | Day-of-week variance; ad fatigue after day 5 |
+| Conversion (landing page) | 50 conversions per variant | 7 days | Weekend vs weekday traffic; new vs returning visitors |
+| Scroll depth | 300 sessions per variant | 72 hours | Device type (mobile scroll ≠ desktop scroll) |
+| Reply rate (cold outreach) | 200 sends per variant | 5 business days | Timezone delay; holiday weeks |
+
+**Red flags — do NOT iterate if:**
+- Any variant has fewer than 50 data points at the relevant funnel stage.
+- The difference between variants is less than 15% relative.
+- External events could explain the variance (holiday, competitor launch, platform algorithm change, news cycle).
+- The data covers only one day of the week.
+
+When in doubt, recommend the user extend the test before concluding.
+
+### When NOT to iterate with biases
+- If the copy was generated for the wrong audience temperature entirely → re-run the full BIAS SELECTION from scratch.
+- If the product positioning changed → start a new piece. No iteration saves bad positioning.
+- If the platform changed (e.g., LinkedIn post → email) → use the new platform's scenario file.
+
+### Metrics Vocabulary
+
+When the user provides raw numbers without interpretation, translate them into bias language:
+- "Only 2% CTR" → "The hook engaged but the social proof in the body didn't escalate. Let's strengthen Bias #1 with a specific customer stat."
+- "High opens, zero replies" → "The fear hook worked, but reciprocity is missing. Let's add a genuine insight before the ask."
+- "Landing page: 70% bounce at hero" → "The framing didn't anchor to a concrete pain point. Let's add a quantified cost to the subhead."
+
+---
+
 ## OUTPUT FORMAT
 
 **Pre-output gate - MANDATORY.** Before writing `[THE ACTUAL MARKETING CONTENT]`, run your planned bias stack and copy approach through `anti-patterns.md`. Check: is social proof specific? Does fear have an exit in the same paragraph? Is the authority source named? Is scarcity explained? If any of the 12 anti-patterns match, fix your plan BEFORE writing a single word of copy. Then verify your copy against the ETHICAL BOUNDARIES NEVER list above - confirm it does not exploit vulnerable populations, fabricate proofs, reinforce harmful beliefs, or build isolating communities. Then proceed.
@@ -595,5 +699,11 @@ Brief explanation of why these biases were chosen and how they work together for
 **Audit request:**
 > "Here's my ad copy. Audit it for cognitive biases and suggest improvements."
 
+**Optimize request:**
+> "This landing page has a 2% CTR. The hero gets views but nobody scrolls. Optimize it."
+
 **Cross-language:**
 > "Write in German about [topic] for the DACH market." - The skill adapts biases, tone, and cultural references to any locale.
+
+**Cross-cultural:**
+> "Write a sales page for the Japanese market. Product: [product]. Audience: [audience]." - Cross-reference `cultural-matrix.md` for region-specific bias adjustments.
