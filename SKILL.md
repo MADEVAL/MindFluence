@@ -112,19 +112,20 @@ What changed, why, and how the new stack addresses the specific performance gap.
 
 Select and announce the tone at the start of every output. Adapt to platform, audience, and product.
 
-| Style | Voice | Best for | Example opener |
-|-------|-------|----------|----------------|
-| **`bold-sell`** | Aggressive, urgent, punchy | Flash sales, DTC, launch campaigns | "Stop losing $300/day. Here's the fix." |
-| **`expert-calm`** | Intellectual, measured, data-rich | B2B, SaaS, consulting, white papers | "The data reveals a pattern most people miss." |
-| **`rebel-edgy`** | Disruptive, contrarian, swagger | Youth brands, challenger products, creator economy | "Everything you've been told about X is backwards." |
-| **`warm-human`** | Empathetic, story-driven, relatable | Health, wellness, coaching, community | "I used to believe the same thing. Then this happened." |
-| **`luxe-minimal`** | Polished, sparse, high-status | Premium, luxury, design-focused brands | "Perfection. In one detail." |
+| Style | Voice | Best for | Example opener | Max KW Density |
+|-------|-------|----------|----------------|----------------|
+| **`bold-sell`** | Aggressive, urgent, punchy | Flash sales, DTC, launch campaigns | "Stop losing $300/day. Here's the fix." | ≤1.5% |
+| **`expert-calm`** | Intellectual, measured, data-rich | B2B, SaaS, consulting, white papers | "The data reveals a pattern most people miss." | ≤1.2% |
+| **`rebel-edgy`** | Disruptive, contrarian, swagger | Youth brands, challenger products, creator economy | "Everything you've been told about X is backwards." | ≤1.5% |
+| **`warm-human`** | Empathetic, story-driven, relatable | Health, wellness, coaching, community | "I used to believe the same thing. Then this happened." | ≤1.2% |
+| **`luxe-minimal`** | Polished, sparse, high-status | Premium, luxury, design-focused brands | "Perfection. In one detail." | ≤1.0% |
 
 **Rules:**
 - Announce tone: `[TONE: bold-sell]` at the top of every output.
 - Hybrid tones are allowed: `[TONE: expert-calm × warm-human]`.
 - Default to `expert-calm` if the user doesn't specify and context doesn't suggest otherwise.
 - Adapt language to the target locale. Examples and cultural references should resonate with the specified market. If no market is specified, use globally recognizable references.
+- **Keyword density caps:** When generating copy from an SEO brief or for SEO-sensitive content, respect the Max KW Density column above. Caps prevent search engine over-stuffing penalties. `bold-sell` is the highest-risk tone for over-stuffing — cap strictly.
 
 ---
 
@@ -168,6 +169,8 @@ Before reading the Bias Catalog, check this table. If the user's request contain
 | "cold email", "cold outreach", "DM", "direct message", "prospecting", "cold pitch" | `scenarios/cold-outreach.md` |
 | "apology", "crisis", "PR statement", "sorry", "incident", "we messed up" | `scenarios/crisis-response.md` |
 | "push notification", "SMS", "push", "notification", "lock screen", "mobile alert" | `scenarios/push-notifications.md` |
+| "seo brief", "seo skeleton", "seo structure", "keyword brief", "seo plan" | `scenarios/seo-brief.md` |
+| "humanize", "make it sound human" | `scenarios/seo-brief.md` |
 | "optimize", "A/B test", "CTR dropped", "open rate low", "not converting", "improve this" | Use Optimize Mode (above) + MEASUREMENT & ITERATION LOOP (below) |
 
 For sample outputs with full bias annotations, see `examples/`.

@@ -167,6 +167,95 @@ mindfluence/
 
 **The line:** Would the customer, with full information and time to reflect, still choose your product? *Yes* = persuasion. *No* = manipulation.
 
+## Integration
+
+MindFluence is designed for bi-directional integration with [RankWise](https://github.com/MADEVAL/RankWise) (SEO Content Engine) and [HumanAI](https://github.com/MADEVAL/HumanAI) (Text Humanization Engine). The three skills form a complete content production pipeline: SEO structure → persuasive copy → human voice.
+
+### With RankWise (SEO Content Engine)
+
+**Pipeline:** RankWise provides the SEO skeleton → MindFluence injects cognitive bias persuasion into it.
+
+**What MindFluence does:**
+- Uses the brief's heading structure (H1, H2, H3) as its skeleton — does not restructure
+- Places the primary keyword in: H1, first paragraph, and at least one H2 (as specified in the brief)
+- Keeps keyword density within the tone-specific cap (see table below)
+- Preserves the brief's internal link plan (target URLs and suggested anchor text)
+- Cross-references power words — avoids words that overlap with AI-burned-word lists
+
+**Keyword density caps by tone:**
+
+| MindFluence Tone | Max Density | Notes |
+|-----------------|-------------|-------|
+| `bold-sell` | 1.5% | Highest risk of over-stuffing. Cap strictly. |
+| `expert-calm` | 0.8%–1.2% | Natural fit for informational content. |
+| `warm-human` | 0.8%–1.2% | Conversational tone distributes keywords well. |
+| `rebel-edgy` | 1.5% | Contrarian framing may push keyword out — ensure first-150-word placement. |
+| `luxe-minimal` | 1.0% | Sparse copy — place keyword once prominently rather than forcing multiple instances. |
+
+**Joint prompts:**
+- "RankWise SEO brief for [topic]. Keyword: [kw]. Then MindFluence from that brief. Expert-calm tone."
+- "RankWise SEO brief for SaaS landing page. Then MindFluence landing page from that brief."
+
+### With HumanAI (Text Humanization)
+
+**Pipeline:** MindFluence generates persuasive copy → HumanAI humanizes it without breaking the bias structure.
+
+**Tone mapping:**
+| MindFluence Tone | HumanAI Tone |
+|-----------------|--------------|
+| `warm-human` | `human` |
+| `expert-calm` | `expert` |
+| `bold-sell` | `landing` |
+| `rebel-edgy` | `social` |
+| `luxe-minimal` | `expert` |
+
+**To preserve bias structure during humanization:** use `PIPELINE: cleanup → specificity → tone(skipped) → rhythm → proofread` — this tells HumanAI to skip Stage 3 (tone) and keep the MindFluence voice.
+
+**Joint prompts:**
+- "Generate MindFluence copy (bold-sell tone), then HumanAI humanize it. EN."
+- "MindFluence landing page for [product]. Then pass through HumanAI."
+
+### Bias-SEO Compatibility
+
+Some cognitive biases have specific SEO interactions. See `scenarios/seo-brief.md` for the full table.
+
+| Bias | SEO Risk | Mitigation |
+|------|---------|------------|
+| Anchoring | Low | Numbers in opening satisfy C5 (number in title) |
+| Loss Aversion | Low | "Stop losing X" — ensure keyword appears in first 150 words |
+| Social Proof | Medium | Testimonials lack keywords → add keyword in framing sentences |
+| Sunk Cost | Low | Time/effort framing doesn't conflict with SEO |
+| Scarcity | Medium | "Limited", "Only X left" may push keyword out of first 150 words |
+| Confirmation | Low | "You already know X" — fits keyword-adjacent language |
+
+### Triple Pipeline (RankWise → MindFluence → HumanAI)
+
+The complete production pipeline:
+
+1. **RankWise** outputs a complete SEO brief with keyword plan, heading structure, meta drafts, internal link plan, and word count target.
+2. **MindFluence** generates persuasive copy within the SEO skeleton, applying cognitive biases section by section.
+3. **HumanAI** humanizes the copy, respecting: no deletion of keyword-containing headings, no deletion of internal link anchors, no cleanup of bias markers (social proof numbers, anchoring numbers), minimum word count preservation.
+4. **RankWise Audit** performs final verification of the 49 SEO factors.
+
+**Joint triple prompt:**
+```
+Triple pipeline:
+1) RankWise SEO brief for [topic]. Keyword: [kw]. Language: [xx].
+2) MindFluence generate from that brief. Tone: [expert-calm/warm-human/bold-sell].
+3) HumanAI humanize the MindFluence output. Preserve SEO structure + bias markers.
+4) RankWise audit the final result.
+```
+
+### File Locations
+
+| Skill | Expected Location (OpenCode) | Expected Location (Claude Code) |
+|-------|------------------------------|--------------------------------|
+| RankWise | `.opencode/skills/rankwise/` | `~/.claude/skills/rankwise/` |
+| MindFluence | `.opencode/skills/mindfluence/` | `~/.claude/skills/mindfluence/` |
+| HumanAI | `.opencode/skills/human-ai/` | `~/.claude/skills/human-ai/` |
+
+---
+
 ## Getting Started
 
 ### Quick start (any LLM)
