@@ -206,7 +206,7 @@ mindfluence/
 
 ## Лицензия
 
-GPL
+MIT
 
 ---
 

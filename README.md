@@ -206,7 +206,7 @@ Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrule
 
 ## License
 
-GPL
+MIT
 
 ---
 
