@@ -126,12 +126,14 @@ mindfluence/
 │   ├── cold-outreach.md        ← 5-line rule for cold email/DM - no trust, no social proof
 │   ├── crisis-response.md      ← 6-part apology structure - defensive bias engineering
 │   └── push-notifications.md   ← Push & SMS - lock screen psychology, 6 push types, frequency caps
-├── examples/                   ← Annotated outputs showing the skill in action
+├── examples/                   ← Annotated outputs showing the skill in action (7 examples)
 │   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
 │   ├── landing-hero.md         ← Hero section for premium meal delivery
 │   ├── ad-script.md            ← 30s video ad for language app
 │   ├── email-welcome.md        ← SaaS welcome email
-│   └── longform-article.md     ← Article intro with full bias analysis
+│   ├── longform-article.md     ← Article intro with full bias analysis
+│   ├── audit-example.md        ← Audit Mode — ad analyzed for biases + anti-patterns + fixes
+│   └── optimize-hero.md        ← Optimize Mode — hero iterated from metrics with full rationale
 └── README.md
 ```
 
