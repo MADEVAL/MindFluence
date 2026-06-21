@@ -709,3 +709,4 @@ Brief explanation of why these biases were chosen and how they work together for
 > "Write a sales page for the Japanese market. Product: [product]. Audience: [audience]." - Cross-reference `cultural-matrix.md` for region-specific bias adjustments.
 
 
+
