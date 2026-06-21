@@ -1,0 +1,36 @@
+* text=auto eol=lf
+
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.neon text eol=lf
+*.po text eol=lf
+*.pot text eol=lf
+*.ps1 text eol=lf
+*.svg text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.ttf binary
+*.woff2 binary
+*.woff binary
+*.eot binary
+*.mp4 binary
+*.mkv binary
+*.avi binary
+*.pdf binary
+*.mo binary
+*.dat binary
+*.dist binary
+*.lock binary
