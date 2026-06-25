@@ -55,12 +55,25 @@ The anchor doesn't need to be a competitor - it can be the cost of NOT using you
 A decoy is an option you don't expect anyone to buy - it exists solely to make another option look better.
 
 **The Classic Decoy (Asymmetric Dominance):**
+The canonical experiment: Dan Ariely (Predictably Irrational, 2008) presented The Economist subscriptions:
+- Web only: $59
+- Print only: $125 ← decoy
+- Print + Web: $125
+
+When all three options were shown, 84% chose Print+Web (vs 32% when only Web and Print+Web were offered). The Print-only option was dominated by Print+Web (same price, fewer products). Nobody bought it -- but it made Print+Web look like a steal. This is asymmetric dominance: a decoy that is inferior in at least one dimension to the target, but not to the competitor.
+
+Applied to pricing:
 ```
 Option A: Print only - $59
 Option B: Print + Digital - $125 ← target
 Option C: Digital only - $125 ← decoy
 ```
 Option C is dominated by Option B (same price, fewer products). B looks like a bargain. Nobody buys C. They don't need to - C did its job just by existing.
+
+**Decoy Design Rules:**
+- The decoy must be clearly inferior to the target on at least one dimension
+- The decoy must NOT be inferior to the competitor on all dimensions (otherwise it's just a bad option, not a decoy)
+- The decoy price should equal or slightly exceed the target price to make the target's value obvious
 
 **Modern SaaS Decoy:**
 ```

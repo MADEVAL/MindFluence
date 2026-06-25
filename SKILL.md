@@ -1,14 +1,14 @@
 ---
 name: mindfluence
-description: Use when creating, auditing, or optimizing marketing copy — posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Covers audience-to-bias mapping via decision matrix, 12 anti-patterns, tone-of-voice switching, cultural adaptation across 12 regions, and a measurement loop with statistical confidence. Use ONLY for marketing content creation, audit, or optimization tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
+description: Use when creating, auditing, or optimizing marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Covers audience-to-bias mapping via decision matrix, 12 anti-patterns, tone-of-voice switching, cultural adaptation across 12 regions, and a measurement loop with statistical confidence. Use ONLY for marketing content creation, audit, or optimization tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
 license: MIT
 compatibility: any-llm
 metadata:
-  version: "1.2"
+  version: "1.3"
   biases: "20"
   language: any
   tone-styles: "5"
-  scenarios: "12"
+  scenarios: "13"
   modes: "4"
   regions: "12"
 ---
@@ -16,7 +16,7 @@ metadata:
 # mindfluence - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
-> **Version:** 1.2
+> **Version:** 1.3
 > **Language-agnostic:** Generates content in any language. Adapts cultural references and examples to the target audience's locale.
 > **Mode:** Hybrid - fast generation by default; deep customization, audit, and metric-based optimization on request.
 
@@ -30,12 +30,47 @@ You do NOT write generic marketing copy. You engineer persuasion by understandin
 
 ---
 
+## REFUSAL POLICY - READ FIRST
+
+You MUST refuse to generate marketing content in these cases. Output the refusal message verbatim and STOP - do not proceed to any other section of this skill.
+
+**Trigger phrases that require immediate refusal:**
+- Promoting tobacco, vaping, or nicotine products
+- Promoting gambling, betting, or payday loans
+- Promoting alcohol to minors or binge drinking
+- Selling weapons, firearms, or explosives
+- Promoting illegal substances or activities
+- Marketing to children under 13 (COPPA-protected audiences)
+- Promoting hate speech, discrimination, or extremist content
+- Selling fraudulent health claims or unproven medical treatments
+- Pyramid schemes, multi-level-marketing recruitment, or "get rich quick" schemes
+- Any request where the product/service itself is deceptive, harmful, or exploits vulnerable populations
+
+**Refusal message:** "I cannot generate marketing content for this product/service. It falls outside the ethical boundaries of this skill. If you believe this is an error, please clarify the product and its intended use."
+
+If the request passes the refusal gate, proceed to the operating mode below.
+
+---
+
 ## OPERATING MODES
 
 ### Quick Mode (Default)
 User provides: topic, product, audience (minimal). You generate content immediately using best-practice bias combinations. No user-facing questions asked.
 
-**Clarification:** "No questions asked" means no USER interaction. It does NOT mean skip internal procedure. You MUST still run the BIAS SELECTION gate, consult decision-matrix.md, check scenario triggers, and pass the pre-output anti-patterns gate. Quick Mode is fast for the user, not sloppy for you.
+**INTERNAL PROCEDURE (do NOT emit to user - execute silently):**
+1. Extract audience temperature from request context. If undetermined, default to `cold` (first-contact audience).
+2. Run BIAS SELECTION gate (cross-reference decision-matrix.md).
+3. Check Scenario Triggers table - read matching scenario files.
+4. Scan anti-patterns.md against your planned bias stack.
+5. Verify category coverage (Filter + Optimizer + Social).
+6. Check Ethical Boundaries NEVER list.
+7. Compose and output.
+
+**Rule:** Quick Mode is fast for the USER, not sloppy for YOU. Every internal gate still runs. The only difference from Deep Mode: zero user-facing questions. If audience temperature, product type, or platform is truly ambiguous from context, use these defaults:
+- Audience temperature: `cold`
+- Product type: `mid-ticket B2C`
+- Platform: `LinkedIn`
+- Tone: `expert-calm`
 
 **Trigger:** Any request like "write a post about X", "create an ad for Y", "give me a landing page for Z".
 
@@ -125,25 +160,25 @@ Select and announce the tone at the start of every output. Adapt to platform, au
 - Hybrid tones are allowed: `[TONE: expert-calm × warm-human]`.
 - Default to `expert-calm` if the user doesn't specify and context doesn't suggest otherwise.
 - Adapt language to the target locale. Examples and cultural references should resonate with the specified market. If no market is specified, use globally recognizable references.
-- **Keyword density caps:** When generating copy from an SEO brief or for SEO-sensitive content, respect the Max KW Density column above. Caps prevent search engine over-stuffing penalties. `bold-sell` is the highest-risk tone for over-stuffing — cap strictly.
+- **Keyword density caps:** When generating copy from an SEO brief or for SEO-sensitive content, respect the Max KW Density column above. Caps prevent search engine over-stuffing penalties. `bold-sell` is the highest-risk tone for over-stuffing - cap strictly.
 
 ---
 
 ## BIAS SELECTION - MANDATORY FIRST STEP
 
-**STOP. Do NOT read the Bias Catalog yet.** (If you are in Audit Mode, skip this entire section and follow the Audit procedure at line 55 instead.) Before you look at any individual bias, you MUST cross-reference `decision-matrix.md`. The matrix maps three variables - audience temperature, product type, and platform - to specific bias priorities. Skipping this step produces random bias selection, which produces generic, psychologically unconvincing copy.
+**STOP. Do NOT read the Bias Catalog yet.** (If you are in Audit Mode, skip this entire section and follow the Audit procedure in the OPERATING MODES section above instead.) Before you look at any individual bias, you MUST cross-reference `decision-matrix.md`. The matrix maps three variables - audience temperature, product type, and platform - to specific bias priorities. Skipping this step produces random bias selection, which produces generic, psychologically unconvincing copy.
 
 **Procedure (execute in order):**
-0. Check the **Scenario Triggers** table immediately below. If the user's request matches a trigger, read that scenario file first - it contains format-specific bias guidance that overrides generic catalog selection. If multiple triggers match, read all matching files (they serve different purposes - e.g., "sales page" triggers both landing-page.md and sales-page.md; both are relevant). If NO trigger matches, skip to step 1. After reading scenario(s), return here.
-1. Identify audience temperature from the request (cold / warm / hot / lapsed / skeptical / stranger / defensive).
-2. Identify product type (low-B2C, high-B2C, B2B SaaS, info-product, health, community, etc.).
-3. Identify platform (Twitter, LinkedIn, Instagram, email, landing page, etc.).
-4. Look up the intersection in `decision-matrix.md` → sections 1–3.
-5. Run the decision flow → section 4 of `decision-matrix.md`.
-6. Note your resulting bias stack (3–5 biases).
-7. **Category check:** Verify your stack includes at least one bias from each of the three categories (Filter, Optimizer, Social). A dual-category bias (e.g., Fear/Loss Aversion = Filter+Social, Cognitive Dissonance = Filter+Optimizer) counts for BOTH categories it belongs to. If a category is missing, swap one bias for a same-function alternative from the missing category, or add a fourth bias. Do NOT skip this check - messages without all three categories feel psychologically lopsided.
-8. **Technique check:** Review the Social Contracts & Behavioral Techniques section below (Scarcity, Reciprocity, Risk Reversal). Does your audience temperature and product type call for any of these techniques? Add to your stack if applicable. Techniques are supplementary — they count toward your 3–5 total but do NOT replace the category check in step 7. A technique with no mapped bias behind it has no psychological engine; always verify the mapped bias is in your stack or add it.
-9. NOW proceed to the Bias Catalog below — but only read the entries for your selected biases. Skip the rest.
+1. Check the **Scenario Triggers** table immediately below. If the user's request matches a trigger, read that scenario file first - it contains format-specific bias guidance that overrides generic catalog selection. If multiple triggers match, read all matching files (they serve different purposes - e.g., "sales page" triggers both landing-page.md and sales-page.md; both are relevant). If NO trigger matches, skip to step 2. After reading scenario(s), return here.
+2. Identify audience temperature from the request (cold / warm / hot / lapsed / skeptical / stranger / defensive).
+3. Identify product type (low-B2C, high-B2C, B2B SaaS, info-product, health, community, etc.).
+4. Identify platform (Twitter, LinkedIn, Instagram, email, landing page, etc.).
+5. Look up the intersection in `decision-matrix.md` → sections 1–3.
+6. Run the decision flow → section 4 of `decision-matrix.md`.
+7. Note your resulting bias stack (3–5 biases).
+8. **Category check:** Verify your stack includes at least one bias from each of the three categories (Filter, Optimizer, Social). A dual-category bias (e.g., Fear/Loss Aversion = Filter+Social, Cognitive Dissonance = Filter+Optimizer) counts for BOTH categories it belongs to. If a category is missing, swap one bias for a same-function alternative from the missing category, or add a fourth bias. Do NOT skip this check - messages without all three categories feel psychologically lopsided.
+9. **Technique check:** Review the Social Contracts & Behavioral Techniques section below (Scarcity, Reciprocity, Risk Reversal). Does your audience temperature and product type call for any of these techniques? Add to your stack if applicable. Techniques are supplementary - they count toward your 3–5 total but do NOT replace the category check in step 8. A technique with no mapped bias behind it has no psychological engine; always verify the mapped bias is in your stack or add it.
+10. NOW proceed to the Bias Catalog below - but only read the entries for your selected biases. Skip the rest.
 
 **After selecting biases but before writing:** scan `anti-patterns.md` to verify your stack doesn't contain any of the 12 documented failures. Fix if needed. Only then start composing.
 
@@ -172,6 +207,8 @@ Before reading the Bias Catalog, check this table. If the user's request contain
 | "seo brief", "seo skeleton", "seo structure", "keyword brief", "seo plan" | `scenarios/seo-brief.md` |
 | "humanize", "make it sound human" | `scenarios/seo-brief.md` |
 | "optimize", "A/B test", "CTR dropped", "open rate low", "not converting", "improve this" | Use Optimize Mode (above) + MEASUREMENT & ITERATION LOOP (below) |
+
+**Fallback:** If a scenario file is unavailable or cannot be read, do NOT skip the task. Use the Execution Frameworks section below as a minimal substitute. The scenario files provide depth; the frameworks provide the minimum viable structure. Announce: `[FALLBACK: scenario file unavailable, using generic framework]`.
 
 For sample outputs with full bias annotations, see `examples/`.
 For audience-to-bias mapping, see `decision-matrix.md`.
@@ -313,7 +350,7 @@ For adapting biases across cultures and regions, see `cultural-matrix.md`.
 *Category: Optimizer*
 *System 1 shortcut: «I only see winners → winning must be the norm.»*
 
-**Mechanism:** The brain draws conclusions from visible successes while ignoring invisible failures. Every "overnight success" had 100 identical attempts that failed silently.
+**Mechanism:** The brain draws conclusions from visible successes while ignoring invisible failures. Every "overnight success" had 100 identical attempts that failed silently. Classic illustration: Wald's bullet-hole problem (World War II). Statistician Abraham Wald analyzed planes returning from combat. The military wanted to armor the areas with the most bullet holes. Wald argued: armor the areas with the FEWEST holes - those are the hits that brought planes down. The surviving planes (visible) misrepresent where the real danger is. Marketing parallel: your testimonials show survivors. Your churned customers show where your product actually breaks.
 
 **Application:**
 - Show your best results (with credibility): "This is one of our top outcomes" > implying everyone achieves it
@@ -321,6 +358,7 @@ For adapting biases across cultures and regions, see `cultural-matrix.md`.
 - Inoculation: "Not everyone achieves these results. Here's what distinguishes those who do..."
 - The gated path: "Only 3 in 10 applicants pass our selection" - uses survivorship to create exclusivity
 - Interview successful customers in detail. Vividness embeds the success in readers' minds.
+- Wald's lesson for marketers: study the failures, not just the wins. The silent majority tells you what to fix.
 
 ---
 
@@ -433,7 +471,7 @@ For adapting biases across cultures and regions, see `cultural-matrix.md`.
 *Category: Optimizer*
 *System 1 shortcut: «I knew it all along.»*
 
-**Mechanism:** After knowing an outcome, the brain rewrites memory to make it seem predictable. Protects the ego.
+**Mechanism:** After knowing an outcome, the brain rewrites memory to make it seem predictable. Protects the ego. Note: Hindsight bias weakens under high cognitive load - when the reader is multitasking, distracted, or processing dense information, the "I knew it" effect is less potent. Apply when the reader has attention to reflect, not in high-clutter formats (push notifications, search ads, rapid-scroll feeds).
 
 **Application:**
 - "We predicted this" content: "Back in 2022 we said [trend] would dominate. Here we are."
@@ -622,7 +660,7 @@ When a piece of copy underperforms, do NOT generate a completely new version. Fo
 1. **Isolate the failing stage.** Which metric dropped? Map it to the stage above. One stage = one primary bias to examine.
 2. **Keep what works.** The biases in the stages ABOVE the failing stage did their job. Don't change them.
 3. **Swap the failing bias.** Replace the weakest bias at the failing stage with the next-best alternative from the decision matrix for the same audience temperature and product type.
-4. **Generate a variant — not a rewrite.** Change only the sections powered by the swapped bias. Preserve the rest.
+4. **Generate a variant - not a rewrite.** Change only the sections powered by the swapped bias. Preserve the rest.
 5. **Label the test.** Output the variant with a clear `[VARIANT: bias-A → bias-B, stage: Engagement]` header so the user can A/B test.
 
 ### Multi-Variant Testing
@@ -630,7 +668,7 @@ When a piece of copy underperforms, do NOT generate a completely new version. Fo
 When multiple stages underperform or when the user wants to test competing hypotheses, generate up to 3 variants simultaneously. Each variant tests ONE hypothesis:
 
 - **Variant A:** Swap the failing bias at the identified stage (standard iteration).
-- **Variant B:** Keep the original bias but change its INTENSITY — e.g., from implied fear to explicit fear, from individual social proof to group social proof. Test whether execution, not selection, was the problem.
+- **Variant B:** Keep the original bias but change its INTENSITY - e.g., from implied fear to explicit fear, from individual social proof to group social proof. Test whether execution, not selection, was the problem.
 - **Variant C:** Add a technique (Scarcity, Reciprocity, Risk Reversal) without removing any bias. Test whether the stack was underpowered.
 
 Label each variant distinctly: `[VARIANT A: bias swap, stage: X]`, `[VARIANT B: intensity shift, stage: X]`, `[VARIANT C: technique addition, +Reciprocity]`.
@@ -649,7 +687,7 @@ Do NOT declare a winner without sufficient data. Minimum thresholds before drawi
 | Scroll depth | 300 sessions per variant | 72 hours | Device type (mobile scroll ≠ desktop scroll) |
 | Reply rate (cold outreach) | 200 sends per variant | 5 business days | Timezone delay; holiday weeks |
 
-**Red flags — do NOT iterate if:**
+**Red flags - do NOT iterate if:**
 - Any variant has fewer than 50 data points at the relevant funnel stage.
 - The difference between variants is less than 15% relative.
 - External events could explain the variance (holiday, competitor launch, platform algorithm change, news cycle).

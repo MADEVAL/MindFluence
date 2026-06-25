@@ -30,7 +30,7 @@ Stop the scroll, capture attention in <3 seconds, communicate value in <15 secon
 | 45–60s | **CTA.** "Click the link. Only [X] available. [Deadline]." | Loss Aversion / Scarcity |
 
 **Pattern B: The Native/UGC Style (15–30s)**
-Start in media res - like a regular person's video. No intro. No branding for 5 seconds.
+Start in medias res - like a regular person's video. No intro. No branding for 5 seconds.
 - "I tried [thing] so you don't have to..."
 - "My [role] friend showed me this and..."
 - "Nobody's talking about this, but..."

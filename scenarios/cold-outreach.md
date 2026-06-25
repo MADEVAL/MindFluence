@@ -100,7 +100,7 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 ### Line 4: Low-Friction Ask
 ```
 [STATUS QUO] The ask should feel like a tiny, natural next step.
-[LOSS AVERSION FRAMING] Optional: "No worries if not" reduces pressure paradoxically increases response rate.
+[LOSS AVERSION FRAMING] Optional: "No worries if not" reduces pressure and paradoxically increases response rate.
 ```
 
 **FAIL:** "Would you be open to a 30-minute call next week to discuss how we can help?"
