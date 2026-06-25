@@ -1,4 +1,4 @@
-# Anti-Patterns: What AI Gets Wrong (And How to Fix It)
+# Anti-Patterns: What AI Gets Wrong (and How to Fix It)
 
 > **Purpose:** These are the most common failures when AI applies cognitive biases to marketing copy. Each anti-pattern describes what the AI produces, why it fails psychologically, and the concrete fix. Check your output against this list before delivering.
 

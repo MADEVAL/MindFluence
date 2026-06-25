@@ -20,10 +20,10 @@ It's built on decades of research in behavioral economics and evolutionary psych
 2. **Give a task:** "Write a LinkedIn post about..." / "Create a landing page for..." / "Audit this ad for cognitive biases."
 3. **Get output** with every bias labeled, every decision explained, every word psychologically justified.
 
-**Two modes:**
+**Four modes:**
 - **Quick Mode** (default) - minimal input, immediate output. The AI picks the best biases automatically.
 - **Deep Mode** - the AI asks clarifying questions about audience, platform, tone, and desired action before generating.
-- **Audit Mode** - analyzes existing copy for cognitive biases and anti-patterns. Doesn't create — dissects.
+- **Audit Mode** - analyzes existing copy for cognitive biases and anti-patterns. Doesn't create - dissects.
 - **Optimize Mode** - iterates on underperforming copy using metrics (CTR, conversion, open rate). Maps funnel stages to specific biases, swaps failing biases, generates A/B variants.
 
 ## The 20 Cognitive Biases
@@ -48,7 +48,7 @@ It's built on decades of research in behavioral economics and evolutionary psych
 | 16 | **Halo Effect**                   | Optimizer           | Designed by the same studio behind Apple's award-winning UI. |
 | 17 | **Hindsight Bias**                | Optimizer           | "In 2022, we said no-code would eat SaaS. 3 years later - here's the data." |
 | 18 | **Backfire Effect**               | Filter              | "You're right - cold email IS broken. That's exactly why we rebuilt the approach." |
-| 19 | **Bias Blind Spot**               | Filter              | "You're too smart to fall for this. Which is precisely why it'll work on you." |
+| 19 | **Bias Blind Spot**               | Filter              | "If you're skeptical about these claims -- great. Let's look at the data." |
 | 20 | **Group Polarization**            | Social              | Join 5,000 founders who are quitting the 9-to-5 this year. |
 
 ## Tone-of-Voice Switcher
@@ -70,7 +70,7 @@ Some biases multiply when combined:
 | Combo | Biases | Use for |
 |-------|--------|---------|
 | **Trust Spiral** | Authority → Social Proof → Confirmation → Endowment | Landing pages, sales pages |
-| **Urgency Engine** | Fear → Loss Aversion → Social Proof → Scarcity | Flash sales, launches |
+| **Urgency Engine** | Loss Aversion → Social Proof → Scarcity | Flash sales, launches |
 | **Loyalty Loop** | Confirmation → In-Group → Sunk Cost → Status Quo | Retention, upsells |
 | **Conversion Chain** | Availability → Framing → Anchoring → Social Proof → Risk Reversal | Ads, free-to-paid |
 
@@ -113,7 +113,7 @@ mindfluence/
 ├── decision-matrix.md          ← Audience × product × platform → bias priority map. Eliminates guesswork.
 ├── anti-patterns.md            ← 12 common AI copywriting failures + concrete fixes + audit checklist.
 ├── cultural-matrix.md          ← Bias adaptation across 4 cultural dimensions + 12 region profiles.
-├── scenarios/                  ← Task-specific playbooks (12 scenarios)
+├── scenarios/                  ← Task-specific playbooks (13 scenarios)
 │   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
 │   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
 │   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
@@ -125,6 +125,7 @@ mindfluence/
 │   ├── pricing-page.md         ← Anchoring architecture, decoy engineering, localization psychology
 │   ├── cold-outreach.md        ← 5-line rule for cold email/DM - no trust, no social proof
 │   ├── crisis-response.md      ← 6-part apology structure - defensive bias engineering
+│   ├── seo-brief.md            ← SEO brief integration, keyword density, humanization survivability
 │   └── push-notifications.md   ← Push & SMS - lock screen psychology, 6 push types, frequency caps
 ├── examples/                   ← Annotated outputs showing the skill in action (7 examples)
 │   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
@@ -132,8 +133,8 @@ mindfluence/
 │   ├── ad-script.md            ← 30s video ad for language app
 │   ├── email-welcome.md        ← SaaS welcome email
 │   ├── longform-article.md     ← Article intro with full bias analysis
-│   ├── audit-example.md        ← Audit Mode — ad analyzed for biases + anti-patterns + fixes
-│   └── optimize-hero.md        ← Optimize Mode — hero iterated from metrics with full rationale
+│   ├── audit-example.md        ← Audit Mode - ad analyzed for biases + anti-patterns + fixes
+│   └── optimize-hero.md        ← Optimize Mode - hero iterated from metrics with full rationale
 └── README.md
 ```
 
@@ -176,21 +177,21 @@ MindFluence is designed for bi-directional integration with [RankWise](https://g
 **Pipeline:** RankWise provides the SEO skeleton → MindFluence injects cognitive bias persuasion into it.
 
 **What MindFluence does:**
-- Uses the brief's heading structure (H1, H2, H3) as its skeleton — does not restructure
+- Uses the brief's heading structure (H1, H2, H3) as its skeleton - does not restructure
 - Places the primary keyword in: H1, first paragraph, and at least one H2 (as specified in the brief)
 - Keeps keyword density within the tone-specific cap (see table below)
 - Preserves the brief's internal link plan (target URLs and suggested anchor text)
-- Cross-references power words — avoids words that overlap with AI-burned-word lists
+- Cross-references power words - avoids words that overlap with AI-burned-word lists
 
 **Keyword density caps by tone:**
 
 | MindFluence Tone | Max Density | Notes |
 |-----------------|-------------|-------|
 | `bold-sell` | 1.5% | Highest risk of over-stuffing. Cap strictly. |
-| `expert-calm` | 0.8%–1.2% | Natural fit for informational content. |
-| `warm-human` | 0.8%–1.2% | Conversational tone distributes keywords well. |
-| `rebel-edgy` | 1.5% | Contrarian framing may push keyword out — ensure first-150-word placement. |
-| `luxe-minimal` | 1.0% | Sparse copy — place keyword once prominently rather than forcing multiple instances. |
+| `expert-calm` | 1.2% | Natural fit for informational content. |
+| `warm-human` | 1.2% | Conversational tone distributes keywords well. |
+| `rebel-edgy` | 1.5% | Contrarian framing may push keyword out - ensure first-150-word placement. |
+| `luxe-minimal` | 1.0% | Sparse copy - place keyword once prominently rather than forcing multiple instances. |
 
 **Joint prompts:**
 - "RankWise SEO brief for [topic]. Keyword: [kw]. Then MindFluence from that brief. Expert-calm tone."
@@ -209,7 +210,7 @@ MindFluence is designed for bi-directional integration with [RankWise](https://g
 | `rebel-edgy` | `social` |
 | `luxe-minimal` | `expert` |
 
-**To preserve bias structure during humanization:** use `PIPELINE: cleanup → specificity → tone(skipped) → rhythm → proofread` — this tells HumanAI to skip Stage 3 (tone) and keep the MindFluence voice.
+**To preserve bias structure during humanization:** use `PIPELINE: cleanup → specificity → tone(skipped) → rhythm → proofread` - this tells HumanAI to skip Stage 3 (tone) and keep the MindFluence voice.
 
 **Joint prompts:**
 - "Generate MindFluence copy (bold-sell tone), then HumanAI humanize it. EN."
@@ -222,11 +223,11 @@ Some cognitive biases have specific SEO interactions. See `scenarios/seo-brief.m
 | Bias | SEO Risk | Mitigation |
 |------|---------|------------|
 | Anchoring | Low | Numbers in opening satisfy C5 (number in title) |
-| Loss Aversion | Low | "Stop losing X" — ensure keyword appears in first 150 words |
+| Loss Aversion | Low | "Stop losing X" - ensure keyword appears in first 150 words |
 | Social Proof | Medium | Testimonials lack keywords → add keyword in framing sentences |
 | Sunk Cost | Low | Time/effort framing doesn't conflict with SEO |
 | Scarcity | Medium | "Limited", "Only X left" may push keyword out of first 150 words |
-| Confirmation | Low | "You already know X" — fits keyword-adjacent language |
+| Confirmation | Low | "You already know X" - fits keyword-adjacent language |
 
 ### Triple Pipeline (RankWise → MindFluence → HumanAI)
 
@@ -302,7 +303,7 @@ MIT
 ## GitHub Description
 
 ```
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy — for any language, any platform, any audience. Includes playbooks for ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, and crisis response. Features a decision matrix (audience × product × platform), 12 anti-patterns with fixes, 20 bias cultural adaptations across 12 regions, and a measurement loop with statistical confidence thresholds.
+An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. Includes playbooks for ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, and crisis response. Features a decision matrix (audience × product × platform), 12 anti-patterns with fixes, 20 bias cultural adaptations across 12 regions, and a measurement loop with statistical confidence thresholds.
 ```
 
 ## GitHub Tags

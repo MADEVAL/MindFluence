@@ -83,14 +83,17 @@
 | Welcome email #1 | Warm | SaaS | Email | Reciprocity + Endowment + Status Quo |
 | Nurture email #3 | Warm | Info-product | Email | Authority + Availability + Sunk Cost |
 | Sales email #5 | Hot | High-B2C | Email | Loss Aversion + Scarcity + Risk Reversal |
-| Landing hero | Cold → Warm | SaaS | Web | Framing (problem) + Loss Aversion + Social Proof |
+| Landing hero | Cold → Warm | SaaS | Web | Framing (problem) + Loss Aversion + Authority |
 | Pricing section | Hot | Any | Web | Anchoring + Social Proof + Risk Reversal |
 | Webinar hook (min 1) | Cold → Warm | Info-product | Video | Availability + Framing + Authority |
 | Webinar offer (min 50) | Hot | Info-product | Video | Anchoring + Social Proof + Scarcity + Risk Reversal |
 | Re-engagement email | Lapsed | SaaS | Email | In-Group + Sunk Cost + Loss Aversion |
 | Cart abandonment #2 | Hot | Low-B2C | Email | Social Proof + Confirmation + Loss Aversion |
-| Sales page (high-ticket) | Cold → Hot | High-B2C | Web (long-form) | Full arc: Framing → Loss Aversion → Availability → Fear → Confirmation → Framing + In-Group → Authority + Anchoring → Survivorship + Social Proof → Backfire Effect → Endowment + Anchoring → Risk Reversal → Scarcity + Sunk Cost |
+| Sales page (high-ticket) | Cold → Hot | High-B2C | Web (long-form) | Full arc: Framing (headline) → Loss Aversion (subhead) → Availability (story) → Fear (problem agitation) → Confirmation (validation) → Framing + In-Group (solution reveal) → Authority + Anchoring (mechanism) → Survivorship + Social Proof (case studies) → Backfire Effect (objection demolition) → Endowment + Anchoring (offer) → Risk Reversal (pricing + guarantee) → Scarcity + Sunk Cost (urgency close) |
 | Case study (success story) | Warm → Hot | Any | Any | Availability (real person) + Fear/Loss (quantified pain) + Social Proof + Survivorship (quantified result) + Confirmation (testimonial quote) |
 | Pricing page (dedicated) | Hot | Any | Web | Anchoring (tiers, expensive first) + Halo Effect (visual target tier) + Loss Aversion (annual framing) + Status Quo (easy migration FAQ) + Risk Reversal (guarantee) |
 | Cold outreach (email/DM) | Stranger | B2B | Email / DM | Availability (pattern-interrupt) + Confirmation (personalization) + Reciprocity (give insight first) + Status Quo (low-friction ask) + Authority (one credibility signal) |
 | Crisis response / apology | Defensive | Any | Public / Email | Bias Blind Spot (reversed) + Fundamental Attribution Error (reversed) + Cognitive Dissonance (reconciliation) + Status Quo (reversed - prove change) + Loss Aversion (restore reliability) + Reciprocity (restitution) |
+| Product review / testimonial | Warm → Hot | Any | Web / Video / Social | Social Proof (specific result) + Availability (personal story) + Survivorship (transformation) + Confirmation (buyer's choice validated) |
+| Job posting / hiring | Warm (active seekers) | N/A (employer brand) | LinkedIn / Web | In-Group (shared values) + Authority (company credibility) + Loss Aversion (opportunity cost) + Halo Effect (brand prestige) + Status Quo (easy application) |
+| Investor pitch / fundraising | Cold → Warm | N/A (company as product) | Deck / Email / Web | Authority (team + traction) + Anchoring (market size) + Fear/Loss (missed opportunity) + Social Proof (existing backers) + Survivorship (competitive moat) |

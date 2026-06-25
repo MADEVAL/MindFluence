@@ -1,10 +1,10 @@
 # Scenario: Push Notifications & SMS
 
 ## CONTEXT
-Mobile push notifications and SMS messages — the highest-interruption marketing format. The user didn't open your app or website. You're appearing on their lock screen, competing with messages from friends, family, and work.
+Mobile push notifications and SMS messages - the highest-interruption marketing format. The user didn't open your app or website. You're appearing on their lock screen, competing with messages from friends, family, and work.
 
 ## GOAL
-Earn the open without triggering the "mute notifications" reflex. Push is permission-based by nature — the user opted in. Break that trust once, and you're muted forever.
+Earn the open without triggering the "mute notifications" reflex. Push is permission-based by nature - the user opted in. Break that trust once, and you're muted forever.
 
 ---
 
@@ -12,16 +12,16 @@ Earn the open without triggering the "mute notifications" reflex. Push is permis
 
 Push notifications have the highest open rates (30–60%) and the highest unsubscribe rates of any channel. Every message is a withdrawal from a trust account. The deposit was made at opt-in. Every irrelevant notification is an overdraft.
 
-**The rule:** Each push must pass the "lock screen test" — if the user saw ONLY your notification among 12 others, would they feel glad they allowed it, or would they swipe to mute?
+**The rule:** Each push must pass the "lock screen test" - if the user saw ONLY your notification among 12 others, would they feel glad they allowed it, or would they swipe to mute?
 
 ---
 
 ## STRUCTURE (50–120 characters visible, 3 lines max on lock screen)
 
 ```
-Line 1: TITLE — the hook. Fits in one lock-screen line (~35 chars). Not truncated.
-Line 2: BODY — the value. What they get by tapping. One sentence.
-Line 3: (Hidden — visible on 3D Touch / long press, or in notification center)
+Line 1: TITLE - the hook. Fits in one lock-screen line (~35 chars). Not truncated.
+Line 2: BODY - the value. What they get by tapping. One sentence.
+Line 3: (Hidden - visible on 3D Touch / long press, or in notification center)
 ```
 
 SMS has more room (160 characters) but the same psychological constraints apply. No images, no formatting, no links that auto-preview. Pure text in an intimate channel.
@@ -34,7 +34,7 @@ SMS has more room (160 characters) but the same psychological constraints apply.
 
 ```
 [STATUS QUO] Reinforce that everything is as expected.
-[ENDOWMENT] "Your [item] is on the way." — it's already theirs.
+[ENDOWMENT] "Your [item] is on the way." - it's already theirs.
 ```
 
 **Example:**
@@ -43,7 +43,7 @@ SMS has more room (160 characters) but the same psychological constraints apply.
 
 **Rules:**
 - No marketing in transactional pushes. These are trust maintenance, not conversion.
-- If you must cross-sell, add it after the transactional info as a soft suffix: "Your order shipped. While you wait — 20% off accessories in the app."
+- If you must cross-sell, add it after the transactional info as a soft suffix: "Your order shipped. While you wait - 20% off accessories in the app."
 
 ---
 
@@ -52,7 +52,7 @@ SMS has more room (160 characters) but the same psychological constraints apply.
 ```
 [LOSS AVERSION] They're missing something.
 [IN-GROUP] They're absent from the community.
-[SUNK COST] They've built something — it's still there.
+[SUNK COST] They've built something - it's still there.
 ```
 
 **Pattern:** "Your [streak/balance/progress] is about to reset" or "[Name], the community noticed you're gone."
@@ -75,7 +75,7 @@ SMS has more room (160 characters) but the same psychological constraints apply.
 [RISK REVERSAL] One word: "Free" or "Guaranteed."
 ```
 
-**Pattern:** "[Specific benefit] expires in [time] — [action]"
+**Pattern:** "[Specific benefit] expires in [time] - [action]"
 
 **Example:**
 > ⏳ Your 30% off expires in 4 hours
@@ -92,7 +92,7 @@ SMS has more room (160 characters) but the same psychological constraints apply.
 ```
 [AVAILABILITY] Concrete, specific curiosity gap.
 [CONFIRMATION] Validate something they already suspect.
-[FRAMING] Not "we published" — "here's what you'll gain."
+[FRAMING] Not "we published" - "here's what you'll gain."
 ```
 
 **Example (bad):**
@@ -121,7 +121,7 @@ SMS has more room (160 characters) but the same psychological constraints apply.
 > [Name], [Name], and [Name] are already inside
 
 **Rules:**
-- Social proof in push must be SPECIFIC — names, numbers, roles. "Someone liked your post" is lazy. "Sarah Chen, VP Ops at Merge, commented on your thread" is not.
+- Social proof in push must be SPECIFIC - names, numbers, roles. "Someone liked your post" is lazy. "Sarah Chen, VP Ops at Merge, commented on your thread" is not.
 - Frequency cap: max 1 social push per day. Social noise is the #1 notification mute reason.
 
 ---
@@ -132,7 +132,7 @@ SMS is higher trust AND higher intrusion than push. A text message competes with
 
 **Structure (160 chars):**
 ```
-[Personalization] — [Value in 8 words or fewer] — [Link (short)] — [Opt-out]
+[Personalization] - [Value in 8 words or fewer] - [Link (short)] - [Opt-out]
 ```
 
 **Example:**
@@ -155,12 +155,12 @@ SMS is higher trust AND higher intrusion than push. A text message competes with
 
 ### Push AP-2: The 6 AM Buzz
 **What happens:** Marketing push at 6:03 AM local time.
-**Why it fails:** Waking someone up with marketing is the fastest path to uninstall. The notification wasn't checked — it was swiped away in anger.
+**Why it fails:** Waking someone up with marketing is the fastest path to uninstall. The notification wasn't checked - it was swiped away in anger.
 **Fix:** Respect quiet hours. Marketing pushes: 10 AM – 8 PM local time. Transactional and critical alerts only outside that window.
 
 ### Push AP-3: The Emoji Dump
 **What happens:** "🔥🔥 DON'T MISS OUT!!! 🚀🚀🚀 LIMITED TIME!!! 💯💯"
-**Why it fails:** Looks like spam. The lock screen is intimate. Screaming in someone's pocket is not marketing — it's harassment.
+**Why it fails:** Looks like spam. The lock screen is intimate. Screaming in someone's pocket is not marketing - it's harassment.
 **Fix:** Max 1 emoji per push. Zero in SMS. Let the words do the work.
 
 ### Push AP-4: Frequency Insanity
@@ -186,9 +186,9 @@ SMS is higher trust AND higher intrusion than push. A text message competes with
 
 ## DEFAULT CULTURAL ADAPTATION FOR PUSH
 
-Push notifications are the most culturally sensitive format because they appear in the user's most personal space — their lock screen or SMS inbox. Adjust per `cultural-matrix.md`:
+Push notifications are the most culturally sensitive format because they appear in the user's most personal space - their lock screen or SMS inbox. Adjust per `cultural-matrix.md`:
 
 - **High Power Distance:** Authority signals in push (certified by, official, approved) increase trust. "From your [industry body]" in the sender name.
 - **Collectivist:** Group framing in re-engagement pushes: "Your team is waiting" > "We miss you."
 - **High Uncertainty Avoidance:** Risk Reversal must be explicit even in 50 characters: "Free to try. Cancel anytime."
-- **High Context:** Curiosity gaps must be culturally resonant — what's intriguing in the US may be confusing in Japan. Test with a native speaker.
+- **High Context:** Curiosity gaps must be culturally resonant - what's intriguing in the US may be confusing in Japan. Test with a native speaker.

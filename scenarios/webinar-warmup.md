@@ -41,6 +41,12 @@ Fill seats with qualified leads, deliver a high-converting presentation, and clo
 
 ### The Psychological Arc (minute-by-minute)
 
+**IMPORTANT - Real-world flexibility:** The minute-by-minute map below is a template for a 90-minute ideal. Real webinars rarely follow the script exactly: Q&A runs long, demos break, attendees trickle in late. The psychological ARC (hook → story → method → proof → offer → close) is non-negotiable - each stage builds on the last. But the TIMING is flexible. Rules of thumb:
+- If running short (e.g., 60 min): compress Method (15 min) and Case Study (10 min). Never compress the Offer or Q&A+Close.
+- If running long: extend Q&A, not the lecture. Attendees value interaction.
+- If attendees arrive late: the first 5 minutes should be a self-contained mini-hook for latecomers. Re-state the core premise at minute 5 and minute 10.
+- If technical issues interrupt: restart the Method section from the beginning when resolved. A broken flow loses the psychological arc.
+
 | Time | Segment | Bias | What happens in the brain |
 |------|---------|------|---------------------------|
 | 0:00–0:05 | Hook + Promise | Availability + Framing | "This matters. I'm in the right place." |
