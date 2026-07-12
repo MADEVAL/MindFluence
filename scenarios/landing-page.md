@@ -1,5 +1,9 @@
 # Scenario: Landing Page
 
+> **See also:** `SKILL.md` → Bias Catalog for full mechanism & application of each bias.
+> **Anti-patterns:** `SKILL.md` → Anti-Patterns section for detection rules.
+> **Cultural:** `SKILL.md` → Cultural Quick-Reference for region-specific adjustments.
+
 ## CONTEXT
 Designing the structure and copy for a landing page - the single page that converts visitors into leads or customers.
 
@@ -25,6 +29,8 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 [HALO EFFECT] Hero visual: premium, clean, emotionally resonant.
 ```
 
+> ⚠ **AP-3:** Framing needs a concrete, quantified anchor. **AP-2:** Loss subhead must be paired with a clear solution. **AP-1:** Social proof needs specific numbers, not "thousands." **AP-9:** Halo source must match audience's actual trust network.
+
 **Rules:**
 - Headline MUST pass the "5-second test" - a stranger should understand the value proposition in 5 seconds.
 - Never use vague headlines like "Revolutionize Your Workflow." Use specific transformation or named pain.
@@ -40,6 +46,8 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 [ANCHORING] Quantify the cost of the problem. "This is costing you $X per month."
 ```
 
+> ⚠ **AP-2:** Fear without an exit = freeze/flight. Every threat needs a solution in the same paragraph. **AP-11:** Scenarios need ≥3 concrete sensory details to anchor in memory.
+
 **Pattern:** "You know that feeling when [vivid scenario]? That's not just annoying. It's costing you [quantified loss]. And it gets worse: [escalation of pain]."
 
 ---
@@ -50,6 +58,8 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 [AUTHORITY] Why you built this / why you're uniquely qualified.
 [HALO EFFECT] Show the product in its best light - screenshots, mockups, video.
 ```
+
+> ⚠ **AP-3:** "Not X, but Y" framing needs a quantified anchor for X. **AP-4:** Authority claims need named sources, not "experts say."
 
 **Pattern:** "That's why we built [product]. Not another [crowded category]. A [new category] that [specific mechanism of solving the problem]."
 
@@ -83,6 +93,8 @@ Fewer steps = lower perceived effort = higher conversion. Never exceed 4 steps.
 
 **The "Wall of Love" pattern:** A dense grid of positive tweets/short quotes. The sheer volume = social proof.
 
+> ⚠ **AP-1:** Vague social proof ("thousands", "many") registers as noise. Minimum: specific number + full name + role + measurable result. **AP-10:** Confirmation should make the reader feel smart to believe, not wrong to doubt.
+
 ---
 
 ### 6. FEATURES AS BENEFITS
@@ -110,6 +122,8 @@ Never list features as bullet points of capabilities. Transform every capability
 [SCARCITY] If genuine: "Only X spots at this price", "Price increases after launch."
 ```
 
+> ⚠ **AP-6:** Scarcity requires an explained constraint. "Only X left" without why = fake scarcity. **AP-2:** Loss frame in pricing ("Save $X") - ensure the gain is achievable and the anchor is honest.
+
 **Pricing table rules:**
 - Middle column MUST be visually distinct (different color, "MOST POPULAR" badge, shadow/elevation).
 - The "free" tier (if any) serves as lead generation, not a real option for serious users.
@@ -124,6 +138,8 @@ Never list features as bullet points of capabilities. Transform every capability
 [COGNITIVE DISSONANCE] Resolve contradictions the reader may feel.
 [STATUS QUO] Address risk of switching. "What about my existing setup?"
 ```
+
+> ⚠ **AP-12:** Dissonance resolution must blame the situation, not the person. "The system makes it hard" not "You failed."
 
 **Pattern for each FAQ:**
 - Question: phrased as the visitor would actually ask it (not sanitized marketing-speak).
@@ -145,6 +161,8 @@ Never list features as bullet points of capabilities. Transform every capability
 [RISK REVERSAL] Repeat the guarantee.
 [SUNK COST] "You've read this far. Last step."
 ```
+
+> ⚠ **AP-6:** Urgency must be genuine and explained. **AP-7:** Sunk cost is late-stage only - valid after demonstrable scrolling/reading investment. **AP-1:** Social proof numbers must be specific and verifiable.
 
 **Pattern:** One clear action. No navigation. No alternative links. No "maybe later." The final CTA is a conversion singularity.
 

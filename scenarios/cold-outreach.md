@@ -1,5 +1,9 @@
 # Scenario: Cold Outreach (Email + DM)
 
+> **See also:** `SKILL.md` → Bias Catalog for full mechanism & application of each bias.
+> **Anti-patterns:** `SKILL.md` → Anti-Patterns section for detection rules.
+> **Cultural:** `SKILL.md` → Cultural Quick-Reference for region-specific adjustments.
+
 ## CONTEXT
 Contacting someone who doesn't know you - cold email, LinkedIn DM, Twitter DM, or any unsolicited outreach - with the goal of starting a conversation that leads to a sale, partnership, or opportunity.
 
@@ -10,9 +14,11 @@ Survive the 3-second deletion window, earn a reply, and start a relationship. Co
 
 ## THE COLD OUTREACH PARADOX
 
-You cannot use your strongest marketing biases. Social Proof? They don't know your customers. Authority? They don't know you. In-Group? You're an outsider by definition. Sunk Cost? They've invested nothing.
+You cannot use your strongest marketing biases. Social Proof (#1)? They don't know your customers. Authority (#4)? They don't know you. In-Group (#15)? You're an outsider by definition. Sunk Cost (#12)? They've invested nothing.
 
-**What's left:** Availability (pattern-interrupt), Fundamental Attribution Error (it's not them, it's the circumstance), Reciprocity (give first), and microscopic doses of Authority (one credible signal).
+**What's left:** Availability (#6, pattern-interrupt), Fundamental Attribution Error (#11, it's not them, it's the circumstance), Reciprocity (give first), and microscopic doses of Authority (#4, one credible signal).
+
+> ⚠ **AP-11:** Pattern-interrupt needs ≥3 concrete sensory/specific details - generic observations = spam. **AP-4:** The single authority signal must be relevant and verifiable. **AP-5:** Value must be given BEFORE any ask (separate lines, not blended).
 
 ---
 
@@ -34,8 +40,8 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 
 ### Line 1: Pattern Interrupt
 ```
-[AVAILABILITY] Something unexpected enough to pause the scroll.
-[FRAMING] Not about you. About something THEY care about.
+[AVAILABILITY (#6)] Something unexpected enough to pause the scroll.
+[FRAMING (#3)] Not about you. About something THEY care about.
 ```
 
 **FAIL:** "Hi [Name], my name is [X] and I'm the founder of [Company]..."
@@ -52,12 +58,14 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 - Start with THEM. Something specific. Something a template couldn't generate.
 - The first line must prove you're human, you did homework, and this isn't mass-sent.
 
+> ⚠ **AP-11:** Specificity is mandatory - a template-detectable opening = instant delete. Observation must be unique enough that 90% of people wouldn't notice it.
+
 ---
 
 ### Line 2: Personalization
 ```
-[FUNDAMENTAL ATTRIBUTION ERROR] Attribute their success to skill, not luck.
-[CONFIRMATION] Validate something they've done - they'll feel recognized.
+[FUNDAMENTAL ATTRIBUTION ERROR (#11)] Attribute their success to skill, not luck.
+[CONFIRMATION (#7)] Validate something they've done - they'll feel recognized.
 ```
 
 **FAIL:** "I see you're the VP of Marketing at [Company]."
@@ -72,13 +80,15 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 - Reference something 90% of people wouldn't notice. Effort = credibility.
 - Be specific. "I liked your post" = template. "The third point in your thread about retention - that's a pricing problem, not a product problem" = human.
 
+> ⚠ **AP-10:** Confirmation must make them feel recognized, not evaluated. Validate their work - don't assess it. "Smart" > "Good job." **AP-11:** Attribution must reference specifics that prove you actually consumed their content.
+
 ---
 
 ### Line 3: Value / Insight (the "Give" - Reciprocity)
 ```
 [RECIPROCITY] Give something before you ask for anything.
-[AVAILABILITY] Make it specific and immediately useful.
-[AUTHORITY] This line establishes your right to speak on this topic.
+[AVAILABILITY (#6)] Make it specific and immediately useful.
+[AUTHORITY (#4)] This line establishes your right to speak on this topic.
 ```
 
 **FAIL:** "We help companies like yours increase revenue by 30%."
@@ -95,12 +105,14 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 - If attaching/linking, it must be immediately consumable. Not a 45-minute video. Not a 30-page PDF. A tweet-length insight or a 2-minute read.
 - This is where you earn the right to ask in Line 4.
 
+> ⚠ **AP-5:** Value and ask must be separate - give value NOW, ask in the NEXT line. **AP-4:** Authority in Line 3 needs a specific, verifiable basis (data point, published research, specific result).
+
 ---
 
 ### Line 4: Low-Friction Ask
 ```
-[STATUS QUO] The ask should feel like a tiny, natural next step.
-[LOSS AVERSION FRAMING] Optional: "No worries if not" reduces pressure and paradoxically increases response rate.
+[STATUS QUO (#13)] The ask should feel like a tiny, natural next step.
+[LOSS AVERSION FRAMING (#5)] Optional: "No worries if not" reduces pressure and paradoxically increases response rate.
 ```
 
 **FAIL:** "Would you be open to a 30-minute call next week to discuss how we can help?"
@@ -118,11 +130,13 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 - If you MUST ask for a call: 10 minutes, not 30. Specific topic, not "discuss how we can help."
 - "No worries if not" in the ask line increases response rates. It removes pressure - the brain relaxes and says "sure, I can reply."
 
+> ⚠ **AP-7:** Sunk cost has NO place in cold outreach - the recipient has invested nothing. Avoid "you've read this far" framing. **AP-2:** The loss-framed "no worries if not" is the one valid loss frame here - it lowers, not raises, pressure.
+
 ---
 
 ### Line 5: Sign-off + Credibility Signal
 ```
-[AUTHORITY] One-line credibility. Not a bio. One signal.
+[AUTHORITY (#4)] One-line credibility. Not a bio. One signal.
 ```
 
 **FAIL:** "John Smith, Founder & CEO of Acme Corp - we've helped 500+ companies, featured in Forbes, TechCrunch..."
@@ -137,6 +151,8 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 - One credibility signal. Not three. One strong signal > three weak ones.
 - Signal should be relevant to the recipient. "Featured in Forbes" is irrelevant to a developer. "Built the authentication system at Stripe" is relevant.
 - If you have no credibility signal, don't fake one. Just sign your name. Authenticity > inflated authority.
+
+> ⚠ **AP-4:** One credibility signal - not a bio dump. The signal must be RELEVANT to THIS recipient. **AP-9:** Wrong-source halo - "Featured in Forbes" can be a negative signal to developers. Match the authority source to the recipient's actual trust network.
 
 ---
 
@@ -155,18 +171,20 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 
 ## COLD OUTREACH BIAS STACK
 ```
-Availability (pattern interrupt - specific, unexpected observation)
- → Confirmation (validate something they did - they feel seen)
+Availability (#6, pattern interrupt - specific, unexpected observation)
+ → Confirmation (#7, validate something they did - they feel seen)
    → Reciprocity (give value first - insight, data, resource)
-     → Status Quo (low-friction ask - one tiny next step)
-       → Authority (one credibility signal - relevant, minimal)
+     → Status Quo (#13, low-friction ask - one tiny next step)
+       → Authority (#4, one credibility signal - relevant, minimal)
 ```
 
 **Biases you CANNOT use in cold outreach:**
-- Social Proof: "Join 10,000 others" - they don't care. They're not in the 10,000.
-- Scarcity / Urgency: "Limited time offer" - immediate delete. Feels like spam.
-- Sunk Cost: They've invested nothing. Not applicable.
-- In-Group: You're an outsider until they reply.
+- Social Proof (#1): "Join 10,000 others" - they don't care. They're not in the 10,000.
+- Scarcity / Urgency (#5): "Limited time offer" - immediate delete. Feels like spam.
+- Sunk Cost (#12): They've invested nothing. Not applicable.
+- In-Group (#15): You're an outsider until they reply.
+
+> ⚠ **Summary of forbidden APs in cold outreach:** AP-1 (Social Proof → irrelevant to stranger), AP-6 (Scarcity → spam signal), AP-7 (Sunk Cost → no investment), AP-8 (In-Group → outsider). Stick to the 5-legitimate-bias stack above.
 
 ---
 

@@ -8,7 +8,7 @@
 
 > **Persuasion engineered through psychology, not manipulation.**
 
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience.
+An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. **v2.0: self-contained single-file.** All tables, anti-patterns with detection rules, cultural data, and few-shot examples are inlined into SKILL.md. No external file reads required for core operation.
 
 ---
 
@@ -20,15 +20,17 @@ It's built on decades of research in behavioral economics and evolutionary psych
 
 ## How it works
 
-1. **Load `SKILL.md`** as a system prompt into any LLM.
+1. **Load `SKILL.md`** as a system prompt into any LLM. That's it - the file is fully self-contained.
 2. **Give a task:** "Write a LinkedIn post about..." / "Create a landing page for..." / "Audit this ad for cognitive biases."
 3. **Get output** with every bias labeled, every decision explained, every word psychologically justified.
 
+**The LLM uses a single-table Bias Selection Router** (audience × product × platform → instant bias stack) instead of a 10-step procedure. After generating, it runs a **mechanical Post-Generation Verification** - 5 grep-style checks (numbers, names, exit, explain, blame-system) - before delivering.
+
 **Four modes:**
-- **Quick Mode** (default) - minimal input, immediate output. The AI picks the best biases automatically.
-- **Deep Mode** - the AI asks clarifying questions about audience, platform, tone, and desired action before generating.
-- **Audit Mode** - analyzes existing copy for cognitive biases and anti-patterns. Doesn't create - dissects.
-- **Optimize Mode** - iterates on underperforming copy using metrics (CTR, conversion, open rate). Maps funnel stages to specific biases, swaps failing biases, generates A/B variants.
+- **Quick Mode** (default) - 3-step internal procedure: lookup router → scenario override → verify. Fast for user, fast for LLM.
+- **Deep Mode** - the AI asks 4 clarifying questions at once, then routes through the same lookup.
+- **Audit Mode** - analyzes existing copy for biases and anti-patterns using mechanical detection rules (e.g., "Search for 'studies show' without source+year → FAIL").
+- **Optimize Mode** - iterates on underperforming copy using funnel-to-bias mapping. Generates A/B variants with statistical confidence thresholds.
 
 ## The 20 Cognitive Biases
 
@@ -57,19 +59,21 @@ It's built on decades of research in behavioral economics and evolutionary psych
 
 ## Tone-of-Voice Switcher
 
-Every output is tagged with one of 5 styles (or a hybrid):
+Every output is tagged with one of 7 styles (or a hybrid with formula: 70% primary cadence + 30% secondary lexical markers):
 
 | Style | Voice | Best for |
 |-------|-------|----------|
-| `bold-sell` | Aggressive, urgent, punchy | Flash sales, DTC, launches |
-| `expert-calm` | Intellectual, measured, data-rich | B2B, SaaS, consulting |
-| `rebel-edgy` | Disruptive, contrarian | Youth brands, challengers, creators |
-| `warm-human` | Empathetic, story-driven | Health, coaching, community |
-| `luxe-minimal` | Polished, sparse, high-status | Premium, luxury, design |
+| `bold-sell` | Direct, urgent, high-energy | Flash sales, DTC, launches |
+| `expert-calm` | Measured, analytical, data-rich | B2B, SaaS, consulting |
+| `rebel-edgy` | Contrarian, disruptive, provocative | Youth brands, challengers, creators |
+| `warm-human` | Empathetic, story-driven, vulnerable | Health, coaching, community |
+| `luxe-minimal` | Sparse, polished, high-status | Premium, luxury, design |
+| `community-build` | Inclusive, tribal, «we»-language | Community launches, membership |
+| `data-vivid` | Numbers-driven, visual, concrete | Case studies, ROI pages, B2B decks |
 
-## Bias Combinations
+## Bias Combinations (14 pre-built stacks)
 
-Some biases multiply when combined:
+Some biases multiply when combined. The skill provides 14 ready-to-use combos with conflict detection:
 
 | Combo | Biases | Use for |
 |-------|--------|---------|
@@ -77,68 +81,86 @@ Some biases multiply when combined:
 | **Urgency Engine** | Loss Aversion → Social Proof → Scarcity | Flash sales, launches |
 | **Loyalty Loop** | Confirmation → In-Group → Sunk Cost → Status Quo | Retention, upsells |
 | **Conversion Chain** | Availability → Framing → Anchoring → Social Proof → Risk Reversal | Ads, free-to-paid |
+| **Cold-to-Warm Bridge** | Availability → Framing → Authority → Social Proof | Cold audience → consideration |
+| **Trust-Repair Sequence** | BBS(rev) → FAE(rev) → CogDiss → SQ(rev) → Reciprocity | Crisis, apology |
+| **Desire Escalator** | Fear → Availability → Survivorship → Loss Aversion | Problem → solution |
+| **Objection Destroyer** | Backfire → Anchoring → CogDiss → Risk Reversal | FAQ, skeptical audiences |
+| **Community Builder** | In-Group → Group Polarization → False Consensus → Social Proof | Community launch |
+| **Premium Positioning** | Halo → Anchoring → Authority → In-Group | Luxury, high-ticket |
+| **Launch Day Stack** | Framing → Anchoring → Social Proof → Scarcity → Risk Reversal | Launch day |
+| **Lead Magnet Funnel** | Reciprocity → Endowment → Authority → Sunk Cost | Freebie → nurture |
+| **Re-engagement Hook** | Availability → Sunk Cost → In-Group → Loss Aversion | Lapsed customers |
+| **Micro-Content Burst** | Framing + False Consensus + Social Proof (parallel) | Twitter/X, push notifications |
 
-## Decision Matrix
+## Bias Selection Router
 
-The skill doesn't guess which biases to use. `decision-matrix.md` provides a lookup table:
+The skill doesn't guess which biases to use. `SKILL.md` contains an inlined **Bias Selection Router** - a single master table (50 rows) that maps audience × product × platform directly to a bias stack. Three steps: lookup → scenario override → category check. No multi-step decision-matrix traversal.
 
-- **Audience temperature** (cold / warm / hot / lapsed / skeptical) → bias priority
-- **Product type** (low-B2C, high-B2C, B2B SaaS, info-products, health, community) → dominant biases
-- **Platform constraint** (Twitter, LinkedIn, Instagram, email, landing page, webinar) → allowed & forbidden biases
-- **Step-by-step flow:** audience → product → platform → combine → validate
-- **Quick-lookup table** for 18 common tasks with pre-computed bias stacks
+- **Audience temperature** (cold / warm / hot / lapsed / skeptical / stranger / defensive) ×
+- **Product type** (low-B2C, mid-B2C, high-B2C, SaaS B2B, info-product, health, community) ×
+- **Platform** (Twitter/X, LinkedIn, Instagram, TikTok, email, landing page, webinar, search ads)
+- **= Instant bias stack** (3–5 biases, pre-validated for complementarity)
+- **Scenario Override** - if user request matches a trigger (e.g., "launch", "apology"), biases are swapped per the Scenario Quick-Reference table.
 
-## Anti-Patterns
+Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolution strategies (e.g., Loss Aversion + Confirmation compete → sequence them: Fear first, Confirmation after solution).
 
-`anti-patterns.md` catches the 12 most common ways AI gets cognitive-bias copy wrong - each with the failing output, the psychological reason it fails, the concrete fix, and a rule to follow:
+## Anti-Patterns (with Mechanical Detection Rules)
 
-| # | Anti-Pattern | Example Failure |
-|---|-------------|-----------------|
-| 1 | Vague Social Proof | "Thousands of satisfied customers" |
-| 2 | Fear Without an Exit | Threat with no immediate solution |
-| 3 | Framing Without Anchoring | "This is a revolution" - no reference point |
-| 4 | Authority Without Proof | "Studies show..." - no source, no year |
-| 5 | Transactional Reciprocity | "Free ebook! Now buy." - gift and pitch in same breath |
-| 6 | Fake Scarcity | Countdown timers that reset on reload |
-| 7 | Premature Sunk Cost | "You've come this far" - in the first paragraph |
-| 8 | Empty In-Group | "Like-minded people" - no shared identity |
-| 9 | Wrong-Source Halo | "As seen on Forbes" - audience doesn't respect Forbes |
-| 10 | Insulting Confirmation | "Most people are wrong" - makes reader defensive |
-| 11 | Abstract Availability | "Imagine struggling" - no concrete sensory details |
-| 12 | Blaming Dissonance | "You say X but do Y" - blames the reader, not the system |
+`SKILL.md` contains 12 anti-patterns inlined - each with a **detection rule** the LLM runs mechanically (grep-style) on its output before delivering:
 
-Includes an **audit checklist** - scan any output in 30 seconds before delivering.
+| # | Anti-Pattern | Detection Rule | Example Failure |
+|---|-------------|----------------|-----------------|
+| 1 | Vague Social Proof | Search for "thousands","many" near customer claims → FAIL | "Thousands of satisfied customers" |
+| 2 | Fear Without an Exit | Fear language without solution in same paragraph → FAIL | Threat with no immediate solution |
+| 3 | Framing Without Anchoring | "Not X, but Y" without quantified old-way → FAIL | "This is a revolution" - no reference point |
+| 4 | Authority Without Proof | "Studies show" without named source+year → FAIL | "Studies show..." - no source, no year |
+| 5 | Transactional Reciprocity | Free value + pitch in same communication → FAIL | "Free ebook! Now buy." |
+| 6 | Fake Scarcity | "Only X left" without explaining WHY → FAIL | Countdown timers that reset on reload |
+| 7 | Premature Sunk Cost | "You've come this far" in first contact → FAIL | Sunk cost language in first paragraph |
+| 8 | Empty In-Group | "Like-minded" without named identity → FAIL | "People like you" - no shared identity |
+| 9 | Wrong-Source Halo | "Featured in [pub]" audience doesn't respect → FAIL | "As seen on Forbes" - audience doesn't respect Forbes |
+| 10 | Insulting Confirmation | "Most people are wrong" → reader in "wrong" group → FAIL | Makes reader defensive, not engaged |
+| 11 | Abstract Availability | "Imagine [scenario]" with <3 concrete sensory details → FAIL | No smells, sounds, times, names |
+| 12 | Blaming Dissonance | "You say X but do Y" → blames reader, not system → FAIL | Shame → withdrawal, not action |
+
+**Post-Generation Verification:** After writing, the LLM runs a mandatory 5-point mechanical checklist before delivering any output - checking for specific numbers, named sources, fear exits, scarcity explanations, and system-blame.
 
 ## What's inside
 
 ```
 mindfluence/
-├── SKILL.md                    ← Main instruction. 20 biases, methodology, tone-of-voice, ethics, output format.
-├── decision-matrix.md          ← Audience × product × platform → bias priority map. Eliminates guesswork.
-├── anti-patterns.md            ← 12 common AI copywriting failures + concrete fixes + audit checklist.
-├── cultural-matrix.md          ← Bias adaptation across 4 cultural dimensions + 12 region profiles.
-├── scenarios/                  ← Task-specific playbooks (13 scenarios)
+├── SKILL.md                    ← Main instruction. Fully self-contained v2.0.
+│                                  Inlined: Bias Selection Router, Scenario Quick-Reference,
+│                                  Cultural Quick-Reference, 12 Anti-Patterns with detection rules,
+│                                  14 Power Combinations, Bias Conflict Detector,
+│                                  Post-Generation Verification (5 mechanical checks),
+│                                  7 tones + hybrid formula, 3-tier output format,
+│                                  5 few-shot examples, Quality Rubric.
+├── decision-matrix.md          ← (Legacy reference) Detailed audience×product×platform mapping.
+├── anti-patterns.md            ← (Legacy reference) 12 AI copywriting failures + audit checklist.
+├── cultural-matrix.md          ← (Legacy reference) Full bias-by-bias cultural adaptation.
+├── scenarios/                  ← Task-specific playbooks (13 scenarios) - optional deep-dives
 │   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
 │   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
 │   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
 │   ├── email-sequence.md       ← Welcome, nurture, cart abandonment, re-engagement
 │   ├── webinar-warmup.md       ← Registration → live event (minute-by-minute) → post-webinar
-│   ├── ad-campaign.md          ← Video, search, social, retargeting + A/B testing framework
-│   ├── sales-page.md           ← Long-form sales page - 12-section psychological arc for high-ticket
-│   ├── case-study.md           ← 6-part success story structure (situation → result → CTA)
-│   ├── pricing-page.md         ← Anchoring architecture, decoy engineering, localization psychology
-│   ├── cold-outreach.md        ← 5-line rule for cold email/DM - no trust, no social proof
+│   ├── ad-campaign.md          ← Video, search, social, retargeting + A/B testing
+│   ├── sales-page.md           ← 12-section psychological arc for high-ticket
+│   ├── case-study.md           ← 6-part success story structure
+│   ├── pricing-page.md         ← Anchoring architecture, decoy engineering
+│   ├── cold-outreach.md        ← 5-line rule - no trust, no social proof
 │   ├── crisis-response.md      ← 6-part apology structure - defensive bias engineering
 │   ├── seo-brief.md            ← SEO brief integration, keyword density, humanization survivability
-│   └── push-notifications.md   ← Push & SMS - lock screen psychology, 6 push types, frequency caps
-├── examples/                   ← Annotated outputs showing the skill in action (7 examples)
+│   └── push-notifications.md   ← Push & SMS - lock screen psychology, 6 push types
+├── examples/                   ← Annotated outputs (7 examples)
 │   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
 │   ├── landing-hero.md         ← Hero section for premium meal delivery
 │   ├── ad-script.md            ← 30s video ad for language app
 │   ├── email-welcome.md        ← SaaS welcome email
 │   ├── longform-article.md     ← Article intro with full bias analysis
 │   ├── audit-example.md        ← Audit Mode - ad analyzed for biases + anti-patterns + fixes
-│   └── optimize-hero.md        ← Optimize Mode - hero iterated from metrics with full rationale
+│   └── optimize-hero.md        ← Optimize Mode - hero iterated from metrics
 └── README.md
 ```
 
@@ -269,9 +291,11 @@ Triple pipeline:
 2. Paste as a system prompt / custom instructions
 3. Type: *"Write a post about [topic] for [audience] on [platform]"*
 
+**The file is fully self-contained.** No additional files needed for core operation. Bias Selection Router, Anti-Patterns with detection rules, Cultural Quick-Reference, few-shot examples - everything is inlined.
+
 ### With OpenCode (native)
 
-Place the `mindfluence/` folder into `.opencode/skills/` (project) or `~/.config/opencode/skills/` (global). OpenCode auto-discovers `SKILL.md` via its frontmatter - no extra config needed. The skill activates when you ask for marketing copy, ads, landing pages, emails, or launch content.
+Place the `mindfluence/` folder into `.opencode/skills/` (project) or `~/.config/opencode/skills/` (global). OpenCode auto-discovers `SKILL.md` via its frontmatter - no extra config needed.
 
 ### With Claude Code
 
@@ -279,16 +303,17 @@ Copy `SKILL.md` into your project as `CLAUDE.md`, or place the full `mindfluence
 
 ### As a Custom GPT / Claude Project
 
-Upload `SKILL.md` as the system prompt. Add `decision-matrix.md`, `anti-patterns.md`, and files from `scenarios/` and `examples/` to the knowledge section for full context.
+Upload `SKILL.md` as the system prompt. All tables, anti-patterns, cultural data, and examples are inlined - no knowledge files needed. For extended scenario depth, optionally add files from `scenarios/` and `examples/`.
 
 ### With any other LLM agent (Cursor, Windsurf, Copilot, Cline, Aider, etc.)
 
-Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md`, etc.). The prompt content is platform-agnostic - only the file name changes.
+Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md`, etc.). The prompt content is platform-agnostic.
 
 ## Requirements
 
 - Any capable LLM with a system prompt / custom instructions field (GPT, Claude, Gemini, DeepSeek, open-source models)
-- For full skill functionality (decision matrix, anti-patterns, scenarios, examples): a skill system that loads files from a folder (OpenCode, Claude Code). For other agents, copy `SKILL.md` as a standalone prompt - it contains the complete core methodology.
+- **One file:** `SKILL.md`. Fully self-contained. All tables, detection rules, cultural data, and examples are inlined.
+- Context window: 32K+ tokens for full v2.0 functionality (256K+ recommended for optimal quality)
 - No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
 
@@ -307,9 +332,9 @@ MIT
 ## GitHub Description
 
 ```
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. Includes playbooks for ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, and crisis response. Features a decision matrix (audience × product × platform), 12 anti-patterns with fixes, 20 bias cultural adaptations across 12 regions, and a measurement loop with statistical confidence thresholds.
+AI prompt-skill v2.0: 20 cognitive biases → high-converting marketing copy. Self-contained single-file with Bias Selection Router (audience×product×platform→instant bias stack), 12 anti-patterns with mechanical detection rules, 14 power bias combinations, 7 tone styles + hybrid formula, 3-tier output format (compact/standard/extended), post-generation verification checklist, 12-region cultural quick-reference, and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
 ```
 
 ## GitHub Tags
 
-`prompt-engineering` `cognitive-biases` `marketing` `copywriting` `behavioral-economics` `psychology` `ai-prompts` `llm-skills` `persuasion` `neuromarketing` `conversion-optimization` `content-strategy` `system-prompt` `gpt` `claude`
+`prompt-engineering` `cognitive-biases` `marketing` `copywriting` `behavioral-economics` `psychology` `ai-prompts` `llm-skills` `persuasion` `neuromarketing` `conversion-optimization` `content-strategy` `system-prompt` `gpt` `claude` `self-contained` `bias-detection` `marketing-automation`

@@ -24,10 +24,10 @@ When an SEO brief is provided, enter **SEO Brief Mode** - a constrained variant 
 
 1. **Read the brief first.** Extract: heading structure (H1→H2→H3), primary keyword, secondary keywords, word count target, internal link plan, meta drafts.
 2. **Do NOT restructure.** The heading hierarchy is deliberate SEO architecture. Use it as your skeleton. Sections may be reordered ONLY if the brief explicitly allows it.
-3. **Run standard BIAS SELECTION** (decision matrix + category check) against the audience/product/platform in the brief.
-4. **Map biases to sections.** Each H2 section gets one dominant bias. The introduction and conclusion each get their own bias. The dominant bias per section determines the FRAME and OPENING of that section - secondary biases can support within.
+3. **Run standard BIAS SELECTION** (use Bias Selection Router in SKILL.md — lookup by audience × product × platform + category check) against the audience/product/platform in the brief.
+4. **Map biases to sections.** Each H2 section gets one dominant bias. The introduction and conclusion each get their own bias. The dominant bias per section determines the FRAME and OPENING of that section — secondary biases can support within.
 5. **Apply keyword constraints** (see below).
-6. **Verify against anti-patterns.md** before output.
+6. **Verify against Anti-Patterns in SKILL.md** — run mechanical detection rules on your output before delivering.
 7. **Preserve downstream humanization survivability** (see below).
 
 ### No-Brief Fallback
@@ -211,8 +211,10 @@ Before finalizing SEO-mode output, verify:
 
 ## CROSS-REFERENCE
 
-- `decision-matrix.md` - audience-to-bias mapping (standard procedure, used in SEO Brief Mode)
-- `anti-patterns.md` - pre-output verification (standard procedure)
-- `cultural-matrix.md` - adapt biases to target region (if brief specifies locale)
+- `SKILL.md` → **Bias Selection Router** — audience-to-bias mapping (one lookup replaces decision-matrix)
+- `SKILL.md` → **Anti-Patterns (with Detection Rules)** — pre-output mechanical verification
+- `SKILL.md` → **Cultural Quick-Reference** — adapt biases to target region (if brief specifies locale)
+- `SKILL.md` → **Bias Catalog** — full mechanism and application for each bias
+- `SKILL.md` → **Post-Generation Verification** — mandatory 5-point checklist before delivery
 - Refer to the upstream SEO engine's keyword rules and density guidelines
 - Refer to the downstream humanization engine's pipeline stages to understand what will affect your copy
