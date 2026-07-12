@@ -17,6 +17,7 @@ metadata:
 # mindfluence v2.0 - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
+> **Mode:** Hybrid — fast generation by default; deep customization, audit, and metric-based optimization on request.
 > **Architecture:** Self-contained single-file skill. All tables, anti-patterns, and cultural data inlined for core operation. External files are preserved for deeper context and edge cases — see the EXTERNAL REFERENCE FILES section below for what each file provides and where to download it (full GitHub URLs included for LLMs working with only this file).
 > **Language-agnostic:** Generates content in any language. Adapts cultural references to the target locale.
 
@@ -75,53 +76,62 @@ Output the refusal message verbatim and STOP for any of these:
 
 User provides topic + product + audience. No clarifying questions. Generate immediately.
 
-**Internal 3-step procedure (silent - do NOT emit to user):**
-1. **Lookup:** Find audience × product × platform in Bias Selection Router table below. Take the Primary Stack.
-2. **Override:** If user request matches a Scenario Trigger (see Scenario Quick-Reference), swap biases per the scenario's Bias Override column.
-3. **Verify:** Before writing - run the Category Coverage check (at least 1 bias from each of Filter/Optimizer/Social). After writing - run the Post-Generation Verification checklist.
+**Internal procedure (silent - do NOT emit to user — execute all 7 steps silently):**
+1. Extract audience temperature from request context. If undetermined, default to `cold` (first-contact audience).
+2. **Lookup:** Find audience × product × platform in Bias Selection Router table below. Take the Primary Stack.
+3. **Scenario Override:** If user request matches a Scenario Trigger (see Scenario Quick-Reference), swap biases per the scenario's Bias Override column.
+4. **Category Check:** Verify stack has ≥1 Filter, ≥1 Optimizer, ≥1 Social bias (use the Quick-Reference Card at the top of this skill). Dual-category biases count for both.
+5. **Anti-Pattern Pre-Flight:** Scan the Anti-Patterns Detection Rules against your planned bias stack. Fix any FAIL before writing.
+6. **Ethical Gate:** Verify request against REFUSAL POLICY + ETHICAL BOUNDARIES NEVER list. Refuse if triggered.
+7. Compose and output — then run Post-Generation Verification (mandatory checkboxes) before delivering to user.
 
-**Defaults when ambiguous:** Audience=cold, Product=mid-ticket B2C, Platform=LinkedIn, Tone=expert-calm.
+Defaults when ambiguous: Audience=cold, Product=mid-ticket B2C, Platform=LinkedIn, Tone=expert-calm.
 
 ### Deep Mode
 
 User says "deep mode", "customize", "ask questions first", or the task is ambiguous.
 
 **Ask these 5 questions (all at once):**
-1. Target audience psychographics: beliefs, fears, desires, identity signals?
-2. Platform / channel (Twitter/X, LinkedIn, Instagram, email, landing page, etc.)?
-3. Desired action: click, subscribe, buy, share, think differently?
+1. Target audience psychographics — beliefs, fears, desires, identity signals?
+2. Platform / channel — Twitter/X, LinkedIn, Instagram, email, landing page, etc.?
+3. Desired action — click, subscribe, buy, share, think differently?
 4. Tone preference (can auto-detect from context)?
 5. Any specific biases to emphasize or avoid?
 
-After receiving answers → plug into Bias Selection Router → proceed as Quick Mode.
+**After receiving answers:**
+1. Plug audience + product + platform into Bias Selection Router → get Primary Stack.
+2. Apply Scenario Override if a trigger matches.
+3. Adjust stack per user's emphasized/avoided biases.
+4. Continue with steps 4–7 of Quick Mode (Category Check → Anti-Pattern Pre-Flight → Ethical Gate → Compose + Verify).
 
 ### Audit Mode
 
 User provides existing copy for analysis. Do NOT create new content.
 
 **Procedure:**
-1. Identify biases present (intentional or accidental).
-2. Flag anti-patterns found - use Anti-Patterns table with detection rules below.
-3. For each bias: rate execution (effective / neutral / counterproductive) + explain why.
-4. Suggest specific improvements: biases to add, strengthen, or fix per anti-patterns.
+1. Read the user's copy carefully.
+2. Identify which cognitive biases are present (intentional or accidental). Use the Bias Catalog for reference.
+3. Flag anti-patterns found — use Anti-Patterns Detection Rules below. Flag every anti-pattern.
+4. For each bias found: rate its execution (effective / neutral / counterproductive) and explain why.
+5. Suggest specific improvements: which biases to add, which to strengthen, which to fix per anti-patterns.
 
 **Output format:** `[BIASES FOUND] → [ANTI-PATTERNS FOUND] → [ANALYSIS per bias] → [RECOMMENDATIONS]`
 
 ### Optimize Mode
 
-User provides performance data from an existing piece of marketing copy and asks you to improve it. You do NOT create from scratch. You iterate based on evidence.
+User provides performance data from an existing piece of marketing copy and asks you to improve it. Do NOT create from scratch — iterate based on evidence.
 
 **Procedure:**
 1. Read the original copy and the metrics provided (open rate, CTR, conversion rate, scroll depth, reply rate, A/B test results, or qualitative feedback).
 2. Identify which stage of the funnel is underperforming. Metric → stage mapping:
-   - Low open rate / low views → **Hook failure.** Re-examine the first bias (usually Availability / Fear / Framing). Is the pattern-interrupt strong enough? Is the headline specific enough? (Check anti-patterns #2, #3, #11.)
-   - High views, low CTR → **Interest failure.** The hook worked, but the body didn't escalate. Re-examine the middle biases. Is social proof specific? Is the authority source named? (Check anti-patterns #1, #4, #7, #8.)
-   - High CTR, low conversion → **Trust/Urgency failure.** The prospect is interested but not convinced to act. Re-examine close biases. Is scarcity genuine? Is risk reversal specific? (Check anti-patterns #5, #6, #12.)
-   - High unsubscribe / low retention → **Mismatch with audience temperature.** The bias stack targeted the wrong temperature. Re-classify audience and re-run the Bias Selection Router.
-3. Propose bias adjustments: keep the biases that worked, replace the biases at the failing stage, explain the psychological rationale for each swap.
-4. Generate the revised copy (full output) with updated `[BIASES ENGAGED]` and `[RATIONALE]` comparing old vs new stack.
+   - Low open rate / low views → **Hook failure.** Re-examine the first bias (usually Availability / Fear / Framing). Check anti-patterns #2, #3, #11.
+   - High views, low CTR → **Interest failure.** The hook worked, but the body didn't escalate. Re-examine middle biases. Check anti-patterns #1, #4, #7, #8.
+   - High CTR, low conversion → **Trust/Urgency failure.** Prospect is interested but not convinced. Re-examine close biases. Check anti-patterns #5, #6, #12.
+   - High unsubscribe / low retention → **Mismatch with audience temperature.** Re-classify audience and re-run the Router.
+3. Keep the biases that worked. Replace ONLY the biases at the failing stage — swap with the next-best alternative from the Router for the same audience temperature and product type.
+4. Generate the revised copy with updated `[BIASES ENGAGED]` and `[RATIONALE]` comparing old vs new stack.
 5. Preserve the original tone and target action unless the user explicitly requests changing them.
-6. Generate up to 3 variants (A: bias swap, B: intensity shift, C: technique addition) if user wants A/B tests.
+6. Generate up to 3 variants (A: bias swap, B: intensity shift, C: technique addition) if user wants A/B tests. Label each distinctly.
 
 **Output format for Optimize Mode:**
 ```
@@ -153,15 +163,15 @@ What changed, why, and how the new stack addresses the specific performance gap.
 
 Select and announce tone at the start of every output. Adapt to platform, audience, and product.
 
-| Style | Voice Profile | Lexical Markers | Cadence | Best Platforms | Worst Platforms |
-|-------|--------------|-----------------|---------|----------------|-----------------|
-| **`bold-sell`** | Direct, urgent, high-energy | «Stop», «Now», «Limited», «Only», «Warning» | Short. Fragmented. 8-15 w/s. | Landing CTA, flash sale email, TikTok | LinkedIn feed, white papers |
-| **`expert-calm`** | Measured, analytical, credible | «Data shows», «Research indicates», «The pattern» | Medium. Balanced. 15-25 w/s. | LinkedIn, email nurture, whitepapers | TikTok, push notifications |
-| **`rebel-edgy`** | Contrarian, disruptive, provocative | «They told you», «Wrong», «Actually», «Here's the truth» | Variable. Punchy then expansive. | Twitter/X, YouTube hooks, creator content | Corporate comms, crisis response |
-| **`warm-human`** | Empathetic, conversational, vulnerable | «I used to», «We've all», «Here's what happened», «You know that feeling» | Natural storytelling cadence. | Email, LinkedIn personal brand, long-form | Search ads, pricing pages |
-| **`luxe-minimal`** | Sparse, polished, high-status | Precise nouns. Zero filler. | Ultra-short. 3-10 w/s. White space. | Hero sections, luxury pages, Instagram | Long-form sales, webinars |
-| **`community-build`** | Inclusive, tribal, «we»-language | «Join us», «Together», «Our community», «People like us» | Warm but declarative. | Community launch, membership pages, events | Cold outreach, crisis response |
-| **`data-vivid`** | Numbers-driven, visual, concrete | Specific stats, timelines, «X → Y in Z days» | Alternates: data claim → human implication. | Case studies, ROI pages, B2B decks | Emotional storytelling |
+| Style | Voice Profile | Lexical Markers | Example Opener | Cadence | Best Platforms | Worst Platforms |
+|-------|--------------|-----------------|----------------|---------|----------------|-----------------|
+| **`bold-sell`** | Direct, urgent, high-energy | «Stop», «Now», «Limited», «Only», «Warning» | "Stop losing $300/day. Here's the fix." | Short. Fragmented. 8-15 w/s. | Landing CTA, flash sale email, TikTok | LinkedIn feed, white papers |
+| **`expert-calm`** | Measured, analytical, credible | «Data shows», «Research indicates», «The pattern» | "The data reveals a pattern most people miss." | Medium. Balanced. 15-25 w/s. | LinkedIn, email nurture, whitepapers | TikTok, push notifications |
+| **`rebel-edgy`** | Contrarian, disruptive, provocative | «They told you», «Wrong», «Actually», «Here's the truth» | "Everything you've been told about X is backwards." | Variable. Punchy then expansive. | Twitter/X, YouTube hooks, creator content | Corporate comms, crisis response |
+| **`warm-human`** | Empathetic, conversational, vulnerable | «I used to», «We've all», «Here's what happened», «You know that feeling» | "I used to believe the same thing. Then this happened." | Natural storytelling cadence. | Email, LinkedIn personal brand, long-form | Search ads, pricing pages |
+| **`luxe-minimal`** | Sparse, polished, high-status | Precise nouns. Zero filler. | "Perfection. In one detail." | Ultra-short. 3-10 w/s. White space. | Hero sections, luxury pages, Instagram | Long-form sales, webinars |
+| **`community-build`** | Inclusive, tribal, «we»-language | «Join us», «Together», «Our community», «People like us» | "We're building something different. Come see." | Warm but declarative. | Community launch, membership pages, events | Cold outreach, crisis response |
+| **`data-vivid`** | Numbers-driven, visual, concrete | Specific stats, timelines, «X → Y in Z days» | "From $0 to $10K in 47 days. The exact numbers." | Alternates: data claim → human implication. | Case studies, ROI pages, B2B decks | Emotional storytelling |
 
 ### Hybrid Tones
 
@@ -577,25 +587,25 @@ These are social/behavioral mechanisms (Cialdini), not cognitive biases. Each ma
 *Mapped to: Loss Aversion (#5)* | *Anti-pattern risk: AP-6 (Fake Scarcity)*
 *DO NOT use with: Stranger, Skeptical, Defensive audiences.*
 
-**Mechanism:** When perceived as limited, the brain's loss-aversion circuit fires. Scarcity = Loss Aversion applied to availability.
+**Mechanism:** When something is perceived as limited (in time or quantity), the brain's loss-aversion circuit fires — the same amygdala response as any other threat of loss. "Only 3 left" and "You're losing $300/day" are the same neural alarm. Scarcity is simply Loss Aversion applied to availability rather than money/health.
 
-**Application:** Countdown timers, limited seats, "only X left," price increase deadlines, bonus expiration, cohort caps. CRITICAL: scarcity must be GENUINE and EXPLAINED.
+**Application:** Countdown timers, limited seats, "only X left," price increase deadlines, bonus expiration, cohort caps. CRITICAL: scarcity must be GENUINE and EXPLAINED. Fake scarcity destroys trust permanently (see AP-6 Detection Rule).
 
 ### Reciprocity
 *Mapped to: Social Proof (#1)* | *Anti-pattern risk: AP-5 (Transactional Reciprocity)*
 *DO NOT use with: Stranger audiences in first contact.*
 
-**Mechanism:** Receiving value creates a psychological obligation to return. The gift must feel genuine - gift and ask must live in SEPARATE content.
+**Mechanism:** Receiving something of value creates a psychological obligation to return the favor. This is not a cognitive bias — it's a learned social contract present in every human culture. The giver incurs a social debt; the receiver feels compelled to repay. In marketing: give genuine value first, and the prospect feels obligated to engage. CRITICAL: the gift must feel genuine — if the "free value" is a transparent hook, it triggers reactance, not reciprocity. Gift and ask must live in SEPARATE content (see AP-5 Detection Rule).
 
-**Application:** Free valuable content before pitch, genuinely useful lead magnets, free tools/trials, personal insights shared without asking.
+**Application:** Free valuable content before a pitch, lead magnets that are genuinely useful, free tools/trials that work standalone, personal insights shared without asking.
 
 ### Risk Reversal
 *Mapped to: Status Quo (#13) + Endowment (#10)*
 *No audience restrictions - works with everyone.*
 
-**Mechanism:** Neutralizes fear-of-change by transferring risk to seller. Free trials activate Endowment - usage feels like ownership.
+**Mechanism:** The brain resists change because the unknown is dangerous (Status Quo). Risk Reversal neutralizes this by guaranteeing the outcome: "If it doesn't work, you lose nothing." Simultaneously, free trials activate Endowment — once they use it, it feels like theirs, and canceling feels like losing something they own. Attacks the fear-of-change by transferring risk from buyer to seller, then locks in via ownership. It's the safest technique in marketing — no audience restrictions, no downside.
 
-**Application:** Money-back guarantees, free trials, "cancel anytime," free returns. Guarantee must be SPECIFIC: timeframe, how to claim, what's covered.
+**Application:** Money-back guarantees, free trials, "cancel anytime," free returns, "if you don't [outcome], it's free," satisfaction guarantees. The guarantee must be SPECIFIC: timeframe, how to claim, what's covered.
 
 ---
 
@@ -818,6 +828,8 @@ These are summaries. Full playbooks with bias-by-bias timing and section-by-sect
 ---
 
 ## MEASUREMENT & ITERATION LOOP
+
+Persuasion without measurement is superstition. The skill can generate copy, but only data can improve it. Use this framework when the user provides performance metrics or asks to iterate on existing copy.
 
 ### Funnel-to-Bias Mapping
 
