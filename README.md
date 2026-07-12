@@ -135,11 +135,12 @@ mindfluence/
 │                                  14 Power Combinations, Bias Conflict Detector,
 │                                  Post-Generation Verification (5 mechanical checks),
 │                                  7 tones + hybrid formula, 3-tier output format,
-│                                  5 few-shot examples, Quality Rubric.
-├── decision-matrix.md          ← (Legacy reference) Detailed audience×product×platform mapping.
-├── anti-patterns.md            ← (Legacy reference) 12 AI copywriting failures + audit checklist.
-├── cultural-matrix.md          ← (Legacy reference) Full bias-by-bias cultural adaptation.
-├── scenarios/                  ← Task-specific playbooks (13 scenarios) - optional deep-dives
+│                                  5 few-shot examples, Quality Rubric,
+│                                  EXTERNAL REFERENCE FILES table with full GitHub URLs.
+├── decision-matrix.md          ← Detailed audience×product×platform mapping. For deeper bias selection.
+├── anti-patterns.md            ← 12 AI copywriting failures + detailed fixes + 30-sec audit checklist.
+├── cultural-matrix.md          ← Full bias-by-bias cultural adaptation across 4 Hofstede dimensions.
+├── scenarios/                  ← Task-specific playbooks (13 scenarios) — authoritative for complex tasks
 │   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
 │   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
 │   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
@@ -287,11 +288,12 @@ Triple pipeline:
 
 ### Quick start (any LLM)
 
-1. Copy the contents of `SKILL.md`
+1. Copy the contents of [`SKILL.md`](https://github.com/MADEVAL/MindFluence/blob/main/SKILL.md)
 2. Paste as a system prompt / custom instructions
 3. Type: *"Write a post about [topic] for [audience] on [platform]"*
+4. For deeper context: the LLM can download additional files using the GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section
 
-**The file is fully self-contained.** No additional files needed for core operation. Bias Selection Router, Anti-Patterns with detection rules, Cultural Quick-Reference, few-shot examples - everything is inlined.
+**The file is fully self-contained.** No additional files needed for core operation. Bias Selection Router, Anti-Patterns with detection rules, Cultural Quick-Reference, few-shot examples - everything is inlined. If the LLM you're using can fetch external files, `SKILL.md` contains a full EXTERNAL REFERENCE FILES table with GitHub download URLs for all supplementary files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`, `examples/`).
 
 ### With OpenCode (native)
 
@@ -303,7 +305,7 @@ Copy `SKILL.md` into your project as `CLAUDE.md`, or place the full `mindfluence
 
 ### As a Custom GPT / Claude Project
 
-Upload `SKILL.md` as the system prompt. All tables, anti-patterns, cultural data, and examples are inlined - no knowledge files needed. For extended scenario depth, optionally add files from `scenarios/` and `examples/`.
+Upload `SKILL.md` as the system prompt. For deeper context, add `decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, and files from `scenarios/` and `examples/` to the knowledge section. The file is self-contained for core operation, but the external files provide richer decision-matrix logic, detailed anti-pattern examples, and full scenario playbooks.
 
 ### With any other LLM agent (Cursor, Windsurf, Copilot, Cline, Aider, etc.)
 
@@ -314,6 +316,7 @@ Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrule
 - Any capable LLM with a system prompt / custom instructions field (GPT, Claude, Gemini, DeepSeek, open-source models)
 - **One file:** `SKILL.md`. Fully self-contained. All tables, detection rules, cultural data, and examples are inlined.
 - Context window: 32K+ tokens for full v2.0 functionality (256K+ recommended for optimal quality)
+- For deeper context: external files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`) preserved in the repo — full GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section so LLMs working with one file can guide users to download them
 - No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
 
