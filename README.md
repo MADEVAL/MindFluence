@@ -1,6 +1,6 @@
 # MindFluence
 
-[![Version](https://img.shields.io/badge/version-2.1-blue)]()
+[![Version](https://img.shields.io/badge/version-2.2-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Compatibility](https://img.shields.io/badge/compatibility-any%20LLM-purple)]()
 
@@ -8,7 +8,7 @@
 
 > **Persuasion engineered through psychology, not manipulation.**
 
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. **v2.1: self-contained single-file with narrative depth.** All tables, 13 anti-patterns with detection rules, cultural data, and few-shot examples are inlined into SKILL.md. Named Person Story Arc (NPSA) requirement ensures human-quality output alongside mechanical verification. No external file reads required for core operation.
+An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. **v2.2: self-contained single-file with narrative depth.** All tables, 13 anti-patterns with detection rules, cultural data, and few-shot examples are inlined into SKILL.md. Named Person Story Arc (NPSA) requirement ensures human-quality output alongside mechanical verification. No external file reads required for core operation.
 
 ---
 
@@ -28,7 +28,7 @@ It's built on decades of research in behavioral economics and evolutionary psych
 
 **Four modes:**
 - **Quick Mode** (default) - 3-step internal procedure: lookup router → scenario override → verify. Fast for user, fast for LLM.
-- **Deep Mode** - the AI asks 4 clarifying questions at once, then routes through the same lookup.
+- **Deep Mode** - the AI asks 5 clarifying questions at once, then routes through the same lookup.
 - **Audit Mode** - analyzes existing copy for biases and anti-patterns using mechanical detection rules (13 anti-patterns including Statistical-Only Fallacy).
 - **Optimize Mode** - iterates on underperforming copy using funnel-to-bias mapping. Generates A/B variants with statistical confidence thresholds.
 
@@ -106,7 +106,7 @@ Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolut
 
 ## Anti-Patterns (with Mechanical Detection Rules)
 
-`SKILL.md` contains 12 anti-patterns inlined - each with a **detection rule** the LLM runs mechanically (grep-style) on its output before delivering:
+`SKILL.md` contains 13 anti-patterns inlined - each with a **detection rule** the LLM runs mechanically (grep-style) on its output before delivering:
 
 | # | Anti-Pattern | Detection Rule | Example Failure |
 |---|-------------|----------------|-----------------|
@@ -130,7 +130,7 @@ Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolut
 
 ```
 mindfluence/
-├── SKILL.md                    ← Main instruction. Fully self-contained v2.1.
+├── SKILL.md                    ← Main instruction. Fully self-contained v2.2.
 │                                  Inlined: Bias Selection Router, Scenario Quick-Reference,
 │                                  Cultural Quick-Reference, 13 Anti-Patterns with detection rules
 │                                  (incl. Statistical-Only Fallacy), Narrative Depth Requirements
@@ -318,7 +318,7 @@ Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrule
 
 - Any capable LLM with a system prompt / custom instructions field (GPT, Claude, Gemini, DeepSeek, open-source models)
 - **One file:** `SKILL.md`. Fully self-contained. All tables, detection rules, cultural data, and examples are inlined.
-- Context window: 32K+ tokens for full v2.1 functionality (256K+ recommended for optimal quality)
+- Context window: 32K+ tokens for full v2.2 functionality (256K+ recommended for optimal quality)
 - For deeper context: external files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`) preserved in the repo — full GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section so LLMs working with one file can guide users to download them
 - No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
@@ -338,7 +338,7 @@ MIT
 ## GitHub Description
 
 ```
-AI prompt-skill v2.1: 20 cognitive biases → high-converting marketing copy with guaranteed human narrative quality. Self-contained single-file with Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (Named Person Story Arc + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 6-point post-generation verification (incl. HUMAN check), 12-region cultural quick-reference, and 5 inlined few-shot examples with NPSA annotations. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
+AI prompt-skill v2.2: 20 cognitive biases → high-converting marketing copy with guaranteed human narrative quality. Self-contained single-file with Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (Named Person Story Arc + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 6-point post-generation verification (incl. HUMAN check), 12-region cultural quick-reference, and 5 inlined few-shot examples with NPSA annotations. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
 ```
 
 ## GitHub Tags

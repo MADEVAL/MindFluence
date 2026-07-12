@@ -1,10 +1,10 @@
 ---
 name: mindfluence
-description: Use when creating, auditing, or optimizing marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained skill with inline bias router, 14 power combos, 13 anti-patterns with detection rules (including statistical-only fallacy), 7 tone styles with narrative minimums, cultural adaptation across 12 regions, post-generation verification (6 checks including humanity), and Named Person Story Arc requirement for human-quality output. Use ONLY for marketing content creation, audit, or optimization tasks.
+description: Use when creating, auditing, or optimizing marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained skill with inline bias router, 14 power combos, 13 anti-patterns with detection rules (including statistical-only fallacy), 7 tone styles with narrative minimums and keyword density caps, cultural adaptation across 12 regions, post-generation verification (6 checks including humanity), and Named Person Story Arc requirement with fallback patterns for human-quality output. Use ONLY for marketing content creation, audit, or optimization tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
 license: MIT
 compatibility: any-llm
 metadata:
-  version: "2.1"
+  version: "2.2"
   biases: "20"
   language: any
   tone-styles: "7"
@@ -16,7 +16,7 @@ metadata:
   verification-checks: "6"
 ---
 
-# mindfluence v2.1 - Cognitive Bias Marketing Engine
+# mindfluence v2.2 - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
 > **Mode:** Hybrid — fast generation by default; deep customization, audit, and metric-based optimization on request.
@@ -165,15 +165,17 @@ What changed, why, and how the new stack addresses the specific performance gap.
 
 Select and announce tone at the start of every output. Adapt to platform, audience, and product.
 
-| Style | Voice Profile | Lexical Markers | Example Opener | Cadence | Best Platforms | Worst Platforms |
-|-------|--------------|-----------------|----------------|---------|----------------|-----------------|
-| **`bold-sell`** | Direct, urgent, high-energy | «Stop», «Now», «Limited», «Only», «Warning» | "Stop losing $300/day. Here's the fix." | Short. Fragmented. 8-15 w/s. | Landing CTA, flash sale email, TikTok | LinkedIn feed, white papers |
-| **`expert-calm`** | Measured, analytical, credible | «Data shows», «Research indicates», «The pattern» | "The data reveals a pattern most people miss." | Medium. Balanced. 15-25 w/s. | LinkedIn, email nurture, whitepapers | TikTok, push notifications |
-| **`rebel-edgy`** | Contrarian, disruptive, provocative | «They told you», «Wrong», «Actually», «Here's the truth» | "Everything you've been told about X is backwards." | Variable. Punchy then expansive. | Twitter/X, YouTube hooks, creator content | Corporate comms, crisis response |
-| **`warm-human`** | Empathetic, conversational, vulnerable | «I used to», «We've all», «Here's what happened», «You know that feeling» | "I used to believe the same thing. Then this happened." | Natural storytelling cadence. | Email, LinkedIn personal brand, long-form | Search ads, pricing pages |
-| **`luxe-minimal`** | Sparse, polished, high-status | Precise nouns. Zero filler. | "Perfection. In one detail." | Ultra-short. 3-10 w/s. White space. | Hero sections, luxury pages, Instagram | Long-form sales, webinars |
-| **`community-build`** | Inclusive, tribal, «we»-language | «Join us», «Together», «Our community», «People like us» | "We're building something different. Come see." | Warm but declarative. | Community launch, membership pages, events | Cold outreach, crisis response |
-| **`data-vivid`** | Numbers-driven, visual, concrete | Specific stats, timelines, «X → Y in Z days» | "From $0 to $10K in 47 days. The exact numbers." | Alternates: data claim → human implication. | Case studies, ROI pages, B2B decks | Emotional storytelling |
+| Style | Voice Profile | Lexical Markers | Example Opener | Cadence | Best Platforms | Worst Platforms | Max KW Density |
+|-------|--------------|-----------------|----------------|---------|----------------|-----------------|---------------|
+| **`bold-sell`** | Direct, urgent, high-energy | «Stop», «Now», «Limited», «Only», «Warning» | "Stop losing $300/day. Here's the fix." | Short. Fragmented. 8-15 w/s. | Landing CTA, flash sale email, TikTok | LinkedIn feed, white papers | ≤1.5% |
+| **`expert-calm`** | Measured, analytical, credible | «Data shows», «Research indicates», «The pattern» | "The data reveals a pattern most people miss." | Medium. Balanced. 15-25 w/s. | LinkedIn, email nurture, whitepapers | TikTok, push notifications | ≤1.2% |
+| **`rebel-edgy`** | Contrarian, disruptive, provocative | «They told you», «Wrong», «Actually», «Here's the truth» | "Everything you've been told about X is backwards." | Variable. Punchy then expansive. | Twitter/X, YouTube hooks, creator content | Corporate comms, crisis response | ≤1.5% |
+| **`warm-human`** | Empathetic, conversational, vulnerable | «I used to», «We've all», «Here's what happened», «You know that feeling» | "I used to believe the same thing. Then this happened." | Natural storytelling cadence. | Email, LinkedIn personal brand, long-form | Search ads, pricing pages | ≤1.2% |
+| **`luxe-minimal`** | Sparse, polished, high-status | Precise nouns. Zero filler. | "Perfection. In one detail." | Ultra-short. 3-10 w/s. White space. | Hero sections, luxury pages, Instagram | Long-form sales, webinars | ≤1.0% |
+| **`community-build`** | Inclusive, tribal, «we»-language | «Join us», «Together», «Our community», «People like us» | "We're building something different. Come see." | Warm but declarative. | Community launch, membership pages, events | Cold outreach, crisis response | ≤1.2% |
+| **`data-vivid`** | Numbers-driven, visual, concrete | Specific stats, timelines, «X → Y in Z days» | "From $0 to $10K in 47 days. The exact numbers." | Alternates: data claim → human implication. | Case studies, ROI pages, B2B decks | Emotional storytelling | ≤1.2% |
+
+> **Keyword density caps:** When generating copy from an SEO brief or for SEO-sensitive content, respect the Max KW Density column above. Caps prevent search engine over-stuffing penalties. `bold-sell` is the highest-risk tone for over-stuffing — cap strictly.
 
 ### Hybrid Tones
 
@@ -785,12 +787,14 @@ Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST ru
 
 Statistical proof activates System 2. Narrative activates System 1. You need BOTH. Every STANDARD or EXTENDED output MUST contain all three elements below. Treat this as structural requirements, not optional style advice.
 
+**Data integrity rule:** ALL names, numbers, quotes, timelines, and details MUST be grounded in input data. If the user provides real customer data, testimonials, metrics — use them precisely. If the user provides no persona data and does not request fabrication, use a **first-person founder narrative** ("I"/"we" experience) or a **generalized behavioral vignette** (unnamed archetype with concrete details, clearly signaled as illustrative with a marker like "A founder we worked with..." or "Picture this:"). NEVER invent a named person with fabricated details unless the user explicitly requests: "make up an example," "hypothetical scenario," "illustrate with a fictional case," or similar.
+
 ### 1. NPSA: Named Person Story Arc
 
 A specific, named person with: **full name + location or role + timeline + verbatim quote + one visceral sensory detail.**
 
 ```
-STRUCTURE:
+STRUCTURE (when real data is available):
   [Name], [role/context], in [location].
   [Timeline: "6 weeks from shutting down" / "Last Tuesday at 7:42 AM"]
   [Visceral detail: "coffee gone cold" / "staring at the ceiling at 2:47 AM" / "cried in her car"]
@@ -798,10 +802,20 @@ STRUCTURE:
   [Outcome — THEN aggregate statistic as reinforcement]
 ```
 
-**NOT:** "The median graduate across 214 clients tracked through February 2026 adds $27,400 in net-new revenue within 90 days of completion."
-**BUT:** "Marcus Webb was 6 weeks from shutting down his Austin consulting practice. Revenue: $11,400/month. Take-home: $6,200. 62-hour weeks. 'I thought I had a pricing problem,' Marcus told us in his intake call. 'I had a leverage problem.' He now works 41 hours/week and hasn't turned down a qualified lead in 7 months. The median across all 214 graduates: +$27,400 within 90 days."
+```
+FALLBACK (when no real persona data is available and user did NOT request fabrication):
+  Use first-person founder narrative:
+  "Three years ago, I was [situation]. [Visceral detail]. Here's what I found..."
+  — OR —
+  Use generalized vignette with concrete details, signaled as illustrative:
+  "A founder we worked with last quarter was [situation]. [Specific metric]. Here's what changed..."
+```
 
-**Minimum:** 1 NPSA per STANDARD output. 2 NPSAs per EXTENDED output (>1500 words).
+**NOT:** "The median graduate across 214 clients tracked through February 2026 adds $27,400 in net-new revenue within 90 days of completion."
+**BUT (with real data):** "Marcus Webb was 6 weeks from shutting down his Austin consulting practice. Revenue: $11,400/month. Take-home: $6,200. 62-hour weeks. 'I thought I had a pricing problem,' Marcus told us in his intake call. 'I had a leverage problem.' He now works 41 hours/week and hasn't turned down a qualified lead in 7 months. The median across all 214 graduates: +$27,400 within 90 days."
+**BUT (no real data, first-person):** "I spent 18 months burning $4,200/month on ads that converted at 0.3%. Every morning, same ritual: open Ads Manager, wince, close tab. Then I found the pattern."
+
+**Minimum:** 1 NPSA or fallback narrative per STANDARD output. 2 per EXTENDED output (>1500 words).
 
 ### 2. Conversational Direct Address
 
@@ -825,15 +839,17 @@ At least ONE element that breaks the pattern of polished marketing-speak.
 
 ### Tone-Specific Narrative Minimums
 
-| Tone | Narrative Requirement |
-|------|----------------------|
-| **expert-calm** | 1 NPSA + 1 verbatim quote per 500 words. Visceral detail before statistics. |
-| **warm-human** | NPSA OPENS the text. Visceral detail in first 3 sentences. |
-| **bold-sell** | 1 unexpected detail per output. P.S. with specific number mandatory. |
-| **rebel-edgy** | 1 self-deprecating or raw-imperfection moment. |
-| **luxe-minimal** | 1 sensory-physical anchor: weight, scent, texture, temperature, sound. |
-| **community-build** | Named member story + "we knew we were onto something when..." moment. |
-| **data-vivid** | 1 NPSA anchoring EVERY aggregate statistic used. Person → number, never number → person. |
+These are framework requirements, not optional. However, they adapt to what the input provides. When real data is unavailable, use first-person or generalized vignette (see NPSA fallback patterns above).
+
+| Tone | Narrative Requirement | Fallback (no real data) |
+|------|----------------------|------------------------|
+| **expert-calm** | 1 NPSA or vignette + 1 verbatim quote per 500 words. Visceral detail before statistics. | Founder narrative: "I/We analyzed X. Here's the pattern." |
+| **warm-human** | NPSA or first-person story OPENS the text. Visceral detail in first 3 sentences. | "I used to believe [X]. Then [specific event with sensory detail]." |
+| **bold-sell** | 1 unexpected detail per output. P.S. with specific number mandatory. | P.S. with a real metric. No number = rebuild. |
+| **rebel-edgy** | 1 self-deprecating or raw-imperfection moment. | "I was wrong about this for [N] years. Here's how I know." |
+| **luxe-minimal** | 1 sensory-physical anchor: weight, scent, texture, temperature, sound. | Works with product attributes — no persona needed. |
+| **community-build** | Named member story or "we knew we were onto something when..." founder moment. | "When our first 50 members all did [X], we realized..." |
+| **data-vivid** | 1 NPSA or vignette anchoring EVERY aggregate statistic used. Person → number, never number → person. | "One customer: [specific metric]. Across all: [aggregate]." |
 
 ---
 
@@ -969,7 +985,14 @@ When the user provides raw numbers without interpretation, translate them into b
 
 ## EXTERNAL REFERENCE FILES
 
-This skill is self-contained for core operation. The following files are preserved in the repository for deeper study, edge cases, and extended context. The LLM may cross-reference them when tasks demand unusual depth. **Full GitHub URLs are provided** so an LLM working with only this SKILL.md file can instruct the user which files to download.
+This skill is self-contained for core operation. The following files are preserved in the repository for deeper study, edge cases, and extended context. **Full GitHub URLs are provided** so an LLM working with only this SKILL.md file can instruct the user which files to download.
+
+**Loading rule — load ON DEMAND, never all at once:**
+- Standard content (social posts, emails, ads, landing sections): use inlined tables only. No external files.
+- Complex content (full sales pages, webinars, long-form, crisis, multi-language): load ONLY the scenario file for your format.
+- Non-Western markets with specific cultural edge cases: load `cultural-matrix.md` ONLY if the inlined Quick-Reference lacks the granularity you need.
+- Deep audit with ambiguous anti-patterns: load `anti-patterns.md` for the full checklist and before/after examples.
+- **NEVER pre-load all files.** Each external file is ~5-15KB. Loading all of them before a simple task wastes context and degrades quality. Load the minimum needed for the specific task.
 
 | File | Purpose | When to Cross-Reference | Download URL |
 |------|---------|------------------------|-------------|
@@ -981,7 +1004,7 @@ This skill is self-contained for core operation. The following files are preserv
 | `README.md` | Project overview, integration guides, pipeline documentation | When you need setup instructions or pipeline integration details | https://github.com/MADEVAL/MindFluence/blob/main/README.md |
 | `README.ru.md` | Russian-language project overview | For Russian-speaking users | https://github.com/MADEVAL/MindFluence/blob/main/README.ru.md |
 
-> **Default rule:** Use the inlined tables and detection rules for all standard tasks. Cross-reference external files only when the task is unusually complex, or the target market/audience is outside the inlined coverage. The external files provide depth; the inlined content provides speed.
+> **Default rule:** Use the inlined tables and detection rules for all standard tasks. Cross-reference external files only when the task is unusually complex, or the target market/audience is outside the inlined coverage. The external files provide depth; the inlined content provides speed. **Load one file at a time — never pre-load the entire repository.**
 
 ---
 
@@ -1227,4 +1250,4 @@ Start Free Trial - No Credit Card
 
 ---
 
-**End of SKILL.md v2.1**
+**End of SKILL.md v2.2**
