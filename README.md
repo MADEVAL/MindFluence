@@ -24,13 +24,13 @@ It's built on decades of research in behavioral economics and evolutionary psych
 2. **Give a task:** "Write a LinkedIn post about..." / "Create a landing page for..." / "Audit this ad for cognitive biases."
 3. **Get output** with every bias labeled, every decision explained, every word psychologically justified.
 
-**The LLM uses a single-table Bias Selection Router** (audience × product × platform → instant bias stack) instead of a 10-step procedure. After generating, it runs a **mechanical Post-Generation Verification** - 6 checks (numbers, names, exit, explain, blame-system, human narrative) — and a mandatory **Named Person Story Arc** requirement before delivering.
+**The LLM uses a single-table Bias Selection Router** (audience × product × platform → instant bias stack) instead of a 10-step procedure. After generating, it runs a **mechanical Post-Generation Verification** - 6 checks (numbers, names, exit, explain, blame-system, human narrative) - and a mandatory **Named Person Story Arc** requirement before delivering.
 
 **Four modes:**
 - **Quick Mode** (default) - 3-step internal procedure: lookup router → scenario override → verify. Fast for user, fast for LLM.
 - **Deep Mode** - the AI asks 5 clarifying questions at once, then routes through the same lookup.
 - **Audit Mode** - analyzes existing copy for biases and anti-patterns using mechanical detection rules (13 anti-patterns including Statistical-Only Fallacy).
-- **Optimize Mode** - iterates on underperforming copy using funnel-to-bias mapping. Generates A/B variants with statistical confidence thresholds.
+- **Optimize Mode** - iterates on underperforming copy using funnel-to-bias mapping. Generates A/B variants with statistical confidence thresholds. Also handles qualitative rewrites without metrics: tone shifts, bias injection/removal, anti-pattern fixes, audience/platform adaptation (7 rewrite intents).
 
 ## The 20 Cognitive Biases
 
@@ -59,7 +59,7 @@ It's built on decades of research in behavioral economics and evolutionary psych
 
 ## Tone-of-Voice Switcher
 
-Every output is tagged with one of 7 styles (or a hybrid with formula: 70% primary cadence + 30% secondary lexical markers). Each tone has a mandatory narrative minimum — e.g., warm-human requires a Named Person Story Arc in the first 3 sentences; luxe-minimal requires a sensory-physical anchor.
+Every output is tagged with one of 7 styles (or a hybrid with formula: 70% primary cadence + 30% secondary lexical markers). Each tone has a mandatory narrative minimum - e.g., warm-human requires a Named Person Story Arc in the first 3 sentences; luxe-minimal requires a sensory-physical anchor.
 
 | Style | Voice | Best for |
 |-------|-------|----------|
@@ -124,7 +124,7 @@ Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolut
 | 12 | Blaming Dissonance | "You say X but do Y" → blames reader, not system → FAIL | Shame → withdrawal, not action |
 | 13 | Statistical-Only Fallacy | All social proof / authority claims are aggregate stats with zero named-person narrative → FAIL | Informs System 2, never activates System 1. Data without story = processed but not felt. |
 
-**Post-Generation Verification:** After writing, the LLM runs a mandatory 6-point mechanical checklist before delivering any output — checking for specific numbers, named sources, fear exits, scarcity explanations, system-blame, and human narrative depth (Named Person Story Arc).
+**Post-Generation Verification:** After writing, the LLM runs a mandatory 6-point mechanical checklist before delivering any output - checking for specific numbers, named sources, fear exits, scarcity explanations, system-blame, and human narrative depth (Named Person Story Arc).
 
 ## What's inside
 
@@ -139,11 +139,13 @@ mindfluence/
 │                                  Post-Generation Verification (6 mechanical checks including HUMAN),
 │                                  7 tones + hybrid formula with narrative minimums, 3-tier output format,
 │                                  5 few-shot examples with NPSA annotations, Quality Rubric,
+│                                  Rewrite Without Metrics (7 intents: full rewrite, tone shift, bias inject/remove,
+│                                  anti-pattern fix, audience/platform adaptation),
 │                                  EXTERNAL REFERENCE FILES table with full GitHub URLs.
 ├── decision-matrix.md          ← Detailed audience×product×platform mapping. For deeper bias selection.
 ├── anti-patterns.md            ← 12 AI copywriting failures + detailed fixes + 30-sec audit checklist.
 ├── cultural-matrix.md          ← Full bias-by-bias cultural adaptation across 4 Hofstede dimensions.
-├── scenarios/                  ← Task-specific playbooks (13 scenarios) — authoritative for complex tasks
+├── scenarios/                  ← Task-specific playbooks (13 scenarios) - authoritative for complex tasks
 │   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
 │   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
 │   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
@@ -319,7 +321,7 @@ Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrule
 - Any capable LLM with a system prompt / custom instructions field (GPT, Claude, Gemini, DeepSeek, open-source models)
 - **One file:** `SKILL.md`. Fully self-contained. All tables, detection rules, cultural data, and examples are inlined.
 - Context window: 32K+ tokens for full v2.2 functionality (256K+ recommended for optimal quality)
-- For deeper context: external files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`) preserved in the repo — full GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section so LLMs working with one file can guide users to download them
+- For deeper context: external files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`) preserved in the repo - full GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section so LLMs working with one file can guide users to download them
 - No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
 
@@ -338,7 +340,7 @@ MIT
 ## GitHub Description
 
 ```
-AI prompt-skill v2.2: 20 cognitive biases → high-converting marketing copy with guaranteed human narrative quality. Self-contained single-file with Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (Named Person Story Arc + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 6-point post-generation verification (incl. HUMAN check), 12-region cultural quick-reference, and 5 inlined few-shot examples with NPSA annotations. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
+AI prompt-skill v2.2: 20 cognitive biases → high-converting marketing copy with guaranteed human narrative quality. Self-contained single-file with Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (Named Person Story Arc + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 6-point post-generation verification (incl. HUMAN check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents for qualitative copy transformation), and 5 inlined few-shot examples with NPSA annotations. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
 ```
 
 ## GitHub Tags

@@ -186,7 +186,7 @@ SMS is higher trust AND higher intrusion than push. A text message competes with
 
 ## DEFAULT CULTURAL ADAPTATION FOR PUSH
 
-Push notifications are the most culturally sensitive format because they appear in the user's most personal space — their lock screen or SMS inbox. Adjust per **Cultural Quick-Reference in SKILL.md**:
+Push notifications are the most culturally sensitive format because they appear in the user's most personal space - their lock screen or SMS inbox. Adjust per **Cultural Quick-Reference in SKILL.md**:
 
 - **High Power Distance:** Authority signals in push (certified by, official, approved) increase trust. "From your [industry body]" in the sender name.
 - **Collectivist:** Group framing in re-engagement pushes: "Your team is waiting" > "We miss you."
