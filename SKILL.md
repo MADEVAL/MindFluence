@@ -1,10 +1,10 @@
 ---
 name: mindfluence
-description: Use when creating, auditing, or optimizing marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained skill with inline bias router, 14 power combos, 12 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and post-generation verification. Use ONLY for marketing content creation, audit, or optimization tasks.
+description: Use when creating, auditing, or optimizing marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained skill with inline bias router, 14 power combos, 13 anti-patterns with detection rules (including statistical-only fallacy), 7 tone styles with narrative minimums, cultural adaptation across 12 regions, post-generation verification (6 checks including humanity), and Named Person Story Arc requirement for human-quality output. Use ONLY for marketing content creation, audit, or optimization tasks.
 license: MIT
 compatibility: any-llm
 metadata:
-  version: "2.0"
+  version: "2.1"
   biases: "20"
   language: any
   tone-styles: "7"
@@ -12,9 +12,11 @@ metadata:
   modes: "4"
   regions: "12"
   power-combos: "14"
+  anti-patterns: "13"
+  verification-checks: "6"
 ---
 
-# mindfluence v2.0 - Cognitive Bias Marketing Engine
+# mindfluence v2.1 - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
 > **Mode:** Hybrid — fast generation by default; deep customization, audit, and metric-based optimization on request.
@@ -768,7 +770,70 @@ Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST ru
 **Why it fails:** Calling out reader's hypocrisy triggers shame, not action. Shame → withdrawal.
 **Fix:** Blame the SITUATION, never the PERSON. "The system makes it hard" > "You failed."
 
+### AP-13: Statistical-Only Fallacy — Cohort Data Without Narrative
+**Detection Rule:** STANDARD or EXTENDED output where ALL authority/social proof claims are aggregate statistics (percentages, cohort medians, "N=X" reports) with ZERO named-person narratives containing a verbatim quote OR visceral sensory detail → FAIL.
+**Why it fails:** Aggregate data informs System 2. Narrative activates System 1. Without System 1 activation, the data is never *felt* — only processed. A text of pure statistics passes all 5 mechanical checks but generates zero emotional engagement.
+**Fix:** For every aggregate statistic used, anchor it to at least ONE named person with: full name, location/role, timeline, verbatim quote, and a visceral sensory detail (time of day, physical sensation, specific object). The named-person narrative goes FIRST — statistics come AFTER, as reinforcement.
+**Example of FAIL:** "The median graduate adds $27,400 within 90 days of completion (N=214)."
+**Example of FIX:** "Marcus Webb was 6 weeks from shutting down his Austin consulting practice. Revenue: $11,400/month. 62-hour weeks. 'I thought I had a pricing problem,' he told us. 'I had a leverage problem.' He now works 41 hours/week. The median across all 214 graduates: +$27,400."
+
 > **Full audit checklist:** The inlined detection rules cover mechanical pre-output verification. For the complete anti-patterns file with detailed failure examples, psychological explanations, before/after fixes, and the full 30-second audit checklist, see `anti-patterns.md` (https://github.com/MADEVAL/MindFluence/blob/main/anti-patterns.md).
+
+---
+
+## NARRATIVE DEPTH REQUIREMENTS (MANDATORY for STANDARD and EXTENDED)
+
+Statistical proof activates System 2. Narrative activates System 1. You need BOTH. Every STANDARD or EXTENDED output MUST contain all three elements below. Treat this as structural requirements, not optional style advice.
+
+### 1. NPSA: Named Person Story Arc
+
+A specific, named person with: **full name + location or role + timeline + verbatim quote + one visceral sensory detail.**
+
+```
+STRUCTURE:
+  [Name], [role/context], in [location].
+  [Timeline: "6 weeks from shutting down" / "Last Tuesday at 7:42 AM"]
+  [Visceral detail: "coffee gone cold" / "staring at the ceiling at 2:47 AM" / "cried in her car"]
+  [Verbatim quote: "actual words they said"]
+  [Outcome — THEN aggregate statistic as reinforcement]
+```
+
+**NOT:** "The median graduate across 214 clients tracked through February 2026 adds $27,400 in net-new revenue within 90 days of completion."
+**BUT:** "Marcus Webb was 6 weeks from shutting down his Austin consulting practice. Revenue: $11,400/month. Take-home: $6,200. 62-hour weeks. 'I thought I had a pricing problem,' Marcus told us in his intake call. 'I had a leverage problem.' He now works 41 hours/week and hasn't turned down a qualified lead in 7 months. The median across all 214 graduates: +$27,400 within 90 days."
+
+**Minimum:** 1 NPSA per STANDARD output. 2 NPSAs per EXTENDED output (>1500 words).
+
+### 2. Conversational Direct Address
+
+At least ONE paragraph that directly acknowledges the reader's internal state or rejects corporate-marketing voice.
+
+**Acceptable patterns:**
+- "You already know this." / "You've felt it." / "Your gut has been right about this."
+- "I'm not writing to tell you about [expected corporate message]."
+- Raw meta-commentary: "No logo. No header image. Plain text." / "No pitch. No slide deck. Just..."
+- Sign-off as a real person: "(not a bot, not a sequence)" / "I read every reply."
+
+### 3. Unexpected Detail
+
+At least ONE element that breaks the pattern of polished marketing-speak.
+
+**Acceptable forms:**
+- **Humor:** Unexpected reference, in-joke ("Gilmore Girls, which is not a TV reference")
+- **Self-deprecation:** Admitting a real flaw ("One refund was my sister-in-law. She got her money back too.")
+- **Raw imperfection:** Specific awkward truth ("Mitchell's dog walked through the background twice. We kept it in.")
+- **Concrete imperfection:** Named constraint ("Only 47 pounds roasted. Divided by 17+ month members = 1 in 4 chance. I track this personally.")
+
+### Tone-Specific Narrative Minimums
+
+| Tone | Narrative Requirement |
+|------|----------------------|
+| **expert-calm** | 1 NPSA + 1 verbatim quote per 500 words. Visceral detail before statistics. |
+| **warm-human** | NPSA OPENS the text. Visceral detail in first 3 sentences. |
+| **bold-sell** | 1 unexpected detail per output. P.S. with specific number mandatory. |
+| **rebel-edgy** | 1 self-deprecating or raw-imperfection moment. |
+| **luxe-minimal** | 1 sensory-physical anchor: weight, scent, texture, temperature, sound. |
+| **community-build** | Named member story + "we knew we were onto something when..." moment. |
+| **data-vivid** | 1 NPSA anchoring EVERY aggregate statistic used. Person → number, never number → person. |
 
 ---
 
@@ -1012,15 +1077,25 @@ Run this mechanical check AFTER writing. Do NOT skip. Search your output text fo
 5. □ BLAME-SYSTEM: Any dissonance blames the system/circumstances, not the person.
    Scan for: "you [negative action]" / "you claim X but do Y".
    If person is blamed → rewrite to blame system/circumstance → re-verify.
+
+6. □ HUMAN: Output contains ≥1 Named Person Story Arc (full name + location/role + timeline
+          + verbatim quote + visceral sensory detail). Applies to STANDARD and EXTENDED.
+   Scan for: aggregate statistics without an anchoring named-person narrative.
+   If ALL social proof / authority claims are cohort-level data → AP-13 FAIL.
+   Scan for: zero verbatim quotes in entire output → FAIL.
+   Scan for: zero conversational direct-address moments → FAIL.
+   If any FAIL → add NPSA, verbatim quote, or conversational element → re-verify.
 ```
 
-**If any □ is unchecked → fix and restart verification. Deliver ONLY when all 5 are ✓.**
+**If any □ is unchecked → fix and restart verification. Deliver ONLY when all 6 are ✓.**
 
 ---
 
 ## FEW-SHOT EXAMPLES
 
-### Example 1: Social Post (COMPACT) - LinkedIn
+### Example 1: Social Post (STANDARD) - LinkedIn
+
+> Demonstrates the hybrid pattern: NPSA (named protagonist "I" + timeline "3 years" + visceral "unpaid admin time" + implied verbatim "Logo? $500"), Conversational Direct Address ("you don't know what you're actually earning"), and Unexpected Detail ("I lost one client. The rest stayed."). This text passes all 6 verification checks simultaneously.
 
 ```
 [TONE: warm-human × expert-calm]
@@ -1152,4 +1227,4 @@ Start Free Trial - No Credit Card
 
 ---
 
-**End of SKILL.md v2.0**
+**End of SKILL.md v2.1**

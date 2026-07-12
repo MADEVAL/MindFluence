@@ -1,6 +1,6 @@
 # MindFluence
 
-[![Version](https://img.shields.io/badge/version-1.0-blue)]()
+[![Version](https://img.shields.io/badge/version-2.1-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Compatibility](https://img.shields.io/badge/compatibility-any%20LLM-purple)]()
 
@@ -8,7 +8,7 @@
 
 > **Persuasion engineered through psychology, not manipulation.**
 
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. **v2.0: self-contained single-file.** All tables, anti-patterns with detection rules, cultural data, and few-shot examples are inlined into SKILL.md. No external file reads required for core operation.
+An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. **v2.1: self-contained single-file with narrative depth.** All tables, 13 anti-patterns with detection rules, cultural data, and few-shot examples are inlined into SKILL.md. Named Person Story Arc (NPSA) requirement ensures human-quality output alongside mechanical verification. No external file reads required for core operation.
 
 ---
 
@@ -24,12 +24,12 @@ It's built on decades of research in behavioral economics and evolutionary psych
 2. **Give a task:** "Write a LinkedIn post about..." / "Create a landing page for..." / "Audit this ad for cognitive biases."
 3. **Get output** with every bias labeled, every decision explained, every word psychologically justified.
 
-**The LLM uses a single-table Bias Selection Router** (audience × product × platform → instant bias stack) instead of a 10-step procedure. After generating, it runs a **mechanical Post-Generation Verification** - 5 grep-style checks (numbers, names, exit, explain, blame-system) - before delivering.
+**The LLM uses a single-table Bias Selection Router** (audience × product × platform → instant bias stack) instead of a 10-step procedure. After generating, it runs a **mechanical Post-Generation Verification** - 6 checks (numbers, names, exit, explain, blame-system, human narrative) — and a mandatory **Named Person Story Arc** requirement before delivering.
 
 **Four modes:**
 - **Quick Mode** (default) - 3-step internal procedure: lookup router → scenario override → verify. Fast for user, fast for LLM.
 - **Deep Mode** - the AI asks 4 clarifying questions at once, then routes through the same lookup.
-- **Audit Mode** - analyzes existing copy for biases and anti-patterns using mechanical detection rules (e.g., "Search for 'studies show' without source+year → FAIL").
+- **Audit Mode** - analyzes existing copy for biases and anti-patterns using mechanical detection rules (13 anti-patterns including Statistical-Only Fallacy).
 - **Optimize Mode** - iterates on underperforming copy using funnel-to-bias mapping. Generates A/B variants with statistical confidence thresholds.
 
 ## The 20 Cognitive Biases
@@ -59,7 +59,7 @@ It's built on decades of research in behavioral economics and evolutionary psych
 
 ## Tone-of-Voice Switcher
 
-Every output is tagged with one of 7 styles (or a hybrid with formula: 70% primary cadence + 30% secondary lexical markers):
+Every output is tagged with one of 7 styles (or a hybrid with formula: 70% primary cadence + 30% secondary lexical markers). Each tone has a mandatory narrative minimum — e.g., warm-human requires a Named Person Story Arc in the first 3 sentences; luxe-minimal requires a sensory-physical anchor.
 
 | Style | Voice | Best for |
 |-------|-------|----------|
@@ -122,20 +122,23 @@ Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolut
 | 10 | Insulting Confirmation | "Most people are wrong" → reader in "wrong" group → FAIL | Makes reader defensive, not engaged |
 | 11 | Abstract Availability | "Imagine [scenario]" with <3 concrete sensory details → FAIL | No smells, sounds, times, names |
 | 12 | Blaming Dissonance | "You say X but do Y" → blames reader, not system → FAIL | Shame → withdrawal, not action |
+| 13 | Statistical-Only Fallacy | All social proof / authority claims are aggregate stats with zero named-person narrative → FAIL | Informs System 2, never activates System 1. Data without story = processed but not felt. |
 
-**Post-Generation Verification:** After writing, the LLM runs a mandatory 5-point mechanical checklist before delivering any output - checking for specific numbers, named sources, fear exits, scarcity explanations, and system-blame.
+**Post-Generation Verification:** After writing, the LLM runs a mandatory 6-point mechanical checklist before delivering any output — checking for specific numbers, named sources, fear exits, scarcity explanations, system-blame, and human narrative depth (Named Person Story Arc).
 
 ## What's inside
 
 ```
 mindfluence/
-├── SKILL.md                    ← Main instruction. Fully self-contained v2.0.
+├── SKILL.md                    ← Main instruction. Fully self-contained v2.1.
 │                                  Inlined: Bias Selection Router, Scenario Quick-Reference,
-│                                  Cultural Quick-Reference, 12 Anti-Patterns with detection rules,
+│                                  Cultural Quick-Reference, 13 Anti-Patterns with detection rules
+│                                  (incl. Statistical-Only Fallacy), Narrative Depth Requirements
+│                                  (NPSA + Conversational Direct Address + Unexpected Detail),
 │                                  14 Power Combinations, Bias Conflict Detector,
-│                                  Post-Generation Verification (5 mechanical checks),
-│                                  7 tones + hybrid formula, 3-tier output format,
-│                                  5 few-shot examples, Quality Rubric,
+│                                  Post-Generation Verification (6 mechanical checks including HUMAN),
+│                                  7 tones + hybrid formula with narrative minimums, 3-tier output format,
+│                                  5 few-shot examples with NPSA annotations, Quality Rubric,
 │                                  EXTERNAL REFERENCE FILES table with full GitHub URLs.
 ├── decision-matrix.md          ← Detailed audience×product×platform mapping. For deeper bias selection.
 ├── anti-patterns.md            ← 12 AI copywriting failures + detailed fixes + 30-sec audit checklist.
@@ -315,7 +318,7 @@ Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrule
 
 - Any capable LLM with a system prompt / custom instructions field (GPT, Claude, Gemini, DeepSeek, open-source models)
 - **One file:** `SKILL.md`. Fully self-contained. All tables, detection rules, cultural data, and examples are inlined.
-- Context window: 32K+ tokens for full v2.0 functionality (256K+ recommended for optimal quality)
+- Context window: 32K+ tokens for full v2.1 functionality (256K+ recommended for optimal quality)
 - For deeper context: external files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`) preserved in the repo — full GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section so LLMs working with one file can guide users to download them
 - No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
@@ -335,9 +338,9 @@ MIT
 ## GitHub Description
 
 ```
-AI prompt-skill v2.0: 20 cognitive biases → high-converting marketing copy. Self-contained single-file with Bias Selection Router (audience×product×platform→instant bias stack), 12 anti-patterns with mechanical detection rules, 14 power bias combinations, 7 tone styles + hybrid formula, 3-tier output format (compact/standard/extended), post-generation verification checklist, 12-region cultural quick-reference, and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
+AI prompt-skill v2.1: 20 cognitive biases → high-converting marketing copy with guaranteed human narrative quality. Self-contained single-file with Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (Named Person Story Arc + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 6-point post-generation verification (incl. HUMAN check), 12-region cultural quick-reference, and 5 inlined few-shot examples with NPSA annotations. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
 ```
 
 ## GitHub Tags
 
-`prompt-engineering` `cognitive-biases` `marketing` `copywriting` `behavioral-economics` `psychology` `ai-prompts` `llm-skills` `persuasion` `neuromarketing` `conversion-optimization` `content-strategy` `system-prompt` `gpt` `claude` `self-contained` `bias-detection` `marketing-automation`
+`prompt-engineering` `cognitive-biases` `marketing` `copywriting` `behavioral-economics` `psychology` `ai-prompts` `llm-skills` `persuasion` `neuromarketing` `conversion-optimization` `content-strategy` `system-prompt` `gpt` `claude` `self-contained` `bias-detection` `marketing-automation` `narrative-engineering` `human-quality`
