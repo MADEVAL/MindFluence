@@ -79,7 +79,7 @@ Fewer steps = lower perceived effort = higher conversion. Never exceed 4 steps.
 
 ### 5. SOCIAL PROOF (the conversion engine)
 ```
-[SOCIAL PROOF] Testimonials with: face photo, full name, role, specific result.
+[SOCIAL PROOF] Testimonials with: face photo, full name, role, specific result - or explicit placeholders if the data is not available.
 [CONFIRMATION] Testimonials should echo the beliefs your target audience already holds.
 [SURVIVORSHIP BIAS] Show your best outcomes. Acknowledge they're top results for credibility.
 [FALSE CONSENSUS] Group testimonials by persona. "If you're a [role], here's what your peers say."
@@ -93,7 +93,7 @@ Fewer steps = lower perceived effort = higher conversion. Never exceed 4 steps.
 
 **The "Wall of Love" pattern:** A dense grid of positive tweets/short quotes. The sheer volume = social proof.
 
-> ⚠ **AP-1:** Vague social proof ("thousands", "many") registers as noise. Minimum: specific number + full name + role + measurable result. **AP-10:** Confirmation should make the reader feel smart to believe, not wrong to doubt.
+> ⚠ **AP-1:** Vague social proof ("thousands", "many") registers as noise. Minimum: specific number + full name + role + measurable result, or explicit placeholders (`[N]`, `[Customer name]`, `[result]`) when data is unavailable. **AP-10:** Confirmation should make the reader feel smart to believe, not wrong to doubt.
 
 ---
 

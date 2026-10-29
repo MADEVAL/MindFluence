@@ -1,1 +1,14 @@
 _ship/
+
+# Local secrets and environment files
+.env
+.env.*
+*.key
+*.pem
+
+# Logs and OS/editor noise
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,5 +1,7 @@
 # Example: Landing Page Hero Section
 
+> **[ILLUSTRATIVE]** Fictional names, brands, numbers, and quotes are used for demonstration. Replace with verified data before publishing.
+
 **Context:** A premium meal-prep delivery service for busy professionals.
 **Request:** "Write the hero section for our landing page. Target: professionals earning $100K+ who don't have time to cook healthy."
 

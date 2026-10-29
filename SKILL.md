@@ -1,10 +1,10 @@
 ---
 name: mindfluence
-description: Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained skill with inline bias router, 14 power combos, 13 anti-patterns with detection rules (including statistical-only fallacy), 7 tone styles with narrative minimums and keyword density caps, cultural adaptation across 12 regions, post-generation verification (6 checks including humanity), Named Person Story Arc requirement with fallback patterns for human-quality output, and Rewrite Without Metrics variant for qualitative transformation of existing copy (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
+description: Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained core with a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and 7 post-generation checks including a mandatory PROVENANCE/TRUTH GATE. Narrative depth supports two compliant modes - real-data Named Person Story Arc or a labeled [illustrative] first-person/generalized vignette. Includes Rewrite Without Metrics (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
 license: MIT
 compatibility: any-llm
 metadata:
-  version: "2.2"
+  version: "2.3"
   biases: "20"
   language: any
   tone-styles: "7"
@@ -13,14 +13,16 @@ metadata:
   regions: "12"
   power-combos: "14"
   anti-patterns: "13"
-  verification-checks: "6"
+  router-rows: "38"
+  narrative-modes: "2"
+  verification-checks: "7"
 ---
 
-# mindfluence v2.2 - Cognitive Bias Marketing Engine
+# mindfluence v2.3 - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
 > **Mode:** Hybrid - fast generation by default; deep customization, audit, and metric-based optimization on request.
-> **Architecture:** Self-contained single-file skill. All tables, anti-patterns, and cultural data inlined for core operation. External files are preserved for deeper context and edge cases - see the EXTERNAL REFERENCE FILES section below for what each file provides and where to download it (full GitHub URLs included for LLMs working with only this file).
+> **Architecture:** Self-contained core. All tables, anti-patterns, and cultural data needed for standard tasks are inlined. Scenario files are optional depth for complex tasks - see the EXTERNAL REFERENCE FILES section below.
 > **Language-agnostic:** Generates content in any language. Adapts cultural references to the target locale.
 
 ---
@@ -72,20 +74,35 @@ Output the refusal message verbatim and STOP for any of these:
 
 ---
 
+## DATA PROVENANCE POLICY - READ SECOND
+
+Every factual claim in the output must fall into exactly one bucket:
+
+1. **Provided by the user** → use it verbatim. Do not "improve" numbers, names, quotes, or results.
+2. **Verified external source** → cite source + year + specific finding. If you cannot verify it, it is not verified.
+3. **Missing** → use an explicit placeholder (`[N]`, `[Customer name]`, `[Source, Year]`, `[measurable result]`) and add a `[DATA NEEDED]` note, or ask the user (Deep Mode / when the missing data is essential). Never invent a number, name, quote, testimonial, study, journal, or year to satisfy a formatting check.
+
+**Hard rule:** A check that requires "specific numbers" or "named sources" is a formatting requirement, not permission to fabricate. Placeholders are compliant; fabricated specifics are not.
+
+**Examples in this repository** use illustrative data unless marked otherwise. Treat their names, numbers, quotes, and brands as fictional templates, not as facts.
+
+---
+
 ## OPERATING MODES
 
 ### Quick Mode (Default - single-pass generation)
 
 User provides topic + product + audience. No clarifying questions. Generate immediately.
 
-**Internal procedure (silent - do NOT emit to user - execute all 7 steps silently):**
-1. Extract audience temperature from request context. If undetermined, default to `cold` (first-contact audience).
-2. **Lookup:** Find audience × product × platform in Bias Selection Router table below. Take the Primary Stack.
-3. **Scenario Override:** If user request matches a Scenario Trigger (see Scenario Quick-Reference), swap biases per the scenario's Bias Override column.
-4. **Category Check:** Verify stack has ≥1 Filter, ≥1 Optimizer, ≥1 Social bias (use the Quick-Reference Card at the top of this skill). Dual-category biases count for both.
-5. **Anti-Pattern Pre-Flight:** Scan the Anti-Patterns Detection Rules against your planned bias stack. Fix any FAIL before writing.
-6. **Ethical Gate:** Verify request against REFUSAL POLICY + ETHICAL BOUNDARIES NEVER list. Refuse if triggered.
-7. Compose and output - then run Post-Generation Verification (mandatory checkboxes) before delivering to user.
+**Internal procedure (silent - do NOT emit to user - execute all 8 steps silently):**
+1. **Data Provenance Audit:** List every number, name, quote, testimonial, study, and source the user actually provided. Everything else is missing → use an explicit placeholder + `[DATA NEEDED]`, or ask (Deep Mode). Never invent.
+2. Extract audience temperature from request context. If undetermined, default to `cold` (first-contact audience).
+3. **Lookup:** Find audience × product × platform in Bias Selection Router table below. Take the Primary Stack and the row's Tone Default (unless the user specified a tone).
+4. **Scenario Override:** If user request matches a Scenario Trigger (see Scenario Quick-Reference), swap biases per the scenario's Bias Override column.
+5. **Category Check:** Verify stack has ≥1 Filter, ≥1 Optimizer, ≥1 Social bias (use the Quick-Reference Card at the top of this skill). Dual-category biases count for both.
+6. **Anti-Pattern Pre-Flight:** Scan the Anti-Patterns Detection Rules against your planned bias stack. Fix any FAIL before writing.
+7. **Ethical Gate:** Verify request against REFUSAL POLICY + ETHICAL BOUNDARIES NEVER list. Refuse if triggered.
+8. Compose and output - then run Post-Generation Verification (7 mandatory checkboxes) before delivering to user.
 
 Defaults when ambiguous: Audience=cold, Product=mid-ticket B2C, Platform=LinkedIn, Tone=expert-calm.
 
@@ -101,43 +118,48 @@ User says "deep mode", "customize", "ask questions first", or the task is ambigu
 5. Any specific biases to emphasize or avoid?
 
 **After receiving answers:**
-1. Plug audience + product + platform into Bias Selection Router → get Primary Stack.
-2. Apply Scenario Override if a trigger matches.
-3. Adjust stack per user's emphasized/avoided biases.
-4. Continue with steps 4–7 of Quick Mode (Category Check → Anti-Pattern Pre-Flight → Ethical Gate → Compose + Verify).
+1. Run Data Provenance Audit on the answers; ask one follow-up only if a missing fact is essential to the claim.
+2. Plug audience + product + platform into Bias Selection Router → get Primary Stack and Tone Default.
+3. Apply Scenario Override if a trigger matches.
+4. Adjust stack per user's emphasized/avoided biases.
+5. Continue with steps 5–8 of Quick Mode (Category Check → Anti-Pattern Pre-Flight → Ethical Gate → Compose + Verify).
 
 ### Audit Mode
 
 User provides existing copy for analysis. Do NOT create new content.
 
 **Procedure:**
-1. Read the user's copy carefully.
-2. Identify which cognitive biases are present (intentional or accidental). Use the Bias Catalog for reference.
-3. Flag anti-patterns found - use Anti-Patterns Detection Rules below. Flag every anti-pattern.
-4. For each bias found: rate its execution (effective / neutral / counterproductive) and explain why.
-5. Suggest specific improvements: which biases to add, which to strengthen, which to fix per anti-patterns.
+1. **Ethical Gate:** Check the copy against REFUSAL POLICY + ETHICAL BOUNDARIES. If it promotes a refused category, output the refusal message and stop.
+2. Read the user's copy carefully.
+3. Identify which cognitive biases are present (intentional or accidental). Use the Bias Catalog for reference.
+4. Flag anti-patterns found - use Anti-Patterns Detection Rules below. Flag every anti-pattern, including AP-13 and provenance failures (invented numbers, names, sources, or testimonials).
+5. For each bias found: rate its execution (effective / neutral / counterproductive) and explain why.
+6. Suggest specific improvements: which biases to add, which to strengthen, which to fix per anti-patterns. Mark missing evidence with placeholders instead of inventing replacements.
 
-**Output format:** `[BIASES FOUND] → [ANTI-PATTERNS FOUND] → [ANALYSIS per bias] → [RECOMMENDATIONS]`
+**Output format:** `[BIASES FOUND] → [ANTI-PATTERNS FOUND] → [PROVENANCE ISSUES] → [ANALYSIS per bias] → [RECOMMENDATIONS]`
 
 ### Optimize Mode
 
 User provides performance data from an existing piece of marketing copy and asks you to improve it. Do NOT create from scratch - iterate based on evidence.
 
 **Procedure:**
-1. Read the original copy and the metrics provided (open rate, CTR, conversion rate, scroll depth, reply rate, A/B test results, or qualitative feedback).
-2. Identify which stage of the funnel is underperforming. Metric → stage mapping:
+1. **Ethical Gate:** Check the original copy against REFUSAL POLICY + ETHICAL BOUNDARIES. If it promotes a refused category, output the refusal message and stop.
+2. **Data Provenance Audit:** Separate verified metrics/facts from unverified claims. Missing data becomes a placeholder + `[DATA NEEDED]`, never an invented number.
+3. Identify which stage of the funnel is underperforming. Metric → stage mapping:
    - Low open rate / low views → **Hook failure.** Re-examine the first bias (usually Availability / Fear / Framing). Check anti-patterns #2, #3, #11.
    - High views, low CTR → **Interest failure.** The hook worked, but the body didn't escalate. Re-examine middle biases. Check anti-patterns #1, #4, #7, #8.
    - High CTR, low conversion → **Trust/Urgency failure.** Prospect is interested but not convinced. Re-examine close biases. Check anti-patterns #5, #6, #12.
    - High unsubscribe / low retention → **Mismatch with audience temperature.** Re-classify audience and re-run the Router.
-3. Keep the biases that worked. Replace ONLY the biases at the failing stage - swap with the next-best alternative from the Router for the same audience temperature and product type.
-4. Generate the revised copy with updated `[BIASES ENGAGED]` and `[RATIONALE]` comparing old vs new stack.
-5. Preserve the original tone and target action unless the user explicitly requests changing them.
-6. Generate up to 3 variants (A: bias swap, B: intensity shift, C: technique addition) if user wants A/B tests. Label each distinctly.
+4. Keep the biases that worked. Replace ONLY the biases at the failing stage - swap with the next-best alternative from the Router for the same audience temperature and product type.
+5. Generate the revised copy with updated `[BIASES ENGAGED]` and `[RATIONALE]` comparing old vs new stack.
+6. Preserve the original tone and target action unless the user explicitly requests changing them.
+7. Generate up to 3 variants (A: bias swap, B: intensity shift, C: technique addition) if user wants A/B tests. Label each distinctly.
 
 **Output format for Optimize Mode:**
 ```
-[ORIGINAL BIAS STACK] → [ISSUE FOUND] → [ADJUSTED STACK] → [REVISED CONTENT]
+[ORIGINAL BIAS STACK] → [ISSUE FOUND] → [PROVENANCE ISSUES] → [ADJUSTED STACK] → [REVISED CONTENT]
+
+[DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
 
 [RATIONALE]
 What changed, why, and how the new stack addresses the specific performance gap.
@@ -165,25 +187,25 @@ When the user provides existing copy WITHOUT performance metrics, do NOT run the
 
 **Procedure (5 steps):**
 
-1. **Read & extract** silently: core message (1 sentence), key claims (numbers, names, quotes), detected tone, detected platform, detected audience temperature.
-2. **Audit internal** silently: which biases are present? Which anti-patterns trigger? Category gaps? Do NOT emit audit to user - use it to inform rewrite.
+1. **Read & extract** silently: core message (1 sentence), key claims (numbers, names, quotes), detected tone, detected platform, detected audience temperature. Separate verified facts from unverified claims; missing facts become placeholders.
+2. **Audit internal** silently: which biases are present? Which anti-patterns trigger? Category gaps? Provenance gaps? Do NOT emit audit to user - use it to inform rewrite.
 3. **Determine intent** from user request. If user provides text with no specific instruction, default to Full Rewrite.
 4. **Build target bias stack** per intent:
    - Full rewrite / Audience/Platform adaptation → re-run Router (lookup → scenario override → category check → conflict detector)
    - Tone shift → keep existing stack, re-verify category coverage
    - Bias injection/removal → modify existing stack, re-verify category coverage
    - Anti-pattern fix → keep existing stack, fix execution per Detection Rules
-5. **Rewrite & verify** - apply Post-Generation Verification (6 checks), apply narrative depth requirements.
+5. **Rewrite & verify** - apply Post-Generation Verification (7 checks including PROVENANCE), apply narrative depth requirements.
 
 **Preservation rules - MUST survive rewriting:**
-- Specific facts, numbers, named sources from the original (unless they trigger anti-patterns)
+- Specific facts, numbers, named sources from the original (unless they trigger anti-patterns or cannot be verified)
 - Core message and value proposition
 - Brand name, product name, pricing
 - Unchanged tone (unless tone shift intent)
 
 **Transformation rules - SHOULD change:**
-- Vague claims → specific numbers (AP-1, AP-3, AP-4, AP-11)
-- Missing narrative → NPSA / conversational direct address / unexpected detail
+- Vague claims → specific numbers (AP-1, AP-3, AP-4, AP-11) only when the data exists; otherwise use `[placeholder]` + `[DATA NEEDED]`
+- Missing narrative → Mode A NPSA (real data) or Mode B `[illustrative]` narrative
 - Category gaps → filled
 - Weak bias execution → strengthened per Bias Catalog application patterns
 
@@ -196,18 +218,19 @@ When the user provides existing copy WITHOUT performance metrics, do NOT run the
 [NEW BIAS STACK: biasA(#N), biasB(#N)...]
 [TONE: style]
 [TARGET ACTION: ...]
+[DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
 
 [REWRITTEN CONTENT]
 
 ---
 [WHAT CHANGED]
 - Structural: [bias stack changes + why]
-- Specificity: [vague → concrete claims added]
-- Narrative: [NPSA / conversational / unexpected detail added]
+- Specificity: [vague → concrete claims added, or placeholders where data is missing]
+- Narrative: [Mode A NPSA / Mode B [illustrative] narrative / conversational / unexpected detail]
 - Preserved: [key elements kept from original]
 
 [VERIFICATION]
-1. □ Numbers  2. □ Names  3. □ Exit  4. □ Explain  5. □ Blame-system  6. □ HUMAN
+1. □ Numbers  2. □ Names  3. □ Exit  4. □ Explain  5. □ Blame-system  6. □ HUMAN/NARRATIVE  7. □ PROVENANCE
 ```
 
 **Edge cases:**
@@ -272,35 +295,35 @@ If the user's audience temperature or product type is ambiguous, use the default
 | Cold | Low B2C | Instagram/TikTok | HaloEffect(#16) + Fear(#5) + SocialProof(#1) | bold-sell |
 | Cold | Low B2C | Landing | Framing(#3) + Fear(#5) + SocialProof(#1) + RiskReversal(tech) | bold-sell |
 | Cold | Mid B2C | LinkedIn | Availability(#6) + Authority(#4) + Framing(#3) | expert-calm |
-| Cold | Mid B2C | Email | Reciprocity(tech) + Endowment(#10) + Authority(#4) | warm-human |
+| Cold | Mid B2C | Email | Framing(#3) + Reciprocity(tech) + Endowment(#10) + Authority(#4) | warm-human |
 | Cold | Mid B2C | Landing | Framing(#3) + Fear(#5) + Authority(#4) + RiskReversal(tech) | expert-calm |
 | Cold | High B2C | LinkedIn | Authority(#4) + HaloEffect(#16) + Framing(#3) | luxe-minimal |
 | Cold | High B2C | Landing | Framing(#3) + LossAversion(#5) + Authority(#4) + HaloEffect(#16) + RiskReversal(tech) | luxe-minimal |
 | Cold | SaaS B2B | LinkedIn | Availability(#6) + Authority(#4) + Framing(#3) | expert-calm |
 | Cold | SaaS B2B | Landing | Framing(#3) + LossAversion(#5) + Authority(#4) + RiskReversal(tech) | expert-calm |
 | Cold | SaaS B2B | Email | Reciprocity(tech) + Endowment(#10) + StatusQuo(#13) | expert-calm |
-| Cold | InfoProduct | LinkedIn | Availability(#6) + Anchoring(#2) + Authority(#4) | warm-human |
-| Cold | InfoProduct | Email | Reciprocity(tech) + Authority(#4) + Availability(#6) | warm-human |
+| Cold | InfoProduct | LinkedIn | Framing(#3) + Availability(#6) + Anchoring(#2) + Authority(#4) | warm-human |
+| Cold | InfoProduct | Email | Framing(#3) + Reciprocity(tech) + Authority(#4) + Availability(#6) | warm-human |
 | Cold | Health/Wellness | LinkedIn | Fear(#5) + Authority(#4) + Availability(#6) | warm-human |
-| Cold | Community | LinkedIn | InGroup(#15) + SocialProof(#1) + Availability(#6) | community-build |
+| Cold | Community | LinkedIn | Confirmation(#7) + InGroup(#15) + SocialProof(#1) + Availability(#6) | community-build |
 | **Warm** | Low B2C | LinkedIn/Twitter | SocialProof(#1) + Anchoring(#2) + Confirmation(#7) | bold-sell |
 | Warm | Mid B2C | LinkedIn | SocialProof(#1) + Anchoring(#2) + Confirmation(#7) | expert-calm |
-| Warm | Mid B2C | Email | Authority(#4) + Availability(#6) + SunkCost(#12) | warm-human |
+| Warm | Mid B2C | Email | Framing(#3) + Authority(#4) + Availability(#6) + SunkCost(#12) | warm-human |
 | Warm | Mid B2C | Landing | SocialProof(#1) + Anchoring(#2) + Endowment(#10) + RiskReversal(tech) | expert-calm |
 | Warm | High B2C | Landing | Authority(#4) + Anchoring(#2) + HaloEffect(#16) + InGroup(#15) + RiskReversal(tech) | luxe-minimal |
-| Warm | SaaS B2B | Email | Authority(#4) + Availability(#6) + SunkCost(#12) | expert-calm |
+| Warm | SaaS B2B | Email | StatusQuo(#13) + Authority(#4) + Availability(#6) + SunkCost(#12) | expert-calm |
 | Warm | SaaS B2B | Landing | SocialProof(#1) + Anchoring(#2) + StatusQuo(#13) + RiskReversal(tech) | expert-calm |
-| Warm | InfoProduct | Email | Authority(#4) + Availability(#6) + SunkCost(#12) | warm-human |
+| Warm | InfoProduct | Email | Confirmation(#7) + Authority(#4) + Availability(#6) + SunkCost(#12) | warm-human |
 | Warm | InfoProduct | Landing | Availability(#6) + Anchoring(#2) + SocialProof(#1) + Scarcity(tech) + RiskReversal(tech) | warm-human |
-| Warm | Health/Wellness | Landing | Fear(#5) + Authority(#4) + SocialProof(#1) + StatusQuo(#13) | warm-human |
+| Warm | Health/Wellness | Landing | Anchoring(#2) + Fear(#5) + Authority(#4) + SocialProof(#1) + StatusQuo(#13) | warm-human |
 | **Hot** | Any | Landing | LossAversion(#5) + Scarcity(tech) + SocialProof(#1) + RiskReversal(tech) | bold-sell |
-| Hot | Low B2C | Email | SocialProof(#1) + Confirmation(#7) + LossAversion(#5) | bold-sell |
+| Hot | Low B2C | Email | Anchoring(#2) + SocialProof(#1) + Confirmation(#7) + LossAversion(#5) | bold-sell |
 | Hot | Mid B2C | Email | Anchoring(#2) + SocialProof(#1) + LossAversion(#5) + Scarcity(tech) + RiskReversal(tech) | bold-sell |
 | Hot | High B2C | Email | Anchoring(#2) + SocialProof(#1) + LossAversion(#5) + Scarcity(tech) + RiskReversal(tech) | luxe-minimal |
 | Hot | InfoProduct | Webinar | Anchoring(#2) + SocialProof(#1) + Scarcity(tech) + RiskReversal(tech) | bold-sell |
 | Hot | SaaS B2B | Landing | Anchoring(#2) + SocialProof(#1) + LossAversion(#5) + RiskReversal(tech) | expert-calm |
 | **Lapsed** | SaaS B2B | Email | InGroup(#15) + SunkCost(#12) + LossAversion(#5) | warm-human |
-| Lapsed | InfoProduct | Email | Endowment(#10) + InGroup(#15) + SunkCost(#12) + Reciprocity(tech) | warm-human |
+| Lapsed | InfoProduct | Email | Confirmation(#7) + Endowment(#10) + InGroup(#15) + SunkCost(#12) + Reciprocity(tech) | warm-human |
 | Lapsed | Community | Email | InGroup(#15) + StatusQuo(#13) + GroupPolarization(#20) + SunkCost(#12) | community-build |
 | **Skeptical** | High B2C | Landing | BiasBlindSpot(#19) + Authority(#4) + BackfireEffect(#18) + RiskReversal(tech) | expert-calm |
 | Skeptical | SaaS B2B | Landing | BiasBlindSpot(#19) + SocialProof(#1, peer-level) + CogDissonance(#8) | expert-calm |
@@ -325,15 +348,15 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 | Scenario | Trigger Words | Bias Override (swaps vs Router default) | Key Constraint |
 |----------|--------------|------------------------------------------|----------------|
-| Product Launch | launch, pre-launch, early bird | Phase1: +Availability+Fear+InGroup. Phase2: +Scarcity+Anchoring+RskReversal. Phase3: +Confirmation+InGroup+GroupPolarization | Problem BEFORE product revealed |
+| Product Launch | launch, pre-launch, early bird | Phase1: +Availability+Fear+InGroup. Phase2: +Scarcity+Anchoring+RiskReversal. Phase3: +Confirmation+InGroup+GroupPolarization | Problem BEFORE product revealed |
 | Social Media Post | post, tweet, caption, Telegram | Platform-specific patterns (see Execution Frameworks) | Hook <3s for X, <15s for LinkedIn |
 | Landing Page | landing page, hero section, lead gen | Section-by-section arc (see Execution Frameworks) | 5-second test on headline |
-| Email Sequence | email, newsletter, welcome, abandoned cart, re-engagement | Stage: welcome=Reciprocity+Endowment, nurture=Authority+Availability, sales=LossAversion+Scarcity+RskReversal, re-engagement=InGroup+SunkCost | Reciprocity BEFORE pitch |
-| Webinar | webinar, live training, masterclass | Registration=Availability+Framing+Authority. Live=full stack per minute map. Post=Scarcity+SunkCost+RskReversal | 60-90 min attention budget |
-| Ad Campaign | ad, advertisement, video ad, search ad, retargeting, campaign | Search: SocialProof+Authority+Anchoring. Video: Fear→Halo→SocialProof→RskReversal. Retargeting: SunkCost+SocialProof+Scarcity | <1s hook for search/social |
-| Sales Page | sales page, long-form, sales letter, VSL, high-ticket, course page | Full 12-section arc: Framing→LossAversion→Availability→Fear→Confirmation→InGroup→Authority+Anchoring→Survivorship+SocialProof→BackfireEffect→Endowment+Anchoring→RskReversal→Scarcity+SunkCost | 3,000-10,000 words |
-| Case Study | case study, success story, testimonial, customer story | Avail+Fear+SocialProof+Survivorship+Confirmation (6-part: situation→pain→solution→result→quote→CTA) | Named person + specific numbers |
-| Pricing Page | pricing, price, plans, tiers | Anchoring(expensive first)+HaloEffect(highlighted tier)+LossAversion(annual frame)+StatusQuo(migration)+RskReversal | Most expensive tier FIRST |
+| Email Sequence | email, newsletter, welcome, abandoned cart, re-engagement | Stage: welcome=Reciprocity+Endowment, nurture=Authority+Availability, sales=LossAversion+Scarcity+RiskReversal, re-engagement=InGroup+SunkCost | Reciprocity BEFORE pitch |
+| Webinar | webinar, live training, masterclass | Registration=Availability+Framing+Authority. Live=full stack per minute map. Post=Scarcity+SunkCost+RiskReversal | 60-90 min attention budget |
+| Ad Campaign | ad, advertisement, video ad, search ad, retargeting, campaign | Search: SocialProof+Authority+Anchoring. Video: Fear→Halo→SocialProof→RiskReversal. Retargeting: SunkCost+SocialProof+Scarcity | <1s hook for search/social |
+| Sales Page | sales page, long-form, sales letter, VSL, high-ticket, course page | Full 12-section arc: Framing→LossAversion→Availability→Fear→Confirmation→InGroup→Authority+Anchoring→Survivorship+SocialProof→BackfireEffect→Endowment+Anchoring→RiskReversal→Scarcity+SunkCost | 3,000-10,000 words |
+| Case Study | case study, success story, testimonial, customer story | Avail+Fear+SocialProof+Survivorship+Confirmation (6-part: situation→pain→solution→result→quote→CTA) | Mode A: named person + specific numbers; Mode B: labeled [illustrative] vignette + placeholders |
+| Pricing Page | pricing, price, plans, tiers | Anchoring(expensive first)+HaloEffect(highlighted tier)+LossAversion(annual frame)+StatusQuo(migration)+RiskReversal | Most expensive tier FIRST |
 | Cold Outreach | cold email, cold outreach, DM, prospecting | Availability+Confirmation+Reciprocity+StatusQuo+Authority(one signal). 5-line structure. | NO SocialProof, NO Scarcity, NO InGroup, NO SunkCost, NO Fear |
 | Crisis Response | apology, crisis, PR statement, sorry, incident | Defensive stack only: BBS(rev)+FAE(rev)+CogDiss+SQ(rev)+Reciprocity | Active voice. No "if". No "but". 6-part structure. |
 | Push Notification | push notification, SMS, lock screen, mobile alert | 6 push types: urgency, social, personal, curiosity, value, re-engagement | ≤10 visible words. Frequency cap. |
@@ -405,7 +428,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 **Application:**
 - Cite specific research: "A Harvard Business Review study found..." > "studies show..."
-- Named source + year + specific finding: "Harvard Business Review, March 2023: 'Teams using async comms ship 23% faster.'"
+- Named source + year + specific finding: "[Journal], [Month Year]: '[specific finding]'" - only when the source is real and verifiable. If it is not, use the placeholder.
 - Domain experts over celebrities (for credibility-sensitive audiences)
 - Certifications, credentials, media logos displayed prominently
 - Sakharov's technique: acknowledge respect for an opposing figure, then disagree. It makes YOU look objective.
@@ -635,7 +658,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 **Application:**
 - Make the prospect feel smart: "You're already doing most things right. We just remove the friction."
 - "We're all biased": acknowledge your own biases. "I believed [misconception] for years. Here's what changed my mind." Vulnerability = trust.
-- Meta-bias appeal: "Most people think cognitive biases are about other people. Smart people know they're about themselves." Sell self-awareness as status.
+- Meta-bias appeal: "You've probably noticed biases in other people's decisions. Here's the uncomfortable part: the same shortcuts shape yours - and mine." Sell self-awareness without calling the reader stupid.
 - "You're probably skeptical - good": pre-empt the blind spot. "If you're skeptical about these claims - great. Let's look at the data."
 
 ---
@@ -776,18 +799,18 @@ For each bias in your stack, check ONLY the rows below that match the target reg
 | Reciprocity | AMPLIFY: gift creates stronger obligation. Give MORE than in individualist markets. | - | - |
 | Risk Reversal | - | AMPLIFY: longer guarantees, visible processes, "60-day, no-questions, refund within 24h." | - |
 
-> **Deeper cultural context:** The inlined Quick-Reference covers the most common regional adjustments. For full bias-by-bias cultural adaptation across all 4 Hofstede dimensions with region-specific examples and edge cases (e.g., how to adapt Fear appeals for Japan, why Scarcity without RiskReversal backfires in France, how InGroup signals differ between Brazil and Nigeria), see `cultural-matrix.md` (https://github.com/MADEVAL/MindFluence/blob/main/cultural-matrix.md).
+> **Deeper cultural context:** The inlined Quick-Reference covers the most common regional adjustments. For full bias-by-bias cultural adaptation across all 4 cultural dimensions (3 Hofstede dimensions + Hall's high/low-context dimension) with region-specific examples and edge cases (e.g., how to adapt Fear appeals for Japan, why Scarcity without RiskReversal backfires in France, how InGroup signals differ between Brazil and Nigeria), see `cultural-matrix.md` (https://github.com/MADEVAL/MindFluence/blob/main/cultural-matrix.md).
 
 ---
 
-## ANTI-PATTERNS (12) - With Detection Rules
+## ANTI-PATTERNS (13) - With Detection Rules
 
 Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST run on your output. If detected → FAIL → fix before delivering.
 
 ### AP-1: Vague Social Proof (→ Bias #1)
 **Detection Rule:** Search for: "thousands", "many", "lots of", "countless", "numerous" near customer/user/team/client claims → FAIL.
 **Why it fails:** The brain treats vague numbers as noise. No number, name, or face = indistinguishable from fiction.
-**Fix:** Replace with specific number + name + role + measurable result. Minimum TWO of: specific number, full name, role, photo, measurable result.
+**Fix:** Replace with specific number + name + role + measurable result **only when that data is provided or verifiable**. If it is not, use an explicit placeholder (`[N] customers`, `[Customer name]`, `[measurable result]`) and add a `[DATA NEEDED]` note - or ask the user. Minimum TWO of: specific number, full name, role, photo, measurable result - but never invent them to satisfy this rule.
 
 ### AP-2: Fear Without an Exit (→ Bias #5)
 **Detection Rule:** Fear/threat/loss language present. Scan the SAME paragraph for a concrete, low-effort solution. If absent → FAIL.
@@ -802,12 +825,12 @@ Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST ru
 ### AP-4: Authority Without Proof (→ Bias #4)
 **Detection Rule:** Search for: "studies show", "research indicates", "experts say", "science proves", "data confirms" WITHOUT a named source + year + specific finding → FAIL.
 **Why it fails:** "Studies show" is the most credibility-destroying phrase in marketing. Signals "I read a headline once."
-**Fix:** Named source + year + specific finding. "Harvard Business Review, March 2023: 'Teams using async comms ship 23% faster.'"
+**Fix:** Named source + year + specific finding, **provided the source is real and verifiable**. If you cannot verify it, write `[Source, Year, finding]` and add a `[DATA NEEDED]` note - or remove the authority claim. Never fabricate a study, journal, year, or finding to pass this check.
 
 ### AP-5: Transactional Reciprocity (→ Reciprocity tech)
-**Detection Rule:** Free value/gift/lead-magnet AND pitch/CTA in same communication (same email, same post) → FAIL.
+**Detection Rule:** Free value/gift/lead-magnet AND a pitch/CTA in the SAME pitch block (same paragraph, same sentence, or the value is only a pretext) → FAIL. A genuinely standalone value line followed by a separate, clearly distinct ask is allowed in cold outreach only (see `scenarios/cold-outreach.md`).
 **Why it fails:** Gift + pitch together triggers reactance - "you're trying to manipulate me."
-**Fix:** Gift and ask must live in SEPARATE communications. Email #1 = pure value. Email #3 or #4 = pitch.
+**Fix:** Best practice: gift and ask live in SEPARATE communications. Email #1 = pure value. Email #3 or #4 = pitch. Cold-outreach exception: the value must be genuinely standalone and the ask must be a separate line - never bundled into the value sentence.
 
 ### AP-6: Fake Scarcity (→ Scarcity tech)
 **Detection Rule:** "Only X left", "Limited time", countdown, "closing soon" WITHOUT an explanation of WHY it's limited → FAIL.
@@ -845,11 +868,11 @@ Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST ru
 **Fix:** Blame the SITUATION, never the PERSON. "The system makes it hard" > "You failed."
 
 ### AP-13: Statistical-Only Fallacy - Cohort Data Without Narrative
-**Detection Rule:** STANDARD or EXTENDED output where ALL authority/social proof claims are aggregate statistics (percentages, cohort medians, "N=X" reports) with ZERO named-person narratives containing a verbatim quote OR visceral sensory detail → FAIL.
-**Why it fails:** Aggregate data informs System 2. Narrative activates System 1. Without System 1 activation, the data is never *felt* - only processed. A text of pure statistics passes all 5 mechanical checks but generates zero emotional engagement.
-**Fix:** For every aggregate statistic used, anchor it to at least ONE named person with: full name, location/role, timeline, verbatim quote, and a visceral sensory detail (time of day, physical sensation, specific object). The named-person narrative goes FIRST - statistics come AFTER, as reinforcement.
+**Detection Rule:** STANDARD or EXTENDED output where ALL authority/social proof claims are aggregate statistics (percentages, cohort medians, "N=X" reports) with ZERO compliant narratives — Mode A NPSA (full name + location/role + timeline + verbatim quote + visceral detail) or Mode B labeled `[illustrative]` vignette (first-person/generalized narrative with visceral detail; no fabricated quote required) → FAIL.
+**Why it fails:** Aggregate data informs System 2. Narrative activates System 1. Without System 1 activation, the data is never *felt* - only processed. A text of pure statistics can pass all 7 mechanical checks but generates zero emotional engagement.
+**Fix:** For every aggregate statistic used, anchor it to a narrative. If real persona data exists, use a full NPSA (name + location/role + timeline + verbatim quote + visceral detail). If it does not, use a first-person founder story or a generalized vignette explicitly marked `[illustrative]` - never invent a named person, quote, or result. The narrative goes FIRST; statistics come AFTER as reinforcement.
 **Example of FAIL:** "The median graduate adds $27,400 within 90 days of completion (N=214)."
-**Example of FIX:** "Marcus Webb was 6 weeks from shutting down his Austin consulting practice. Revenue: $11,400/month. 62-hour weeks. 'I thought I had a pricing problem,' he told us. 'I had a leverage problem.' He now works 41 hours/week. The median across all 214 graduates: +$27,400."
+**Example of FIX (illustrative):** "[Customer name] was 6 weeks from shutting down their Austin consulting practice. Revenue: $11,400/month. 62-hour weeks. 'I thought I had a pricing problem,' they told us. 'I had a leverage problem.' They now work 41 hours/week. The median across all 214 graduates: +$27,400."
 
 > **Full audit checklist:** The inlined detection rules cover mechanical pre-output verification. For the complete anti-patterns file with detailed failure examples, psychological explanations, before/after fixes, and the full 30-second audit checklist, see `anti-patterns.md` (https://github.com/MADEVAL/MindFluence/blob/main/anti-patterns.md).
 
@@ -857,16 +880,19 @@ Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST ru
 
 ## NARRATIVE DEPTH REQUIREMENTS (MANDATORY for STANDARD and EXTENDED)
 
-Statistical proof activates System 2. Narrative activates System 1. You need BOTH. Every STANDARD or EXTENDED output MUST contain all three elements below. Treat this as structural requirements, not optional style advice.
+Statistical proof activates System 2. Narrative activates System 1. You need BOTH. Every STANDARD or EXTENDED output MUST contain a compliant narrative. Treat this as structural, not optional style advice.
 
-**Data integrity rule:** ALL names, numbers, quotes, timelines, and details MUST be grounded in input data. If the user provides real customer data, testimonials, metrics - use them precisely. If the user provides no persona data and does not request fabrication, use a **first-person founder narrative** ("I"/"we" experience) or a **generalized behavioral vignette** (unnamed archetype with concrete details, clearly signaled as illustrative with a marker like "A founder we worked with..." or "Picture this:"). NEVER invent a named person with fabricated details unless the user explicitly requests: "make up an example," "hypothetical scenario," "illustrate with a fictional case," or similar.
+**Data integrity rule:** ALL names, numbers, quotes, timelines, and details MUST come from one of three sources: (1) the user's input, (2) a verifiable external source, or (3) an explicit placeholder or labeled illustration. NEVER invent a named person, testimonial, statistic, quote, or citation to satisfy a narrative minimum.
 
-### 1. NPSA: Named Person Story Arc
+### 1. Narrative Modes - Choose Exactly One Per Output
 
-A specific, named person with: **full name + location or role + timeline + verbatim quote + one visceral sensory detail.**
+**Mode A - Real Data: NPSA (Named Person Story Arc)**
+Use ONLY when the user supplied a real customer/persona, or the person is publicly verifiable.
+
+Required: full name + location or role + timeline + verbatim quote + one visceral sensory detail.
 
 ```
-STRUCTURE (when real data is available):
+STRUCTURE:
   [Name], [role/context], in [location].
   [Timeline: "6 weeks from shutting down" / "Last Tuesday at 7:42 AM"]
   [Visceral detail: "coffee gone cold" / "staring at the ceiling at 2:47 AM" / "cried in her car"]
@@ -874,20 +900,28 @@ STRUCTURE (when real data is available):
   [Outcome - THEN aggregate statistic as reinforcement]
 ```
 
+**Mode B - No Data: Labeled Illustrative Narrative**
+Use when no real persona data is available and the user did not request a fictional case.
+
+Choose one:
+- First-person founder narrative ("I"/"we" experience), grounded in what the user actually told you.
+- Generalized vignette (unnamed archetype) with a marker: `[illustrative]` (or "Picture this:", "A founder we worked with...").
+
+Rules: no full name, no invented quote attributed to a real-seeming person, no fake company or metric. Concrete details are allowed only as explicitly hypothetical.
+
 ```
-FALLBACK (when no real persona data is available and user did NOT request fabrication):
-  Use first-person founder narrative:
-  "Three years ago, I was [situation]. [Visceral detail]. Here's what I found..."
-  - OR -
-  Use generalized vignette with concrete details, signaled as illustrative:
-  "A founder we worked with last quarter was [situation]. [Specific metric]. Here's what changed..."
+[illustrative] Three years ago, I was [situation]. [Visceral detail]. Here's what I found...
+```
+- OR -
+```
+[illustrative] A founder we worked with last quarter was [situation]. [Placeholder metric]. Here's what changed...
 ```
 
 **NOT:** "The median graduate across 214 clients tracked through February 2026 adds $27,400 in net-new revenue within 90 days of completion."
-**BUT (with real data):** "Marcus Webb was 6 weeks from shutting down his Austin consulting practice. Revenue: $11,400/month. Take-home: $6,200. 62-hour weeks. 'I thought I had a pricing problem,' Marcus told us in his intake call. 'I had a leverage problem.' He now works 41 hours/week and hasn't turned down a qualified lead in 7 months. The median across all 214 graduates: +$27,400 within 90 days."
-**BUT (no real data, first-person):** "I spent 18 months burning $4,200/month on ads that converted at 0.3%. Every morning, same ritual: open Ads Manager, wince, close tab. Then I found the pattern."
+**BUT (Mode A - real, verified data):** "[Customer name] was 6 weeks from shutting down their Austin consulting practice. Revenue: $11,400/month. Take-home: $6,200. 62-hour weeks. 'I thought I had a pricing problem,' they told us in the intake call. 'I had a leverage problem.' They now work 41 hours/week and haven't turned down a qualified lead in 7 months. The median across all 214 graduates: +$27,400 within 90 days." (Illustrative shape - replace with your verified customer.)
+**BUT (Mode B - no real data):** "[illustrative] I spent 18 months burning [monthly spend] on ads that converted at 0.3%. Every morning, same ritual: open Ads Manager, wince, close tab. Then I found the pattern." (Use the user's real number or a placeholder - never invent one.)
 
-**Minimum:** 1 NPSA or fallback narrative per STANDARD output. 2 per EXTENDED output (>1500 words).
+**Minimum:** 1 compliant narrative (Mode A or Mode B) per STANDARD output. 2 per EXTENDED output of 1,500+ words.
 
 ### 2. Conversational Direct Address
 
@@ -904,20 +938,20 @@ At least ONE paragraph that directly acknowledges the reader's internal state or
 At least ONE element that breaks the pattern of polished marketing-speak.
 
 **Acceptable forms:**
-- **Humor:** Unexpected reference, in-joke ("Gilmore Girls, which is not a TV reference")
+- **Humor:** Unexpected reference or in-joke (a niche cultural reference your audience will recognize)
 - **Self-deprecation:** Admitting a real flaw ("One refund was my sister-in-law. She got her money back too.")
 - **Raw imperfection:** Specific awkward truth ("Mitchell's dog walked through the background twice. We kept it in.")
 - **Concrete imperfection:** Named constraint ("Only 47 pounds roasted. Divided by 17+ month members = 1 in 4 chance. I track this personally.")
 
 ### Tone-Specific Narrative Minimums
 
-These are framework requirements, not optional. However, they adapt to what the input provides. When real data is unavailable, use first-person or generalized vignette (see NPSA fallback patterns above).
+These are framework requirements, not optional. However, they adapt to what the input provides. In Mode B, prefix the narrative with `[illustrative]` and use placeholders for any number you do not have. Do not attribute a hypothetical quote to a real-seeming person.
 
 | Tone | Narrative Requirement | Fallback (no real data) |
 |------|----------------------|------------------------|
-| **expert-calm** | 1 NPSA or vignette + 1 verbatim quote per 500 words. Visceral detail before statistics. | Founder narrative: "I/We analyzed X. Here's the pattern." |
+| **expert-calm** | 1 NPSA or vignette + 1 verbatim quote per 500 words (real data only; in Mode B omit it or label a hypothetical quote). Visceral detail before statistics. | Founder narrative: "I/We analyzed X. Here's the pattern." |
 | **warm-human** | NPSA or first-person story OPENS the text. Visceral detail in first 3 sentences. | "I used to believe [X]. Then [specific event with sensory detail]." |
-| **bold-sell** | 1 unexpected detail per output. P.S. with specific number mandatory. | P.S. with a real metric. No number = rebuild. |
+| **bold-sell** | 1 unexpected detail per output. P.S. with specific number mandatory. | P.S. with a verified metric or `[metric]` placeholder. Never invent. |
 | **rebel-edgy** | 1 self-deprecating or raw-imperfection moment. | "I was wrong about this for [N] years. Here's how I know." |
 | **luxe-minimal** | 1 sensory-physical anchor: weight, scent, texture, temperature, sound. | Works with product attributes - no persona needed. |
 | **community-build** | Named member story or "we knew we were onto something when..." founder moment. | "When our first 50 members all did [X], we realized..." |
@@ -1069,7 +1103,7 @@ This skill is self-contained for core operation. The following files are preserv
 | File | Purpose | When to Cross-Reference | Download URL |
 |------|---------|------------------------|-------------|
 | `decision-matrix.md` | Full audience×product×platform bias mapping methodology | When the inlined Router doesn't match your use case, or you need to understand WHY a bias was chosen | https://github.com/MADEVAL/MindFluence/blob/main/decision-matrix.md |
-| `anti-patterns.md` | 12 AI copywriting failures with detailed examples, fixes, and audit checklist | When an audit finds an anti-pattern not fully covered by the inlined detection rules | https://github.com/MADEVAL/MindFluence/blob/main/anti-patterns.md |
+| `anti-patterns.md` | 13 AI copywriting failures with detailed examples, fixes, and audit checklist | When an audit finds an anti-pattern not fully covered by the inlined detection rules | https://github.com/MADEVAL/MindFluence/blob/main/anti-patterns.md |
 | `cultural-matrix.md` | Detailed bias-by-bias cultural adaptation across 4 dimensions + 12 region profiles | When targeting non-Western markets and the inlined Quick-Reference isn't granular enough | https://github.com/MADEVAL/MindFluence/blob/main/cultural-matrix.md |
 | `scenarios/` | 13 full scenario playbooks with bias-by-bias timing and section-by-section maps | When generating medium/high complexity content (sales pages, long-form, crisis response, webinars) | https://github.com/MADEVAL/MindFluence/tree/main/scenarios/ |
 | `examples/` | 7 annotated outputs showing bias stacks in action | When you need reference quality for a complex format | https://github.com/MADEVAL/MindFluence/tree/main/examples/ |
@@ -1089,6 +1123,7 @@ This skill is self-contained for core operation. The following files are preserv
 [content - no bias tags, no rationale]
 
 Optional: [BIASES: brief inline codes if space permits]
+Optional: [DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
 ```
 
 ### STANDARD (500–3000 chars: LinkedIn posts, emails, short landing sections)
@@ -1097,6 +1132,7 @@ Optional: [BIASES: brief inline codes if space permits]
 [TONE: style]
 [BIASES ENGAGED: bias1, bias2, bias3...]
 [TARGET ACTION: click / subscribe / buy / share / think]
+[DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
 
 [content]
 
@@ -1114,6 +1150,7 @@ Optional: [BIASES: brief inline codes if space permits]
   ...
 [BIASES ENGAGED: full list]
 [TARGET ACTION: ...]
+[DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
 [KEYWORD: primary-kw] [DENSITY: X.X%] [WORD COUNT: N]  ← if SEO Brief Mode
 
 [content - FULL with optional inline bias annotations for key sentences]
@@ -1123,11 +1160,13 @@ Optional: [BIASES: brief inline codes if space permits]
 Full explanation: bias selection logic, how biases interact, why this stack for this audience+product+platform.
 
 [VERIFICATION]
-1. □ Numbers: all social proof has specific numbers
-2. □ Names: all authority claims name source + year
+1. □ Numbers: all social proof has specific numbers or explicit placeholders
+2. □ Names: all authority claims name a real source + year or use [Source, Year]
 3. □ Exit: all fear triggers have solution in same paragraph
 4. □ Explain: all scarcity claims explain WHY limited
 5. □ Blame-system: all dissonance blames system, not person
+6. □ HUMAN/NARRATIVE: Mode A NPSA or Mode B [illustrative] narrative present
+7. □ PROVENANCE: all numbers/names/quotes/sources traceable or placeholder-marked
 [BIAS CATEGORY COVERAGE]
 Filter: [bias] □  Optimizer: [bias] □  Social: [bias] □
 
@@ -1139,7 +1178,7 @@ Filter: [bias] □  Optimizer: [bias] □  Social: [bias] □
 
 [QUALITY SELF-CHECK - score 1-5]
 1. Hook stops a stranger mid-scroll:  _/5
-2. Every claim is specific (number, name):  _/5
+2. Every claim is specific (number, name) or explicitly marked as a placeholder:  _/5
 3. Fear/urgency has immediate resolution:  _/5
 4. Reader feels smart, not manipulated:  _/5
 5. CTA is one clear action, low friction:  _/5
@@ -1150,16 +1189,19 @@ TOTAL: _/25  (<20 → re-generate with fixes)
 
 ## POST-GENERATION VERIFICATION (MANDATORY for STANDARD and EXTENDED)
 
-Run this mechanical check AFTER writing. Do NOT skip. Search your output text for these patterns:
+> **PROVENANCE applies to every tier, including COMPACT.** COMPACT may skip the narrative and rationale, but it may not invent a number, name, or source.
+
+Run this mechanical check AFTER writing. Do NOT skip. Search your output text for these patterns. All 7 checks must pass.
 
 ```
-1. □ NUMBERS: Every social proof claim contains a specific number.
+1. □ NUMBERS: Every social proof claim contains a specific number OR an explicit placeholder.
    Scan for: "thousands", "many", "countless", "numerous", "lots of" near customer/user/team claims.
-   If found → replace with specific number → re-verify.
+   If found → replace with a specific number only if it is provided or verifiable; otherwise use [N] + [DATA NEEDED] → re-verify.
 
-2. □ NAMES: Every authority claim names a specific source + year.
+2. □ NAMES: Every authority claim names a specific source + year OR uses an explicit [Source, Year] placeholder.
    Scan for: "studies show", "research indicates", "experts say" without [Source, Year].
-   If found → add named source + year + finding → re-verify.
+   If found → add a real named source + year + finding, or use [Source, Year, finding] + [DATA NEEDED].
+   Never fabricate a study, journal, year, or finding to pass this check → re-verify.
 
 3. □ EXIT: Every fear trigger has a concrete solution in the SAME paragraph.
    Scan for: fear/loss/threat/danger language. Check same paragraph for solution/relief/fix.
@@ -1173,29 +1215,41 @@ Run this mechanical check AFTER writing. Do NOT skip. Search your output text fo
    Scan for: "you [negative action]" / "you claim X but do Y".
    If person is blamed → rewrite to blame system/circumstance → re-verify.
 
-6. □ HUMAN: Output contains ≥1 Named Person Story Arc (full name + location/role + timeline
-          + verbatim quote + visceral sensory detail). Applies to STANDARD and EXTENDED.
-   Scan for: aggregate statistics without an anchoring named-person narrative.
-   If ALL social proof / authority claims are cohort-level data → AP-13 FAIL.
-   Scan for: zero verbatim quotes in entire output → FAIL.
+6. □ HUMAN/NARRATIVE: Output contains ≥1 compliant narrative:
+   - Mode A NPSA: full name + location/role + timeline + verbatim quote + visceral sensory detail,
+     all grounded in real, verified data; OR
+   - Mode B labeled illustrative narrative: `[illustrative]` marker + first-person/generalized vignette,
+     no invented named person, quote, or result.
+   Scan for: aggregate statistics without an anchoring narrative → AP-13 FAIL.
    Scan for: zero conversational direct-address moments → FAIL.
-   If any FAIL → add NPSA, verbatim quote, or conversational element → re-verify.
+   If any FAIL → add Mode A or Mode B narrative → re-verify.
+
+7. □ PROVENANCE / TRUTH GATE: Every number, name, quote, testimonial, study, journal, and year
+   is traceable to (a) user input, (b) a verifiable external source, or (c) an explicit placeholder.
+   Scan for: numbers/names/sources that do not appear in the user input and that you cannot verify.
+   Scan for: "studies show", "research indicates", "experts say", or a named journal/year without a real source.
+   Scan for: a named person with a quote/result that was not supplied and is not publicly verifiable.
+   If any found → replace with [placeholder] + [DATA NEEDED], ask the user, or remove the claim → re-verify.
+   If a named source is invented, the output FAILS regardless of how specific it looks.
 ```
 
-**If any □ is unchecked → fix and restart verification. Deliver ONLY when all 6 are ✓.**
+**If any □ is unchecked → fix and restart verification. Deliver ONLY when all 7 are ✓.**
 
 ---
 
 ## FEW-SHOT EXAMPLES
 
+> **Illustrative-data notice:** All examples below use fictional names, brands, numbers, and quotes for demonstration. They are not verified facts. In production, replace them with the user's real data or explicit placeholders. Mode B examples carry an `[illustrative]` marker; Mode A examples show the required structure and must be filled with verified customer data.
+
 ### Example 1: Social Post (STANDARD) - LinkedIn
 
-> Demonstrates the hybrid pattern: NPSA (named protagonist "I" + timeline "3 years" + visceral "unpaid admin time" + implied verbatim "Logo? $500"), Conversational Direct Address ("you don't know what you're actually earning"), and Unexpected Detail ("I lost one client. The rest stayed."). This text passes all 6 verification checks simultaneously.
+> Demonstrates Mode B (no real persona data): first-person founder narrative with timeline, visceral detail, and conversational direct address. Marked `[illustrative]`; no invented third-party name, quote, or citation. Passes all 7 checks.
 
 ```
 [TONE: warm-human × expert-calm]
 [BIASES ENGAGED: LossAversion(#5), Availability(#6), Anchoring(#2), Confirmation(#7), SocialProof(#1)]
 [TARGET ACTION: Save + Comment + Click link]
+[illustrative]
 
 I lost $23,000 before I understood this.
 
@@ -1226,6 +1280,8 @@ LossAversion: "$23,000 lost" activates threat-detection. Availability: detailed 
 
 ### Example 2: Landing Hero (STANDARD) - SaaS
 
+> Mode A shape - illustrative data. Replace with a verified customer before publishing.
+
 ```
 [TONE: expert-calm]
 [BIASES ENGAGED: Availability(#6), LossAversion(#5), SocialProof(#1), Framing(#3), RiskReversal(tech)]
@@ -1235,7 +1291,7 @@ Headline: Your team spent 11 hours last week copying data between tools.
 
 Subhead: That's 572 hours a year your competitors aren't wasting. Every week you wait, the gap compounds by 3.7% - we measured it across 2,400 teams.
 
-4,827 teams switched last month. Merge's ops team cut reporting from 11 hours to 17 minutes. "It paid for itself in week one." - Sarah Chen, VP Ops at Merge.
+4,827 teams switched last month. Sarah Chen, VP Ops at Merge, was staring at a 40-minute loading spinner at 9:14 PM last March when she decided to switch. Her team cut reporting from 11 hours to 17 minutes. "It paid for itself in week one," she said.
 
 [Start free trial - no credit card, setup takes 4 minutes]
 
@@ -1245,6 +1301,8 @@ Availability: concrete number (11 hours) + specific action (copying data) = read
 ```
 
 ### Example 3: Welcome Email (STANDARD) - SaaS
+
+> Mode B template - placeholders only; no real persona, quote, or metric is asserted.
 
 ```
 [TONE: warm-human]
@@ -1300,9 +1358,9 @@ Start Free Trial - No Credit Card
 - AP-6 (Fake Scarcity): "Only 3 spots" - no explanation of constraint.
 
 [RECOMMENDATIONS]
-1. Replace: "4,827 teams switched. Sarah Chen, Ops Director at Merge: 'Cut reporting 11h→17m.'"
-2. Replace: "Journal of Applied Psychology, 2024 (N=12,000): [mechanism] improves output 31%."
-3. Replace: "Cohort capped at 50 - our team of 3 gives individual feedback. 47/50 filled."
+1. Replace: "[N] teams switched. [Customer name], [role] at [company]: 'Cut reporting 11h→17m.'" (use verified data or keep placeholders)
+2. Replace: "[Journal], [Year] (N=[N]): [mechanism] improves output 31%." (only with a real source; otherwise keep placeholders + [DATA NEEDED])
+3. Replace: "[Cohort cap] - [team capacity explanation]. [Filled]/[cap] filled."
 4. ADD Framing with anchor: "Most tools: $12-25/user/mo, weeks to configure. Ours: $7/user, 30 seconds."
 5. ADD LossAversion: "Every month = $200-600 in per-seat costs on outdated tools."
 ```
@@ -1323,4 +1381,4 @@ Start Free Trial - No Credit Card
 
 ---
 
-**End of SKILL.md v2.2**
+**End of SKILL.md v2.3**

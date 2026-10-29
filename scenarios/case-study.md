@@ -19,7 +19,7 @@ Make the reader think "If they can do it, I can do it" - then take the next step
 **Pattern:** "[Full Name] is a [Role] at [Company], [Location]. Like most [role/industry], they were dealing with [common situation]."
 
 **Rules:**
-- Full name, real photo. Anonymous case studies have zero credibility.
+- Full name, real photo. Anonymous case studies have zero credibility. If identity cannot be disclosed, use a labeled `[illustrative]` anonymized case with real metrics or explicit placeholders - never invent a name or photo.
 - The situation must mirror your target reader's situation. If the reader can't see themselves, they can't see the result as relevant.
 - Include a humanizing detail: "Sarah, a mother of two," "Marcus, who taught himself to code at 34."
 

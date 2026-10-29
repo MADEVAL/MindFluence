@@ -1,5 +1,7 @@
 # Example: Optimize Mode Output
 
+> **[ILLUSTRATIVE]** Fictional names, brands, numbers, and quotes are used for demonstration. Replace with verified data before publishing.
+
 **Context:** User submits a SaaS landing page hero section with performance data.
 **Request:** "This hero gets 4,200 views/month but 68% bounce before scrolling. The CTA click rate is 1.9%. Optimize it."
 

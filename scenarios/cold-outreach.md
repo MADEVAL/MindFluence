@@ -18,7 +18,7 @@ You cannot use your strongest marketing biases. Social Proof (#1)? They don't kn
 
 **What's left:** Availability (#6, pattern-interrupt), Fundamental Attribution Error (#11, it's not them, it's the circumstance), Reciprocity (give first), and microscopic doses of Authority (#4, one credible signal).
 
-> ⚠ **AP-11:** Pattern-interrupt needs ≥3 concrete sensory/specific details - generic observations = spam. **AP-4:** The single authority signal must be relevant and verifiable. **AP-5:** Value must be given BEFORE any ask (separate lines, not blended).
+> ⚠ **AP-11:** Pattern-interrupt needs ≥3 concrete sensory/specific details - generic observations = spam. **AP-4:** The single authority signal must be relevant and verifiable. **AP-5 exception for cold outreach:** value must be genuinely standalone and appear BEFORE the ask, on a separate line - never bundle the pitch into the value sentence. For multi-touch campaigns, prefer separate communications.
 
 ---
 
@@ -101,11 +101,11 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 - "Here's something I built that might help: [link to genuinely useful free resource]."
 
 **Rules:**
-- The value must be specific, not generic. "Here's a tip" = 0. "We found that changing button color from blue to green increased conversions 11% - here's the test data" = 1.
+- The value must be specific, not generic. "Here's a tip" = 0. "We found that changing button color from blue to green increased conversions 11% - here's the test data" = 1 (use only if the test data is real).
 - If attaching/linking, it must be immediately consumable. Not a 45-minute video. Not a 30-page PDF. A tweet-length insight or a 2-minute read.
 - This is where you earn the right to ask in Line 4.
 
-> ⚠ **AP-5:** Value and ask must be separate - give value NOW, ask in the NEXT line. **AP-4:** Authority in Line 3 needs a specific, verifiable basis (data point, published research, specific result).
+> ⚠ **AP-5 exception:** Value and ask must be separate - give value NOW, ask in the NEXT line, never in the same sentence. The value must be genuinely standalone. **AP-4:** Authority in Line 3 needs a specific, verifiable basis (data point, published research, specific result) - or a placeholder if no real source exists.
 
 ---
 

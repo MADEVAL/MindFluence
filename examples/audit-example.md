@@ -1,5 +1,7 @@
 # Example: Audit Mode Output
 
+> **[ILLUSTRATIVE]** Fictional names, brands, numbers, and quotes are used for demonstration. Replace with verified data before publishing.
+
 **Context:** User submits a Facebook ad for audit.
 **Request:** "Audit this ad for cognitive biases."
 
@@ -33,12 +35,12 @@
 [RECOMMENDATIONS]
 
 **Fix 1 - REWRITE the social proof:**
-> "4,827 teams switched this year. Sarah Chen, Ops Director at Merge: 'We cut reporting from 11 hours to 17 minutes a week.'"
-→ Replaces vague claim with specific number + named person + measurable outcome.
+> "4,827 teams switched this year. [Customer name], [role] at [company]: 'We cut reporting from 11 hours to 17 minutes a week.'"
+→ Replaces vague claim with specific number + named person + measurable outcome. Use verified data or keep the placeholders; never invent the name or result.
 
 **Fix 2 - REWRITE the authority claim:**
-> "A 2024 meta-analysis in the Journal of Applied Psychology (12,000 participants) found [specific mechanism] improves output by 31%."
-→ Replaces "studies show" with named, dated, quantified authority.
+> "A [Year] meta-analysis in [Journal] ([N] participants) found [specific mechanism] improves output by 31%."
+→ Replaces "studies show" with named, dated, quantified authority. Cite only a real source; otherwise keep the placeholders and add `[DATA NEEDED]`.
 
 **Fix 3 - REWRITE the scarcity:**
 > "We cap each cohort at 50 founders - our team of 3 reviews every submission personally. Current cohort: 47/50. Registration closes Friday midnight PT."

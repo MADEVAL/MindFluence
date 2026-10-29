@@ -1,5 +1,7 @@
 # Example: Welcome Email #1
 
+> **[ILLUSTRATIVE]** Fictional names, brands, numbers, and quotes are used for demonstration. Replace with verified data before publishing.
+
 **Context:** SaaS project management tool for small creative agencies.
 **Request:** "Write the first welcome email after someone signs up for a free trial."
 

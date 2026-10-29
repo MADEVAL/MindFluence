@@ -1,5 +1,7 @@
 # Example: Long-form Article Intro + Body (excerpt)
 
+> **[ILLUSTRATIVE]** Fictional names, brands, numbers, and quotes are used for demonstration. Replace with verified data before publishing.
+
 **Context:** An article about why most productivity systems fail, promoting a minimalist productivity course.
 **Request:** "Write the article intro and first major section. Audience: knowledge workers overwhelmed by tools."
 

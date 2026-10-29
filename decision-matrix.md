@@ -1,6 +1,6 @@
 # Decision Matrix: Which Bias When
 
-> **Purpose:** Eliminate random bias selection. Every marketing task has an optimal bias stack based on audience temperature, product type, and platform. Use this matrix as the first filter before opening the bias catalog.
+> **Purpose:** Explain the reasoning behind bias selection. The inlined 38-row router in `SKILL.md` is authoritative for execution; use this file when you need the full audience/product/platform rationale, not as a second mandatory procedure.
 
 ---
 
@@ -8,7 +8,7 @@
 
 | Temperature | Definition | Primary Biases | Secondary | DO NOT Use |
 |-------------|-----------|----------------|-----------|------------|
-| **Cold** (never heard of you) | Scrolling, no awareness, no pain recognition | Availability (vivid story) + Fear/Loss (name the pain they didn't know they had) | Framing, Authority | Social Proof, Sunk Cost, In-Group (they don't know you yet) |
+| **Cold** (never heard of you) | Scrolling, no awareness, no pain recognition | Availability (vivid story) + Fear/Loss (name the pain they didn't know they had) | Framing, Authority | Use cautiously: Social Proof (peer-level only), Sunk Cost, In-Group (they don't know you yet) |
 | **Warm** (aware, not convinced) | Knows the problem exists, comparing solutions | Social Proof + Anchoring + Confirmation | Framing, Authority, Availability | Scarcity (premature), Fear (already aware of problem) |
 | **Hot** (ready to buy, hesitating) | On the page, in the cart, at the webinar | Loss Aversion + Scarcity + Risk Reversal | Social Proof, Sunk Cost, Endowment | Availability (too late for stories), Authority (already trusted) |
 | **Lapsed** (bought before, silent now) | Past customer, inactive subscriber | In-Group + Status Quo + Sunk Cost | Endowment, Reciprocity, Loss Aversion | Fear (don't scare people who already paid you) |

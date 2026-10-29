@@ -1,6 +1,8 @@
 # Anti-Patterns: What AI Gets Wrong (and How to Fix It)
 
 > **Purpose:** These are the most common failures when AI applies cognitive biases to marketing copy. Each anti-pattern describes what the AI produces, why it fails psychologically, and the concrete fix. Check your output against this list before delivering.
+>
+> **Provenance rule:** If the data is missing, use an explicit placeholder (`[N]`, `[Customer name]`, `[Source, Year]`) and a `[DATA NEEDED]` note. Never invent a number, name, quote, or source to "fix" an anti-pattern.
 
 ---
 
@@ -12,9 +14,9 @@
 **Why it fails:** The brain treats vague numbers as noise. "Thousands" could mean 2,001 or 99,999. No specificity = no credibility. Social proof without a number, face, or name is indistinguishable from fiction.
 
 **Fix:**
-> "4,827 teams switched to [Product] last month. Here's what Sarah Chen, VP of Ops at Merge, told us: 'We cut reporting time from 11 hours to 17 minutes.'"
+> "4,827 teams switched to [Product] last month. Here's what [Customer name], [role] at [company], told us: 'We cut reporting time from 11 hours to 17 minutes.'"
 
-**Rule:** Social proof needs at least TWO of: specific number, full name, role, photo, measurable result.
+**Rule:** Social proof needs at least TWO of: specific number, full name, role, photo, measurable result. **Only use data that is provided or verifiable.** If it is not, write `[N] customers`, `[Customer name]`, `[measurable result]` and add a `[DATA NEEDED]` note. Never invent a testimonial, number, or name to satisfy this rule.
 
 ---
 
@@ -54,9 +56,9 @@
 **Why it fails:** "Studies show" is the most overused, credibility-destroying phrase in marketing. It signals "I read a headline once." The brain has been burned by this too many times.
 
 **Fix:**
-> "A 2023 meta-analysis in the Journal of Applied Psychology (N = 12,000) found that [specific finding]. We built [Product] to operationalize that exact mechanism."
+> "A [Year] meta-analysis in [Journal] (N = [N]) found that [specific finding]. We built [Product] to operationalize that exact mechanism."
 
-**Rule:** Authority claims need: named source, year, specific finding. "Harvard research" = weak. "Harvard Business Review, March 2023: 'Teams using async communication ship 23% faster'" = strong.
+**Rule:** Authority claims need: named source, year, specific finding. "Harvard research" = weak. "[Journal], [Month Year]: '[specific finding]'" = strong - **only when the source is real and verifiable.** If you cannot verify it, use `[Source, Year, finding]` and add a `[DATA NEEDED]` note. Never fabricate a study, journal, year, or finding.
 
 ---
 
@@ -170,14 +172,33 @@
 
 ---
 
+## 13. STATISTICAL-ONLY FALLACY: COHORT DATA WITHOUT NARRATIVE (→ Bias #6 + #1)
+
+**What AI writes:**
+> "The median graduate adds $27,400 within 90 days of completion (N=214)."
+
+**Why it fails:** Aggregate data informs System 2. Narrative activates System 1. Without System 1 activation, the data is processed but never *felt*. A text of pure statistics can pass every mechanical check and still generate zero emotional engagement.
+
+**Detection rule:** A STANDARD or EXTENDED output where all authority/social proof claims are aggregate statistics and there is no compliant narrative — Mode A NPSA (name + location/role + timeline + verbatim quote + visceral detail) or Mode B labeled `[illustrative]` vignette (visceral detail; no fabricated quote required) → FAIL.
+
+**Fix (real data):**
+> "[Customer name] was 6 weeks from shutting down their Austin consulting practice. Revenue: $11,400/month. 62-hour weeks. 'I thought I had a pricing problem,' they told us. 'I had a leverage problem.' They now work 41 hours/week. The median across all 214 graduates: +$27,400."
+
+**Fix (no real persona data):**
+> "[illustrative] A founder we worked with last quarter was [situation]. [Placeholder metric]. Here's what changed..." - or use a first-person founder narrative. Never invent a named person, quote, or result.
+
+**Rule:** Anchor every aggregate statistic to a narrative. Mode A (real NPSA) or Mode B (labeled `[illustrative]` vignette). Never fabricate a person to satisfy the requirement.
+
+---
+
 ## QUICK AUDIT CHECKLIST
 
 Before delivering any output, scan for these failures:
 
-- [ ] Social Proof: Does it have a specific number + name/role/face?
+- [ ] Social Proof: Does it have a specific number + name/role/face, or an explicit placeholder?
 - [ ] Fear: Is the solution in the SAME paragraph as the threat?
 - [ ] Framing: Is the "old way" anchored with specifics?
-- [ ] Authority: Is the source named + dated + finding quoted?
+- [ ] Authority: Is the source named + dated + finding quoted, or explicitly placeholdered?
 - [ ] Reciprocity: Is the value separable from the pitch?
 - [ ] Scarcity: Is the constraint EXPLAINED, not just declared?
 - [ ] Sunk Cost: Has the prospect actually invested yet?
@@ -186,3 +207,5 @@ Before delivering any output, scan for these failures:
 - [ ] Confirmation: Does it make the reader feel SMART or DUMB?
 - [ ] Availability: Are there 3+ concrete sensory details?
 - [ ] Cognitive Dissonance: Is the system blamed, not the person?
+- [ ] Statistical-Only Fallacy: Is every aggregate statistic anchored to a narrative?
+- [ ] Provenance: Is every number, name, quote, and source traceable or placeholder-marked?

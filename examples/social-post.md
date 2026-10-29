@@ -1,5 +1,7 @@
 # Example: Social Media Post (LinkedIn)
 
+> **[ILLUSTRATIVE]** Fictional names, brands, numbers, and quotes are used for demonstration. Replace with verified data before publishing.
+
 **Context:** Promoting a time-tracking SaaS to freelance designers.
 **Request:** "Write a LinkedIn post about why freelancers undercharge."
 

@@ -93,7 +93,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 ### SECTION 6: CASE STUDY STACK (400–800 words)
 ```
 [SURVIVORSHIP BIAS] Show your 2–3 best results.
-[SOCIAL PROOF] Full name, photo, specific before/after metrics.
+[SOCIAL PROOF] Full name, photo, specific before/after metrics - or explicit placeholders if the data is not available.
 [AVAILABILITY] Before → Struggle → Discovery → Application → After.
 [CONFIRMATION] The case study should mirror the reader's situation.
 ```

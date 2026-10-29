@@ -103,7 +103,7 @@ Answer questions. Each Q&A is an opportunity for social proof ("Great question -
 - [ ] Personal story includes failures and wrong beliefs (Bias Blind Spot)
 - [ ] Method has a NAME (Anchoring)
 - [ ] Method taught with real value - not holding back (Reciprocity)
-- [ ] Case study is specific: names, dates, numbers (Survivorship + Availability)
+- [ ] Case study is specific: names, dates, numbers (or explicit placeholders if data is unavailable) (Survivorship + Availability)
 - [ ] Price anchored against higher reference points before revealed
 - [ ] Bonus stack exceeds offer value by 3–5×
 - [ ] Urgency is genuine - real deadlines, real limited bonuses
