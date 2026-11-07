@@ -36,7 +36,7 @@ REQUIRED_SECTIONS = [
     "Cultural Quick-Reference",
     "Anti-Patterns (13)",
     "Narrative Depth Requirements",
-    "External Reference Files",
+    "Reference Files",
     "Output Contract",
     "Post-Generation Verification",
 ]

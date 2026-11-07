@@ -1,13 +1,13 @@
 ---
 name: mindfluence
-description: "Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained core with a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and 7 post-generation checks including a mandatory PROVENANCE/TRUTH GATE. Narrative depth supports two compliant modes - real-data Named Person Story Arc or a labeled [illustrative] first-person/generalized vignette. Includes Rewrite Without Metrics (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, SEO structure (RankWise), angles and hooks (AngleCraft), or humanizing AI text (human-ai)."
+description: "Use when creating, auditing, optimizing, or rewriting marketing copy: posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer persuasion that converts without inventing facts. Self-contained core: a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation for 12 regions, and a mandatory PROVENANCE/TRUTH GATE. Use ONLY for marketing content work. DO NOT use for general writing, technical documentation, SEO structure (RankWise), angles and hooks (AngleCraft), or humanizing AI text (human-ai)."
 license: MIT
 compatibility: Plain Markdown. No external dependencies.
 metadata:
   author: Yevhen Leonidov
   version: "2.4.0"
   biases: 20
-  languages: "any"
+  languages: [any]
   tone_styles: 7
   scenarios: 13
   modes: 4
@@ -1112,7 +1112,7 @@ When the user provides raw numbers without interpretation, translate them into b
 
 ---
 
-## External Reference Files
+## Reference Files
 
 This skill is self-contained for core operation. The following files are preserved in the repository for deeper study, edge cases, and extended context. **Paths are relative to this `SKILL.md`**; read a file only when the task needs it.
 

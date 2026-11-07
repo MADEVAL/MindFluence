@@ -212,7 +212,7 @@ MindFluence/
 
 ## Integration
 
-MindFluence is designed for bi-directional integration with [RankWise](https://github.com/MADEVAL/RankWise) (SEO Content Engine) and [human-ai](https://github.com/MADEVAL/Natural-skill) (Text Humanization Engine). The three skills form a complete content production pipeline: SEO structure → persuasive copy → human voice.
+MindFluence is designed for bi-directional integration with [RankWise](https://github.com/MADEVAL/RankWise) (SEO Content Engine) and [human-ai](https://github.com/MADEVAL/HumanAI) (Text Humanization Engine). The three skills form a complete content production pipeline: SEO structure → persuasive copy → human voice.
 
 ### With RankWise (SEO Content Engine)
 
