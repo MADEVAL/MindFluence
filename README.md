@@ -353,9 +353,11 @@ MIT
 ## GitHub Description
 
 ```
-AI prompt-skill v2.3.0: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
+AI prompt-skill v2.3.0: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration. Skills.sh: https://www.skills.sh/madeval/mindfluence
 ```
 
 ## GitHub Tags
 
 `prompt-engineering` `cognitive-biases` `marketing` `copywriting` `behavioral-economics` `psychology` `ai-prompts` `llm-skills` `persuasion` `neuromarketing` `conversion-optimization` `content-strategy` `system-prompt` `gpt` `claude` `self-contained` `bias-detection` `marketing-automation` `narrative-engineering` `human-quality`
+
+Skills.sh: https://www.skills.sh/madeval/mindfluence
