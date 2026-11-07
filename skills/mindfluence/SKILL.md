@@ -1,22 +1,22 @@
 ---
 name: mindfluence
-description: "Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained core with a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and 7 post-generation checks including a mandatory PROVENANCE/TRUTH GATE. Narrative depth supports two compliant modes - real-data Named Person Story Arc or a labeled [illustrative] first-person/generalized vignette. Includes Rewrite Without Metrics (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks."
+description: "Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained core with a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and 7 post-generation checks including a mandatory PROVENANCE/TRUTH GATE. Narrative depth supports two compliant modes - real-data Named Person Story Arc or a labeled [illustrative] first-person/generalized vignette. Includes Rewrite Without Metrics (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, SEO structure (RankWise), angles and hooks (AngleCraft), or humanizing AI text (human-ai)."
 license: MIT
 compatibility: Plain Markdown. No external dependencies.
 metadata:
   author: Yevhen Leonidov
   version: "2.4.0"
-  biases: "20"
-  language: any
-  tone-styles: "7"
-  scenarios: "13"
-  modes: "4"
-  regions: "12"
-  power-combos: "14"
-  anti-patterns: "13"
-  router-rows: "38"
-  narrative-modes: "2"
-  verification-checks: "7"
+  biases: 20
+  languages: "any"
+  tone_styles: 7
+  scenarios: 13
+  modes: 4
+  regions: 12
+  power_combos: 14
+  anti_patterns: 13
+  router_rows: 38
+  narrative_modes: 2
+  verification_checks: 7
   repository: "https://github.com/MADEVAL/MindFluence"
 ---
 
@@ -157,7 +157,7 @@ User provides existing copy for analysis. Do NOT create new content.
 5. For each bias found: rate its execution (effective / neutral / counterproductive) and explain why.
 6. Suggest specific improvements: which biases to add, which to strengthen, which to fix per anti-patterns. Mark missing evidence with placeholders instead of inventing replacements.
 
-**Output format:** `[BIASES FOUND] → [ANTI-PATTERNS FOUND] → [PROVENANCE ISSUES] → [ANALYSIS per bias] → [RECOMMENDATIONS]`
+**Output format:** `[LANG: xx] → [BIASES FOUND] → [ANTI-PATTERNS FOUND] → [PROVENANCE ISSUES] → [ANALYSIS per bias] → [RECOMMENDATIONS]`
 
 ### Optimize Mode
 
@@ -178,6 +178,7 @@ User provides performance data from an existing piece of marketing copy and asks
 
 **Output format for Optimize Mode:**
 ```
+[LANG: xx]
 [ORIGINAL BIAS STACK] → [ISSUE FOUND] → [PROVENANCE ISSUES] → [ADJUSTED STACK] → [REVISED CONTENT]
 
 [DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
@@ -233,6 +234,7 @@ When the user provides existing copy WITHOUT performance metrics, do NOT run the
 **Output format for Rewrite (STANDARD):**
 
 ```
+[LANG: xx]
 [REWRITE: intent]
 [ORIGINAL BIASES: bias1, bias2...]
 [ANTI-PATTERNS FIXED: AP-N]  ← only if APs were found and fixed
@@ -1127,7 +1129,7 @@ This skill is self-contained for core operation. The following files are preserv
 | `references/anti-patterns.md` | 13 AI copywriting failures with detailed examples, fixes, and audit checklist | When an audit finds an anti-pattern not fully covered by the inlined detection rules | references/anti-patterns.md |
 | `references/cultural-matrix.md` | Detailed bias-by-bias cultural adaptation across 4 dimensions + 12 region profiles | When targeting non-Western markets and the inlined Quick-Reference isn't granular enough | references/cultural-matrix.md |
 | `scenarios/` | 13 full scenario playbooks with bias-by-bias timing and section-by-section maps | When generating medium/high complexity content (sales pages, long-form, crisis response, webinars) | `scenarios/` |
-| `examples/` | 7 annotated outputs showing bias stacks in action | When you need reference quality for a complex format | examples// |
+| `examples/` | 7 annotated outputs showing bias stacks in action | When you need reference quality for a complex format | `examples/` |
 | `../../README.md` | Project overview, integration guides, pipeline documentation | When you need setup instructions or pipeline integration details | ../../README.md |
 | `../../README.ru.md` | Russian-language project overview | For Russian-speaking users | ../../README.ru.md |
 
@@ -1137,9 +1139,12 @@ This skill is self-contained for core operation. The following files are preserv
 
 ## Output Contract - 3 Tier
 
+Every output opens with `[LANG: xx]` - the ISO code of the content language - before the tier header.
+
 ### Compact (Output < 500 Chars: Tweets, Push, SMS, Ad Headlines, Instagram Captions)
 
 ```
+[LANG: xx]
 [TONE: style]
 [content - no bias tags, no rationale]
 
@@ -1150,6 +1155,7 @@ Optional: [DATA NEEDED: missing numbers/names/sources - only if placeholders rem
 ### Standard (500-3000 Chars: LinkedIn Posts, Emails, Short Landing Sections)
 
 ```
+[LANG: xx]
 [TONE: style]
 [BIASES ENGAGED: bias1, bias2, bias3...]
 [TARGET ACTION: click / subscribe / buy / share / think]
@@ -1164,6 +1170,7 @@ Optional: [DATA NEEDED: missing numbers/names/sources - only if placeholders rem
 ### Extended (3000+ Chars: Full Landing Pages, Sales Pages, Long-Form Articles, Email Sequences)
 
 ```
+[LANG: xx]
 [TONE: style]
 [BIAS-SECTION MAP]
   Section Name: Bias(#N) - purpose
@@ -1267,6 +1274,7 @@ Run this mechanical check AFTER writing. Do NOT skip. Search your output text fo
 > Demonstrates Mode B (no real persona data): first-person founder narrative with timeline, visceral detail, and conversational direct address. Marked `[illustrative]`; no invented third-party name, quote, or citation. Passes all 7 checks.
 
 ```
+[LANG: en]
 [TONE: warm-human × expert-calm]
 [BIASES ENGAGED: LossAversion(#5), Availability(#6), Anchoring(#2), Confirmation(#7), SocialProof(#1)]
 [TARGET ACTION: Save + Comment + Click link]
@@ -1304,6 +1312,7 @@ LossAversion: "$23,000 lost" activates threat-detection. Availability: detailed 
 > Mode A shape - illustrative data. Replace with a verified customer before publishing.
 
 ```
+[LANG: en]
 [TONE: expert-calm]
 [BIASES ENGAGED: Availability(#6), LossAversion(#5), SocialProof(#1), Framing(#3), RiskReversal(tech)]
 [TARGET ACTION: Start free trial]
@@ -1326,6 +1335,7 @@ Availability: concrete number (11 hours) + specific action (copying data) = read
 > Mode B template - placeholders only; no real persona, quote, or metric is asserted.
 
 ```
+[LANG: en]
 [TONE: warm-human]
 [BIASES ENGAGED: Reciprocity(tech), Endowment(#10), StatusQuo(#13)]
 [TARGET ACTION: Complete profile setup]
@@ -1357,6 +1367,7 @@ Reciprocity: pre-loaded workspace = genuine value before any ask. Endowment: "Yo
 ### Example 4: Search Ad (Compact) - B2B SaaS
 
 ```
+[LANG: en]
 [TONE: expert-calm]
 [BIASES: Anchoring(#2), SocialProof(#1), RiskReversal(tech)]
 
@@ -1368,6 +1379,7 @@ Start Free Trial - No Credit Card
 ### Example 5: Audit Output (Extended) - Facebook Ad
 
 ```
+[LANG: en]
 [BIASES FOUND]
 - SocialProof(#1): "Thousands of happy customers"
 - Authority(#4): "Studies show"

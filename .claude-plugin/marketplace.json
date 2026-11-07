@@ -1,0 +1,17 @@
+{
+  "name": "mindfluence",
+  "owner": {
+    "name": "Yevhen Leonidov",
+    "url": "https://github.com/MADEVAL"
+  },
+  "plugins": [
+    {
+      "name": "mindfluence",
+      "source": "./",
+      "description": "Cognitive-bias marketing engine for high-converting copy across any language, platform, and audience.",
+      "version": "2.4.0",
+      "homepage": "https://github.com/MADEVAL/MindFluence",
+      "repository": "https://github.com/MADEVAL/MindFluence"
+    }
+  ]
+}

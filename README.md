@@ -10,7 +10,7 @@
 
 > **Persuasion engineered through psychology, not manipulation.**
 
-An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. **v2.3: self-contained core with narrative depth and provenance.** All tables, 13 anti-patterns with detection rules, cultural data, and few-shot examples are inlined into SKILL.md. A mandatory PROVENANCE / TRUTH GATE prevents invented numbers, names, and sources. Narrative depth supports two compliant modes: real-data Named Person Story Arc (NPSA) or a labeled `[illustrative]` fallback. No external file reads required for core operation.
+An AI prompt-skill that turns 20 cognitive biases into high-converting marketing copy - for any language, any platform, any audience. **Skill class:** orchestrator - self-contained `SKILL.md` plus on-demand references. **v2.3: self-contained core with narrative depth and provenance.** All tables, 13 anti-patterns with detection rules, cultural data, and few-shot examples are inlined into SKILL.md. A mandatory PROVENANCE / TRUTH GATE prevents invented numbers, names, and sources. Narrative depth supports two compliant modes: real-data Named Person Story Arc (NPSA) or a labeled `[illustrative]` fallback. No external file reads required for core operation.
 
 ---
 
@@ -172,7 +172,7 @@ MindFluence/
 │   │   ├── audit-example.md     ← Audit Mode - ad analyzed for biases + anti-patterns + fixes
 │   │   └── optimize-hero.md     ← Optimize Mode - hero iterated from metrics
 │   └── agents/openai.yaml       ← OpenAI agent manifest
-├── install.py                   ← Installer for Claude Code, OpenCode, Cursor, .agents
+├── install.py                   ← Installer for Claude Code, OpenCode, Codex, .agents
 ├── .claude-plugin/plugin.json
 ├── .cursor-plugin/plugin.json
 ├── CHANGELOG.md                 ← Version history and release notes.

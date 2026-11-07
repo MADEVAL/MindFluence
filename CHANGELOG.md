@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Moved the runtime skill to `skills/mindfluence/` to match the suite layout.
 - Moved reference files to `skills/mindfluence/references/`.
-- Added `install.py` for Claude Code, OpenCode, Cursor, and the generic `.agents` convention.
+- Added `install.py` for Claude Code, OpenCode, Codex, and the generic `.agents` convention.
 - Added Claude and Cursor plugin manifests, `.editorconfig`, and an OpenAI agent manifest.
 - Frontmatter normalized: quoted description, added `metadata.repository`, environment-based `compatibility`, `metadata.author`.
 - Section headings normalized to Title Case; H1 aligned with the suite.
