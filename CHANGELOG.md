@@ -2,6 +2,11 @@
 
 All notable changes to MindFluence are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [2.5.1] - 2026-11-07
+
+### Changed
+- `install.py` copies `LICENSE` into the installed skill and includes it in `--check`; `scripts/` is shipped with the skill.
+
 ## [2.5.0] - 2026-11-07
 
 ### Added

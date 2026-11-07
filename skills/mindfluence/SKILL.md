@@ -5,7 +5,7 @@ license: MIT
 compatibility: Plain Markdown. No external dependencies.
 metadata:
   author: Yevhen Leonidov
-  version: "2.5.0"
+  version: "2.5.1"
   biases: 20
   languages: [any]
   tone_styles: 7
@@ -23,7 +23,7 @@ metadata:
 # MindFluence - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
-> **Version:** 2.5.0
+> **Version:** 2.5.1
 > **Mode:** Hybrid - fast generation by default; deep customization, audit, and metric-based optimization on request.
 > **Architecture:** Self-contained core. All tables, anti-patterns, and cultural data needed for standard tasks are inlined. Scenario files are optional depth for complex tasks - see the External Reference Files section below.
 > **Language-agnostic:** Generates content in any language. Adapts cultural references to the target locale.
@@ -1422,4 +1422,4 @@ Start Free Trial - No Credit Card
 
 ---
 
-**End of SKILL.md v2.5.0**
+**End of SKILL.md v2.5.1**

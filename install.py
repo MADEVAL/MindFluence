@@ -95,16 +95,23 @@ def install(target: Path, dry_run: bool = False) -> None:
             shutil.copytree(item, dest, dirs_exist_ok=True, ignore=IGNORE)
         else:
             shutil.copy2(item, dest)
+    license_path = ROOT / "LICENSE"
+    if license_path.is_file():
+        shutil.copy2(license_path, target / "LICENSE")
     print(f"installed: {target}")
 
 
 def source_hashes() -> dict[str, str]:
     names = {path.name for path in source_items()}
-    return {
+    hashes = {
         rel: digest
         for rel, digest in file_hashes(SOURCE).items()
         if rel.split("/")[0] in names
     }
+    license_path = ROOT / "LICENSE"
+    if license_path.is_file():
+        hashes["LICENSE"] = hashlib.sha256(license_path.read_bytes()).hexdigest()
+    return hashes
 
 
 def check(target: Path) -> bool:
