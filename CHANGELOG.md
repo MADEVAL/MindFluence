@@ -5,14 +5,20 @@ All notable changes to MindFluence are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.4.0] - 2026-11-07
 
 ### Changed
+- Moved the runtime skill to `skills/mindfluence/` to match the suite layout.
+- Moved reference files to `skills/mindfluence/references/`.
+- Added `install.py` for Claude Code, OpenCode, Cursor, and the generic `.agents` convention.
+- Added Claude and Cursor plugin manifests, `.editorconfig`, and an OpenAI agent manifest.
+- Frontmatter normalized: quoted description, added `metadata.repository`, environment-based `compatibility`, `metadata.author`.
+- Section headings normalized to Title Case; H1 aligned with the suite.
 - Version normalized to three-part semver (2.3.0).
-- Frontmatter normalized: environment-based `compatibility`, `metadata.author`.
+- CI now validates frontmatter, version, relative links, and the installer plan.
 - Reference files are read by relative path from the skill folder instead of GitHub URLs.
 - Long dashes replaced with hyphens across all documentation.
-- Section canon: added `WHEN NOT TO USE`, renamed the output section to `OUTPUT CONTRACT`.
+- Section canon: added `When Not to Use`, renamed the output section to `Output Contract`.
 - Canonical placeholder vocabulary documented: `[N]`, `[DATA NEEDED: ...]`, `[VERIFY: ...]`, `[Source, Year]`, `[illustrative]`.
 
 ## [2.3.0] - 2026-10-30

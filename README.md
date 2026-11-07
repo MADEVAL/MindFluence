@@ -1,11 +1,12 @@
 # MindFluence
 
-[![Version](https://img.shields.io/badge/version-2.3.0-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.4.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Compatibility](https://img.shields.io/badge/compatibility-plain%20markdown-purple)](#requirements)
+[![CI](https://github.com/MADEVAL/MindFluence/actions/workflows/ci.yml/badge.svg)](https://github.com/MADEVAL/MindFluence/actions/workflows/ci.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-listed-2ea44f)](https://www.skills.sh/madeval/mindfluence)
 
-[ **English** | [Русский](README.ru.md) ]
+\[ **English** | [Русский](README.ru.md) \]
 
 > **Persuasion engineered through psychology, not manipulation.**
 
@@ -130,46 +131,52 @@ Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolut
 ## What's inside
 
 ```
-mindfluence/
-├── SKILL.md                    ← Main instruction. Self-contained core v2.3.0.
-│                                  Inlined: Bias Selection Router (38 rows), Scenario Quick-Reference,
-│                                  Cultural Quick-Reference, 13 Anti-Patterns with detection rules
-│                                  (incl. Statistical-Only Fallacy), Narrative Depth Requirements
-│                                  (Mode A NPSA / Mode B [illustrative] + Conversational Direct Address + Unexpected Detail),
-│                                  14 Power Combinations, Bias Conflict Detector,
-│                                  Post-Generation Verification (7 checks including HUMAN/NARRATIVE and PROVENANCE),
-│                                  7 tones + hybrid formula with narrative minimums, 3-tier output format,
-│                                  5 inlined few-shot examples (Mode A/B), Quality Rubric,
-│                                  Rewrite Without Metrics (7 intents: full rewrite, tone shift, bias inject/remove,
-│                                  anti-pattern fix, audience/platform adaptation),
-│                                  EXTERNAL REFERENCE FILES table with full GitHub URLs.
-├── decision-matrix.md          ← Detailed audience×product×platform mapping. For deeper bias selection.
-├── anti-patterns.md            ← 13 AI copywriting failures + detailed fixes + 30-sec audit checklist.
-├── cultural-matrix.md          ← Full bias-by-bias cultural adaptation across 4 cultural dimensions (Hofstede + Hall).
-├── scenarios/                  ← Task-specific playbooks (13 scenarios) - authoritative for complex tasks
-│   ├── product-launch.md       ← Pre-launch → launch day → post-launch bias sequences
-│   ├── social-media-post.md    ← X, LinkedIn, Instagram, Telegram, TikTok patterns
-│   ├── landing-page.md         ← Full page bias map - hero to footer, section by section
-│   ├── email-sequence.md       ← Welcome, nurture, cart abandonment, re-engagement
-│   ├── webinar-warmup.md       ← Registration → live event (minute-by-minute) → post-webinar
-│   ├── ad-campaign.md          ← Video, search, social, retargeting + A/B testing
-│   ├── sales-page.md           ← 12-section psychological arc for high-ticket
-│   ├── case-study.md           ← 6-part success story structure
-│   ├── pricing-page.md         ← Anchoring architecture, decoy engineering
-│   ├── cold-outreach.md        ← 5-line rule - no trust, no social proof
-│   ├── crisis-response.md      ← 6-part apology structure - defensive bias engineering
-│   ├── seo-brief.md            ← SEO brief integration, keyword density, humanization survivability
-│   └── push-notifications.md   ← Push & SMS - lock screen psychology, 6 push types
-├── examples/                   ← Annotated outputs (7 examples)
-│   ├── social-post.md          ← LinkedIn post for freelancers (7 biases dissected)
-│   ├── landing-hero.md         ← Hero section for premium meal delivery
-│   ├── ad-script.md            ← 30s video ad for language app
-│   ├── email-welcome.md        ← SaaS welcome email
-│   ├── longform-article.md     ← Article intro with full bias analysis
-│   ├── audit-example.md        ← Audit Mode - ad analyzed for biases + anti-patterns + fixes
-│   └── optimize-hero.md        ← Optimize Mode - hero iterated from metrics
-├── CHANGELOG.md                ← Version history and release notes.
-├── SECURITY.md                 ← Vulnerability reporting and security scope.
+MindFluence/
+├── skills/mindfluence/          ← runtime skill package
+│   ├── SKILL.md                 ← Main instruction. Self-contained core v2.4.0.
+│   │                              Inlined: Bias Selection Router (38 rows), Scenario Quick-Reference,
+│   │                              Cultural Quick-Reference, 13 Anti-Patterns with detection rules
+│   │                              (incl. Statistical-Only Fallacy), Narrative Depth Requirements
+│   │                              (Mode A NPSA / Mode B [illustrative] + Conversational Direct Address + Unexpected Detail),
+│   │                              14 Power Combinations, Bias Conflict Detector,
+│   │                              Post-Generation Verification (7 checks including HUMAN/NARRATIVE and PROVENANCE),
+│   │                              7 tones + hybrid formula with narrative minimums, 3-tier output format,
+│   │                              5 inlined few-shot examples (Mode A/B), Quality Rubric,
+│   │                              Rewrite Without Metrics (7 intents: full rewrite, tone shift, bias inject/remove,
+│   │                              anti-pattern fix, audience/platform adaptation),
+│   │                              External Reference Files table with relative paths.
+│   ├── references/
+│   │   ├── decision-matrix.md   ← Detailed audience×product×platform mapping. For deeper bias selection.
+│   │   ├── anti-patterns.md     ← 13 AI copywriting failures + detailed fixes + 30-sec audit checklist.
+│   │   └── cultural-matrix.md   ← Full bias-by-bias cultural adaptation across 4 cultural dimensions (Hofstede + Hall).
+│   ├── scenarios/               ← Task-specific playbooks (13 scenarios) - authoritative for complex tasks
+│   │   ├── product-launch.md    ← Pre-launch → launch day → post-launch bias sequences
+│   │   ├── social-media-post.md ← X, LinkedIn, Instagram, Telegram, TikTok patterns
+│   │   ├── landing-page.md      ← Full page bias map - hero to footer, section by section
+│   │   ├── email-sequence.md    ← Welcome, nurture, cart abandonment, re-engagement
+│   │   ├── webinar-warmup.md    ← Registration → live event (minute-by-minute) → post-webinar
+│   │   ├── ad-campaign.md       ← Video, search, social, retargeting + A/B testing
+│   │   ├── sales-page.md        ← 12-section psychological arc for high-ticket
+│   │   ├── case-study.md        ← 6-part success story structure
+│   │   ├── pricing-page.md      ← Anchoring architecture, decoy engineering
+│   │   ├── cold-outreach.md     ← 5-line rule - no trust, no social proof
+│   │   ├── crisis-response.md   ← 6-part apology structure - defensive bias engineering
+│   │   ├── seo-brief.md         ← SEO brief integration, keyword density, humanization survivability
+│   │   └── push-notifications.md ← Push & SMS - lock screen psychology, 6 push types
+│   ├── examples/                ← Annotated outputs (7 examples)
+│   │   ├── social-post.md       ← LinkedIn post for freelancers (7 biases dissected)
+│   │   ├── landing-hero.md      ← Hero section for premium meal delivery
+│   │   ├── ad-script.md         ← 30s video ad for language app
+│   │   ├── email-welcome.md     ← SaaS welcome email
+│   │   ├── longform-article.md  ← Article intro with full bias analysis
+│   │   ├── audit-example.md     ← Audit Mode - ad analyzed for biases + anti-patterns + fixes
+│   │   └── optimize-hero.md     ← Optimize Mode - hero iterated from metrics
+│   └── agents/openai.yaml       ← OpenAI agent manifest
+├── install.py                   ← Installer for Claude Code, OpenCode, Cursor, .agents
+├── .claude-plugin/plugin.json
+├── .cursor-plugin/plugin.json
+├── CHANGELOG.md                 ← Version history and release notes.
+├── SECURITY.md                  ← Vulnerability reporting and security scope.
 └── README.md / README.ru.md
 ```
 
@@ -185,7 +192,7 @@ mindfluence/
 >
 > For 3 years, I charged clients based on what "felt right"...
 
-*→ [full example in `examples/social-post.md`]*
+*→ [full example in `skills/mindfluence/examples/social-post.md`]*
 
 ## Ethical Boundaries
 
@@ -253,7 +260,7 @@ MindFluence is designed for bi-directional integration with [RankWise](https://g
 
 ### Bias-SEO Compatibility
 
-Some cognitive biases have specific SEO interactions. See `scenarios/seo-brief.md` for the full table.
+Some cognitive biases have specific SEO interactions. See `skills/mindfluence/scenarios/seo-brief.md` for the full table.
 
 | Bias | SEO Risk | Mitigation |
 |------|---------|------------|
@@ -294,37 +301,49 @@ Triple pipeline:
 
 ## Getting Started
 
+### Installer
+
+```bash
+python install.py --target all
+python install.py --target opencode
+python install.py --target claude
+python install.py --list
+python install.py --check
+```
+
+`--target all` installs to Claude Code, OpenCode, Codex, and the portable `~/.agents/skills`; `--target project` writes to the current project's `.opencode/skills/`. Add `--dry-run` to preview.
+
 ### Quick start (any LLM)
 
-1. Copy the contents of [`SKILL.md`](https://github.com/MADEVAL/MindFluence/blob/main/SKILL.md)
+1. Copy the contents of [`skills/mindfluence/SKILL.md`](https://github.com/MADEVAL/MindFluence/blob/main/skills/mindfluence/SKILL.md)
 2. Paste as a system prompt / custom instructions
 3. Type: *"Write a post about [topic] for [audience] on [platform]"*
-4. For deeper context: the LLM can download additional files using the GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section
+4. For deeper context: read the supplementary files in `skills/mindfluence/references/`, `skills/mindfluence/scenarios/`, and `skills/mindfluence/examples/`
 
-**The file is self-contained for core operation.** No additional files needed for standard tasks. Bias Selection Router, Anti-Patterns with detection rules, Cultural Quick-Reference, few-shot examples - everything needed for core operation is inlined. If the LLM you're using can fetch external files, `SKILL.md` contains a full EXTERNAL REFERENCE FILES table with GitHub download URLs for all supplementary files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`, `examples/`).
+**The file is self-contained for core operation.** No additional files needed for standard tasks. Bias Selection Router, Anti-Patterns with detection rules, Cultural Quick-Reference, few-shot examples - everything needed for core operation is inlined. If the LLM you're using can fetch external files, `SKILL.md` contains a full External Reference Files table with relative paths for all supplementary files (`references/decision-matrix.md`, `references/anti-patterns.md`, `references/cultural-matrix.md`, `scenarios/`, `examples/`).
 
 ### With OpenCode (native)
 
-Place the `mindfluence/` folder into `.opencode/skills/` (project) or `~/.config/opencode/skills/` (global). OpenCode discovers `SKILL.md` by its path - no extra config needed. The folder name becomes the skill ID; keep it lowercase kebab-case (`mindfluence`) for portability.
+Place the `skills/mindfluence/` folder into `.opencode/skills/mindfluence/` (project) or `~/.config/opencode/skills/mindfluence/` (global), or run `python install.py --target opencode`. OpenCode discovers `SKILL.md` by its path - no extra config needed. The folder name becomes the skill ID; keep it lowercase kebab-case (`mindfluence`) for portability.
 
 ### With Claude Code
 
-Copy `SKILL.md` into your project as `CLAUDE.md`, or place the full `mindfluence/` folder under `~/.claude/skills/`.
+Run `python install.py --target claude`, or copy `skills/mindfluence/` to `~/.claude/skills/mindfluence/`. To use the skill as a project instruction file, copy `skills/mindfluence/SKILL.md` into your project as `CLAUDE.md`.
 
 ### As a Custom GPT / Claude Project
 
-Upload `SKILL.md` as the system prompt. For deeper context, add `decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, and files from `scenarios/` and `examples/` to the knowledge section. The file is self-contained for core operation, but the external files provide richer decision-matrix logic, detailed anti-pattern examples, and full scenario playbooks.
+Upload `skills/mindfluence/SKILL.md` as the system prompt. For deeper context, add files from `skills/mindfluence/references/`, `skills/mindfluence/scenarios/`, and `skills/mindfluence/examples/` to the knowledge section. The file is self-contained for core operation, but the external files provide richer decision-matrix logic, detailed anti-pattern examples, and full scenario playbooks.
 
 ### With any other LLM agent (Cursor, Windsurf, Copilot, Cline, Aider, etc.)
 
-Copy the contents of `SKILL.md` into that agent's instruction file (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md`, etc.). The prompt content is platform-agnostic.
+Copy the contents of `skills/mindfluence/SKILL.md` into that agent's instruction file (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md`, etc.). The prompt content is platform-agnostic.
 
 ## Requirements
 
 - Any capable LLM with a system prompt / custom instructions field (GPT, Claude, Gemini, DeepSeek, open-source models)
-- **Self-contained core:** `SKILL.md`. All tables, detection rules, cultural data, and examples needed for standard tasks are inlined.
+- **Self-contained core:** `skills/mindfluence/SKILL.md`. All tables, detection rules, cultural data, and examples needed for standard tasks are inlined.
 - Context window: 32K minimum for COMPACT/STANDARD; 64K+ recommended for EXTENDED and external references.
-- For deeper context: external files (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`) preserved in the repo - full GitHub URLs in SKILL.md's EXTERNAL REFERENCE FILES section so LLMs working with one file can guide users to download them
+- For deeper context: external files (`references/decision-matrix.md`, `references/anti-patterns.md`, `references/cultural-matrix.md`, `skills/mindfluence/scenarios/`) preserved in the repo - relative paths in SKILL.md's External Reference Files section so LLMs working with one file can guide users to the rest of the package.
 - No API keys, no tools, no dependencies - pure prompt engineering
 - Works in any language; adapts cultural references to the target market
 
@@ -353,7 +372,7 @@ MIT
 ## GitHub Description
 
 ```
-AI prompt-skill v2.3.0: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
+AI prompt-skill v2.4.0: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
 ```
 
 ## GitHub Tags

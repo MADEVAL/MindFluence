@@ -1,15 +1,16 @@
 # MindFluence
 
-[![Version](https://img.shields.io/badge/version-2.3.0-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.4.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Compatibility](https://img.shields.io/badge/compatibility-plain%20markdown-purple)](#требования)
+[![CI](https://github.com/MADEVAL/MindFluence/actions/workflows/ci.yml/badge.svg)](https://github.com/MADEVAL/MindFluence/actions/workflows/ci.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-listed-2ea44f)](https://www.skills.sh/madeval/mindfluence)
 
-[ [English](README.md) | **Русский** ]
+\[ [English](README.md) | **Русский** \]
 
 > **Убеждение, построенное на психологии, а не на манипуляции.**
 
-AI-навык (промпт) v2.3.0, превращающий 20 когнитивных искажений в маркетинговый копирайтинг с высокой конверсией - для любого языка, любой платформы, любой аудитории. **v2.3: самодостаточное ядро с нарративной глубиной и проверкой происхождения данных.** Все таблицы, 13 анти-паттернов с правилами обнаружения, культурные данные и few-shot примеры встроены в SKILL.md. Обязательный PROVENANCE / TRUTH GATE не даёт выдумывать числа, имена и источники. Нарративная глубина поддерживает два режима: NPSA на реальных данных или явно помеченный `[illustrative]` fallback. Для базовой работы внешние файлы не требуются.
+AI-навык (промпт) v2.4.0, превращающий 20 когнитивных искажений в маркетинговый копирайтинг с высокой конверсией - для любого языка, любой платформы, любой аудитории. **v2.3: самодостаточное ядро с нарративной глубиной и проверкой происхождения данных.** Все таблицы, 13 анти-паттернов с правилами обнаружения, культурные данные и few-shot примеры встроены в SKILL.md. Обязательный PROVENANCE / TRUTH GATE не даёт выдумывать числа, имена и источники. Нарративная глубина поддерживает два режима: NPSA на реальных данных или явно помеченный `[illustrative]` fallback. Для базовой работы внешние файлы не требуются.
 
 ---
 
@@ -130,46 +131,52 @@ AI-навык (промпт) v2.3.0, превращающий 20 когнити�
 ## Что внутри
 
 ```
-mindfluence/
-├── SKILL.md                    ← Основная инструкция v2.3.0. Самодостаточное ядро.
-│                                  Встроены: Bias Selection Router (38 строк), Scenario Quick-Reference,
-│                                  Cultural Quick-Reference, 13 анти-паттернов с правилами обнаружения
-│                                  (вкл. Statistical-Only Fallacy), Narrative Depth Requirements
-│                                  (Mode A NPSA / Mode B [illustrative] + Conversational Direct Address + Unexpected Detail),
-│                                  14 комбинаций искажений, Bias Conflict Detector,
-│                                  пост-генерационная верификация (7 проверок, включая HUMAN/NARRATIVE и PROVENANCE),
-│                                  7 стилей тона + гибридная формула с нарративными минимумами,
-│                                  3-tier формат вывода, 5 few-shot примеров (Mode A/B),
-│                                  Quality Rubric, Rewrite Without Metrics (7 сценариев: полный рерайт,
-│                                  смена тона, инъекция/удаление искажений, исправление анти-паттернов,
-│                                  адаптация под аудиторию/платформу), таблица EXTERNAL REFERENCE FILES с GitHub URL.
-├── decision-matrix.md          ← Детальная карта аудитория×продукт×платформа. Для углублённого выбора искажений.
-├── anti-patterns.md            ← 13 ошибок AI-копирайтинга + подробные исправления + 30-сек чеклист аудита.
-├── cultural-matrix.md          ← Полная культурная адаптация искажений по 4 измерениям (Hofstede + Hall).
-├── scenarios/                  ← Сценарии под конкретные задачи (13 сценариев) - авторитетны для сложных задач
-│   ├── product-launch.md       ← Последовательности искажений: предзапуск → день запуска → пост-запуск
-│   ├── social-media-post.md    ← Шаблоны для X, LinkedIn, Instagram, Telegram, TikTok
-│   ├── landing-page.md         ← Карта искажений для всей страницы - от hero до футера, секция за секцией
-│   ├── email-sequence.md       ← Приветствие, прогрев, брошенная корзина, реактивация
-│   ├── webinar-warmup.md       ← Регистрация → прямой эфир (поминутно) → пост-вебинар
-│   ├── ad-campaign.md          ← Видео, поиск, соцсети, ретаргетинг + A/B-тестирование
-│   ├── sales-page.md           ← Психологическая арка из 12 секций для дорогих продуктов
-│   ├── case-study.md           ← Структура истории успеха из 6 частей
-│   ├── pricing-page.md         ← Архитектура якорения, инженерия приманки
-│   ├── cold-outreach.md        ← Правило 5 строк - без доверия, без соцдоказательств
-│   ├── crisis-response.md      ← Структура извинения из 6 частей - инженерия защитных искажений
-│   ├── seo-brief.md            ← Интеграция с SEO-брифами, плотность ключевых слов, выживаемость при humanization
-│   └── push-notifications.md   ← Push и SMS - психология экрана блокировки, 6 типов уведомлений
-├── examples/                   ← Аннотированные примеры (7 примеров)
-│   ├── social-post.md          ← Пост в LinkedIn для фрилансеров (7 искажений в разборе)
-│   ├── landing-hero.md         ← Hero-секция для премиум-доставки еды
-│   ├── ad-script.md            ← 30-секундный видеоролик для языкового приложения
-│   ├── email-welcome.md        ← Приветственное письмо SaaS
-│   ├── longform-article.md     ← Вступление к статье с полным анализом искажений
-│   ├── audit-example.md        ← Audit Mode - анализ объявления: искажения + анти-паттерны + исправления
-│   └── optimize-hero.md        ← Optimize Mode - итерация hero-секции по метрикам
-├── CHANGELOG.md                ← История версий и release notes.
-├── SECURITY.md                 ← Политика сообщения об уязвимостях и область безопасности.
+MindFluence/
+├── skills/mindfluence/          ← пакет навыка
+│   ├── SKILL.md                 ← Основная инструкция v2.4.0. Самодостаточное ядро.
+│   │                              Встроены: Bias Selection Router (38 строк), Scenario Quick-Reference,
+│   │                              Cultural Quick-Reference, 13 анти-паттернов с правилами обнаружения
+│   │                              (вкл. Statistical-Only Fallacy), Narrative Depth Requirements
+│   │                              (Mode A NPSA / Mode B [illustrative] + Conversational Direct Address + Unexpected Detail),
+│   │                              14 комбинаций искажений, Bias Conflict Detector,
+│   │                              пост-генерационная верификация (7 проверок, включая HUMAN/NARRATIVE и PROVENANCE),
+│   │                              7 стилей тона + гибридная формула с нарративными минимумами,
+│   │                              3-tier формат вывода, 5 few-shot примеров (Mode A/B),
+│   │                              Quality Rubric, Rewrite Without Metrics (7 сценариев: полный рерайт,
+│   │                              смена тона, инъекция/удаление искажений, исправление анти-паттернов,
+│   │                              адаптация под аудиторию/платформу), таблица External Reference Files с относительными путями.
+│   ├── references/
+│   │   ├── decision-matrix.md   ← Детальная карта аудитория×продукт×платформа. Для углублённого выбора искажений.
+│   │   ├── anti-patterns.md     ← 13 ошибок AI-копирайтинга + подробные исправления + 30-сек чеклист аудита.
+│   │   └── cultural-matrix.md   ← Полная культурная адаптация искажений по 4 измерениям (Hofstede + Hall).
+│   ├── scenarios/               ← Сценарии под конкретные задачи (13 сценариев) - авторитетны для сложных задач
+│   │   ├── product-launch.md    ← Последовательности искажений: предзапуск → день запуска → пост-запуск
+│   │   ├── social-media-post.md ← Шаблоны для X, LinkedIn, Instagram, Telegram, TikTok
+│   │   ├── landing-page.md      ← Карта искажений для всей страницы - от hero до футера, секция за секцией
+│   │   ├── email-sequence.md    ← Приветствие, прогрев, брошенная корзина, реактивация
+│   │   ├── webinar-warmup.md    ← Регистрация → прямой эфир (поминутно) → пост-вебинар
+│   │   ├── ad-campaign.md       ← Видео, поиск, соцсети, ретаргетинг + A/B-тестирование
+│   │   ├── sales-page.md        ← Психологическая арка из 12 секций для дорогих продуктов
+│   │   ├── case-study.md        ← Структура истории успеха из 6 частей
+│   │   ├── pricing-page.md      ← Архитектура якорения, инженерия приманки
+│   │   ├── cold-outreach.md     ← Правило 5 строк - без доверия, без соцдоказательств
+│   │   ├── crisis-response.md   ← Структура извинения из 6 частей - инженерия защитных искажений
+│   │   ├── seo-brief.md         ← Интеграция с SEO-брифами, плотность ключевых слов, выживаемость при humanization
+│   │   └── push-notifications.md ← Push и SMS - психология экрана блокировки, 6 типов уведомлений
+│   ├── examples/                ← Аннотированные примеры (7 примеров)
+│   │   ├── social-post.md       ← Пост в LinkedIn для фрилансеров (7 искажений в разборе)
+│   │   ├── landing-hero.md      ← Hero-секция для премиум-доставки еды
+│   │   ├── ad-script.md         ← 30-секундный видеоролик для языкового приложения
+│   │   ├── email-welcome.md     ← Приветственное письмо SaaS
+│   │   ├── longform-article.md  ← Вступление к статье с полным анализом искажений
+│   │   ├── audit-example.md     ← Audit Mode - анализ объявления: искажения + анти-паттерны + исправления
+│   │   └── optimize-hero.md     ← Optimize Mode - итерация hero-секции по метрикам
+│   └── agents/openai.yaml       ← Манифест агента OpenAI
+├── install.py                   ← Установщик для Claude Code, OpenCode, Cursor, .agents
+├── .claude-plugin/plugin.json
+├── .cursor-plugin/plugin.json
+├── CHANGELOG.md                 ← История версий и release notes.
+├── SECURITY.md                  ← Политика сообщения об уязвимостях и область безопасности.
 └── README.md / README.ru.md
 ```
 
@@ -185,7 +192,7 @@ mindfluence/
 >
 > 3 года я назначал цены клиентам, исходя из того, что «казалось правильным»...
 
-*→ [полный пример в `examples/social-post.md`]*
+*→ [полный пример в `skills/mindfluence/examples/social-post.md`]*
 
 ## Этические границы
 
@@ -256,7 +263,7 @@ MindFluence спроектирован для двусторонней инте�
 
 ### Совместимость Bias-SEO
 
-Некоторые когнитивные искажения имеют специфические взаимодействия с SEO. См. `scenarios/seo-brief.md` для полной таблицы.
+Некоторые когнитивные искажения имеют специфические взаимодействия с SEO. См. `skills/mindfluence/scenarios/seo-brief.md` для полной таблицы.
 
 | Искажение | SEO-риск | Смягчение |
 |-----------|----------|-----------|
@@ -297,35 +304,47 @@ Triple pipeline:
 
 ## Быстрый старт
 
+### Установщик
+
+```bash
+python install.py --target all
+python install.py --target opencode
+python install.py --target claude
+python install.py --list
+python install.py --check
+```
+
+`--target all` ставит навык в Claude Code, OpenCode, Codex и переносимый `~/.agents/skills`; `--target project` пишет в `.opencode/skills/` текущего проекта. Добавьте `--dry-run`, чтобы посмотреть план без записи.
+
 ### Быстрый старт (любая LLM)
 
-1. Скопируйте содержимое [`SKILL.md`](https://github.com/MADEVAL/MindFluence/blob/main/SKILL.md)
+1. Скопируйте содержимое [`skills/mindfluence/SKILL.md`](https://github.com/MADEVAL/MindFluence/blob/main/skills/mindfluence/SKILL.md)
 2. Вставьте как системный промпт / пользовательские инструкции
 3. Напишите: *«Создай пост на тему [тема] для [аудитория] на [платформа]»*
-4. Для углублённого контекста: LLM может скачать дополнительные файлы, используя GitHub URL-ы из секции EXTERNAL REFERENCE FILES в SKILL.md
+4. Для углублённого контекста: читайте дополнительные файлы в `skills/mindfluence/references/`, `skills/mindfluence/scenarios/` и `skills/mindfluence/examples/`
 
 ### С OpenCode (нативно)
 
-Поместите папку `mindfluence/` в `.opencode/skills/` (проект) или `~/.config/opencode/skills/` (глобально). OpenCode обнаруживает `SKILL.md` по пути - дополнительная настройка не требуется. Имя папки становится ID навыка; для переносимости держите его в lowercase kebab-case (`mindfluence`). Навык активируется при запросе маркетинговых текстов, рекламы, лендингов, писем или контента для запусков.
+Поместите папку `skills/mindfluence/` в `.opencode/skills/mindfluence/` (проект) или `~/.config/opencode/skills/mindfluence/` (глобально) либо запустите `python install.py --target opencode`. OpenCode обнаруживает `SKILL.md` по пути - дополнительная настройка не требуется. Имя папки становится ID навыка; для переносимости держите его в lowercase kebab-case (`mindfluence`). Навык активируется при запросе маркетинговых текстов, рекламы, лендингов, писем или контента для запусков.
 
 ### С Claude Code
 
-Скопируйте `SKILL.md` в ваш проект как `CLAUDE.md` или поместите всю папку `mindfluence/` в `~/.claude/skills/`.
+Запустите `python install.py --target claude` или скопируйте `skills/mindfluence/` в `~/.claude/skills/mindfluence/`. Чтобы использовать навык как файл инструкций проекта, скопируйте `skills/mindfluence/SKILL.md` в проект как `CLAUDE.md`.
 
 ### Как Custom GPT / Проект Claude
 
-Загрузите `SKILL.md` как системный промпт. Для углублённого контекста добавьте `decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md` и файлы из `scenarios/` и `examples/` в knowledge section. Файл самодостаточен для базовой работы, но внешние файлы дают более богатую логику decision-matrix, детальные примеры анти-паттернов и полные сценарные плейбуки.
+Загрузите `skills/mindfluence/SKILL.md` как системный промпт. Для углублённого контекста добавьте файлы из `skills/mindfluence/references/`, `skills/mindfluence/scenarios/` и `skills/mindfluence/examples/` в knowledge section. Файл самодостаточен для базовой работы, но внешние файлы дают более богатую логику decision-matrix, детальные примеры анти-паттернов и полные сценарные плейбуки.
 
 ### С любым другим AI-агентом (Cursor, Windsurf, Copilot, Cline, Aider и др.)
 
-Скопируйте содержимое `SKILL.md` в файл инструкций этого агента (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md` и т.д.). Содержимое промпта не зависит от платформы - меняется только имя файла.
+Скопируйте содержимое `skills/mindfluence/SKILL.md` в файл инструкций этого агента (`.cursorrules`, `.windsurfrules`, `.github/copilot-instructions.md`, `.clinerules`, `CONVENTIONS.md` и т.д.). Содержимое промпта не зависит от платформы - меняется только имя файла.
 
 ## Требования
 
 - Любая способная LLM с полем системного промпта (GPT, Claude, Gemini, DeepSeek, open-source модели)
-- **Самодостаточное ядро:** `SKILL.md`. Все таблицы, правила обнаружения, культурные данные и примеры для стандартных задач встроены.
+- **Самодостаточное ядро:** `skills/mindfluence/SKILL.md`. Все таблицы, правила обнаружения, культурные данные и примеры для стандартных задач встроены.
 - Контекстное окно: 32K минимум для COMPACT/STANDARD; 64K+ рекомендуется для EXTENDED и внешних файлов.
-- Для углублённого контекста: внешние файлы (`decision-matrix.md`, `anti-patterns.md`, `cultural-matrix.md`, `scenarios/`) сохранены в репозитории - полные GitHub URL-ы в секции EXTERNAL REFERENCE FILES файла SKILL.md, так что LLM, работающие с одним файлом, могут направить пользователя к их скачиванию
+- Для углублённого контекста: внешние файлы (`references/decision-matrix.md`, `references/anti-patterns.md`, `references/cultural-matrix.md`, `skills/mindfluence/scenarios/`) сохранены в репозитории - относительные пути в секции External Reference Files файла SKILL.md, так что LLM, работающие с одним файлом, могут направить пользователя к остальному пакету
 - Без API-ключей, без инструментов, без зависимостей - чистый промпт-инжиниринг
 - Работает на любом языке; адаптирует культурные отсылки под целевой рынок
 
@@ -354,7 +373,7 @@ MIT
 ## Описание для GitHub
 
 ```
-AI-навык (промпт) v2.3: 20 когнитивных искажений → маркетинговый копирайтинг с высокой конверсией и проверкой происхождения данных. Самодостаточное ядро с Bias Selection Router на 38 строк (аудитория×продукт×платформа→мгновенный стек искажений), 13 анти-паттернов с механическими правилами обнаружения (вкл. Statistical-Only Fallacy), Narrative Depth Requirements (NPSA на реальных данных или помеченный [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 комбинаций искажений, 7 стилей тона + гибридная формула с нарративными минимумами, 3-tier формат вывода (compact/standard/extended), 7-пунктовая пост-генерационная верификация (вкл. PROVENANCE/TRUTH GATE и HUMAN), культурный quick-reference для 12 регионов, Rewrite Without Metrics (7 сценариев качественного рерайта) и 5 встроенных few-shot примеров. Покрывает: рекламу, лендинги, email-последовательности, соцсети, вебинары, запуски, продающие страницы, кейсы, ценообразование, холодный аутрич, push-уведомления, кризисные коммуникации и интеграцию с SEO-брифами.
+AI-навык (промпт) v2.4.0: 20 когнитивных искажений → маркетинговый копирайтинг с высокой конверсией и проверкой происхождения данных. Самодостаточное ядро с Bias Selection Router на 38 строк (аудитория×продукт×платформа→мгновенный стек искажений), 13 анти-паттернов с механическими правилами обнаружения (вкл. Statistical-Only Fallacy), Narrative Depth Requirements (NPSA на реальных данных или помеченный [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 комбинаций искажений, 7 стилей тона + гибридная формула с нарративными минимумами, 3-tier формат вывода (compact/standard/extended), 7-пунктовая пост-генерационная верификация (вкл. PROVENANCE/TRUTH GATE и HUMAN), культурный quick-reference для 12 регионов, Rewrite Without Metrics (7 сценариев качественного рерайта) и 5 встроенных few-shot примеров. Покрывает: рекламу, лендинги, email-последовательности, соцсети, вебинары, запуски, продающие страницы, кейсы, ценообразование, холодный аутрич, push-уведомления, кризисные коммуникации и интеграцию с SEO-брифами.
 ```
 
 ## Теги для GitHub

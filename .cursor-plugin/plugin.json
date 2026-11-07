@@ -1,0 +1,16 @@
+{
+  "name": "mindfluence",
+  "displayName": "MindFluence",
+  "description": "Cognitive-bias marketing engine for high-converting copy across any language, platform, and audience.",
+  "version": "2.4.0",
+  "author": {
+    "name": "Yevhen Leonidov",
+    "url": "https://github.com/MADEVAL"
+  },
+  "homepage": "https://github.com/MADEVAL/MindFluence",
+  "repository": "https://github.com/MADEVAL/MindFluence",
+  "license": "MIT",
+  "skills": [
+    "./skills/mindfluence"
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "MindFluence"
+  short_description: "Cognitive-bias marketing engine for high-converting copy"
+  default_prompt: "Write marketing copy for this product and audience. Ask for missing details first."
+policy:
+  allow_implicit_invocation: true

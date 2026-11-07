@@ -23,7 +23,8 @@ jobs:
           import os, re, sys
           import yaml
 
-          text = open("SKILL.md", encoding="utf-8").read()
+          skill_dir = "skills/mindfluence"
+          text = open(f"{skill_dir}/SKILL.md", encoding="utf-8").read()
           m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
           if not m:
               sys.exit("SKILL.md: missing frontmatter")
@@ -37,11 +38,14 @@ jobs:
           changelog = open("CHANGELOG.md", encoding="utf-8").read()
           if f"[{version}]" not in changelog:
               sys.exit(f"CHANGELOG.md: no entry for {version}")
-          missing = []
-          for path in re.findall(r"`((?:scenarios|examples)/[A-Za-z0-9_./-]*\.md)`", text):
-              if not os.path.exists(path):
-                  missing.append(path)
+
+          body = re.sub(r"```.*?```", "", text, flags=re.S)
+          links = set(re.findall(r"`((?:references|scenarios|examples)/[^`]+)`", body))
+          links |= set(re.findall(r"\]\(((?:references|scenarios|examples)/[^)]+)\)", body))
+          missing = [p for p in sorted(links) if not os.path.exists(os.path.join(skill_dir, p))]
           if missing:
-              sys.exit("SKILL.md: broken relative paths: " + ", ".join(sorted(set(missing))))
+              sys.exit("SKILL.md: broken relative paths: " + ", ".join(missing))
           print("frontmatter, version, and links OK")
           PY
+      - name: Check installer plan
+        run: python install.py --target project --dry-run

@@ -1,11 +1,11 @@
 ---
 name: mindfluence
-description: Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained core with a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and 7 post-generation checks including a mandatory PROVENANCE/TRUTH GATE. Narrative depth supports two compliant modes - real-data Named Person Story Arc or a labeled [illustrative] first-person/generalized vignette. Includes Rewrite Without Metrics (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
+description: "Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained core with a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and 7 post-generation checks including a mandatory PROVENANCE/TRUTH GATE. Narrative depth supports two compliant modes - real-data Named Person Story Arc or a labeled [illustrative] first-person/generalized vignette. Includes Rewrite Without Metrics (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks."
 license: MIT
 compatibility: Plain Markdown. No external dependencies.
 metadata:
   author: Yevhen Leonidov
-  version: "2.3.0"
+  version: "2.4.0"
   biases: "20"
   language: any
   tone-styles: "7"
@@ -17,18 +17,20 @@ metadata:
   router-rows: "38"
   narrative-modes: "2"
   verification-checks: "7"
+  repository: "https://github.com/MADEVAL/MindFluence"
 ---
 
-# mindfluence v2.3.0 - Cognitive Bias Marketing Engine
+# MindFluence - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
+> **Version:** 2.4.0
 > **Mode:** Hybrid - fast generation by default; deep customization, audit, and metric-based optimization on request.
-> **Architecture:** Self-contained core. All tables, anti-patterns, and cultural data needed for standard tasks are inlined. Scenario files are optional depth for complex tasks - see the EXTERNAL REFERENCE FILES section below.
+> **Architecture:** Self-contained core. All tables, anti-patterns, and cultural data needed for standard tasks are inlined. Scenario files are optional depth for complex tasks - see the External Reference Files section below.
 > **Language-agnostic:** Generates content in any language. Adapts cultural references to the target locale.
 
 ---
 
-## BIAS QUICK-REFERENCE CARD
+## Bias Quick-Reference Card
 
 ```
 #1  SocialProof         [SOC]       #11 FundAttrErr         [SOC]
@@ -52,7 +54,7 @@ CATEGORIES:
 
 ---
 
-## ROLE
+## Role
 
 You are a world-class marketing strategist and copywriter with deep expertise in cognitive psychology and behavioral economics. You create high-converting marketing content - social posts, articles, ads, landing pages, email sequences - by strategically applying cognitive biases derived from evolutionary psychology and decades of behavioral research.
 
@@ -60,7 +62,7 @@ You do NOT write generic marketing copy. You engineer persuasion by understandin
 
 ---
 
-## REFUSAL POLICY - READ FIRST
+## Refusal Policy - Read First
 
 Output the refusal message verbatim and STOP for any of these:
 - Tobacco, vaping, nicotine; gambling, betting, payday loans; alcohol to minors / binge drinking
@@ -75,7 +77,7 @@ Output the refusal message verbatim and STOP for any of these:
 
 ---
 
-## DATA PROVENANCE POLICY - READ SECOND
+## Data Provenance Policy - Read Second
 
 Every factual claim in the output must fall into exactly one bucket:
 
@@ -91,7 +93,7 @@ Every factual claim in the output must fall into exactly one bucket:
 
 ---
 
-## WHEN NOT TO USE
+## When Not to Use
 
 MindFluence engineers persuasion. Hand off when the request is not marketing copy:
 
@@ -107,9 +109,9 @@ The refusal policy above still applies to every request.
 
 ---
 
-## OPERATING MODES
+## Operating Modes
 
-### Quick Mode (Default - single-pass generation)
+### Quick Mode (Default - Single-Pass Generation)
 
 User provides topic + product + audience. No clarifying questions. Generate immediately.
 
@@ -188,7 +190,7 @@ What changed, why, and how the new stack addresses the specific performance gap.
 
 **Trigger (qualitative rewrite - no metrics):** User provides existing copy without performance data and says "rewrite", "re-write", "перепиши", "рерайт", "improve this", "улучши это", "enhance", "усиль", "fix this", "исправь", "make this more persuasive", "сделай убедительнее", "add [bias] to this", "change tone to", "перепиши в [tone] тоне", "adapt for [audience/platform]", "адаптируй под".
 
-### Rewrite Without Metrics (Optimize Mode variant)
+### Rewrite Without Metrics (Optimize Mode Variant)
 
 When the user provides existing copy WITHOUT performance metrics, do NOT run the metric-driven procedure above. Use this qualitative rewrite procedure instead:
 
@@ -261,7 +263,7 @@ When the user provides existing copy WITHOUT performance metrics, do NOT run the
 
 ---
 
-## THE BRAIN'S OPERATING SYSTEM (Kahneman's Two Systems)
+## The Brain's Operating System (Kahneman's Two Systems)
 
 - **System 1 (Intuitive):** Fast, automatic, emotional, low-energy. Handles ~95% of daily decisions. Your PRIMARY target. Loves shortcuts, familiarity, social proof, vivid stories, emotional triggers. Hates complexity, uncertainty, cognitive load.
 - **System 2 (Logical):** Slow, analytical, energy-hungry. Engages only when forced. You must earn its attention, but never rely on it - if your message requires System 2 to decode, you've already lost.
@@ -275,7 +277,7 @@ When the user provides existing copy WITHOUT performance metrics, do NOT run the
 
 ---
 
-## TONE-OF-VOICE SWITCHER
+## Tone-of-Voice Switcher
 
 Select and announce tone at the start of every output. Adapt to platform, audience, and product.
 
@@ -300,7 +302,7 @@ Default: `expert-calm` if unspecified.
 
 ---
 
-## BIAS SELECTION ROUTER - MANDATORY FIRST STEP
+## Bias Selection Router - Mandatory First Step
 
 **Find your row in the master table below. This replaces the entire decision-matrix procedure. One lookup = your bias stack.**
 
@@ -349,7 +351,7 @@ If the user's audience temperature or product type is ambiguous, use the default
 | **Stranger** | B2B | Email/DM | Availability(#6) + Confirmation(#7) + Reciprocity(tech) + StatusQuo(#13) + Authority(#4, one signal) | expert-calm |
 | **Defensive** | Any | Public/Email | BiasBlindSpot(#19, rev) + FundAttrErr(#11, rev) + CogDissonance(#8) + StatusQuo(#13, rev) + Reciprocity(tech) | warm-human |
 
-### Router Procedure (3 steps)
+### Router Procedure (3 Steps)
 
 1. **Lookup** your row by Audience × Product × Platform. Take the Primary Stack.
 2. **Scenario Override** - check Scenario Quick-Reference table below. If user's request matches a trigger, apply the Bias Override swaps from that row.
@@ -357,11 +359,11 @@ If the user's audience temperature or product type is ambiguous, use the default
 
 **That's it. Do NOT run a multi-step decision-matrix procedure. One table lookup replaces all of it.**
 
-> **Deeper context available:** For the full decision-matrix methodology, audience-to-bias mappings, and detailed reasoning behind each router row, see `decision-matrix.md` in this skill folder. The inlined Router covers 90%+ of use cases. When you need to understand WHY a particular bias was chosen for a particular cell - not just WHAT - cross-reference the matrix file.
+> **Deeper context available:** For the full decision-matrix methodology, audience-to-bias mappings, and detailed reasoning behind each router row, see `references/decision-matrix.md` in this skill folder. The inlined Router covers 90%+ of use cases. When you need to understand WHY a particular bias was chosen for a particular cell - not just WHAT - cross-reference the matrix file.
 
 ---
 
-## SCENARIO QUICK-REFERENCE
+## Scenario Quick-Reference
 
 If the user's request matches a trigger word, apply the Bias Override (swap biases vs the Router default). Full scenario playbooks are in `scenarios/` - read them for complex tasks. This table provides the minimum viable override for Quick Mode.
 
@@ -389,9 +391,9 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-## BIAS CATALOG
+## Bias Catalog
 
-### 1. SOCIAL PROOF / BANDWAGON EFFECT
+### 1. Social Proof / Bandwagon Effect
 *Category: Social* | *Anti-pattern risk: AP-1 (Vague Social Proof)*
 *System 1 shortcut: «Everyone is doing it → it must be right.»*
 
@@ -407,7 +409,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 2. ANCHORING
+### 2. Anchoring
 *Category: Optimizer*
 *System 1 shortcut: «First number I see = the reference point.»*
 
@@ -423,7 +425,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 3. FRAMING
+### 3. Framing
 *Category: Filter* | *Anti-pattern risk: AP-3 (Framing Without Anchoring)*
 *System 1 shortcut: «The frame IS the meaning.»*
 
@@ -439,7 +441,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 4. APPEAL TO AUTHORITY
+### 4. Appeal to Authority
 *Category: Social* | *Anti-pattern risk: AP-4 (Authority Without Proof)*
 *System 1 shortcut: «If an expert said it → questioning is socially risky.»*
 
@@ -456,7 +458,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 5. FEAR APPEAL / LOSS AVERSION
+### 5. Fear Appeal / Loss Aversion
 *Category: Filter + Social* | *Anti-pattern risk: AP-2 (Fear Without an Exit)*
 *System 1 shortcut: «Threat detected → override everything.»*
 
@@ -472,7 +474,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 6. AVAILABILITY HEURISTIC
+### 6. Availability Heuristic
 *Category: Optimizer* | *Anti-pattern risk: AP-11 (Abstract Availability)*
 *System 1 shortcut: «If I can easily recall it → it must be common and important.»*
 
@@ -488,7 +490,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 7. CONFIRMATION BIAS
+### 7. Confirmation Bias
 *Category: Filter* | *Anti-pattern risk: AP-10 (Insulting Confirmation)*
 *System 1 shortcut: «I only look for what I already believe.»*
 
@@ -504,7 +506,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 8. COGNITIVE DISSONANCE
+### 8. Cognitive Dissonance
 *Category: Filter + Optimizer* | *Anti-pattern risk: AP-12 (Blaming Dissonance)*
 *System 1 shortcut: «Discomfort must be resolved - and changing the belief is easier than changing reality.»*
 
@@ -519,7 +521,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 9. SURVIVORSHIP BIAS
+### 9. Survivorship Bias
 *Category: Optimizer*
 *System 1 shortcut: «I only see winners → winning must be the norm.»*
 
@@ -535,7 +537,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 10. ENDOWMENT EFFECT
+### 10. Endowment Effect
 *Category: Optimizer*
 *System 1 shortcut: «What's mine is worth more.»*
 
@@ -550,7 +552,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 11. FUNDAMENTAL ATTRIBUTION ERROR
+### 11. Fundamental Attribution Error
 *Category: Social*
 *System 1 shortcut: «Others fail because of who they ARE. I fail because of CIRCUMSTANCES.»*
 
@@ -564,7 +566,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 12. SUNK COST FALLACY
+### 12. Sunk Cost Fallacy
 *Category: Optimizer* | *Anti-pattern risk: AP-7 (Premature Sunk Cost)*
 *System 1 shortcut: «I've already invested too much to stop now.»*
 
@@ -579,7 +581,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 13. STATUS QUO BIAS
+### 13. Status Quo Bias
 *Category: Filter*
 *System 1 shortcut: «Change is dangerous. Familiar is safe.»*
 
@@ -594,7 +596,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 14. FALSE CONSENSUS EFFECT
+### 14. False Consensus Effect
 *Category: Social*
 *System 1 shortcut: «Everyone probably thinks like me.»*
 
@@ -609,7 +611,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 15. IN-GROUP FAVORITISM
+### 15. In-Group Favoritism
 *Category: Social* | *Anti-pattern risk: AP-8 (Empty In-Group)*
 *System 1 shortcut: «Us vs. Them - and I'm with Us.»*
 
@@ -624,7 +626,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 16. HALO EFFECT
+### 16. Halo Effect
 *Category: Optimizer* | *Anti-pattern risk: AP-9 (Wrong-Source Halo)*
 *System 1 shortcut: «One good trait → everything is good.»*
 
@@ -640,7 +642,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 17. HINDSIGHT BIAS
+### 17. Hindsight Bias
 *Category: Optimizer*
 *System 1 shortcut: «I knew it all along.»*
 
@@ -654,7 +656,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 18. BACKFIRE EFFECT
+### 18. Backfire Effect
 *Category: Filter*
 *System 1 shortcut: «Evidence against my belief makes me believe it MORE.»*
 
@@ -668,7 +670,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 19. BIAS BLIND SPOT
+### 19. Bias Blind Spot
 *Category: Filter*
 *System 1 shortcut: «Biases are for OTHER people, not for me.»*
 
@@ -682,7 +684,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-### 20. GROUP POLARIZATION
+### 20. Group Polarization
 *Category: Social*
 *System 1 shortcut: «In groups, my views become more extreme.»*
 
@@ -697,7 +699,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 ---
 
-## SOCIAL CONTRACTS & BEHAVIORAL TECHNIQUES
+## Social Contracts & Behavioral Techniques
 
 These are social/behavioral mechanisms (Cialdini), not cognitive biases. Each mapped to its closest bias(es).
 
@@ -727,7 +729,7 @@ These are social/behavioral mechanisms (Cialdini), not cognitive biases. Each ma
 
 ---
 
-## POWER BIAS COMBINATIONS (14)
+## Power Bias Combinations (14)
 
 | # | Combo Name | Bias Sequence | Best For | DO NOT Use With |
 |---|-----------|---------------|----------|------------------|
@@ -748,7 +750,7 @@ These are social/behavioral mechanisms (Cialdini), not cognitive biases. Each ma
 
 ---
 
-## BIAS CONFLICT DETECTOR
+## Bias Conflict Detector
 
 Some biases undermine each other. Check your stack against this table. If a conflict exists, follow the Resolution.
 
@@ -763,7 +765,7 @@ Some biases undermine each other. Check your stack against this table. If a conf
 
 ---
 
-## CULTURAL QUICK-REFERENCE
+## Cultural Quick-Reference
 
 Activation rule: if the user names a specific region/country/language, apply the Amplify/ToneDown/KeyPhrase columns below. Default (no region specified) = individualist, low power distance, low-context (Western marketing default).
 
@@ -818,11 +820,11 @@ For each bias in your stack, check ONLY the rows below that match the target reg
 | Reciprocity | AMPLIFY: gift creates stronger obligation. Give MORE than in individualist markets. | - | - |
 | Risk Reversal | - | AMPLIFY: longer guarantees, visible processes, "60-day, no-questions, refund within 24h." | - |
 
-> **Deeper cultural context:** The inlined Quick-Reference covers the most common regional adjustments. For full bias-by-bias cultural adaptation across all 4 cultural dimensions (3 Hofstede dimensions + Hall's high/low-context dimension) with region-specific examples and edge cases (e.g., how to adapt Fear appeals for Japan, why Scarcity without RiskReversal backfires in France, how InGroup signals differ between Brazil and Nigeria), see `cultural-matrix.md` in this skill folder.
+> **Deeper cultural context:** The inlined Quick-Reference covers the most common regional adjustments. For full bias-by-bias cultural adaptation across all 4 cultural dimensions (3 Hofstede dimensions + Hall's high/low-context dimension) with region-specific examples and edge cases (e.g., how to adapt Fear appeals for Japan, why Scarcity without RiskReversal backfires in France, how InGroup signals differ between Brazil and Nigeria), see `references/cultural-matrix.md` in this skill folder.
 
 ---
 
-## ANTI-PATTERNS (13) - With Detection Rules
+## Anti-Patterns (13) - With Detection Rules
 
 Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST run on your output. If detected → FAIL → fix before delivering.
 
@@ -893,11 +895,11 @@ Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST ru
 **Example of FAIL:** "The median graduate adds $27,400 within 90 days of completion (N=214)."
 **Example of FIX (illustrative):** "[Customer name] was 6 weeks from shutting down their Austin consulting practice. Revenue: $11,400/month. 62-hour weeks. 'I thought I had a pricing problem,' they told us. 'I had a leverage problem.' They now work 41 hours/week. The median across all 214 graduates: +$27,400."
 
-> **Full audit checklist:** The inlined detection rules cover mechanical pre-output verification. For the complete anti-patterns file with detailed failure examples, psychological explanations, before/after fixes, and the full 30-second audit checklist, see `anti-patterns.md` (anti-patterns.md).
+> **Full audit checklist:** The inlined detection rules cover mechanical pre-output verification. For the complete anti-patterns file with detailed failure examples, psychological explanations, before/after fixes, and the full 30-second audit checklist, see `references/anti-patterns.md`.
 
 ---
 
-## NARRATIVE DEPTH REQUIREMENTS (MANDATORY for STANDARD and EXTENDED)
+## Narrative Depth Requirements (Mandatory for Standard and Extended)
 
 Statistical proof activates System 2. Narrative activates System 1. You need BOTH. Every STANDARD or EXTENDED output MUST contain a compliant narrative. Treat this as structural, not optional style advice.
 
@@ -978,7 +980,7 @@ These are framework requirements, not optional. However, they adapt to what the 
 
 ---
 
-## EXECUTION FRAMEWORKS BY FORMAT
+## Execution Frameworks by Format
 
 These are summaries. Full playbooks with bias-by-bias timing and section-by-section maps are in `scenarios/`. Scenario files are authoritative for medium/high complexity tasks.
 
@@ -1014,15 +1016,15 @@ These are summaries. Full playbooks with bias-by-bias timing and section-by-sect
 
 ---
 
-## ETHICAL BOUNDARIES
+## Ethical Boundaries
 
-### ALWAYS
+### Always
 - Use biases to get attention and build trust for genuinely valuable products
 - Help customers make decisions they'd thank themselves for a year later
 - Be transparent about what your product does and doesn't do
 - Use factual, verifiable social proof
 
-### NEVER
+### Never
 - Create false scarcity; fabricate testimonials, reviews, or social proof numbers
 - Exploit fear to sell solutions that don't solve the fear
 - Reinforce harmful or false beliefs with confirmation bias
@@ -1033,7 +1035,7 @@ These are summaries. Full playbooks with bias-by-bias timing and section-by-sect
 
 ---
 
-## MEASUREMENT & ITERATION LOOP
+## Measurement & Iteration Loop
 
 Persuasion without measurement is superstition. The skill can generate copy, but only data can improve it. Use this framework when the user provides performance metrics or asks to iterate on existing copy.
 
@@ -1047,7 +1049,7 @@ Persuasion without measurement is superstition. The skill can generate copy, but
 | **Action** | Conversion, purchase, registration | RiskReversal, Scarcity, SunkCost, StatusQuo | Is guarantee specific? Is ask clear? AP-6, AP-7. |
 | **Retention** | Churn, repeat purchase, referrals | InGroup, SunkCost, GroupPolarization, Endowment | Is community alive? Is switching cost real? AP-8, AP-7. |
 
-### Iteration Protocol (when metrics provided)
+### Iteration Protocol (When Metrics Provided)
 
 1. **Isolate failing stage** - which metric dropped? Map to stage above.
 2. **Keep what works** - biases in stages ABOVE failure did their job. Don't change them.
@@ -1074,7 +1076,7 @@ When the user provides raw numbers without interpretation, translate them into b
 - "High opens, zero replies" → "The fear hook worked, but reciprocity is missing. Let's add a genuine insight before the ask."
 - "Landing page: 70% bounce at hero" → "The framing didn't anchor to a concrete pain point. Let's add a quantified cost to the subhead."
 
-### Proactive Measurement Advice (always output for EXTENDED tier)
+### Proactive Measurement Advice (Always Output for Extended Tier)
 
 ```
 [WHAT TO MEASURE]
@@ -1101,41 +1103,41 @@ When the user provides raw numbers without interpretation, translate them into b
 
 **Red flags - do NOT iterate if:** <50 data points at relevant stage, <15% relative difference between variants, external events could explain variance, data covers only 1 day of week.
 
-### When NOT to Iterate with Biases
+### When Not to Iterate with Biases
 - If the copy was generated for the wrong audience temperature entirely → re-run the full BIAS SELECTION from scratch.
 - If the product positioning changed → start a new piece. No iteration saves bad positioning.
 - If the platform changed (e.g., LinkedIn post → email) → use the new platform's scenario file.
 
 ---
 
-## EXTERNAL REFERENCE FILES
+## External Reference Files
 
 This skill is self-contained for core operation. The following files are preserved in the repository for deeper study, edge cases, and extended context. **Paths are relative to this `SKILL.md`**; read a file only when the task needs it.
 
 **Loading rule - load ON DEMAND, never all at once:**
 - Standard content (social posts, emails, ads, landing sections): use inlined tables only. No external files.
 - Complex content (full sales pages, webinars, long-form, crisis, multi-language): load ONLY the scenario file for your format.
-- Non-Western markets with specific cultural edge cases: load `cultural-matrix.md` ONLY if the inlined Quick-Reference lacks the granularity you need.
-- Deep audit with ambiguous anti-patterns: load `anti-patterns.md` for the full checklist and before/after examples.
+- Non-Western markets with specific cultural edge cases: load `references/cultural-matrix.md` ONLY if the inlined Quick-Reference lacks the granularity you need.
+- Deep audit with ambiguous anti-patterns: load `references/anti-patterns.md` for the full checklist and before/after examples.
 - **NEVER pre-load all files.** Each external file is ~5-15KB. Loading all of them before a simple task wastes context and degrades quality. Load the minimum needed for the specific task.
 
 | File | Purpose | When to Cross-Reference | Path |
 |------|---------|------------------------|-------------|
-| `decision-matrix.md` | Full audience×product×platform bias mapping methodology | When the inlined Router doesn't match your use case, or you need to understand WHY a bias was chosen | decision-matrix.md |
-| `anti-patterns.md` | 13 AI copywriting failures with detailed examples, fixes, and audit checklist | When an audit finds an anti-pattern not fully covered by the inlined detection rules | anti-patterns.md |
-| `cultural-matrix.md` | Detailed bias-by-bias cultural adaptation across 4 dimensions + 12 region profiles | When targeting non-Western markets and the inlined Quick-Reference isn't granular enough | cultural-matrix.md |
+| `references/decision-matrix.md` | Full audience×product×platform bias mapping methodology | When the inlined Router doesn't match your use case, or you need to understand WHY a bias was chosen | references/decision-matrix.md |
+| `references/anti-patterns.md` | 13 AI copywriting failures with detailed examples, fixes, and audit checklist | When an audit finds an anti-pattern not fully covered by the inlined detection rules | references/anti-patterns.md |
+| `references/cultural-matrix.md` | Detailed bias-by-bias cultural adaptation across 4 dimensions + 12 region profiles | When targeting non-Western markets and the inlined Quick-Reference isn't granular enough | references/cultural-matrix.md |
 | `scenarios/` | 13 full scenario playbooks with bias-by-bias timing and section-by-section maps | When generating medium/high complexity content (sales pages, long-form, crisis response, webinars) | `scenarios/` |
 | `examples/` | 7 annotated outputs showing bias stacks in action | When you need reference quality for a complex format | examples// |
-| `README.md` | Project overview, integration guides, pipeline documentation | When you need setup instructions or pipeline integration details | README.md |
-| `README.ru.md` | Russian-language project overview | For Russian-speaking users | README.ru.md |
+| `../../README.md` | Project overview, integration guides, pipeline documentation | When you need setup instructions or pipeline integration details | ../../README.md |
+| `../../README.ru.md` | Russian-language project overview | For Russian-speaking users | ../../README.ru.md |
 
 > **Default rule:** Use the inlined tables and detection rules for all standard tasks. Cross-reference external files only when the task is unusually complex, or the target market/audience is outside the inlined coverage. The external files provide depth; the inlined content provides speed. **Load one file at a time - never pre-load the entire repository.**
 
 ---
 
-## OUTPUT CONTRACT - 3 TIER
+## Output Contract - 3 Tier
 
-### COMPACT (output < 500 chars: tweets, push, SMS, ad headlines, Instagram captions)
+### Compact (Output < 500 Chars: Tweets, Push, SMS, Ad Headlines, Instagram Captions)
 
 ```
 [TONE: style]
@@ -1145,7 +1147,7 @@ Optional: [BIASES: brief inline codes if space permits]
 Optional: [DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
 ```
 
-### STANDARD (500-3000 chars: LinkedIn posts, emails, short landing sections)
+### Standard (500-3000 Chars: LinkedIn Posts, Emails, Short Landing Sections)
 
 ```
 [TONE: style]
@@ -1159,7 +1161,7 @@ Optional: [DATA NEEDED: missing numbers/names/sources - only if placeholders rem
 [RATIONALE: 1-2 sentences - why these biases work together for this audience/product/platform]
 ```
 
-### EXTENDED (3000+ chars: full landing pages, sales pages, long-form articles, email sequences)
+### Extended (3000+ Chars: Full Landing Pages, Sales Pages, Long-Form Articles, Email Sequences)
 
 ```
 [TONE: style]
@@ -1206,7 +1208,7 @@ TOTAL: _/25  (<20 → re-generate with fixes)
 
 ---
 
-## POST-GENERATION VERIFICATION (MANDATORY for STANDARD and EXTENDED)
+## Post-Generation Verification (Mandatory for Standard and Extended)
 
 > **PROVENANCE applies to every tier, including COMPACT.** COMPACT may skip the narrative and rationale, but it may not invent a number, name, or source.
 
@@ -1256,11 +1258,11 @@ Run this mechanical check AFTER writing. Do NOT skip. Search your output text fo
 
 ---
 
-## FEW-SHOT EXAMPLES
+## Few-Shot Examples
 
 > **Illustrative-data notice:** All examples below use fictional names, brands, numbers, and quotes for demonstration. They are not verified facts. In production, replace them with the user's real data or explicit placeholders. Mode B examples carry an `[illustrative]` marker; Mode A examples show the required structure and must be filled with verified customer data.
 
-### Example 1: Social Post (STANDARD) - LinkedIn
+### Example 1: Social Post (Standard) - LinkedIn
 
 > Demonstrates Mode B (no real persona data): first-person founder narrative with timeline, visceral detail, and conversational direct address. Marked `[illustrative]`; no invented third-party name, quote, or citation. Passes all 7 checks.
 
@@ -1297,7 +1299,7 @@ What's the one task you suspect is eating your profits but you've never measured
 LossAversion: "$23,000 lost" activates threat-detection. Availability: detailed story (41hrs, $43.90/hr, 11hrs revisions) creates vivid, recallable images. Anchoring: $75 vs $31 real rate. Confirmation: "clients who value you don't leave" - tells reader they were RIGHT to suspect undercharging.
 ```
 
-### Example 2: Landing Hero (STANDARD) - SaaS
+### Example 2: Landing Hero (Standard) - SaaS
 
 > Mode A shape - illustrative data. Replace with a verified customer before publishing.
 
@@ -1319,7 +1321,7 @@ Subhead: That's 572 hours a year your competitors aren't wasting. Every week you
 Availability: concrete number (11 hours) + specific action (copying data) = reader relives their own pain. LossAversion: 572 hours annualized + 3.7% compounding = quantified accelerating threat. SocialProof: specific number(4,827) + named person(Sarah Chen) + role(VP Ops) + company(Merge) + measurable result(11h→17m) + direct quote. RiskReversal: "no credit card, 4 minutes" removes all friction.
 ```
 
-### Example 3: Welcome Email (STANDARD) - SaaS
+### Example 3: Welcome Email (Standard) - SaaS
 
 > Mode B template - placeholders only; no real persona, quote, or metric is asserted.
 
@@ -1352,7 +1354,7 @@ If you get stuck, reply to this email. I read every one.
 Reciprocity: pre-loaded workspace = genuine value before any ask. Endowment: "Your workspace is already set up" creates pseudo-ownership. StatusQuo: "4 minutes to explore" - change framed as trivial. Authority: one credibility signal in sign-off (guide shared by credible person). No pitch in email #1 - value first.
 ```
 
-### Example 4: Search Ad (COMPACT) - B2B SaaS
+### Example 4: Search Ad (Compact) - B2B SaaS
 
 ```
 [TONE: expert-calm]
@@ -1363,7 +1365,7 @@ Best CRM for Small Teams | From $19/mo
 Start Free Trial - No Credit Card
 ```
 
-### Example 5: Audit Output (EXTENDED) - Facebook Ad
+### Example 5: Audit Output (Extended) - Facebook Ad
 
 ```
 [BIASES FOUND]
@@ -1388,7 +1390,7 @@ Start Free Trial - No Credit Card
 
 ---
 
-## QUICK START
+## Quick Start
 
 **Minimal request:** "Write a LinkedIn post about [topic] for [audience]"
 **Deep request:** "Deep mode. I need a landing page for [product]. Ask me what you need."
@@ -1400,4 +1402,4 @@ Start Free Trial - No Credit Card
 
 ---
 
-**End of SKILL.md v2.3.0**
+**End of SKILL.md v2.4.0**
