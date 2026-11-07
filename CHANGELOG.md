@@ -2,6 +2,16 @@
 
 All notable changes to MindFluence are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [2.5.0] - 2026-11-07
+
+### Added
+- `scripts/anti_patterns.py`: deterministic checks for AP-1...AP-13, `--tier`, `--json`, `[FAIL]`/`[REVIEW]`.
+- `tests/test_anti_patterns.py`: 13 adversarial samples, a compliant sample, and same-paragraph checks for AP-2/AP-5.
+- CI runs the anti-pattern tests; `install.py` ships `scripts/`.
+
+### Changed
+- Post-Generation Verification now points to the mechanical lint.
+
 ## [2.4.0] - 2026-11-07
 
 ### Changed

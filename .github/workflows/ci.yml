@@ -17,3 +17,5 @@ jobs:
           python-version: "3.12"
       - name: Validate skill structure
         run: python tests/validate_skill.py
+      - name: Check anti-patterns
+        run: python tests/test_anti_patterns.py

@@ -1,5 +1,10 @@
 _ship/
 
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
 # Local secrets and environment files
 .env
 .env.*

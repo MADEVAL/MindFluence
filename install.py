@@ -31,6 +31,7 @@ PAYLOAD = [
     "references",
     "examples",
     "scenarios",
+    "scripts",
     "agents",
 ]
 IGNORE = shutil.ignore_patterns(

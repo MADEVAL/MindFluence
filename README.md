@@ -1,6 +1,6 @@
 # MindFluence
 
-[![Version](https://img.shields.io/badge/version-2.4.0-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.5.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Compatibility](https://img.shields.io/badge/compatibility-plain%20markdown-purple)](#requirements)
 [![CI](https://github.com/MADEVAL/MindFluence/actions/workflows/ci.yml/badge.svg)](https://github.com/MADEVAL/MindFluence/actions/workflows/ci.yml)
@@ -133,7 +133,7 @@ Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolut
 ```
 MindFluence/
 ├── skills/mindfluence/          ← runtime skill package
-│   ├── SKILL.md                 ← Main instruction. Self-contained core v2.4.0.
+│   ├── SKILL.md                 ← Main instruction. Self-contained core v2.5.0.
 │   │                              Inlined: Bias Selection Router (38 rows), Scenario Quick-Reference,
 │   │                              Cultural Quick-Reference, 13 Anti-Patterns with detection rules
 │   │                              (incl. Statistical-Only Fallacy), Narrative Depth Requirements
@@ -372,7 +372,7 @@ MIT
 ## GitHub Description
 
 ```
-AI prompt-skill v2.4.0: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
+AI prompt-skill v2.5.0: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
 ```
 
 ## GitHub Tags
