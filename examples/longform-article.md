@@ -49,7 +49,7 @@ That week, I shipped more than I had in the previous month.
 
 Here's what I learned, and what the research confirms: the human brain can hold roughly 4 items in working memory at any given time. Push beyond that, and you're not multitasking. You're switching. And every switch costs you 23 minutes of focused attention - a finding from the University of California that's been replicated across dozens of studies.
 
-At 6 tools × multiple switches per day, the average knowledge worker is losing 2–3 hours daily to tool-switching alone. Not to actual work. To the CONTEXT of work.
+At 6 tools × multiple switches per day, the average knowledge worker is losing 2-3 hours daily to tool-switching alone. Not to actual work. To the CONTEXT of work.
 
 $50/hour × 2.5 hours/day × 250 working days = **$31,250 per year in lost cognitive output.**
 

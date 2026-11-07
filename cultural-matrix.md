@@ -98,8 +98,8 @@ For each bias, the table shows how to adapt across the dominant cultural dimensi
 
 | Context | Adjustment |
 |---------|-----------|
-| **High Uncertainty Avoidance** | Free trials work best with long trial periods (30–60 days) and no-questions-asked cancellation. The longer they own it, the stronger the effect. Risk reversal must be explicit and generous. |
-| **Low Uncertainty Avoidance** | Shorter trials (7–14 days) work. The endowment effect activates faster when the culture tolerates quick decisions. "Try free for 7 days - cancel anytime" is sufficient. |
+| **High Uncertainty Avoidance** | Free trials work best with long trial periods (30-60 days) and no-questions-asked cancellation. The longer they own it, the stronger the effect. Risk reversal must be explicit and generous. |
+| **Low Uncertainty Avoidance** | Shorter trials (7-14 days) work. The endowment effect activates faster when the culture tolerates quick decisions. "Try free for 7 days - cancel anytime" is sufficient. |
 
 ### 11. FUNDAMENTAL ATTRIBUTION ERROR
 *Dominant dimension: Individualism ↔ Collectivism*

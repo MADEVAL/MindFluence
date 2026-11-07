@@ -39,7 +39,7 @@ If the user provides keywords but no structured brief: generate the heading skel
 
 ### Mandatory Positions
 - **Primary keyword in H1** - the brief specifies this. Do not change the H1 text.
-- **Primary keyword in first paragraph** - within the first 100–150 words. This is the copy you write.
+- **Primary keyword in first paragraph** - within the first 100-150 words. This is the copy you write.
 - **Primary keyword in at least one H2** - the brief marks which H2(s) contain the keyword. Keep the keyword in those headings. Write the surrounding body copy.
 - **Secondary keywords in their designated H2/H3 sections** - as specified in the brief.
 
@@ -129,7 +129,7 @@ Some cognitive biases interact with SEO requirements. Flag these proactively:
 
 ### Minimum Word Count
 - SEO minimum: 600 words (unless user explicitly requests shorter).
-- Each bias needs room to execute - allocate words per bias: introduction (100–150w), each H2 section (150–300w), conclusion (50–100w).
+- Each bias needs room to execute - allocate words per bias: introduction (100-150w), each H2 section (150-300w), conclusion (50-100w).
 - If the word count target from the brief is higher than your standard output, extend the body sections rather than adding fluff.
 
 ---

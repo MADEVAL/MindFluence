@@ -160,8 +160,8 @@ Line 5: SIGN-OFF - name + one-line credibility signal.
 
 **The Rule of 3:**
 - Email 1: Value-first. No pitch. ("I noticed X. Here's an insight.")
-- Email 2 (3–5 days later): Reference Email 1. Add value. Soft pitch. ("Following up on my note about X. Here's another data point. Would [specific solution] be useful?")
-- Email 3 (7–10 days later): The break-up. ("I assume the timing isn't right. If [problem] becomes a priority, here's how to reach me.")
+- Email 2 (3-5 days later): Reference Email 1. Add value. Soft pitch. ("Following up on my note about X. Here's another data point. Would [specific solution] be useful?")
+- Email 3 (7-10 days later): The break-up. ("I assume the timing isn't right. If [problem] becomes a priority, here's how to reach me.")
 
 **Why 3 and not more:** After 3 unanswered emails, you're not "persistent." You're "annoying." The break-up email respects their time and leaves the door open. Many replies come on Email 3.
 
@@ -192,7 +192,7 @@ Availability (#6, pattern interrupt - specific, unexpected observation)
 
 ### Cold Email
 - Subject line: ≤ 5 words. Curiosity or specificity, not "Quick question" (the most overused, ignored subject line in history).
-- Send Tuesday–Thursday, 6–9 AM recipient's time zone.
+- Send Tuesday-Thursday, 6-9 AM recipient's time zone.
 - Plain text > HTML. It feels personal, not automated.
 - No images. No tracking pixels (privacy-aware recipients flag these).
 - No attachments in Email 1 (spam filters).
@@ -205,7 +205,7 @@ Availability (#6, pattern interrupt - specific, unexpected observation)
 
 ### Twitter/X DM
 - Only possible if they follow you or have DMs open. Don't pitch in public replies.
-- Even shorter: 2–3 lines max. Twitter DMs are casual by nature.
+- Even shorter: 2-3 lines max. Twitter DMs are casual by nature.
 - "Your thread on X was great. One thing I'd add: [insight]."
 
 ---

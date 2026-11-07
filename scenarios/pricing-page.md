@@ -44,7 +44,7 @@ Instead of "Save 20% with annual," show the monthly as the reference and annual 
 
 **Technique 3: Pre-price anchoring.**
 Before any price appears on the page, establish a value anchor:
-> "Companies typically spend $50,000–150,000 building custom solutions for this. Our platform: starting at $99/mo."
+> "Companies typically spend $50,000-150,000 building custom solutions for this. Our platform: starting at $99/mo."
 
 The anchor doesn't need to be a competitor - it can be the cost of NOT using your product.
 
@@ -114,7 +114,7 @@ Features missing from lower tiers should create FOMO, not price resistance.
 "Call for pricing" on the top tier: creates exclusivity. But ONLY if your target market expects it (enterprise B2B). For consumer products, hidden pricing = distrust signal.
 
 ### Feature Bundling
-Don't list 20 features. Group them into 3–4 capability bundles:
+Don't list 20 features. Group them into 3-4 capability bundles:
 - "Collaboration: shared workspaces, comments, version history"
 - "Analytics: custom dashboards, exports, scheduled reports"
 - "Security: SSO, 2FA, audit logs"

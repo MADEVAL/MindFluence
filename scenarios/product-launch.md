@@ -12,7 +12,7 @@ Build anticipation, convert early adopters, and maximize launch-day sales while 
 
 ---
 
-## PHASE 1: PRE-LAUNCH (7–14 days before)
+## PHASE 1: PRE-LAUNCH (7-14 days before)
 
 ### Bias Stack
 `Fear (#5, problem awareness) → Authority (#4, why we built this) → Social Proof (#1, waitlist) → In-Group (#15, early access)`
@@ -64,7 +64,7 @@ Build anticipation, convert early adopters, and maximize launch-day sales while 
 
 ---
 
-## PHASE 3: POST-LAUNCH (3–7 days after)
+## PHASE 3: POST-LAUNCH (3-7 days after)
 
 ### Bias Stack
 `Confirmation (#7, you made the right choice) → Social Proof (#1, look who else bought) → In-Group (#15, welcome to the community)`

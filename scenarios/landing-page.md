@@ -24,7 +24,7 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 ```
 [FRAMING] Headline: name the problem OR state the transformation.
 [LOSS AVERSION] Subhead: what they're losing by NOT having this.
-[SOCIAL PROOF] 3–5 recognizable logos or a single stat ("Used by 10,000+ teams").
+[SOCIAL PROOF] 3-5 recognizable logos or a single stat ("Used by 10,000+ teams").
 [RISK REVERSAL] CTA: "Start free trial" / "Get started - no credit card."
 [HALO EFFECT] Hero visual: premium, clean, emotionally resonant.
 ```
@@ -39,7 +39,7 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 
 ---
 
-### 2. PROBLEM AGITATION (2–3 paragraphs)
+### 2. PROBLEM AGITATION (2-3 paragraphs)
 ```
 [FEAR / LOSS AVERSION] Make the problem vivid, specific, and personal.
 [AVAILABILITY] Use a story or scenario the reader recognizes immediately.
@@ -52,7 +52,7 @@ The human brain makes the buy/don't-buy decision in ~50ms of landing, then spend
 
 ---
 
-### 3. SOLUTION INTRODUCTION (2–3 paragraphs)
+### 3. SOLUTION INTRODUCTION (2-3 paragraphs)
 ```
 [FRAMING] Introduce your product not as "a tool" but as a category of one.
 [AUTHORITY] Why you built this / why you're uniquely qualified.

@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install check dependencies
+        run: pip install pyyaml
+      - name: Check frontmatter, versions, and relative links
+        run: |
+          python - <<'PY'
+          import os, re, sys
+          import yaml
+
+          text = open("SKILL.md", encoding="utf-8").read()
+          m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
+          if not m:
+              sys.exit("SKILL.md: missing frontmatter")
+          fm = yaml.safe_load(m.group(1))
+          for field in ("name", "description", "license", "compatibility"):
+              if not fm.get(field):
+                  sys.exit(f"SKILL.md: missing {field}")
+          version = str(fm.get("metadata", {}).get("version", ""))
+          if version.count(".") != 2:
+              sys.exit("SKILL.md: metadata.version must be X.Y.Z")
+          changelog = open("CHANGELOG.md", encoding="utf-8").read()
+          if f"[{version}]" not in changelog:
+              sys.exit(f"CHANGELOG.md: no entry for {version}")
+          missing = []
+          for path in re.findall(r"`((?:scenarios|examples)/[A-Za-z0-9_./-]*\.md)`", text):
+              if not os.path.exists(path):
+                  missing.append(path)
+          if missing:
+              sys.exit("SKILL.md: broken relative paths: " + ", ".join(sorted(set(missing))))
+          print("frontmatter, version, and links OK")
+          PY

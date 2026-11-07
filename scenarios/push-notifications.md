@@ -10,13 +10,13 @@ Earn the open without triggering the "mute notifications" reflex. Push is permis
 
 ## THE PUSH PARADOX
 
-Push notifications have the highest open rates (30–60%) and the highest unsubscribe rates of any channel. Every message is a withdrawal from a trust account. The deposit was made at opt-in. Every irrelevant notification is an overdraft.
+Push notifications have the highest open rates (30-60%) and the highest unsubscribe rates of any channel. Every message is a withdrawal from a trust account. The deposit was made at opt-in. Every irrelevant notification is an overdraft.
 
 **The rule:** Each push must pass the "lock screen test" - if the user saw ONLY your notification among 12 others, would they feel glad they allowed it, or would they swipe to mute?
 
 ---
 
-## STRUCTURE (50–120 characters visible, 3 lines max on lock screen)
+## STRUCTURE (50-120 characters visible, 3 lines max on lock screen)
 
 ```
 Line 1: TITLE - the hook. Fits in one lock-screen line (~35 chars). Not truncated.
@@ -156,7 +156,7 @@ SMS is higher trust AND higher intrusion than push. A text message competes with
 ### Push AP-2: The 6 AM Buzz
 **What happens:** Marketing push at 6:03 AM local time.
 **Why it fails:** Waking someone up with marketing is the fastest path to uninstall. The notification wasn't checked - it was swiped away in anger.
-**Fix:** Respect quiet hours. Marketing pushes: 10 AM – 8 PM local time. Transactional and critical alerts only outside that window.
+**Fix:** Respect quiet hours. Marketing pushes: 10 AM - 8 PM local time. Transactional and critical alerts only outside that window.
 
 ### Push AP-3: The Emoji Dump
 **What happens:** "🔥🔥 DON'T MISS OUT!!! 🚀🚀🚀 LIMITED TIME!!! 💯💯"

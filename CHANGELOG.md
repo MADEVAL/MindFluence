@@ -5,13 +5,23 @@ All notable changes to MindFluence are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.3] - 2026-10-30
+## [Unreleased]
+
+### Changed
+- Version normalized to three-part semver (2.3.0).
+- Frontmatter normalized: environment-based `compatibility`, `metadata.author`.
+- Reference files are read by relative path from the skill folder instead of GitHub URLs.
+- Long dashes replaced with hyphens across all documentation.
+- Section canon: added `WHEN NOT TO USE`, renamed the output section to `OUTPUT CONTRACT`.
+- Canonical placeholder vocabulary documented: `[N]`, `[DATA NEEDED: ...]`, `[VERIFY: ...]`, `[Source, Year]`, `[illustrative]`.
+
+## [2.3.0] - 2026-10-30
 
 ### Added
 
 - **PROVENANCE / TRUTH GATE** as mandatory post-generation check #7: every number, name, quote, testimonial, study, journal, and year must be traceable to user input, a verifiable source, or an explicit placeholder.
 - **Data provenance policy**: if data is missing, use placeholders (`[N]`, `[Customer name]`, `[Source, Year]`, `[measurable result]`) and a `[DATA NEEDED]` note, or ask the user in Deep Mode. Never invent specifics to satisfy a formatting check.
-- **Two compliant narrative modes**: Mode A — real-data NPSA (full name + location/role + timeline + verbatim quote + visceral detail); Mode B — labeled `[illustrative]` first-person founder narrative or generalized vignette.
+- **Two compliant narrative modes**: Mode A - real-data NPSA (full name + location/role + timeline + verbatim quote + visceral detail); Mode B - labeled `[illustrative]` first-person founder narrative or generalized vignette.
 - `SECURITY.md` with vulnerability reporting guidance, scope, and supported versions.
 - `CHANGELOG.md` (this file).
 - Placeholder guidance in AP-1, AP-4, AP-13 and in the verification checks.

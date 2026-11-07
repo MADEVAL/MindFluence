@@ -3,7 +3,7 @@
 > **[ILLUSTRATIVE]** Fictional names, brands, numbers, and quotes are used for demonstration. Replace with verified data before publishing.
 
 **Context:** A language learning app that uses AI conversation practice.
-**Request:** "Write a 30-second video ad script for US market. Target: 25–40 year olds who've tried Duolingo but still can't speak."
+**Request:** "Write a 30-second video ad script for US market. Target: 25-40 year olds who've tried Duolingo but still can't speak."
 
 ---
 

@@ -23,7 +23,7 @@
 | Product Type | Examples | Dominant Biases | Why |
 |-------------|----------|-----------------|-----|
 | **Low-ticket B2C** (<$50) | App subscription, ebook, consumable | Social Proof + Scarcity + Loss Aversion + Halo Effect | Snap decisions. System 1 dominates. Price objection is minimal. |
-| **Mid-ticket B2C** ($50–$500) | Course, gadget, premium subscription | Anchoring + Social Proof + Risk Reversal + Endowment (trial) | System 1 hooks, System 2 justifies. Trial = ownership = conversion. |
+| **Mid-ticket B2C** ($50-$500) | Course, gadget, premium subscription | Anchoring + Social Proof + Risk Reversal + Endowment (trial) | System 1 hooks, System 2 justifies. Trial = ownership = conversion. |
 | **High-ticket B2C** ($500+) | Coaching, luxury goods, travel | Authority + Anchoring + Halo Effect + Risk Reversal + In-Group | Trust is everything. Price must be anchored. Exclusivity sells. |
 | **B2B SaaS** (monthly/annual) | CRM, analytics, project mgmt | Authority + Sunk Cost + Status Quo + Loss Aversion + Anchoring | Long sales cycle. Switching cost is the #1 objection. ROI framing essential. |
 | **B2B Services** (project-based) | Consulting, agency, dev shop | Authority + Social Proof (case studies) + Anchoring + Sunk Cost | Credibility is product. Case studies = social proof. Past results = sunk cost for prospect's research time. |
@@ -38,12 +38,12 @@
 | Platform | Attention Span | Best Biases | Worst Biases |
 |----------|---------------|-------------|--------------|
 | **Twitter/X** | <3 seconds | Framing, False Consensus, Social Proof (numbers), Confirmation (hot take) | Sunk Cost (no time to build), Anchoring (complex), Cognitive Dissonance (needs space) |
-| **LinkedIn** | 5–15 seconds | Authority, Availability (story), Sunk Cost, Anchoring | Scarcity (feels salesy), Fear (too aggressive for feed) |
-| **Instagram** (visual) | <1 second (visual), 5–10s (caption) | Halo Effect, Social Proof, Survivorship (before/after), Endowment | Sunk Cost, Cognitive Dissonance, Backfire Effect (too complex for format) |
+| **LinkedIn** | 5-15 seconds | Authority, Availability (story), Sunk Cost, Anchoring | Scarcity (feels salesy), Fear (too aggressive for feed) |
+| **Instagram** (visual) | <1 second (visual), 5-10s (caption) | Halo Effect, Social Proof, Survivorship (before/after), Endowment | Sunk Cost, Cognitive Dissonance, Backfire Effect (too complex for format) |
 | **TikTok/Reels** | <1 second (hook), stay <30s | Availability, Social Proof, Halo Effect, Fear (quick shock) | Sunk Cost, Anchoring (no time), Backfire Effect |
-| **Email** | Subject: <1s, Body: 30–60s | Reciprocity, Endowment, Sunk Cost, Loss Aversion, In-Group | Halo Effect (can't control visual enough), Availability (unless it's THE story) |
-| **Landing Page** | Hero: <3s, Full: 2–5 min | Full stack possible. See `scenarios/landing-page.md` for section-by-section map. | Backfire Effect (don't start with objections), False Consensus (assumes agreement too early) |
-| **Webinar** | 60–90 min | Full stack. See `scenarios/webinar-warmup.md` for minute-by-minute map. | - |
+| **Email** | Subject: <1s, Body: 30-60s | Reciprocity, Endowment, Sunk Cost, Loss Aversion, In-Group | Halo Effect (can't control visual enough), Availability (unless it's THE story) |
+| **Landing Page** | Hero: <3s, Full: 2-5 min | Full stack possible. See `scenarios/landing-page.md` for section-by-section map. | Backfire Effect (don't start with objections), False Consensus (assumes agreement too early) |
+| **Webinar** | 60-90 min | Full stack. See `scenarios/webinar-warmup.md` for minute-by-minute map. | - |
 | **Search Ads** | <1 second | Social Proof (ratings), Authority, Anchoring (price), Loss Aversion | Availability (no room for stories), Sunk Cost |
 
 ---
@@ -55,7 +55,7 @@
    └─ Pick 2 primary biases from that row.
 
 2. IDENTIFY product type → section 2 above
-   └─ Add 1–2 dominant biases for this product category.
+   └─ Add 1-2 dominant biases for this product category.
 
 3. IDENTIFY platform → section 3 above
    └─ Remove any bias listed in "Worst Biases" column.
@@ -63,7 +63,7 @@
 
 4. COMBINE:
    └─ Primary stack = (audience primaries) + (product dominants) − (platform exclusions)
-   └─ Aim for 3–5 biases total. Less than 3 = underpowered. More than 5 = unfocused.
+   └─ Aim for 3-5 biases total. Less than 3 = underpowered. More than 5 = unfocused.
 
 5. VALIDATE:
    └─ Do biases complement or compete? Loss Aversion (#5) + Social Proof (#1) complement (fear drives action, crowd validates). Loss Aversion (#5) + Confirmation (#7) compete (fear says "danger ahead", confirmation says "you were right all along").

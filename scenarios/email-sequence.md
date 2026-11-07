@@ -14,7 +14,7 @@ Move subscribers through a psychological progression: stranger → trust → des
 
 ## SEQUENCE TYPES
 
-### 1. WELCOME SEQUENCE (3–5 emails over 7–10 days)
+### 1. WELCOME SEQUENCE (3-5 emails over 7-10 days)
 
 **Psychological arc:** Gratitude + expectation-setting → Value + authority → Social proof → Soft pitch → Hard pitch or community invite.
 
@@ -59,7 +59,7 @@ Move subscribers through a psychological progression: stranger → trust → des
 
 ---
 
-### 3. CART ABANDONMENT (1–3 emails)
+### 3. CART ABANDONMENT (1-3 emails)
 
 **Psychological arc:** Reminder → Social proof → Urgency/loss.
 
@@ -67,7 +67,7 @@ Move subscribers through a psychological progression: stranger → trust → des
 |-------|--------|------|---------|
 | #1 | 1 hour after | Endowment (#10) | "Your [item] is waiting. Complete your order." |
 | #2 | 24 hours after | Social Proof (#1) + Confirmation (#7) | "X people bought [item] today. Here's what they're saying." |
-| #3 | 48–72 hours after | Loss Aversion (#5) + Scarcity | "Your cart expires in [time]. Price increases / stock is low." |
+| #3 | 48-72 hours after | Loss Aversion (#5) + Scarcity | "Your cart expires in [time]. Price increases / stock is low." |
 
 **Bias details:**
 - **Endowment (#10):** They already mentally "own" the item. The email reminds them it's theirs - they just haven't taken possession.
@@ -79,7 +79,7 @@ Move subscribers through a psychological progression: stranger → trust → des
 
 ---
 
-### 4. RE-ENGAGEMENT (inactive subscribers, 3–5 emails)
+### 4. RE-ENGAGEMENT (inactive subscribers, 3-5 emails)
 
 **Psychological arc:** "We miss you" → Guilt (gently) → Value reminder → Final ultimatum → Goodbye.
 
@@ -116,7 +116,7 @@ Move subscribers through a psychological progression: stranger → trust → des
 > ⚠ **AP-2:** Fear in subject lines needs a solution in the body. **AP-11:** Curiosity subjects need a vivid payoff. **AP-12:** Dissonance subjects must blame the situation, not the reader. **AP-1:** Social proof subjects need specific, real numbers.
 
 **Subject line rules:**
-- 30–50 characters for mobile (most opens are mobile).
+- 30-50 characters for mobile (most opens are mobile).
 - Avoid spam trigger words ("FREE", "BUY NOW", ALL CAPS, excessive punctuation!!!).
 - The subject line's job is to get the OPEN. The preview text's job is to reinforce the reason to open. The first line's job is to hook.
 

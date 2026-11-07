@@ -2,9 +2,10 @@
 name: mindfluence
 description: Use when creating, auditing, optimizing, or rewriting marketing copy - posts, ads, landing pages, emails, webinars, push notifications, product launches. Applies 20 cognitive biases from behavioral economics and evolutionary psychology to engineer high-converting persuasion. Self-contained core with a 38-row bias router, 14 power combos, 13 anti-patterns with detection rules, 7 tone styles, cultural adaptation across 12 regions, and 7 post-generation checks including a mandatory PROVENANCE/TRUTH GATE. Narrative depth supports two compliant modes - real-data Named Person Story Arc or a labeled [illustrative] first-person/generalized vignette. Includes Rewrite Without Metrics (7 rewrite intents). Use ONLY for marketing content creation, audit, optimization, or rewrite tasks. DO NOT use for general writing, technical documentation, or non-marketing tasks.
 license: MIT
-compatibility: any-llm
+compatibility: Plain Markdown. No external dependencies.
 metadata:
-  version: "2.3"
+  author: Yevhen Leonidov
+  version: "2.3.0"
   biases: "20"
   language: any
   tone-styles: "7"
@@ -18,7 +19,7 @@ metadata:
   verification-checks: "7"
 ---
 
-# mindfluence v2.3 - Cognitive Bias Marketing Engine
+# mindfluence v2.3.0 - Cognitive Bias Marketing Engine
 
 > **Tagline:** Engineer persuasion by understanding the brain, not manipulating it.
 > **Mode:** Hybrid - fast generation by default; deep customization, audit, and metric-based optimization on request.
@@ -82,9 +83,27 @@ Every factual claim in the output must fall into exactly one bucket:
 2. **Verified external source** → cite source + year + specific finding. If you cannot verify it, it is not verified.
 3. **Missing** → use an explicit placeholder (`[N]`, `[Customer name]`, `[Source, Year]`, `[measurable result]`) and add a `[DATA NEEDED]` note, or ask the user (Deep Mode / when the missing data is essential). Never invent a number, name, quote, testimonial, study, journal, or year to satisfy a formatting check.
 
+**Canonical placeholders across the skill set:** `[N]` and `[Source, Year]` for missing values, `[DATA NEEDED: ...]` for a missing block of input, `[VERIFY: ...]` for a claim to check, `[illustrative]` for hypothetical narratives.
+
 **Hard rule:** A check that requires "specific numbers" or "named sources" is a formatting requirement, not permission to fabricate. Placeholders are compliant; fabricated specifics are not.
 
 **Examples in this repository** use illustrative data unless marked otherwise. Treat their names, numbers, quotes, and brands as fictional templates, not as facts.
+
+---
+
+## WHEN NOT TO USE
+
+MindFluence engineers persuasion. Hand off when the request is not marketing copy:
+
+| Request | Use instead |
+|---|---|
+| SEO structure, keywords, meta tags, ranking audit | RankWise |
+| Angles, hooks, or topic entry points before writing | AngleCraft |
+| Rewriting AI text so it sounds human | human-ai |
+| Technical documentation, legal text, or neutral reporting | Write it directly - no bias layer |
+| Fact-checking or original research | A research/browsing tool - never invent sources |
+
+The refusal policy above still applies to every request.
 
 ---
 
@@ -122,7 +141,7 @@ User says "deep mode", "customize", "ask questions first", or the task is ambigu
 2. Plug audience + product + platform into Bias Selection Router → get Primary Stack and Tone Default.
 3. Apply Scenario Override if a trigger matches.
 4. Adjust stack per user's emphasized/avoided biases.
-5. Continue with steps 5–8 of Quick Mode (Category Check → Anti-Pattern Pre-Flight → Ethical Gate → Compose + Verify).
+5. Continue with steps 5-8 of Quick Mode (Category Check → Anti-Pattern Pre-Flight → Ethical Gate → Compose + Verify).
 
 ### Audit Mode
 
@@ -338,7 +357,7 @@ If the user's audience temperature or product type is ambiguous, use the default
 
 **That's it. Do NOT run a multi-step decision-matrix procedure. One table lookup replaces all of it.**
 
-> **Deeper context available:** For the full decision-matrix methodology, audience-to-bias mappings, and detailed reasoning behind each router row, see `decision-matrix.md` (https://github.com/MADEVAL/MindFluence/blob/main/decision-matrix.md). The inlined Router covers 90%+ of use cases. When you need to understand WHY a particular bias was chosen for a particular cell - not just WHAT - cross-reference the matrix file.
+> **Deeper context available:** For the full decision-matrix methodology, audience-to-bias mappings, and detailed reasoning behind each router row, see `decision-matrix.md` in this skill folder. The inlined Router covers 90%+ of use cases. When you need to understand WHY a particular bias was chosen for a particular cell - not just WHAT - cross-reference the matrix file.
 
 ---
 
@@ -366,7 +385,7 @@ If the user's request matches a trigger word, apply the Bias Override (swap bias
 
 **Fallback:** If a scenario file is unavailable or cannot be read, do NOT skip the task. Use the Execution Frameworks section below as a minimal substitute. The scenario files provide depth; the frameworks provide the minimum viable structure. Announce: `[FALLBACK: scenario file unavailable, using generic framework]`.
 
-> **Full scenario playbooks:** The `scenarios/` folder (https://github.com/MADEVAL/MindFluence/tree/main/scenarios/) contains 13 detailed playbooks with bias-by-bias timing and section-by-section maps. Scenario files are authoritative for medium/high complexity tasks. The Quick-Reference above provides the minimum viable override - when you need full depth, download and read the corresponding scenario file.
+> **Full scenario playbooks:** The `scenarios/` folder contains 13 detailed playbooks with bias-by-bias timing and section-by-section maps. Scenario files are authoritative for medium/high complexity tasks. The Quick-Reference above provides the minimum viable override - when you need full depth, read the corresponding scenario file.
 
 ---
 
@@ -799,7 +818,7 @@ For each bias in your stack, check ONLY the rows below that match the target reg
 | Reciprocity | AMPLIFY: gift creates stronger obligation. Give MORE than in individualist markets. | - | - |
 | Risk Reversal | - | AMPLIFY: longer guarantees, visible processes, "60-day, no-questions, refund within 24h." | - |
 
-> **Deeper cultural context:** The inlined Quick-Reference covers the most common regional adjustments. For full bias-by-bias cultural adaptation across all 4 cultural dimensions (3 Hofstede dimensions + Hall's high/low-context dimension) with region-specific examples and edge cases (e.g., how to adapt Fear appeals for Japan, why Scarcity without RiskReversal backfires in France, how InGroup signals differ between Brazil and Nigeria), see `cultural-matrix.md` (https://github.com/MADEVAL/MindFluence/blob/main/cultural-matrix.md).
+> **Deeper cultural context:** The inlined Quick-Reference covers the most common regional adjustments. For full bias-by-bias cultural adaptation across all 4 cultural dimensions (3 Hofstede dimensions + Hall's high/low-context dimension) with region-specific examples and edge cases (e.g., how to adapt Fear appeals for Japan, why Scarcity without RiskReversal backfires in France, how InGroup signals differ between Brazil and Nigeria), see `cultural-matrix.md` in this skill folder.
 
 ---
 
@@ -868,13 +887,13 @@ Each anti-pattern includes a **Detection Rule** - a mechanical check you MUST ru
 **Fix:** Blame the SITUATION, never the PERSON. "The system makes it hard" > "You failed."
 
 ### AP-13: Statistical-Only Fallacy - Cohort Data Without Narrative
-**Detection Rule:** STANDARD or EXTENDED output where ALL authority/social proof claims are aggregate statistics (percentages, cohort medians, "N=X" reports) with ZERO compliant narratives — Mode A NPSA (full name + location/role + timeline + verbatim quote + visceral detail) or Mode B labeled `[illustrative]` vignette (first-person/generalized narrative with visceral detail; no fabricated quote required) → FAIL.
+**Detection Rule:** STANDARD or EXTENDED output where ALL authority/social proof claims are aggregate statistics (percentages, cohort medians, "N=X" reports) with ZERO compliant narratives - Mode A NPSA (full name + location/role + timeline + verbatim quote + visceral detail) or Mode B labeled `[illustrative]` vignette (first-person/generalized narrative with visceral detail; no fabricated quote required) → FAIL.
 **Why it fails:** Aggregate data informs System 2. Narrative activates System 1. Without System 1 activation, the data is never *felt* - only processed. A text of pure statistics can pass all 7 mechanical checks but generates zero emotional engagement.
 **Fix:** For every aggregate statistic used, anchor it to a narrative. If real persona data exists, use a full NPSA (name + location/role + timeline + verbatim quote + visceral detail). If it does not, use a first-person founder story or a generalized vignette explicitly marked `[illustrative]` - never invent a named person, quote, or result. The narrative goes FIRST; statistics come AFTER as reinforcement.
 **Example of FAIL:** "The median graduate adds $27,400 within 90 days of completion (N=214)."
 **Example of FIX (illustrative):** "[Customer name] was 6 weeks from shutting down their Austin consulting practice. Revenue: $11,400/month. 62-hour weeks. 'I thought I had a pricing problem,' they told us. 'I had a leverage problem.' They now work 41 hours/week. The median across all 214 graduates: +$27,400."
 
-> **Full audit checklist:** The inlined detection rules cover mechanical pre-output verification. For the complete anti-patterns file with detailed failure examples, psychological explanations, before/after fixes, and the full 30-second audit checklist, see `anti-patterns.md` (https://github.com/MADEVAL/MindFluence/blob/main/anti-patterns.md).
+> **Full audit checklist:** The inlined detection rules cover mechanical pre-output verification. For the complete anti-patterns file with detailed failure examples, psychological explanations, before/after fixes, and the full 30-second audit checklist, see `anti-patterns.md` (anti-patterns.md).
 
 ---
 
@@ -964,21 +983,21 @@ These are framework requirements, not optional. However, they adapt to what the 
 These are summaries. Full playbooks with bias-by-bias timing and section-by-section maps are in `scenarios/`. Scenario files are authoritative for medium/high complexity tasks.
 
 ### Social Media Posts
-**Hook (0–3 sec):** Bold number, contradiction, vivid image, fear trigger, dissonance question.
-**Body:** Layer 2–3 complementary biases.
+**Hook (0-3 sec):** Bold number, contradiction, vivid image, fear trigger, dissonance question.
+**Body:** Layer 2-3 complementary biases.
 **CTA:** Bias-informed. "Join those who already..." (social proof + loss aversion).
 
 ### Articles / Long-form
 **Title:** Framing + Anchoring + Availability.
-**Intro (0–300 words):** Vivid problem frame. Concrete story. Do NOT introduce solution yet.
+**Intro (0-300 words):** Vivid problem frame. Concrete story. Do NOT introduce solution yet.
 **Body:** Alternate theory (authority, research) with story (availability, social proof). Each section = one dominant bias.
 **Conclusion:** Resolve dissonance. CTA leverages sunk cost: "You've read this far. Last step."
 
 ### Advertising (Video)
-- Sec 0–3: Startle/intrigue - Fear, surprise, extreme social proof.
-- Sec 4–8: Problem = loss frame.
-- Sec 9–20: Solution = halo effect (beautiful visuals, confident presenter).
-- Sec 21–30: Social proof (testimonials, numbers) + CTA with Risk Reversal.
+- Sec 0-3: Startle/intrigue - Fear, surprise, extreme social proof.
+- Sec 4-8: Problem = loss frame.
+- Sec 9-20: Solution = halo effect (beautiful visuals, confident presenter).
+- Sec 21-30: Social proof (testimonials, numbers) + CTA with Risk Reversal.
 
 ### Advertising (Search)
 - "best X for Y" queries → Anchoring + Authority
@@ -1091,7 +1110,7 @@ When the user provides raw numbers without interpretation, translate them into b
 
 ## EXTERNAL REFERENCE FILES
 
-This skill is self-contained for core operation. The following files are preserved in the repository for deeper study, edge cases, and extended context. **Full GitHub URLs are provided** so an LLM working with only this SKILL.md file can instruct the user which files to download.
+This skill is self-contained for core operation. The following files are preserved in the repository for deeper study, edge cases, and extended context. **Paths are relative to this `SKILL.md`**; read a file only when the task needs it.
 
 **Loading rule - load ON DEMAND, never all at once:**
 - Standard content (social posts, emails, ads, landing sections): use inlined tables only. No external files.
@@ -1100,21 +1119,21 @@ This skill is self-contained for core operation. The following files are preserv
 - Deep audit with ambiguous anti-patterns: load `anti-patterns.md` for the full checklist and before/after examples.
 - **NEVER pre-load all files.** Each external file is ~5-15KB. Loading all of them before a simple task wastes context and degrades quality. Load the minimum needed for the specific task.
 
-| File | Purpose | When to Cross-Reference | Download URL |
+| File | Purpose | When to Cross-Reference | Path |
 |------|---------|------------------------|-------------|
-| `decision-matrix.md` | Full audience×product×platform bias mapping methodology | When the inlined Router doesn't match your use case, or you need to understand WHY a bias was chosen | https://github.com/MADEVAL/MindFluence/blob/main/decision-matrix.md |
-| `anti-patterns.md` | 13 AI copywriting failures with detailed examples, fixes, and audit checklist | When an audit finds an anti-pattern not fully covered by the inlined detection rules | https://github.com/MADEVAL/MindFluence/blob/main/anti-patterns.md |
-| `cultural-matrix.md` | Detailed bias-by-bias cultural adaptation across 4 dimensions + 12 region profiles | When targeting non-Western markets and the inlined Quick-Reference isn't granular enough | https://github.com/MADEVAL/MindFluence/blob/main/cultural-matrix.md |
-| `scenarios/` | 13 full scenario playbooks with bias-by-bias timing and section-by-section maps | When generating medium/high complexity content (sales pages, long-form, crisis response, webinars) | https://github.com/MADEVAL/MindFluence/tree/main/scenarios/ |
-| `examples/` | 7 annotated outputs showing bias stacks in action | When you need reference quality for a complex format | https://github.com/MADEVAL/MindFluence/tree/main/examples/ |
-| `README.md` | Project overview, integration guides, pipeline documentation | When you need setup instructions or pipeline integration details | https://github.com/MADEVAL/MindFluence/blob/main/README.md |
-| `README.ru.md` | Russian-language project overview | For Russian-speaking users | https://github.com/MADEVAL/MindFluence/blob/main/README.ru.md |
+| `decision-matrix.md` | Full audience×product×platform bias mapping methodology | When the inlined Router doesn't match your use case, or you need to understand WHY a bias was chosen | decision-matrix.md |
+| `anti-patterns.md` | 13 AI copywriting failures with detailed examples, fixes, and audit checklist | When an audit finds an anti-pattern not fully covered by the inlined detection rules | anti-patterns.md |
+| `cultural-matrix.md` | Detailed bias-by-bias cultural adaptation across 4 dimensions + 12 region profiles | When targeting non-Western markets and the inlined Quick-Reference isn't granular enough | cultural-matrix.md |
+| `scenarios/` | 13 full scenario playbooks with bias-by-bias timing and section-by-section maps | When generating medium/high complexity content (sales pages, long-form, crisis response, webinars) | `scenarios/` |
+| `examples/` | 7 annotated outputs showing bias stacks in action | When you need reference quality for a complex format | examples// |
+| `README.md` | Project overview, integration guides, pipeline documentation | When you need setup instructions or pipeline integration details | README.md |
+| `README.ru.md` | Russian-language project overview | For Russian-speaking users | README.ru.md |
 
 > **Default rule:** Use the inlined tables and detection rules for all standard tasks. Cross-reference external files only when the task is unusually complex, or the target market/audience is outside the inlined coverage. The external files provide depth; the inlined content provides speed. **Load one file at a time - never pre-load the entire repository.**
 
 ---
 
-## OUTPUT FORMAT - 3 TIER
+## OUTPUT CONTRACT - 3 TIER
 
 ### COMPACT (output < 500 chars: tweets, push, SMS, ad headlines, Instagram captions)
 
@@ -1126,7 +1145,7 @@ Optional: [BIASES: brief inline codes if space permits]
 Optional: [DATA NEEDED: missing numbers/names/sources - only if placeholders remain]
 ```
 
-### STANDARD (500–3000 chars: LinkedIn posts, emails, short landing sections)
+### STANDARD (500-3000 chars: LinkedIn posts, emails, short landing sections)
 
 ```
 [TONE: style]
@@ -1381,4 +1400,4 @@ Start Free Trial - No Credit Card
 
 ---
 
-**End of SKILL.md v2.3**
+**End of SKILL.md v2.3.0**

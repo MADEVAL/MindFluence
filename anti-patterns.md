@@ -179,7 +179,7 @@
 
 **Why it fails:** Aggregate data informs System 2. Narrative activates System 1. Without System 1 activation, the data is processed but never *felt*. A text of pure statistics can pass every mechanical check and still generate zero emotional engagement.
 
-**Detection rule:** A STANDARD or EXTENDED output where all authority/social proof claims are aggregate statistics and there is no compliant narrative — Mode A NPSA (name + location/role + timeline + verbatim quote + visceral detail) or Mode B labeled `[illustrative]` vignette (visceral detail; no fabricated quote required) → FAIL.
+**Detection rule:** A STANDARD or EXTENDED output where all authority/social proof claims are aggregate statistics and there is no compliant narrative - Mode A NPSA (name + location/role + timeline + verbatim quote + visceral detail) or Mode B labeled `[illustrative]` vignette (visceral detail; no fabricated quote required) → FAIL.
 
 **Fix (real data):**
 > "[Customer name] was 6 weeks from shutting down their Austin consulting practice. Revenue: $11,400/month. 62-hour weeks. 'I thought I had a pricing problem,' they told us. 'I had a leverage problem.' They now work 41 hours/week. The median across all 214 graduates: +$27,400."

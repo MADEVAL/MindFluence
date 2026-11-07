@@ -13,23 +13,23 @@ Stop the scroll, capture attention in <3 seconds, communicate value in <15 secon
 ### Video Ads (TikTok, Reels, YouTube Shorts - ≤60s)
 
 **The Brain's Ad Processing:**
-- Second 0–3: Amygdala scan - "Threat? Opportunity? Ignore?"
-- Second 3–8: System 1 engagement - "This feels relevant/familiar/exciting."
-- Second 8–30: Value communication - "What's in it for me?"
-- Second 30–60: Action trigger - "What do I do now?"
+- Second 0-3: Amygdala scan - "Threat? Opportunity? Ignore?"
+- Second 3-8: System 1 engagement - "This feels relevant/familiar/exciting."
+- Second 8-30: Value communication - "What's in it for me?"
+- Second 30-60: Action trigger - "What do I do now?"
 
-**Pattern A: The Hook → Problem → Solution → Proof → CTA (30–60s)**
+**Pattern A: The Hook → Problem → Solution → Proof → CTA (30-60s)**
 
 | Time | What | Bias |
 |------|------|------|
-| 0–3s | **HOOK.** Bold statement, contradiction, fear trigger, or absurd visual. | Availability / Fear / Framing |
-| 3–8s | **PROBLEM AGITATION.** "You know that feeling when [vivid scenario]?" | Availability / Loss Aversion |
-| 8–20s | **SOLUTION.** Your product as the hero. Show it working. | Framing / Halo Effect |
-| 20–30s | **PROOF.** Before/after, testimonial, stat, demo. | Social Proof / Survivorship |
-| 30–45s | **OFFER.** Price, bonus, guarantee. Anchored against higher value. | Anchoring / Risk Reversal |
-| 45–60s | **CTA.** "Click the link. Only [X] available. [Deadline]." | Loss Aversion / Scarcity |
+| 0-3s | **HOOK.** Bold statement, contradiction, fear trigger, or absurd visual. | Availability / Fear / Framing |
+| 3-8s | **PROBLEM AGITATION.** "You know that feeling when [vivid scenario]?" | Availability / Loss Aversion |
+| 8-20s | **SOLUTION.** Your product as the hero. Show it working. | Framing / Halo Effect |
+| 20-30s | **PROOF.** Before/after, testimonial, stat, demo. | Social Proof / Survivorship |
+| 30-45s | **OFFER.** Price, bonus, guarantee. Anchored against higher value. | Anchoring / Risk Reversal |
+| 45-60s | **CTA.** "Click the link. Only [X] available. [Deadline]." | Loss Aversion / Scarcity |
 
-**Pattern B: The Native/UGC Style (15–30s)**
+**Pattern B: The Native/UGC Style (15-30s)**
 Start in medias res - like a regular person's video. No intro. No branding for 5 seconds.
 - "I tried [thing] so you don't have to..."
 - "My [role] friend showed me this and..."
@@ -37,7 +37,7 @@ Start in medias res - like a regular person's video. No intro. No branding for 5
 
 *Primary bias: Availability + False Consensus.* The "regular person" format bypasses ad skepticism. Halo effect from relatability, not polish.
 
-**Pattern C: The "They're All Wrong" (15–30s)**
+**Pattern C: The "They're All Wrong" (15-30s)**
 Contrarian hook. Polemic.
 - "Everything you've been told about [topic] is backwards."
 - "Stop doing [common advice]. Here's why."
@@ -112,7 +112,7 @@ The prospect has already engaged. They've visited your site, read content, maybe
 | Past customer | Status Quo + In-Group | "You're part of [community]. Here's what's new / what you're missing." |
 
 **Retargeting rules:**
-- Frequency cap: max 3–5 impressions per user per week. More = annoyance = brand damage.
+- Frequency cap: max 3-5 impressions per user per week. More = annoyance = brand damage.
 - Creative rotation: same ad shown 5 times = ignored. Rotate creatives with same message, different execution.
 - Burn code: if user converted, REMOVE them from retargeting immediately. Nothing feels more incompetent than an ad for something they already bought.
 
@@ -127,7 +127,7 @@ The prospect has already engaged. They've visited your site, read content, maybe
    What they FEEL right now. The pain, the desire, the fear, the curiosity.
    Bias: Availability / Framing / Fear
 
-2. PROBLEM / OPPORTUNITY (next 1–2 sentences)
+2. PROBLEM / OPPORTUNITY (next 1-2 sentences)
    Why this matters now. Quantify if possible.
    Bias: Loss Aversion / Anchoring
 

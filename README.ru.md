@@ -1,14 +1,15 @@
 # MindFluence
 
-[![Version](https://img.shields.io/badge/version-2.3-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.3.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Compatibility](https://img.shields.io/badge/compatibility-any%20LLM-purple)](#требования)
+[![Compatibility](https://img.shields.io/badge/compatibility-plain%20markdown-purple)](#требования)
+[![skills.sh](https://img.shields.io/badge/skills.sh-listed-2ea44f)](https://www.skills.sh/madeval/mindfluence)
 
 [ [English](README.md) | **Русский** ]
 
 > **Убеждение, построенное на психологии, а не на манипуляции.**
 
-AI-навык (промпт) v2.3, превращающий 20 когнитивных искажений в маркетинговый копирайтинг с высокой конверсией - для любого языка, любой платформы, любой аудитории. **v2.3: самодостаточное ядро с нарративной глубиной и проверкой происхождения данных.** Все таблицы, 13 анти-паттернов с правилами обнаружения, культурные данные и few-shot примеры встроены в SKILL.md. Обязательный PROVENANCE / TRUTH GATE не даёт выдумывать числа, имена и источники. Нарративная глубина поддерживает два режима: NPSA на реальных данных или явно помеченный `[illustrative]` fallback. Для базовой работы внешние файлы не требуются.
+AI-навык (промпт) v2.3.0, превращающий 20 когнитивных искажений в маркетинговый копирайтинг с высокой конверсией - для любого языка, любой платформы, любой аудитории. **v2.3: самодостаточное ядро с нарративной глубиной и проверкой происхождения данных.** Все таблицы, 13 анти-паттернов с правилами обнаружения, культурные данные и few-shot примеры встроены в SKILL.md. Обязательный PROVENANCE / TRUTH GATE не даёт выдумывать числа, имена и источники. Нарративная глубина поддерживает два режима: NPSA на реальных данных или явно помеченный `[illustrative]` fallback. Для базовой работы внешние файлы не требуются.
 
 ---
 
@@ -99,7 +100,7 @@ AI-навык (промпт) v2.3, превращающий 20 когнитив�
 - **Температура аудитории** (холодная / тёплая / горячая / ушедшая / скептичная / stranger / defensive) ×
 - **Тип продукта** (low-B2C, mid-B2C, high-B2C, B2B SaaS, инфопродукты, здоровье, сообщество) ×
 - **Платформа** (Twitter/X, LinkedIn, Instagram, TikTok, email, лендинг, вебинар, search ads)
-- **= Мгновенный стек искажений** (3–5 biases, предварительно проверенных на совместимость)
+- **= Мгновенный стек искажений** (3-5 biases, предварительно проверенных на совместимость)
 - **Scenario Override** - если запрос пользователя содержит триггер (например, «launch», «apology»), искажения заменяются согласно таблице Scenario Quick-Reference.
 
 Также включает **Bias Conflict Detector** - 6 известных конфликтов искажений со стратегиями разрешения (например, Страх потери + Подтверждение конфликтуют → последовательность: Страх сначала, Подтверждение после раскрытия решения).
@@ -130,7 +131,7 @@ AI-навык (промпт) v2.3, превращающий 20 когнитив�
 
 ```
 mindfluence/
-├── SKILL.md                    ← Основная инструкция v2.3. Самодостаточное ядро.
+├── SKILL.md                    ← Основная инструкция v2.3.0. Самодостаточное ядро.
 │                                  Встроены: Bias Selection Router (38 строк), Scenario Quick-Reference,
 │                                  Cultural Quick-Reference, 13 анти-паттернов с правилами обнаружения
 │                                  (вкл. Statistical-Only Fallacy), Narrative Depth Requirements
@@ -206,7 +207,7 @@ mindfluence/
 
 ## Интеграция
 
-MindFluence спроектирован для двусторонней интеграции с [RankWise](https://github.com/MADEVAL/RankWise) (SEO Content Engine) и [HumanAI](https://github.com/MADEVAL/HumanAI) (Text Humanization Engine). Три навыка формируют полный конвейер продакшена: SEO-структура → убедительный текст → человеческий голос.
+MindFluence спроектирован для двусторонней интеграции с [RankWise](https://github.com/MADEVAL/RankWise) (SEO Content Engine) и [human-ai](https://github.com/MADEVAL/Natural-skill) (Text Humanization Engine). Три навыка формируют полный конвейер продакшена: SEO-структура → убедительный текст → человеческий голос.
 
 ### С RankWise (SEO Content Engine)
 
@@ -233,13 +234,13 @@ MindFluence спроектирован для двусторонней инте�
 - «RankWise SEO brief for [topic]. Keyword: [kw]. Then MindFluence from that brief. Expert-calm tone.»
 - «RankWise SEO brief for SaaS landing page. Then MindFluence landing page from that brief.»
 
-### С HumanAI (Text Humanization)
+### С human-ai (Text Humanization)
 
-**Конвейер:** MindFluence генерирует убедительный текст → HumanAI очеловечивает его, не ломая структуру искажений.
+**Конвейер:** MindFluence генерирует убедительный текст → human-ai очеловечивает его, не ломая структуру искажений.
 
 **Сопоставление тонов:**
 
-| Тон MindFluence | Тон HumanAI |
+| Тон MindFluence | Тон human-ai |
 |-----------------|-------------|
 | `warm-human` | `human` |
 | `expert-calm` | `expert` |
@@ -247,11 +248,11 @@ MindFluence спроектирован для двусторонней инте�
 | `rebel-edgy` | `social` |
 | `luxe-minimal` | `expert` |
 
-**Для сохранения структуры искажений при очеловечивании:** используйте `PIPELINE: cleanup → specificity → tone(skipped) → rhythm → proofread` - это говорит HumanAI пропустить Stage 3 (tone) и сохранить голос MindFluence.
+**Для сохранения структуры искажений при очеловечивании:** используйте `PIPELINE: cleanup → specificity → tone(skipped) → rhythm → proofread` - это говорит human-ai пропустить Stage 3 (tone) и сохранить голос MindFluence.
 
 **Совместные промпты:**
-- «Generate MindFluence copy (bold-sell tone), then HumanAI humanize it. EN.»
-- «MindFluence landing page for [product]. Then pass through HumanAI.»
+- «Generate MindFluence copy (bold-sell tone), then human-ai humanize it. EN.»
+- «MindFluence landing page for [product]. Then pass through human-ai.»
 
 ### Совместимость Bias-SEO
 
@@ -266,13 +267,13 @@ MindFluence спроектирован для двусторонней инте�
 | Дефицит | Средний | «Ограничено», «Осталось X» может вытолкнуть ключ из первых 150 слов |
 | Подтверждение | Низкий | «Вы и так знаете X» - хорошо ложится рядом с ключом |
 
-### Тройной конвейер (RankWise → MindFluence → HumanAI)
+### Тройной конвейер (RankWise → MindFluence → human-ai)
 
 Полный производственный конвейер:
 
 1. **RankWise** выдаёт полный SEO-бриф с планом ключевых слов, структурой заголовков, мета-черновиками, планом внутренних ссылок и целевым количеством слов.
 2. **MindFluence** генерирует убедительный текст внутри SEO-скелета, применяя когнитивные искажения секция за секцией.
-3. **HumanAI** очеловечивает текст, соблюдая: без удаления заголовков с ключами, без удаления якорей внутренних ссылок, без очистки маркеров искажений (числа соцдоказательств, числа якорения), сохранение минимального количества слов.
+3. **human-ai** очеловечивает текст, соблюдая: без удаления заголовков с ключами, без удаления якорей внутренних ссылок, без очистки маркеров искажений (числа соцдоказательств, числа якорения), сохранение минимального количества слов.
 4. **RankWise Audit** выполняет финальную верификацию 49 SEO-факторов.
 
 **Совместный тройной промпт:**
@@ -280,7 +281,7 @@ MindFluence спроектирован для двусторонней инте�
 Triple pipeline:
 1) RankWise SEO brief for [topic]. Keyword: [kw]. Language: [xx].
 2) MindFluence generate from that brief. Tone: [expert-calm/warm-human/bold-sell].
-3) HumanAI humanize the MindFluence output. Preserve SEO structure + bias markers.
+3) human-ai humanize the MindFluence output. Preserve SEO structure + bias markers.
 4) RankWise audit the final result.
 ```
 
@@ -290,7 +291,7 @@ Triple pipeline:
 |-------|-----------------------------------|-------------------------------------|
 | RankWise | `.opencode/skills/rankwise/` | `~/.claude/skills/rankwise/` |
 | MindFluence | `.opencode/skills/mindfluence/` | `~/.claude/skills/mindfluence/` |
-| HumanAI | `.opencode/skills/human-ai/` | `~/.claude/skills/human-ai/` |
+| human-ai | `.opencode/skills/human-ai/` | `~/.claude/skills/human-ai/` |
 
 ---
 

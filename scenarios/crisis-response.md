@@ -146,10 +146,10 @@ Bias Blind Spot (reversed - admit you were wrong)
 
 | Time Since Incident | Action |
 |--------------------|--------|
-| 0–2 hours | Initial acknowledgment: "We're aware of [issue]. We're investigating. Update by [time]." |
-| 2–6 hours | Full statement (Parts 1–4) - what happened, apology, impact, explanation. |
-| 6–24 hours | Fix announcement (Parts 5–6) - what's changing, commitments. |
-| 3–7 days | Follow-up: proof that changes happened. Updated incident report. |
+| 0-2 hours | Initial acknowledgment: "We're aware of [issue]. We're investigating. Update by [time]." |
+| 2-6 hours | Full statement (Parts 1-4) - what happened, apology, impact, explanation. |
+| 6-24 hours | Fix announcement (Parts 5-6) - what's changing, commitments. |
+| 3-7 days | Follow-up: proof that changes happened. Updated incident report. |
 | 30 days | "What we changed" retrospective. (Optional - for major incidents.) |
 
 **The faster the initial acknowledgment, the less anger accumulates.** Silence for 24 hours while "crafting the perfect statement" = far worse than an imperfect statement in 2 hours.

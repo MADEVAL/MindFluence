@@ -1,8 +1,9 @@
 # MindFluence
 
-[![Version](https://img.shields.io/badge/version-2.3-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.3.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Compatibility](https://img.shields.io/badge/compatibility-any%20LLM-purple)](#requirements)
+[![Compatibility](https://img.shields.io/badge/compatibility-plain%20markdown-purple)](#requirements)
+[![skills.sh](https://img.shields.io/badge/skills.sh-listed-2ea44f)](https://www.skills.sh/madeval/mindfluence)
 
 [ **English** | [Русский](README.ru.md) ]
 
@@ -99,7 +100,7 @@ The skill doesn't guess which biases to use. `SKILL.md` contains an inlined **Bi
 - **Audience temperature** (cold / warm / hot / lapsed / skeptical / stranger / defensive) ×
 - **Product type** (low-B2C, mid-B2C, high-B2C, SaaS B2B, info-product, health, community) ×
 - **Platform** (Twitter/X, LinkedIn, Instagram, TikTok, email, landing page, webinar, search ads)
-- **= Instant bias stack** (3–5 biases, pre-validated for complementarity)
+- **= Instant bias stack** (3-5 biases, pre-validated for complementarity)
 - **Scenario Override** - if user request matches a trigger (e.g., "launch", "apology"), biases are swapped per the Scenario Quick-Reference table.
 
 Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolution strategies (e.g., Loss Aversion + Confirmation compete → sequence them: Fear first, Confirmation after solution).
@@ -130,7 +131,7 @@ Also includes a **Bias Conflict Detector** - 6 known bias conflicts with resolut
 
 ```
 mindfluence/
-├── SKILL.md                    ← Main instruction. Self-contained core v2.3.
+├── SKILL.md                    ← Main instruction. Self-contained core v2.3.0.
 │                                  Inlined: Bias Selection Router (38 rows), Scenario Quick-Reference,
 │                                  Cultural Quick-Reference, 13 Anti-Patterns with detection rules
 │                                  (incl. Statistical-Only Fallacy), Narrative Depth Requirements
@@ -204,7 +205,7 @@ mindfluence/
 
 ## Integration
 
-MindFluence is designed for bi-directional integration with [RankWise](https://github.com/MADEVAL/RankWise) (SEO Content Engine) and [HumanAI](https://github.com/MADEVAL/HumanAI) (Text Humanization Engine). The three skills form a complete content production pipeline: SEO structure → persuasive copy → human voice.
+MindFluence is designed for bi-directional integration with [RankWise](https://github.com/MADEVAL/RankWise) (SEO Content Engine) and [human-ai](https://github.com/MADEVAL/Natural-skill) (Text Humanization Engine). The three skills form a complete content production pipeline: SEO structure → persuasive copy → human voice.
 
 ### With RankWise (SEO Content Engine)
 
@@ -231,12 +232,12 @@ MindFluence is designed for bi-directional integration with [RankWise](https://g
 - "RankWise SEO brief for [topic]. Keyword: [kw]. Then MindFluence from that brief. Expert-calm tone."
 - "RankWise SEO brief for SaaS landing page. Then MindFluence landing page from that brief."
 
-### With HumanAI (Text Humanization)
+### With human-ai (Text Humanization)
 
-**Pipeline:** MindFluence generates persuasive copy → HumanAI humanizes it without breaking the bias structure.
+**Pipeline:** MindFluence generates persuasive copy → human-ai humanizes it without breaking the bias structure.
 
 **Tone mapping:**
-| MindFluence Tone | HumanAI Tone |
+| MindFluence Tone | human-ai Tone |
 |-----------------|--------------|
 | `warm-human` | `human` |
 | `expert-calm` | `expert` |
@@ -244,11 +245,11 @@ MindFluence is designed for bi-directional integration with [RankWise](https://g
 | `rebel-edgy` | `social` |
 | `luxe-minimal` | `expert` |
 
-**To preserve bias structure during humanization:** use `PIPELINE: cleanup → specificity → tone(skipped) → rhythm → proofread` - this tells HumanAI to skip Stage 3 (tone) and keep the MindFluence voice.
+**To preserve bias structure during humanization:** use `PIPELINE: cleanup → specificity → tone(skipped) → rhythm → proofread` - this tells human-ai to skip Stage 3 (tone) and keep the MindFluence voice.
 
 **Joint prompts:**
-- "Generate MindFluence copy (bold-sell tone), then HumanAI humanize it. EN."
-- "MindFluence landing page for [product]. Then pass through HumanAI."
+- "Generate MindFluence copy (bold-sell tone), then human-ai humanize it. EN."
+- "MindFluence landing page for [product]. Then pass through human-ai."
 
 ### Bias-SEO Compatibility
 
@@ -263,13 +264,13 @@ Some cognitive biases have specific SEO interactions. See `scenarios/seo-brief.m
 | Scarcity | Medium | "Limited", "Only X left" may push keyword out of first 150 words |
 | Confirmation | Low | "You already know X" - fits keyword-adjacent language |
 
-### Triple Pipeline (RankWise → MindFluence → HumanAI)
+### Triple Pipeline (RankWise → MindFluence → human-ai)
 
 The complete production pipeline:
 
 1. **RankWise** outputs a complete SEO brief with keyword plan, heading structure, meta drafts, internal link plan, and word count target.
 2. **MindFluence** generates persuasive copy within the SEO skeleton, applying cognitive biases section by section.
-3. **HumanAI** humanizes the copy, respecting: no deletion of keyword-containing headings, no deletion of internal link anchors, no cleanup of bias markers (social proof numbers, anchoring numbers), minimum word count preservation.
+3. **human-ai** humanizes the copy, respecting: no deletion of keyword-containing headings, no deletion of internal link anchors, no cleanup of bias markers (social proof numbers, anchoring numbers), minimum word count preservation.
 4. **RankWise Audit** performs final verification of the 49 SEO factors.
 
 **Joint triple prompt:**
@@ -277,7 +278,7 @@ The complete production pipeline:
 Triple pipeline:
 1) RankWise SEO brief for [topic]. Keyword: [kw]. Language: [xx].
 2) MindFluence generate from that brief. Tone: [expert-calm/warm-human/bold-sell].
-3) HumanAI humanize the MindFluence output. Preserve SEO structure + bias markers.
+3) human-ai humanize the MindFluence output. Preserve SEO structure + bias markers.
 4) RankWise audit the final result.
 ```
 
@@ -287,7 +288,7 @@ Triple pipeline:
 |-------|------------------------------|--------------------------------|
 | RankWise | `.opencode/skills/rankwise/` | `~/.claude/skills/rankwise/` |
 | MindFluence | `.opencode/skills/mindfluence/` | `~/.claude/skills/mindfluence/` |
-| HumanAI | `.opencode/skills/human-ai/` | `~/.claude/skills/human-ai/` |
+| human-ai | `.opencode/skills/human-ai/` | `~/.claude/skills/human-ai/` |
 
 ---
 
@@ -352,7 +353,7 @@ MIT
 ## GitHub Description
 
 ```
-AI prompt-skill v2.3: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
+AI prompt-skill v2.3.0: 20 cognitive biases → high-converting marketing copy with a provenance-first narrative engine. Self-contained core with a 38-row Bias Selection Router (audience×product×platform→instant bias stack), 13 anti-patterns with mechanical detection rules (incl. Statistical-Only Fallacy), Narrative Depth Requirements (real-data NPSA or labeled [illustrative] fallback + Conversational Direct Address + Unexpected Detail), 14 power bias combinations, 7 tone styles + hybrid formula with narrative minimums, 3-tier output format (compact/standard/extended), 7-point post-generation verification (incl. PROVENANCE/TRUTH GATE and HUMAN narrative check), 12-region cultural quick-reference, Rewrite Without Metrics (7 rewrite intents), and 5 inlined few-shot examples. Covers ads, landing pages, email sequences, social posts, webinars, launches, sales pages, case studies, pricing pages, cold outreach, push notifications, crisis response, and SEO brief integration.
 ```
 
 ## GitHub Tags

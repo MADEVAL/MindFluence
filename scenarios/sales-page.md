@@ -1,7 +1,7 @@
 # Scenario: Long-Form Sales Page
 
 ## CONTEXT
-A standalone sales page for a high-ticket product ($200+): course, coaching program, premium software, consulting package. Unlike a landing page (which converts to trial or lead), this page must overcome deep skepticism, justify a significant price, and close a purchase directly - often 3,000–10,000 words.
+A standalone sales page for a high-ticket product ($200+): course, coaching program, premium software, consulting package. Unlike a landing page (which converts to trial or lead), this page must overcome deep skepticism, justify a significant price, and close a purchase directly - often 3,000-10,000 words.
 
 ## GOAL
 Move the reader from "I don't know you" to "Take my money" in a single scroll. Every section builds on the previous. Skipping a section creates a psychological leak.
@@ -26,7 +26,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 2: THE HOOK / STORY (200–400 words)
+### SECTION 2: THE HOOK / STORY (200-400 words)
 ```
 [AVAILABILITY] A specific, vivid story of the founder or a customer.
 [BIAS BLIND SPOT] The founder admits their own past mistake or wrong belief.
@@ -42,7 +42,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 3: PROBLEM AGITATION (400–600 words)
+### SECTION 3: PROBLEM AGITATION (400-600 words)
 ```
 [FEAR / LOSS AVERSION] Make the problem visceral. Quantify the cost.
 [AVAILABILITY] Use scenarios the reader has personally experienced.
@@ -58,7 +58,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 4: SOLUTION REVEAL (200–300 words)
+### SECTION 4: SOLUTION REVEAL (200-300 words)
 ```
 [FRAMING] Category of one. "This isn't [crowded category]. This is [new category]."
 [ANCHORING] "Others charge $X for [inferior approach]. This is different."
@@ -74,7 +74,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 5: THE MECHANISM / FRAMEWORK (300–500 words)
+### SECTION 5: THE MECHANISM / FRAMEWORK (300-500 words)
 ```
 [AUTHORITY] The research, testing, or expertise behind the mechanism.
 [ANCHORING] "After [X iterations / $Y investment / Z years], here's what works."
@@ -90,9 +90,9 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 6: CASE STUDY STACK (400–800 words)
+### SECTION 6: CASE STUDY STACK (400-800 words)
 ```
-[SURVIVORSHIP BIAS] Show your 2–3 best results.
+[SURVIVORSHIP BIAS] Show your 2-3 best results.
 [SOCIAL PROOF] Full name, photo, specific before/after metrics - or explicit placeholders if the data is not available.
 [AVAILABILITY] Before → Struggle → Discovery → Application → After.
 [CONFIRMATION] The case study should mirror the reader's situation.
@@ -101,14 +101,14 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 **Pattern (per case study):** "[Name], [Role] from [Location]. Before: [quantified bad situation]. They tried [failed alternatives]. Then they applied [specific part of your mechanism]. After [timeframe]: [quantified result]."
 
 **Rules:**
-- 2–3 case studies. Not 1 (feels like only one person succeeded). Not 10 (dilutes).
+- 2-3 case studies. Not 1 (feels like only one person succeeded). Not 10 (dilutes).
 - Each case study should represent a different customer persona.
 - Always include a testimonial quote. Direct speech hits harder than paraphrasing.
 - Acknowledge selection bias: "These are some of our best results." Credibility > false modesty.
 
 ---
 
-### SECTION 7: OBJECTION DEMOLITION (300–500 words)
+### SECTION 7: OBJECTION DEMOLITION (300-500 words)
 ```
 [BACKFIRE EFFECT] Validate the objection before reframing.
 [COGNITIVE DISSONANCE] "You're right to be skeptical. Here's why."
@@ -124,7 +124,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 8: THE OFFER / WHAT YOU GET (300–500 words)
+### SECTION 8: THE OFFER / WHAT YOU GET (300-500 words)
 ```
 [ENDOWMENT] "Here's everything that becomes yours."
 [ANCHORING] Each component with a dollar value.
@@ -134,13 +134,13 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 **Pattern:** "When you join [Program Name], here's everything you get: Module 1: [Name] (value: $X) - [what it solves]. Module 2: [Name] (value: $X) - [what it solves]... Total value: $X,XXX. Your investment: $XXX."
 
 **Rules:**
-- List every deliverable with an individual value. The sum must exceed the price by 3–5×.
+- List every deliverable with an individual value. The sum must exceed the price by 3-5×.
 - "Value" must be justifiable - not arbitrary. "Consulting calls: $500/hr × 4 hours = $2,000."
 - Bonuses at the end: "And you also get [bonus 1], [bonus 2]..." Bonuses = added value perception without added cost.
 
 ---
 
-### SECTION 9: PRICING REVEAL + GUARANTEE (200–300 words)
+### SECTION 9: PRICING REVEAL + GUARANTEE (200-300 words)
 ```
 [ANCHORING] "Programs like this cost $X,XXX. Yours: $XXX."
 [LOSS AVERSION] "Price increases after [date / cohort fills]."
@@ -155,7 +155,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 10: FINAL SOCIAL PROOF (200–300 words)
+### SECTION 10: FINAL SOCIAL PROOF (200-300 words)
 ```
 [SOCIAL PROOF] Wall of testimonials or logos.
 [FALSE CONSENSUS] "People like you are choosing this."
@@ -166,7 +166,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 11: URGENCY / SCARCITY CLOSE (100–200 words)
+### SECTION 11: URGENCY / SCARCITY CLOSE (100-200 words)
 ```
 [LOSS AVERSION] What they lose by waiting.
 [SCARCITY] Genuine constraint explained.
@@ -179,7 +179,7 @@ Move the reader from "I don't know you" to "Take my money" in a single scroll. E
 
 ---
 
-### SECTION 12: FINAL CTA + P.S. (50–100 words)
+### SECTION 12: FINAL CTA + P.S. (50-100 words)
 ```
 [LOSS AVERSION] "Don't let another [time period] go by."
 [RISK REVERSAL] Re-state the guarantee.

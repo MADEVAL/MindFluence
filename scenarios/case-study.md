@@ -10,7 +10,7 @@ Make the reader think "If they can do it, I can do it" - then take the next step
 
 ## THE CASE STUDY STRUCTURE (6-part arc)
 
-### PART 1: SITUATION (50–100 words)
+### PART 1: SITUATION (50-100 words)
 ```
 [AVAILABILITY] Introduce a specific, real person with concrete details.
 [FALSE CONSENSUS] Frame their situation as typical for your target audience.
@@ -25,7 +25,7 @@ Make the reader think "If they can do it, I can do it" - then take the next step
 
 ---
 
-### PART 2: PROBLEM (100–200 words)
+### PART 2: PROBLEM (100-200 words)
 ```
 [FEAR / LOSS AVERSION] Describe the pain in specific, quantified terms.
 [CONFIRMATION] Validate that the problem was real and frustrating.
@@ -41,7 +41,7 @@ Make the reader think "If they can do it, I can do it" - then take the next step
 
 ---
 
-### PART 3: DISCOVERY (50–100 words)
+### PART 3: DISCOVERY (50-100 words)
 ```
 [AVAILABILITY] How they found your product - the "meet-cute" moment.
 [SOCIAL PROOF] If they found you via referral, name the referrer.
@@ -57,7 +57,7 @@ Make the reader think "If they can do it, I can do it" - then take the next step
 
 ---
 
-### PART 4: SOLUTION / IMPLEMENTATION (100–200 words)
+### PART 4: SOLUTION / IMPLEMENTATION (100-200 words)
 ```
 [FRAMING] Describe your product as the mechanism of change, not a magic pill.
 [STATUS QUO] Emphasize how easy or natural the transition was.
@@ -73,7 +73,7 @@ Make the reader think "If they can do it, I can do it" - then take the next step
 
 ---
 
-### PART 5: RESULTS (100–200 words)
+### PART 5: RESULTS (100-200 words)
 ```
 [SURVIVORSHIP BIAS] Show the outcome - quantified, specific, verifiable.
 [SOCIAL PROOF] The result IS the proof.
@@ -90,14 +90,14 @@ Make the reader think "If they can do it, I can do it" - then take the next step
 
 ---
 
-### PART 6: TESTIMONIAL QUOTE + CTA (50–100 words)
+### PART 6: TESTIMONIAL QUOTE + CTA (50-100 words)
 ```
 [SOCIAL PROOF] Direct quote from the customer.
 [CONFIRMATION] The quote should validate the reader's desire.
 [AVAILABILITY] Natural, conversational language - not marketing-speak.
 ```
 
-**Pattern:** > "[Direct quote from customer, 2–4 sentences. Should mention a specific result and an emotional payoff.]"
+**Pattern:** > "[Direct quote from customer, 2-4 sentences. Should mention a specific result and an emotional payoff.]"
 >
 > - [Full Name], [Role] at [Company]
 
@@ -133,7 +133,7 @@ Situation (paragraph) → Problem (2 paragraphs) → Discovery (1 paragraph) →
 Full structure above. Add visuals: charts, before/after screenshots, photos of the customer.
 
 ### Video case study (for ads, testimonials)
-3–5 minutes. Customer speaks directly to camera. Use the 6-part structure as interview questions. Edit tightly - keep only the strongest moments.
+3-5 minutes. Customer speaks directly to camera. Use the 6-part structure as interview questions. Edit tightly - keep only the strongest moments.
 
 ---
 

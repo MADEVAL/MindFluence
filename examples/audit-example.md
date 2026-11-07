@@ -47,12 +47,12 @@
 → Replaces unexplained scarcity with genuine constraint + specific deadline + current status.
 
 **Fix 4 - ADD framing with anchor:**
-> "Most project management tools cost $12–25/user/month and take weeks to configure. Our platform: $7/user, runs in your browser in 30 seconds."
+> "Most project management tools cost $12-25/user/month and take weeks to configure. Our platform: $7/user, runs in your browser in 30 seconds."
 → Adds price anchor + time anchor, creating a frame where the offer looks favorable.
 
 **Fix 5 - ADD loss aversion:**
-> "Every month you wait, that's $200–600 in per-seat costs and 15–30 hours of configuration time you're spending on outdated tools."
+> "Every month you wait, that's $200-600 in per-seat costs and 15-30 hours of configuration time you're spending on outdated tools."
 → Quantifies the cost of inaction. Concrete loss > abstract benefit.
 
 **Revised ad (applying all fixes):**
-> "Most project tools cost $12–25/user/month and take weeks to set up. Ours runs in your browser in 30 seconds - $7/user. A 2024 meta-analysis (12,000 participants) found our approach improves team output by 31%. Sarah Chen, Ops Director at Merge: 'We cut reporting from 11 hours to 17 minutes a week.' 4,827 teams switched this year. Cohort 12: 47 of 50 spots filled. Registration closes Friday midnight. Start your free trial - no credit card, cancel anytime."
+> "Most project tools cost $12-25/user/month and take weeks to set up. Ours runs in your browser in 30 seconds - $7/user. A 2024 meta-analysis (12,000 participants) found our approach improves team output by 31%. Sarah Chen, Ops Director at Merge: 'We cut reporting from 11 hours to 17 minutes a week.' 4,827 teams switched this year. Cohort 12: 47 of 50 spots filled. Registration closes Friday midnight. Start your free trial - no credit card, cancel anytime."

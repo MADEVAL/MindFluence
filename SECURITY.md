@@ -24,7 +24,7 @@ Use GitHub's private vulnerability reporting:
    the observed behavior.
 
 If private reporting is unavailable, open a regular issue that says only
-"security report — please contact me privately" and wait for a maintainer to
+"security report - please contact me privately" and wait for a maintainer to
 respond. Do not include exploit details, secrets, or personal data in a public
 issue.
 
@@ -32,7 +32,7 @@ issue.
 
 - **Prompt injection / instruction bypass** that makes the skill ignore its
   refusal policy, ethical boundaries, or provenance gate.
-- **Fabricated evidence** produced by the skill's own instructions — for example,
+- **Fabricated evidence** produced by the skill's own instructions - for example,
   a check that rewards invented numbers, names, testimonials, studies, journals,
   or years.
 - **Unsafe marketing guidance** that violates the refusal policy (tobacco,
@@ -44,7 +44,7 @@ issue.
 ## What is out of scope
 
 - The truthfulness of third-party statistics or quotes that a user supplies.
-- Marketing performance claims (conversion rates, CTR, revenue) — this skill
+- Marketing performance claims (conversion rates, CTR, revenue) - this skill
   does not guarantee outcomes.
 - Legal or regulatory compliance in a specific jurisdiction. Users are
   responsible for verifying claims, disclosures, and consent requirements.
